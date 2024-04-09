@@ -93,7 +93,7 @@ export const BorrowAssetsListMobileItem = ({
           variant="secondary14"
         />
       </Row> */}
-      {symbol === 'ETH' && currentMarket === 'proto_mainnet_v3' && (
+      {symbol === 'SYS' && currentMarket === 'proto_rollux_v3' && (
         <Row>
           <Link
             href="https://governance.aave.com/t/arfc-merit-a-new-aave-alignment-user-reward-system/16646"

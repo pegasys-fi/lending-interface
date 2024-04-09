@@ -105,7 +105,7 @@ export const MarketAssetsListMobileItem = ({ ...reserve }: ComputedReserveData) 
         </Box>
       </Row>
 
-      {reserve.symbol === 'ETH' && currentMarket === 'proto_mainnet_v3' && (
+      {reserve.symbol === 'SYS' && currentMarket === 'proto_rollux_v3' && (
         <Row mb={2}>
           <Link
             href="https://governance.aave.com/t/arfc-merit-a-new-aave-alignment-user-reward-system/16646"
