@@ -20,7 +20,7 @@ import { BasicModal } from '../../primitives/BasicModal';
 import { supportedNetworksWithEnabledMarket } from './common';
 import { SwitchModalContent } from './SwitchModalContent';
 
-const defaultNetwork = marketsData[CustomMarket.proto_mainnet_v3];
+const defaultNetwork = marketsData[CustomMarket.proto_rollux_v3];
 
 export interface TokenInfoWithBalance extends TokenInfo {
   balance: string;
