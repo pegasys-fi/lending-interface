@@ -78,7 +78,7 @@ export const TOKEN_LIST: TokenList = {
   tokens: [
     ...NETWORK_ASSETS,
     {
-      address: '0x9e9FaDf7B88490088535aBAB87299dbb027a28A1',
+      address: '0x5B0aC6194499621630ddebb30c4aBE37037b30Ec',
       chainId: 570,
       name: 'DAI',
       symbol: 'DAI',
@@ -87,7 +87,7 @@ export const TOKEN_LIST: TokenList = {
         'https://raw.githubusercontent.com/pegasys-fi/default-token-list/master/src/logos/570/0x5B0aC6194499621630ddebb30c4aBE37037b30Ec/logo.png',
     },
     {
-      address: '0xBf3DED8998120ec2Fc3A448fC38183F62dF5Ca06',
+      address: '0x368433CaC2A0B8D76E64681a9835502a1f2A8A30',
       chainId: 570,
       name: 'USD Coin',
       symbol: 'USDC',
@@ -96,7 +96,7 @@ export const TOKEN_LIST: TokenList = {
         'https://raw.githubusercontent.com/pegasys-fi/default-token-list/master/src/logos/570/0x368433CaC2A0B8D76E64681a9835502a1f2A8A30/logo.png',
     },
     {
-      address: '0x59F7b68F09D5f1e29B053A8625db7086d8B41c55',
+      address: '0x28c9c7Fb3fE3104d2116Af26cC8eF7905547349c',
       chainId: 570,
       name: 'Tether USD',
       symbol: 'USDT',
@@ -105,7 +105,7 @@ export const TOKEN_LIST: TokenList = {
         'https://raw.githubusercontent.com/pegasys-fi/default-token-list/master/src/logos/570/0x28c9c7Fb3fE3104d2116Af26cC8eF7905547349c/logo.png',
     },
     {
-      address: '0xf232380fe86ca57601634469B23756734b265659',
+      address: '0x2A4DC2e946b92AB4a1f7D62844EB237788F9056c',
       chainId: 570,
       name: 'Wrapped BTC',
       symbol: 'WBTC',
@@ -114,7 +114,7 @@ export const TOKEN_LIST: TokenList = {
         'https://raw.githubusercontent.com/pegasys-fi/default-token-list/master/src/logos/570/0x2A4DC2e946b92AB4a1f7D62844EB237788F9056c/logo.png',
     },
     {
-      address: '0x2e06a6939efB0600628Cd8cC0716B1E477eCf46F',
+      address: '0xaA1c53AFd099E415208F47FCFA2C880f659E6904',
       chainId: 570,
       name: 'Wrapped Ether',
       symbol: 'WETH',
@@ -123,7 +123,7 @@ export const TOKEN_LIST: TokenList = {
         'https://raw.githubusercontent.com/pegasys-fi/default-token-list/master/src/logos/570/0xaA1c53AFd099E415208F47FCFA2C880f659E6904/logo.png',
     },
     {
-      address: '0xB28BE64060B0595EA88Ec4E122f20f20A6908c1B',
+      address: '0x4200000000000000000000000000000000000006',
       chainId: 570,
       name: 'Wrapped Syscoin',
       symbol: 'WSYS',

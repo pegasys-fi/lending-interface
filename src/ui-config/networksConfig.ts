@@ -126,7 +126,7 @@ export const networkConfigs: Record<string, BaseNetworkConfig> = {
     baseAssetDecimals: 18,
     explorerLink: 'https://explorer.rollux.com/',
     // usdMarket: true,
-    isTestnet: true,
-    networkLogoPath: '/icons/networks/ethereum.svg',
+    // isTestnet: true,
+    networkLogoPath: '/icons/networks/base.svg',
   },
 } as const;
