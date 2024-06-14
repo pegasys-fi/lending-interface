@@ -140,14 +140,13 @@ export const StakingPanel: React.FC<StakingPanelProps> = ({
       .mul(ethPriceUsd || '1'),
     18 + 18 + 8 // incentivesBalance (18), rewardTokenPriceEth (18), ethPriceUsd (8)
   );
+
   const aavePerMonth = formatEther(
-    stakeData?.stakeTokenTotalSupply === '0'
-      ? 0
-      : valueToBigNumber(stakeUserData?.stakeTokenRedeemableAmount || '0')
-          .dividedBy(stakeData?.stakeTokenTotalSupply || '1')
-          .multipliedBy(stakeData?.distributionPerSecond || '0')
-          .multipliedBy('2592000')
-          .toFixed(0)
+    valueToBigNumber(stakeUserData?.stakeTokenRedeemableAmount || '0')
+      .dividedBy(stakeData?.stakeTokenTotalSupply || '1')
+      .multipliedBy(stakeData?.distributionPerSecond || '0')
+      .multipliedBy('2592000')
+      .toFixed(0)
   );
 
   return (

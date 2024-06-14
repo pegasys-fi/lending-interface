@@ -150,12 +150,12 @@ export default function Staking() {
                   stakeData={stakeGeneralResult?.pegasys}
                   stakeUserData={stakeUserResult?.pegasys}
                   ethPriceUsd={stakeGeneralResult?.ethPriceUsd}
-                  onStakeAction={() => openStake('pegasys', 'PSYS')}
-                  onCooldownAction={() => openStakeCooldown('pegasys')}
-                  onUnstakeAction={() => openUnstake('pegasys', 'PSYS')}
-                  onStakeRewardClaimAction={() => openStakeRewardsClaim('pegasys', 'PSYS')}
+                  onStakeAction={() => openStake('psys', 'PSYS')}
+                  onCooldownAction={() => openStakeCooldown('psys')}
+                  onUnstakeAction={() => openUnstake('psys', 'PSYS')}
+                  onStakeRewardClaimAction={() => openStakeRewardsClaim('psys', 'PSYS')}
                   onStakeRewardClaimRestakeAction={() =>
-                    openStakeRewardsRestakeClaim('pegasys', 'PSYS')
+                    openStakeRewardsRestakeClaim('psys', 'PSYS')
                   }
                   headerAction={<BuyWithFiat cryptoSymbol="PSYS" networkMarketName={network} />}
                   hasDiscountProgram={true}
