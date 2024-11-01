@@ -118,9 +118,8 @@ function __extends(d, b) {
 }
 function __rest(s, e) {
   var t = {};
-  for (var p in s)
-    if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-      t[p] = s[p];
+  for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+    t[p] = s[p];
   if (s != null && typeof Object.getOwnPropertySymbols === "function")
     for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
       if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
@@ -130,12 +129,8 @@ function __rest(s, e) {
 }
 function __decorate(decorators, target, key, desc) {
   var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-  if (typeof Reflect === "object" && typeof Reflect.decorate === "function")
-    r = Reflect.decorate(decorators, target, key, desc);
-  else
-    for (var i = decorators.length - 1; i >= 0; i--)
-      if (d = decorators[i])
-        r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+  if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+  else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
   return c > 3 && r && Object.defineProperty(target, key, r), r;
 }
 function __param(paramIndex, decorator) {
@@ -144,8 +139,7 @@ function __param(paramIndex, decorator) {
   };
 }
 function __metadata(metadataKey, metadataValue) {
-  if (typeof Reflect === "object" && typeof Reflect.metadata === "function")
-    return Reflect.metadata(metadataKey, metadataValue);
+  if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(metadataKey, metadataValue);
 }
 function __awaiter(thisArg, _arguments, P, generator) {
   function adopt(value) {
@@ -176,8 +170,7 @@ function __awaiter(thisArg, _arguments, P, generator) {
 }
 function __generator(thisArg, body) {
   var _ = { label: 0, sent: function() {
-    if (t[0] & 1)
-      throw t[1];
+    if (t[0] & 1) throw t[1];
     return t[1];
   }, trys: [], ops: [] }, f, y, t, g;
   return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() {
@@ -189,108 +182,92 @@ function __generator(thisArg, body) {
     };
   }
   function step(op) {
-    if (f)
-      throw new TypeError("Generator is already executing.");
-    while (_)
-      try {
-        if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done)
-          return t;
-        if (y = 0, t)
-          op = [op[0] & 2, t.value];
-        switch (op[0]) {
-          case 0:
-          case 1:
+    if (f) throw new TypeError("Generator is already executing.");
+    while (_) try {
+      if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+      if (y = 0, t) op = [op[0] & 2, t.value];
+      switch (op[0]) {
+        case 0:
+        case 1:
+          t = op;
+          break;
+        case 4:
+          _.label++;
+          return { value: op[1], done: false };
+        case 5:
+          _.label++;
+          y = op[1];
+          op = [0];
+          continue;
+        case 7:
+          op = _.ops.pop();
+          _.trys.pop();
+          continue;
+        default:
+          if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
+            _ = 0;
+            continue;
+          }
+          if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
+            _.label = op[1];
+            break;
+          }
+          if (op[0] === 6 && _.label < t[1]) {
+            _.label = t[1];
             t = op;
             break;
-          case 4:
-            _.label++;
-            return { value: op[1], done: false };
-          case 5:
-            _.label++;
-            y = op[1];
-            op = [0];
-            continue;
-          case 7:
-            op = _.ops.pop();
-            _.trys.pop();
-            continue;
-          default:
-            if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
-              _ = 0;
-              continue;
-            }
-            if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
-              _.label = op[1];
-              break;
-            }
-            if (op[0] === 6 && _.label < t[1]) {
-              _.label = t[1];
-              t = op;
-              break;
-            }
-            if (t && _.label < t[2]) {
-              _.label = t[2];
-              _.ops.push(op);
-              break;
-            }
-            if (t[2])
-              _.ops.pop();
-            _.trys.pop();
-            continue;
-        }
-        op = body.call(thisArg, _);
-      } catch (e) {
-        op = [6, e];
-        y = 0;
-      } finally {
-        f = t = 0;
+          }
+          if (t && _.label < t[2]) {
+            _.label = t[2];
+            _.ops.push(op);
+            break;
+          }
+          if (t[2]) _.ops.pop();
+          _.trys.pop();
+          continue;
       }
-    if (op[0] & 5)
-      throw op[1];
+      op = body.call(thisArg, _);
+    } catch (e) {
+      op = [6, e];
+      y = 0;
+    } finally {
+      f = t = 0;
+    }
+    if (op[0] & 5) throw op[1];
     return { value: op[0] ? op[1] : void 0, done: true };
   }
 }
 function __createBinding(o, m, k, k2) {
-  if (k2 === void 0)
-    k2 = k;
+  if (k2 === void 0) k2 = k;
   o[k2] = m[k];
 }
 function __exportStar(m, exports2) {
-  for (var p in m)
-    if (p !== "default" && !exports2.hasOwnProperty(p))
-      exports2[p] = m[p];
+  for (var p in m) if (p !== "default" && !exports2.hasOwnProperty(p)) exports2[p] = m[p];
 }
 function __values(o) {
   var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
-  if (m)
-    return m.call(o);
-  if (o && typeof o.length === "number")
-    return {
-      next: function() {
-        if (o && i >= o.length)
-          o = void 0;
-        return { value: o && o[i++], done: !o };
-      }
-    };
+  if (m) return m.call(o);
+  if (o && typeof o.length === "number") return {
+    next: function() {
+      if (o && i >= o.length) o = void 0;
+      return { value: o && o[i++], done: !o };
+    }
+  };
   throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
 }
 function __read(o, n) {
   var m = typeof Symbol === "function" && o[Symbol.iterator];
-  if (!m)
-    return o;
+  if (!m) return o;
   var i = m.call(o), r, ar = [], e;
   try {
-    while ((n === void 0 || n-- > 0) && !(r = i.next()).done)
-      ar.push(r.value);
+    while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
   } catch (error) {
     e = { error };
   } finally {
     try {
-      if (r && !r.done && (m = i["return"]))
-        m.call(i);
+      if (r && !r.done && (m = i["return"])) m.call(i);
     } finally {
-      if (e)
-        throw e.error;
+      if (e) throw e.error;
     }
   }
   return ar;
@@ -301,8 +278,7 @@ function __spread() {
   return ar;
 }
 function __spreadArrays() {
-  for (var s = 0, i = 0, il = arguments.length; i < il; i++)
-    s += arguments[i].length;
+  for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
   for (var r = Array(s), k = 0, i = 0; i < il; i++)
     for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
       r[k] = a[j];
@@ -312,19 +288,17 @@ function __await(v) {
   return this instanceof __await ? (this.v = v, this) : new __await(v);
 }
 function __asyncGenerator(thisArg, _arguments, generator) {
-  if (!Symbol.asyncIterator)
-    throw new TypeError("Symbol.asyncIterator is not defined.");
+  if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
   var g = generator.apply(thisArg, _arguments || []), i, q = [];
   return i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function() {
     return this;
   }, i;
   function verb(n) {
-    if (g[n])
-      i[n] = function(v) {
-        return new Promise(function(a, b) {
-          q.push([n, v, a, b]) > 1 || resume(n, v);
-        });
-      };
+    if (g[n]) i[n] = function(v) {
+      return new Promise(function(a, b) {
+        q.push([n, v, a, b]) > 1 || resume(n, v);
+      });
+    };
   }
   function resume(n, v) {
     try {
@@ -343,8 +317,7 @@ function __asyncGenerator(thisArg, _arguments, generator) {
     resume("throw", value);
   }
   function settle(f, v) {
-    if (f(v), q.shift(), q.length)
-      resume(q[0][0], q[0][1]);
+    if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]);
   }
 }
 function __asyncDelegator(o) {
@@ -361,8 +334,7 @@ function __asyncDelegator(o) {
   }
 }
 function __asyncValues(o) {
-  if (!Symbol.asyncIterator)
-    throw new TypeError("Symbol.asyncIterator is not defined.");
+  if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
   var m = o[Symbol.asyncIterator], i;
   return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function() {
     return this;
@@ -389,13 +361,10 @@ function __makeTemplateObject(cooked, raw) {
   return cooked;
 }
 function __importStar(mod) {
-  if (mod && mod.__esModule)
-    return mod;
+  if (mod && mod.__esModule) return mod;
   var result = {};
   if (mod != null) {
-    for (var k in mod)
-      if (Object.hasOwnProperty.call(mod, k))
-        result[k] = mod[k];
+    for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
   }
   result.default = mod;
   return result;
@@ -424,9 +393,7 @@ var init_tslib_es6 = __esm({
       extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
         d2.__proto__ = b2;
       } || function(d2, b2) {
-        for (var p in b2)
-          if (b2.hasOwnProperty(p))
-            d2[p] = b2[p];
+        for (var p in b2) if (b2.hasOwnProperty(p)) d2[p] = b2[p];
       };
       return extendStatics(d, b);
     };
@@ -434,9 +401,7 @@ var init_tslib_es6 = __esm({
       __assign = Object.assign || function __assign2(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
           s = arguments[i];
-          for (var p in s)
-            if (Object.prototype.hasOwnProperty.call(s, p))
-              t[p] = s[p];
+          for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
         }
         return t;
       };
@@ -452,8 +417,7 @@ var require_bn = __commonJS({
     (function(module3, exports3) {
       "use strict";
       function assert(val, msg) {
-        if (!val)
-          throw new Error(msg || "Assertion failed");
+        if (!val) throw new Error(msg || "Assertion failed");
       }
       function inherits(ctor, superCtor) {
         ctor.super_ = superCtor;
@@ -502,13 +466,11 @@ var require_bn = __commonJS({
         return num !== null && typeof num === "object" && num.constructor.wordSize === BN.wordSize && Array.isArray(num.words);
       };
       BN.max = function max(left, right) {
-        if (left.cmp(right) > 0)
-          return left;
+        if (left.cmp(right) > 0) return left;
         return right;
       };
       BN.min = function min(left, right) {
-        if (left.cmp(right) < 0)
-          return left;
+        if (left.cmp(right) < 0) return left;
         return right;
       };
       BN.prototype._init = function init(number, base, endian) {
@@ -562,8 +524,7 @@ var require_bn = __commonJS({
           ];
           this.length = 3;
         }
-        if (endian !== "le")
-          return;
+        if (endian !== "le") return;
         this._initArray(this.toArray(), base, endian);
       };
       BN.prototype._initArray = function _initArray(number, base, endian) {
@@ -994,8 +955,7 @@ var require_bn = __commonJS({
         };
       }
       BN.prototype._zeroBits = function _zeroBits(w) {
-        if (w === 0)
-          return 26;
+        if (w === 0) return 26;
         var t = w;
         var r = 0;
         if ((t & 8191) === 0) {
@@ -1034,14 +994,12 @@ var require_bn = __commonJS({
         return w;
       }
       BN.prototype.zeroBits = function zeroBits() {
-        if (this.isZero())
-          return 0;
+        if (this.isZero()) return 0;
         var r = 0;
         for (var i = 0; i < this.length; i++) {
           var b = this._zeroBits(this.words[i]);
           r += b;
-          if (b !== 26)
-            break;
+          if (b !== 26) break;
         }
         return r;
       };
@@ -1086,13 +1044,11 @@ var require_bn = __commonJS({
         return this.iuor(num);
       };
       BN.prototype.or = function or(num) {
-        if (this.length > num.length)
-          return this.clone().ior(num);
+        if (this.length > num.length) return this.clone().ior(num);
         return num.clone().ior(this);
       };
       BN.prototype.uor = function uor(num) {
-        if (this.length > num.length)
-          return this.clone().iuor(num);
+        if (this.length > num.length) return this.clone().iuor(num);
         return num.clone().iuor(this);
       };
       BN.prototype.iuand = function iuand(num) {
@@ -1113,13 +1069,11 @@ var require_bn = __commonJS({
         return this.iuand(num);
       };
       BN.prototype.and = function and(num) {
-        if (this.length > num.length)
-          return this.clone().iand(num);
+        if (this.length > num.length) return this.clone().iand(num);
         return num.clone().iand(this);
       };
       BN.prototype.uand = function uand(num) {
-        if (this.length > num.length)
-          return this.clone().iuand(num);
+        if (this.length > num.length) return this.clone().iuand(num);
         return num.clone().iuand(this);
       };
       BN.prototype.iuxor = function iuxor(num) {
@@ -1148,13 +1102,11 @@ var require_bn = __commonJS({
         return this.iuxor(num);
       };
       BN.prototype.xor = function xor(num) {
-        if (this.length > num.length)
-          return this.clone().ixor(num);
+        if (this.length > num.length) return this.clone().ixor(num);
         return num.clone().ixor(this);
       };
       BN.prototype.uxor = function uxor(num) {
-        if (this.length > num.length)
-          return this.clone().iuxor(num);
+        if (this.length > num.length) return this.clone().iuxor(num);
         return num.clone().iuxor(this);
       };
       BN.prototype.inotn = function inotn(width) {
@@ -1244,8 +1196,7 @@ var require_bn = __commonJS({
           this.negative = 1;
           return res;
         }
-        if (this.length > num.length)
-          return this.clone().iadd(num);
+        if (this.length > num.length) return this.clone().iadd(num);
         return num.clone().iadd(this);
       };
       BN.prototype.isub = function isub(num) {
@@ -1953,8 +1904,7 @@ var require_bn = __commonJS({
         return t;
       };
       FFTM.prototype.revBin = function revBin(x, l, N) {
-        if (x === 0 || x === N - 1)
-          return x;
+        if (x === 0 || x === N - 1) return x;
         var rb = 0;
         for (var i = 0; i < l; i++) {
           rb |= (x & 1) << l - i - 1;
@@ -2008,8 +1958,7 @@ var require_bn = __commonJS({
         return 1 << i + 1 + odd;
       };
       FFTM.prototype.conjugate = function conjugate(rws, iws, N) {
-        if (N <= 1)
-          return;
+        if (N <= 1) return;
         for (var i = 0; i < N / 2; i++) {
           var t = rws[i];
           rws[i] = rws[N - i - 1];
@@ -2125,17 +2074,14 @@ var require_bn = __commonJS({
       };
       BN.prototype.pow = function pow(num) {
         var w = toBitArray(num);
-        if (w.length === 0)
-          return new BN(1);
+        if (w.length === 0) return new BN(1);
         var res = this;
         for (var i = 0; i < w.length; i++, res = res.sqr()) {
-          if (w[i] !== 0)
-            break;
+          if (w[i] !== 0) break;
         }
         if (++i < w.length) {
           for (var q = res.sqr(); i < w.length; i++, q = q.sqr()) {
-            if (w[i] === 0)
-              continue;
+            if (w[i] === 0) continue;
             res = res.mul(q);
           }
         }
@@ -2241,8 +2187,7 @@ var require_bn = __commonJS({
         var r = bit % 26;
         var s = (bit - r) / 26;
         var q = 1 << r;
-        if (this.length <= s)
-          return false;
+        if (this.length <= s) return false;
         var w = this.words[s];
         return !!(w & q);
       };
@@ -2270,8 +2215,7 @@ var require_bn = __commonJS({
       BN.prototype.iaddn = function iaddn(num) {
         assert(typeof num === "number");
         assert(num < 67108864);
-        if (num < 0)
-          return this.isubn(-num);
+        if (num < 0) return this.isubn(-num);
         if (this.negative !== 0) {
           if (this.length === 1 && (this.words[0] | 0) < num) {
             this.words[0] = num - (this.words[0] | 0);
@@ -2301,8 +2245,7 @@ var require_bn = __commonJS({
       BN.prototype.isubn = function isubn(num) {
         assert(typeof num === "number");
         assert(num < 67108864);
-        if (num < 0)
-          return this.iaddn(-num);
+        if (num < 0) return this.iaddn(-num);
         if (this.negative !== 0) {
           this.negative = 0;
           this.iaddn(num);
@@ -2352,8 +2295,7 @@ var require_bn = __commonJS({
           carry = w >> 26;
           this.words[i + shift] = w & 67108863;
         }
-        if (carry === 0)
-          return this.strip();
+        if (carry === 0) return this.strip();
         assert(carry === -1);
         carry = 0;
         for (i = 0; i < this.length; i++) {
@@ -2506,14 +2448,12 @@ var require_bn = __commonJS({
       };
       BN.prototype.divRound = function divRound(num) {
         var dm = this.divmod(num);
-        if (dm.mod.isZero())
-          return dm.div;
+        if (dm.mod.isZero()) return dm.div;
         var mod = dm.div.negative !== 0 ? dm.mod.isub(num) : dm.mod;
         var half = num.ushrn(1);
         var r2 = num.andln(1);
         var cmp = mod.cmp(half);
-        if (cmp < 0 || r2 === 1 && cmp === 0)
-          return dm.div;
+        if (cmp < 0 || r2 === 1 && cmp === 0) return dm.div;
         return dm.div.negative !== 0 ? dm.div.isubn(1) : dm.div.iaddn(1);
       };
       BN.prototype.modn = function modn(num) {
@@ -2561,8 +2501,7 @@ var require_bn = __commonJS({
         var yp = y.clone();
         var xp = x.clone();
         while (!x.isZero()) {
-          for (var i = 0, im = 1; (x.words[0] & im) === 0 && i < 26; ++i, im <<= 1)
-            ;
+          for (var i = 0, im = 1; (x.words[0] & im) === 0 && i < 26; ++i, im <<= 1) ;
           if (i > 0) {
             x.iushrn(i);
             while (i-- > 0) {
@@ -2574,8 +2513,7 @@ var require_bn = __commonJS({
               B.iushrn(1);
             }
           }
-          for (var j = 0, jm = 1; (y.words[0] & jm) === 0 && j < 26; ++j, jm <<= 1)
-            ;
+          for (var j = 0, jm = 1; (y.words[0] & jm) === 0 && j < 26; ++j, jm <<= 1) ;
           if (j > 0) {
             y.iushrn(j);
             while (j-- > 0) {
@@ -2617,8 +2555,7 @@ var require_bn = __commonJS({
         var x2 = new BN(0);
         var delta = b.clone();
         while (a.cmpn(1) > 0 && b.cmpn(1) > 0) {
-          for (var i = 0, im = 1; (a.words[0] & im) === 0 && i < 26; ++i, im <<= 1)
-            ;
+          for (var i = 0, im = 1; (a.words[0] & im) === 0 && i < 26; ++i, im <<= 1) ;
           if (i > 0) {
             a.iushrn(i);
             while (i-- > 0) {
@@ -2628,8 +2565,7 @@ var require_bn = __commonJS({
               x1.iushrn(1);
             }
           }
-          for (var j = 0, jm = 1; (b.words[0] & jm) === 0 && j < 26; ++j, jm <<= 1)
-            ;
+          for (var j = 0, jm = 1; (b.words[0] & jm) === 0 && j < 26; ++j, jm <<= 1) ;
           if (j > 0) {
             b.iushrn(j);
             while (j-- > 0) {
@@ -2659,10 +2595,8 @@ var require_bn = __commonJS({
         return res;
       };
       BN.prototype.gcd = function gcd(num) {
-        if (this.isZero())
-          return num.abs();
-        if (num.isZero())
-          return this.abs();
+        if (this.isZero()) return num.abs();
+        if (num.isZero()) return this.abs();
         var a = this.clone();
         var b = num.clone();
         a.negative = 0;
@@ -2731,10 +2665,8 @@ var require_bn = __commonJS({
       };
       BN.prototype.cmpn = function cmpn(num) {
         var negative = num < 0;
-        if (this.negative !== 0 && !negative)
-          return -1;
-        if (this.negative === 0 && negative)
-          return 1;
+        if (this.negative !== 0 && !negative) return -1;
+        if (this.negative === 0 && negative) return 1;
         this.strip();
         var res;
         if (this.length > 1) {
@@ -2747,31 +2679,24 @@ var require_bn = __commonJS({
           var w = this.words[0] | 0;
           res = w === num ? 0 : w < num ? -1 : 1;
         }
-        if (this.negative !== 0)
-          return -res | 0;
+        if (this.negative !== 0) return -res | 0;
         return res;
       };
       BN.prototype.cmp = function cmp(num) {
-        if (this.negative !== 0 && num.negative === 0)
-          return -1;
-        if (this.negative === 0 && num.negative !== 0)
-          return 1;
+        if (this.negative !== 0 && num.negative === 0) return -1;
+        if (this.negative === 0 && num.negative !== 0) return 1;
         var res = this.ucmp(num);
-        if (this.negative !== 0)
-          return -res | 0;
+        if (this.negative !== 0) return -res | 0;
         return res;
       };
       BN.prototype.ucmp = function ucmp(num) {
-        if (this.length > num.length)
-          return 1;
-        if (this.length < num.length)
-          return -1;
+        if (this.length > num.length) return 1;
+        if (this.length < num.length) return -1;
         var res = 0;
         for (var i = this.length - 1; i >= 0; i--) {
           var a = this.words[i] | 0;
           var b = num.words[i] | 0;
-          if (a === b)
-            continue;
+          if (a === b) continue;
           if (a < b) {
             res = -1;
           } else if (a > b) {
@@ -3032,8 +2957,7 @@ var require_bn = __commonJS({
         return num;
       };
       BN._prime = function prime(name2) {
-        if (primes[name2])
-          return primes[name2];
+        if (primes[name2]) return primes[name2];
         var prime2;
         if (name2 === "k256") {
           prime2 = new K256();
@@ -3072,8 +2996,7 @@ var require_bn = __commonJS({
         );
       };
       Red.prototype.imod = function imod(a) {
-        if (this.prime)
-          return this.prime.ireduce(a)._forceRed(this);
+        if (this.prime) return this.prime.ireduce(a)._forceRed(this);
         return a.umod(this.m)._forceRed(this);
       };
       Red.prototype.neg = function neg(a) {
@@ -3133,8 +3056,7 @@ var require_bn = __commonJS({
         return this.mul(a, a);
       };
       Red.prototype.sqrt = function sqrt(a) {
-        if (a.isZero())
-          return a.clone();
+        if (a.isZero()) return a.clone();
         var mod3 = this.m.andln(3);
         assert(mod3 % 2 === 1);
         if (mod3 === 3) {
@@ -3184,10 +3106,8 @@ var require_bn = __commonJS({
         }
       };
       Red.prototype.pow = function pow(a, num) {
-        if (num.isZero())
-          return new BN(1).toRed(this);
-        if (num.cmpn(1) === 0)
-          return a.clone();
+        if (num.isZero()) return new BN(1).toRed(this);
+        if (num.cmpn(1) === 0) return a.clone();
         var windowSize = 4;
         var wnd = new Array(1 << windowSize);
         wnd[0] = new BN(1).toRed(this);
@@ -3216,8 +3136,7 @@ var require_bn = __commonJS({
             current <<= 1;
             current |= bit;
             currentLen++;
-            if (currentLen !== windowSize && (i !== 0 || j !== 0))
-              continue;
+            if (currentLen !== windowSize && (i !== 0 || j !== 0)) continue;
             res = this.mul(res, wnd[current]);
             currentLen = 0;
             current = 0;
@@ -3278,8 +3197,7 @@ var require_bn = __commonJS({
         return res._forceRed(this);
       };
       Mont.prototype.mul = function mul(a, b) {
-        if (a.isZero() || b.isZero())
-          return new BN(0)._forceRed(this);
+        if (a.isZero() || b.isZero()) return new BN(0)._forceRed(this);
         var t = a.mul(b);
         var c = t.maskn(this.shift).mul(this.minv).imaskn(this.shift).mul(this.m);
         var u = t.isub(c).iushrn(this.shift);
@@ -4722,8 +4640,7 @@ var require_lib4 = __commonJS({
     };
     var __generator2 = exports2 && exports2.__generator || function(thisArg, body) {
       var _ = { label: 0, sent: function() {
-        if (t[0] & 1)
-          throw t[1];
+        if (t[0] & 1) throw t[1];
         return t[1];
       }, trys: [], ops: [] }, f, y, t, g;
       return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() {
@@ -4735,64 +4652,58 @@ var require_lib4 = __commonJS({
         };
       }
       function step(op) {
-        if (f)
-          throw new TypeError("Generator is already executing.");
-        while (_)
-          try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done)
-              return t;
-            if (y = 0, t)
-              op = [op[0] & 2, t.value];
-            switch (op[0]) {
-              case 0:
-              case 1:
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+          if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+          if (y = 0, t) op = [op[0] & 2, t.value];
+          switch (op[0]) {
+            case 0:
+            case 1:
+              t = op;
+              break;
+            case 4:
+              _.label++;
+              return { value: op[1], done: false };
+            case 5:
+              _.label++;
+              y = op[1];
+              op = [0];
+              continue;
+            case 7:
+              op = _.ops.pop();
+              _.trys.pop();
+              continue;
+            default:
+              if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
+                _ = 0;
+                continue;
+              }
+              if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
+                _.label = op[1];
+                break;
+              }
+              if (op[0] === 6 && _.label < t[1]) {
+                _.label = t[1];
                 t = op;
                 break;
-              case 4:
-                _.label++;
-                return { value: op[1], done: false };
-              case 5:
-                _.label++;
-                y = op[1];
-                op = [0];
-                continue;
-              case 7:
-                op = _.ops.pop();
-                _.trys.pop();
-                continue;
-              default:
-                if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
-                  _ = 0;
-                  continue;
-                }
-                if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
-                  _.label = op[1];
-                  break;
-                }
-                if (op[0] === 6 && _.label < t[1]) {
-                  _.label = t[1];
-                  t = op;
-                  break;
-                }
-                if (t && _.label < t[2]) {
-                  _.label = t[2];
-                  _.ops.push(op);
-                  break;
-                }
-                if (t[2])
-                  _.ops.pop();
-                _.trys.pop();
-                continue;
-            }
-            op = body.call(thisArg, _);
-          } catch (e) {
-            op = [6, e];
-            y = 0;
-          } finally {
-            f = t = 0;
+              }
+              if (t && _.label < t[2]) {
+                _.label = t[2];
+                _.ops.push(op);
+                break;
+              }
+              if (t[2]) _.ops.pop();
+              _.trys.pop();
+              continue;
           }
-        if (op[0] & 5)
-          throw op[1];
+          op = body.call(thisArg, _);
+        } catch (e) {
+          op = [6, e];
+          y = 0;
+        } finally {
+          f = t = 0;
+        }
+        if (op[0] & 5) throw op[1];
         return { value: op[0] ? op[1] : void 0, done: true };
       }
     };
@@ -4950,9 +4861,7 @@ var require_fragments = __commonJS({
         extendStatics2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
           d2.__proto__ = b2;
         } || function(d2, b2) {
-          for (var p in b2)
-            if (Object.prototype.hasOwnProperty.call(b2, p))
-              d2[p] = b2[p];
+          for (var p in b2) if (Object.prototype.hasOwnProperty.call(b2, p)) d2[p] = b2[p];
         };
         return extendStatics2(d, b);
       };
@@ -5065,6 +4974,7 @@ var require_fragments = __commonJS({
             delete node.parent;
             node = sibling;
             break;
+          // Hit a space...
           case " ":
             if (node.state.allowType) {
               if (node.type !== "") {
@@ -6989,9 +6899,7 @@ var require_address = __commonJS({
         extendStatics2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
           d2.__proto__ = b2;
         } || function(d2, b2) {
-          for (var p in b2)
-            if (Object.prototype.hasOwnProperty.call(b2, p))
-              d2[p] = b2[p];
+          for (var p in b2) if (Object.prototype.hasOwnProperty.call(b2, p)) d2[p] = b2[p];
         };
         return extendStatics2(d, b);
       };
@@ -7047,9 +6955,7 @@ var require_anonymous = __commonJS({
         extendStatics2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
           d2.__proto__ = b2;
         } || function(d2, b2) {
-          for (var p in b2)
-            if (Object.prototype.hasOwnProperty.call(b2, p))
-              d2[p] = b2[p];
+          for (var p in b2) if (Object.prototype.hasOwnProperty.call(b2, p)) d2[p] = b2[p];
         };
         return extendStatics2(d, b);
       };
@@ -7100,9 +7006,7 @@ var require_array = __commonJS({
         extendStatics2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
           d2.__proto__ = b2;
         } || function(d2, b2) {
-          for (var p in b2)
-            if (Object.prototype.hasOwnProperty.call(b2, p))
-              d2[p] = b2[p];
+          for (var p in b2) if (Object.prototype.hasOwnProperty.call(b2, p)) d2[p] = b2[p];
         };
         return extendStatics2(d, b);
       };
@@ -7334,9 +7238,7 @@ var require_boolean = __commonJS({
         extendStatics2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
           d2.__proto__ = b2;
         } || function(d2, b2) {
-          for (var p in b2)
-            if (Object.prototype.hasOwnProperty.call(b2, p))
-              d2[p] = b2[p];
+          for (var p in b2) if (Object.prototype.hasOwnProperty.call(b2, p)) d2[p] = b2[p];
         };
         return extendStatics2(d, b);
       };
@@ -7385,9 +7287,7 @@ var require_bytes = __commonJS({
         extendStatics2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
           d2.__proto__ = b2;
         } || function(d2, b2) {
-          for (var p in b2)
-            if (Object.prototype.hasOwnProperty.call(b2, p))
-              d2[p] = b2[p];
+          for (var p in b2) if (Object.prototype.hasOwnProperty.call(b2, p)) d2[p] = b2[p];
         };
         return extendStatics2(d, b);
       };
@@ -7454,9 +7354,7 @@ var require_fixed_bytes = __commonJS({
         extendStatics2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
           d2.__proto__ = b2;
         } || function(d2, b2) {
-          for (var p in b2)
-            if (Object.prototype.hasOwnProperty.call(b2, p))
-              d2[p] = b2[p];
+          for (var p in b2) if (Object.prototype.hasOwnProperty.call(b2, p)) d2[p] = b2[p];
         };
         return extendStatics2(d, b);
       };
@@ -7514,9 +7412,7 @@ var require_null = __commonJS({
         extendStatics2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
           d2.__proto__ = b2;
         } || function(d2, b2) {
-          for (var p in b2)
-            if (Object.prototype.hasOwnProperty.call(b2, p))
-              d2[p] = b2[p];
+          for (var p in b2) if (Object.prototype.hasOwnProperty.call(b2, p)) d2[p] = b2[p];
         };
         return extendStatics2(d, b);
       };
@@ -7671,9 +7567,7 @@ var require_number = __commonJS({
         extendStatics2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
           d2.__proto__ = b2;
         } || function(d2, b2) {
-          for (var p in b2)
-            if (Object.prototype.hasOwnProperty.call(b2, p))
-              d2[p] = b2[p];
+          for (var p in b2) if (Object.prototype.hasOwnProperty.call(b2, p)) d2[p] = b2[p];
         };
         return extendStatics2(d, b);
       };
@@ -8244,9 +8138,7 @@ var require_string = __commonJS({
         extendStatics2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
           d2.__proto__ = b2;
         } || function(d2, b2) {
-          for (var p in b2)
-            if (Object.prototype.hasOwnProperty.call(b2, p))
-              d2[p] = b2[p];
+          for (var p in b2) if (Object.prototype.hasOwnProperty.call(b2, p)) d2[p] = b2[p];
         };
         return extendStatics2(d, b);
       };
@@ -8296,9 +8188,7 @@ var require_tuple = __commonJS({
         extendStatics2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
           d2.__proto__ = b2;
         } || function(d2, b2) {
-          for (var p in b2)
-            if (Object.prototype.hasOwnProperty.call(b2, p))
-              d2[p] = b2[p];
+          for (var p in b2) if (Object.prototype.hasOwnProperty.call(b2, p)) d2[p] = b2[p];
         };
         return extendStatics2(d, b);
       };
@@ -8629,8 +8519,7 @@ var require_typed_data = __commonJS({
     };
     var __generator2 = exports2 && exports2.__generator || function(thisArg, body) {
       var _ = { label: 0, sent: function() {
-        if (t[0] & 1)
-          throw t[1];
+        if (t[0] & 1) throw t[1];
         return t[1];
       }, trys: [], ops: [] }, f, y, t, g;
       return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() {
@@ -8642,64 +8531,58 @@ var require_typed_data = __commonJS({
         };
       }
       function step(op) {
-        if (f)
-          throw new TypeError("Generator is already executing.");
-        while (_)
-          try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done)
-              return t;
-            if (y = 0, t)
-              op = [op[0] & 2, t.value];
-            switch (op[0]) {
-              case 0:
-              case 1:
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+          if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+          if (y = 0, t) op = [op[0] & 2, t.value];
+          switch (op[0]) {
+            case 0:
+            case 1:
+              t = op;
+              break;
+            case 4:
+              _.label++;
+              return { value: op[1], done: false };
+            case 5:
+              _.label++;
+              y = op[1];
+              op = [0];
+              continue;
+            case 7:
+              op = _.ops.pop();
+              _.trys.pop();
+              continue;
+            default:
+              if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
+                _ = 0;
+                continue;
+              }
+              if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
+                _.label = op[1];
+                break;
+              }
+              if (op[0] === 6 && _.label < t[1]) {
+                _.label = t[1];
                 t = op;
                 break;
-              case 4:
-                _.label++;
-                return { value: op[1], done: false };
-              case 5:
-                _.label++;
-                y = op[1];
-                op = [0];
-                continue;
-              case 7:
-                op = _.ops.pop();
-                _.trys.pop();
-                continue;
-              default:
-                if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
-                  _ = 0;
-                  continue;
-                }
-                if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
-                  _.label = op[1];
-                  break;
-                }
-                if (op[0] === 6 && _.label < t[1]) {
-                  _.label = t[1];
-                  t = op;
-                  break;
-                }
-                if (t && _.label < t[2]) {
-                  _.label = t[2];
-                  _.ops.push(op);
-                  break;
-                }
-                if (t[2])
-                  _.ops.pop();
-                _.trys.pop();
-                continue;
-            }
-            op = body.call(thisArg, _);
-          } catch (e) {
-            op = [6, e];
-            y = 0;
-          } finally {
-            f = t = 0;
+              }
+              if (t && _.label < t[2]) {
+                _.label = t[2];
+                _.ops.push(op);
+                break;
+              }
+              if (t[2]) _.ops.pop();
+              _.trys.pop();
+              continue;
           }
-        if (op[0] & 5)
-          throw op[1];
+          op = body.call(thisArg, _);
+        } catch (e) {
+          op = [6, e];
+          y = 0;
+        } finally {
+          f = t = 0;
+        }
+        if (op[0] & 5) throw op[1];
         return { value: op[0] ? op[1] : void 0, done: true };
       }
     };
@@ -9076,8 +8959,7 @@ var require_typed_data = __commonJS({
                   _i = 0;
                   _e.label = 1;
                 case 1:
-                  if (!(_i < _a7.length))
-                    return [3, 4];
+                  if (!(_i < _a7.length)) return [3, 4];
                   name_4 = _a7[_i];
                   _c = ensCache;
                   _d = name_4;
@@ -9196,9 +9078,7 @@ var require_interface = __commonJS({
         extendStatics2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
           d2.__proto__ = b2;
         } || function(d2, b2) {
-          for (var p in b2)
-            if (Object.prototype.hasOwnProperty.call(b2, p))
-              d2[p] = b2[p];
+          for (var p in b2) if (Object.prototype.hasOwnProperty.call(b2, p)) d2[p] = b2[p];
         };
         return extendStatics2(d, b);
       };
@@ -10673,8 +10553,7 @@ var require_inherits = __commonJS({
     "use strict";
     try {
       util = require("util");
-      if (typeof util.inherits !== "function")
-        throw "";
+      if (typeof util.inherits !== "function") throw "";
       module2.exports = util.inherits;
     } catch (e) {
       module2.exports = require_inherits_browser();
@@ -15366,14 +15245,12 @@ var require_lib17 = __commonJS({
   "node_modules/@ethersproject/transactions/lib/index.js"(exports2) {
     "use strict";
     var __createBinding2 = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
-      if (k2 === void 0)
-        k2 = k;
+      if (k2 === void 0) k2 = k;
       Object.defineProperty(o, k2, { enumerable: true, get: function() {
         return m[k];
       } });
     } : function(o, m, k, k2) {
-      if (k2 === void 0)
-        k2 = k;
+      if (k2 === void 0) k2 = k;
       o[k2] = m[k];
     });
     var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
@@ -15382,13 +15259,10 @@ var require_lib17 = __commonJS({
       o["default"] = v;
     });
     var __importStar2 = exports2 && exports2.__importStar || function(mod) {
-      if (mod && mod.__esModule)
-        return mod;
+      if (mod && mod.__esModule) return mod;
       var result = {};
       if (mod != null) {
-        for (var k in mod)
-          if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k))
-            __createBinding2(result, mod, k);
+        for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding2(result, mod, k);
       }
       __setModuleDefault(result, mod);
       return result;
@@ -15847,9 +15721,7 @@ var require_lang_cz = __commonJS({
         extendStatics2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
           d2.__proto__ = b2;
         } || function(d2, b2) {
-          for (var p in b2)
-            if (Object.prototype.hasOwnProperty.call(b2, p))
-              d2[p] = b2[p];
+          for (var p in b2) if (Object.prototype.hasOwnProperty.call(b2, p)) d2[p] = b2[p];
         };
         return extendStatics2(d, b);
       };
@@ -15911,9 +15783,7 @@ var require_lang_en = __commonJS({
         extendStatics2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
           d2.__proto__ = b2;
         } || function(d2, b2) {
-          for (var p in b2)
-            if (Object.prototype.hasOwnProperty.call(b2, p))
-              d2[p] = b2[p];
+          for (var p in b2) if (Object.prototype.hasOwnProperty.call(b2, p)) d2[p] = b2[p];
         };
         return extendStatics2(d, b);
       };
@@ -15975,9 +15845,7 @@ var require_lang_es = __commonJS({
         extendStatics2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
           d2.__proto__ = b2;
         } || function(d2, b2) {
-          for (var p in b2)
-            if (Object.prototype.hasOwnProperty.call(b2, p))
-              d2[p] = b2[p];
+          for (var p in b2) if (Object.prototype.hasOwnProperty.call(b2, p)) d2[p] = b2[p];
         };
         return extendStatics2(d, b);
       };
@@ -16068,9 +15936,7 @@ var require_lang_fr = __commonJS({
         extendStatics2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
           d2.__proto__ = b2;
         } || function(d2, b2) {
-          for (var p in b2)
-            if (Object.prototype.hasOwnProperty.call(b2, p))
-              d2[p] = b2[p];
+          for (var p in b2) if (Object.prototype.hasOwnProperty.call(b2, p)) d2[p] = b2[p];
         };
         return extendStatics2(d, b);
       };
@@ -16160,9 +16026,7 @@ var require_lang_ja = __commonJS({
         extendStatics2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
           d2.__proto__ = b2;
         } || function(d2, b2) {
-          for (var p in b2)
-            if (Object.prototype.hasOwnProperty.call(b2, p))
-              d2[p] = b2[p];
+          for (var p in b2) if (Object.prototype.hasOwnProperty.call(b2, p)) d2[p] = b2[p];
         };
         return extendStatics2(d, b);
       };
@@ -16306,9 +16170,7 @@ var require_lang_ko = __commonJS({
         extendStatics2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
           d2.__proto__ = b2;
         } || function(d2, b2) {
-          for (var p in b2)
-            if (Object.prototype.hasOwnProperty.call(b2, p))
-              d2[p] = b2[p];
+          for (var p in b2) if (Object.prototype.hasOwnProperty.call(b2, p)) d2[p] = b2[p];
         };
         return extendStatics2(d, b);
       };
@@ -16400,9 +16262,7 @@ var require_lang_it = __commonJS({
         extendStatics2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
           d2.__proto__ = b2;
         } || function(d2, b2) {
-          for (var p in b2)
-            if (Object.prototype.hasOwnProperty.call(b2, p))
-              d2[p] = b2[p];
+          for (var p in b2) if (Object.prototype.hasOwnProperty.call(b2, p)) d2[p] = b2[p];
         };
         return extendStatics2(d, b);
       };
@@ -16464,9 +16324,7 @@ var require_lang_zh = __commonJS({
         extendStatics2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
           d2.__proto__ = b2;
         } || function(d2, b2) {
-          for (var p in b2)
-            if (Object.prototype.hasOwnProperty.call(b2, p))
-              d2[p] = b2[p];
+          for (var p in b2) if (Object.prototype.hasOwnProperty.call(b2, p)) d2[p] = b2[p];
         };
         return extendStatics2(d, b);
       };
@@ -16821,9 +16679,11 @@ var require_lib19 = __commonJS({
           var chainCode = (0, bytes_1.hexlify)(bytes.slice(13, 45));
           var key = bytes.slice(45, 78);
           switch ((0, bytes_1.hexlify)(bytes.slice(0, 4))) {
+            // Public Key
             case "0x0488b21e":
             case "0x043587cf":
               return new HDNode2(_constructorGuard, null, (0, bytes_1.hexlify)(key), parentFingerprint, chainCode, index, depth, null);
+            // Private Key
             case "0x0488ade4":
             case "0x04358394 ":
               if (key[0] !== 0) {
@@ -17561,9 +17421,7 @@ var require_crowdsale = __commonJS({
         extendStatics2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
           d2.__proto__ = b2;
         } || function(d2, b2) {
-          for (var p in b2)
-            if (Object.prototype.hasOwnProperty.call(b2, p))
-              d2[p] = b2[p];
+          for (var p in b2) if (Object.prototype.hasOwnProperty.call(b2, p)) d2[p] = b2[p];
         };
         return extendStatics2(d, b);
       };
@@ -17871,15 +17729,12 @@ var require_scrypt = __commonJS({
         for (i = innerLen - 4; i < innerLen; i++) {
           inner[i] = 0;
         }
-        for (i = 0; i < 64; i++)
-          outerKey[i] = 92;
-        for (i = 0; i < password.length; i++)
-          outerKey[i] ^= password[i];
+        for (i = 0; i < 64; i++) outerKey[i] = 92;
+        for (i = 0; i < password.length; i++) outerKey[i] ^= password[i];
         function incrementCounter() {
           for (let i2 = innerLen - 1; i2 >= innerLen - 4; i2--) {
             inner[i2]++;
-            if (inner[i2] <= 255)
-              return;
+            if (inner[i2] <= 255) return;
             inner[i2] = 0;
           }
         }
@@ -18033,6 +17888,7 @@ var require_scrypt = __commonJS({
               arraycopy(B, Bi, XY, 0, Yi);
               state = 1;
               i1 = 0;
+            // Fall through
             case 1:
               steps = N - i1;
               if (steps > limit) {
@@ -18059,6 +17915,7 @@ var require_scrypt = __commonJS({
               }
               i1 = 0;
               state = 2;
+            // Fall through
             case 2:
               steps = N - i1;
               if (steps > limit) {
@@ -18219,9 +18076,7 @@ var require_keystore = __commonJS({
         extendStatics2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
           d2.__proto__ = b2;
         } || function(d2, b2) {
-          for (var p in b2)
-            if (Object.prototype.hasOwnProperty.call(b2, p))
-              d2[p] = b2[p];
+          for (var p in b2) if (Object.prototype.hasOwnProperty.call(b2, p)) d2[p] = b2[p];
         };
         return extendStatics2(d, b);
       };
@@ -18264,8 +18119,7 @@ var require_keystore = __commonJS({
     };
     var __generator2 = exports2 && exports2.__generator || function(thisArg, body) {
       var _ = { label: 0, sent: function() {
-        if (t[0] & 1)
-          throw t[1];
+        if (t[0] & 1) throw t[1];
         return t[1];
       }, trys: [], ops: [] }, f, y, t, g;
       return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() {
@@ -18277,64 +18131,58 @@ var require_keystore = __commonJS({
         };
       }
       function step(op) {
-        if (f)
-          throw new TypeError("Generator is already executing.");
-        while (_)
-          try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done)
-              return t;
-            if (y = 0, t)
-              op = [op[0] & 2, t.value];
-            switch (op[0]) {
-              case 0:
-              case 1:
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+          if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+          if (y = 0, t) op = [op[0] & 2, t.value];
+          switch (op[0]) {
+            case 0:
+            case 1:
+              t = op;
+              break;
+            case 4:
+              _.label++;
+              return { value: op[1], done: false };
+            case 5:
+              _.label++;
+              y = op[1];
+              op = [0];
+              continue;
+            case 7:
+              op = _.ops.pop();
+              _.trys.pop();
+              continue;
+            default:
+              if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
+                _ = 0;
+                continue;
+              }
+              if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
+                _.label = op[1];
+                break;
+              }
+              if (op[0] === 6 && _.label < t[1]) {
+                _.label = t[1];
                 t = op;
                 break;
-              case 4:
-                _.label++;
-                return { value: op[1], done: false };
-              case 5:
-                _.label++;
-                y = op[1];
-                op = [0];
-                continue;
-              case 7:
-                op = _.ops.pop();
-                _.trys.pop();
-                continue;
-              default:
-                if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
-                  _ = 0;
-                  continue;
-                }
-                if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
-                  _.label = op[1];
-                  break;
-                }
-                if (op[0] === 6 && _.label < t[1]) {
-                  _.label = t[1];
-                  t = op;
-                  break;
-                }
-                if (t && _.label < t[2]) {
-                  _.label = t[2];
-                  _.ops.push(op);
-                  break;
-                }
-                if (t[2])
-                  _.ops.pop();
-                _.trys.pop();
-                continue;
-            }
-            op = body.call(thisArg, _);
-          } catch (e) {
-            op = [6, e];
-            y = 0;
-          } finally {
-            f = t = 0;
+              }
+              if (t && _.label < t[2]) {
+                _.label = t[2];
+                _.ops.push(op);
+                break;
+              }
+              if (t[2]) _.ops.pop();
+              _.trys.pop();
+              continue;
           }
-        if (op[0] & 5)
-          throw op[1];
+          op = body.call(thisArg, _);
+        } catch (e) {
+          op = [6, e];
+          y = 0;
+        } finally {
+          f = t = 0;
+        }
+        if (op[0] & 5) throw op[1];
         return { value: op[0] ? op[1] : void 0, done: true };
       }
     };
@@ -18924,9 +18772,7 @@ var require_lib24 = __commonJS({
         extendStatics2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
           d2.__proto__ = b2;
         } || function(d2, b2) {
-          for (var p in b2)
-            if (Object.prototype.hasOwnProperty.call(b2, p))
-              d2[p] = b2[p];
+          for (var p in b2) if (Object.prototype.hasOwnProperty.call(b2, p)) d2[p] = b2[p];
         };
         return extendStatics2(d, b);
       };
@@ -18969,8 +18815,7 @@ var require_lib24 = __commonJS({
     };
     var __generator2 = exports2 && exports2.__generator || function(thisArg, body) {
       var _ = { label: 0, sent: function() {
-        if (t[0] & 1)
-          throw t[1];
+        if (t[0] & 1) throw t[1];
         return t[1];
       }, trys: [], ops: [] }, f, y, t, g;
       return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() {
@@ -18982,64 +18827,58 @@ var require_lib24 = __commonJS({
         };
       }
       function step(op) {
-        if (f)
-          throw new TypeError("Generator is already executing.");
-        while (_)
-          try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done)
-              return t;
-            if (y = 0, t)
-              op = [op[0] & 2, t.value];
-            switch (op[0]) {
-              case 0:
-              case 1:
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+          if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+          if (y = 0, t) op = [op[0] & 2, t.value];
+          switch (op[0]) {
+            case 0:
+            case 1:
+              t = op;
+              break;
+            case 4:
+              _.label++;
+              return { value: op[1], done: false };
+            case 5:
+              _.label++;
+              y = op[1];
+              op = [0];
+              continue;
+            case 7:
+              op = _.ops.pop();
+              _.trys.pop();
+              continue;
+            default:
+              if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
+                _ = 0;
+                continue;
+              }
+              if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
+                _.label = op[1];
+                break;
+              }
+              if (op[0] === 6 && _.label < t[1]) {
+                _.label = t[1];
                 t = op;
                 break;
-              case 4:
-                _.label++;
-                return { value: op[1], done: false };
-              case 5:
-                _.label++;
-                y = op[1];
-                op = [0];
-                continue;
-              case 7:
-                op = _.ops.pop();
-                _.trys.pop();
-                continue;
-              default:
-                if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
-                  _ = 0;
-                  continue;
-                }
-                if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
-                  _.label = op[1];
-                  break;
-                }
-                if (op[0] === 6 && _.label < t[1]) {
-                  _.label = t[1];
-                  t = op;
-                  break;
-                }
-                if (t && _.label < t[2]) {
-                  _.label = t[2];
-                  _.ops.push(op);
-                  break;
-                }
-                if (t[2])
-                  _.ops.pop();
-                _.trys.pop();
-                continue;
-            }
-            op = body.call(thisArg, _);
-          } catch (e) {
-            op = [6, e];
-            y = 0;
-          } finally {
-            f = t = 0;
+              }
+              if (t && _.label < t[2]) {
+                _.label = t[2];
+                _.ops.push(op);
+                break;
+              }
+              if (t[2]) _.ops.pop();
+              _.trys.pop();
+              continue;
           }
-        if (op[0] & 5)
-          throw op[1];
+          op = body.call(thisArg, _);
+        } catch (e) {
+          op = [6, e];
+          y = 0;
+        } finally {
+          f = t = 0;
+        }
+        if (op[0] & 5) throw op[1];
         return { value: op[0] ? op[1] : void 0, done: true };
       }
     };
@@ -19199,9 +19038,7 @@ var require_lib25 = __commonJS({
         extendStatics2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
           d2.__proto__ = b2;
         } || function(d2, b2) {
-          for (var p in b2)
-            if (Object.prototype.hasOwnProperty.call(b2, p))
-              d2[p] = b2[p];
+          for (var p in b2) if (Object.prototype.hasOwnProperty.call(b2, p)) d2[p] = b2[p];
         };
         return extendStatics2(d, b);
       };
@@ -19244,8 +19081,7 @@ var require_lib25 = __commonJS({
     };
     var __generator2 = exports2 && exports2.__generator || function(thisArg, body) {
       var _ = { label: 0, sent: function() {
-        if (t[0] & 1)
-          throw t[1];
+        if (t[0] & 1) throw t[1];
         return t[1];
       }, trys: [], ops: [] }, f, y, t, g;
       return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() {
@@ -19257,64 +19093,58 @@ var require_lib25 = __commonJS({
         };
       }
       function step(op) {
-        if (f)
-          throw new TypeError("Generator is already executing.");
-        while (_)
-          try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done)
-              return t;
-            if (y = 0, t)
-              op = [op[0] & 2, t.value];
-            switch (op[0]) {
-              case 0:
-              case 1:
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+          if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+          if (y = 0, t) op = [op[0] & 2, t.value];
+          switch (op[0]) {
+            case 0:
+            case 1:
+              t = op;
+              break;
+            case 4:
+              _.label++;
+              return { value: op[1], done: false };
+            case 5:
+              _.label++;
+              y = op[1];
+              op = [0];
+              continue;
+            case 7:
+              op = _.ops.pop();
+              _.trys.pop();
+              continue;
+            default:
+              if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
+                _ = 0;
+                continue;
+              }
+              if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
+                _.label = op[1];
+                break;
+              }
+              if (op[0] === 6 && _.label < t[1]) {
+                _.label = t[1];
                 t = op;
                 break;
-              case 4:
-                _.label++;
-                return { value: op[1], done: false };
-              case 5:
-                _.label++;
-                y = op[1];
-                op = [0];
-                continue;
-              case 7:
-                op = _.ops.pop();
-                _.trys.pop();
-                continue;
-              default:
-                if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
-                  _ = 0;
-                  continue;
-                }
-                if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
-                  _.label = op[1];
-                  break;
-                }
-                if (op[0] === 6 && _.label < t[1]) {
-                  _.label = t[1];
-                  t = op;
-                  break;
-                }
-                if (t && _.label < t[2]) {
-                  _.label = t[2];
-                  _.ops.push(op);
-                  break;
-                }
-                if (t[2])
-                  _.ops.pop();
-                _.trys.pop();
-                continue;
-            }
-            op = body.call(thisArg, _);
-          } catch (e) {
-            op = [6, e];
-            y = 0;
-          } finally {
-            f = t = 0;
+              }
+              if (t && _.label < t[2]) {
+                _.label = t[2];
+                _.ops.push(op);
+                break;
+              }
+              if (t[2]) _.ops.pop();
+              _.trys.pop();
+              continue;
           }
-        if (op[0] & 5)
-          throw op[1];
+          op = body.call(thisArg, _);
+        } catch (e) {
+          op = [6, e];
+          y = 0;
+        } finally {
+          f = t = 0;
+        }
+        if (op[0] & 5) throw op[1];
         return { value: op[0] ? op[1] : void 0, done: true };
       }
     };
@@ -19548,13 +19378,11 @@ var require_lib25 = __commonJS({
                   } else if ((tx.type === 0 || tx.type === 1) && hasEip1559) {
                     logger2.throwArgumentError("pre-eip-1559 transaction do not support maxFeePerGas/maxPriorityFeePerGas", "transaction", transaction);
                   }
-                  if (!((tx.type === 2 || tx.type == null) && (tx.maxFeePerGas != null && tx.maxPriorityFeePerGas != null)))
-                    return [3, 2];
+                  if (!((tx.type === 2 || tx.type == null) && (tx.maxFeePerGas != null && tx.maxPriorityFeePerGas != null))) return [3, 2];
                   tx.type = 2;
                   return [3, 5];
                 case 2:
-                  if (!(tx.type === 0 || tx.type === 1))
-                    return [3, 3];
+                  if (!(tx.type === 0 || tx.type === 1)) return [3, 3];
                   if (tx.gasPrice == null) {
                     tx.gasPrice = this.getGasPrice();
                   }
@@ -19711,9 +19539,7 @@ var require_lib26 = __commonJS({
         extendStatics2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
           d2.__proto__ = b2;
         } || function(d2, b2) {
-          for (var p in b2)
-            if (Object.prototype.hasOwnProperty.call(b2, p))
-              d2[p] = b2[p];
+          for (var p in b2) if (Object.prototype.hasOwnProperty.call(b2, p)) d2[p] = b2[p];
         };
         return extendStatics2(d, b);
       };
@@ -19756,8 +19582,7 @@ var require_lib26 = __commonJS({
     };
     var __generator2 = exports2 && exports2.__generator || function(thisArg, body) {
       var _ = { label: 0, sent: function() {
-        if (t[0] & 1)
-          throw t[1];
+        if (t[0] & 1) throw t[1];
         return t[1];
       }, trys: [], ops: [] }, f, y, t, g;
       return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() {
@@ -19769,64 +19594,58 @@ var require_lib26 = __commonJS({
         };
       }
       function step(op) {
-        if (f)
-          throw new TypeError("Generator is already executing.");
-        while (_)
-          try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done)
-              return t;
-            if (y = 0, t)
-              op = [op[0] & 2, t.value];
-            switch (op[0]) {
-              case 0:
-              case 1:
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+          if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+          if (y = 0, t) op = [op[0] & 2, t.value];
+          switch (op[0]) {
+            case 0:
+            case 1:
+              t = op;
+              break;
+            case 4:
+              _.label++;
+              return { value: op[1], done: false };
+            case 5:
+              _.label++;
+              y = op[1];
+              op = [0];
+              continue;
+            case 7:
+              op = _.ops.pop();
+              _.trys.pop();
+              continue;
+            default:
+              if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
+                _ = 0;
+                continue;
+              }
+              if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
+                _.label = op[1];
+                break;
+              }
+              if (op[0] === 6 && _.label < t[1]) {
+                _.label = t[1];
                 t = op;
                 break;
-              case 4:
-                _.label++;
-                return { value: op[1], done: false };
-              case 5:
-                _.label++;
-                y = op[1];
-                op = [0];
-                continue;
-              case 7:
-                op = _.ops.pop();
-                _.trys.pop();
-                continue;
-              default:
-                if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
-                  _ = 0;
-                  continue;
-                }
-                if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
-                  _.label = op[1];
-                  break;
-                }
-                if (op[0] === 6 && _.label < t[1]) {
-                  _.label = t[1];
-                  t = op;
-                  break;
-                }
-                if (t && _.label < t[2]) {
-                  _.label = t[2];
-                  _.ops.push(op);
-                  break;
-                }
-                if (t[2])
-                  _.ops.pop();
-                _.trys.pop();
-                continue;
-            }
-            op = body.call(thisArg, _);
-          } catch (e) {
-            op = [6, e];
-            y = 0;
-          } finally {
-            f = t = 0;
+              }
+              if (t && _.label < t[2]) {
+                _.label = t[2];
+                _.ops.push(op);
+                break;
+              }
+              if (t[2]) _.ops.pop();
+              _.trys.pop();
+              continue;
           }
-        if (op[0] & 5)
-          throw op[1];
+          op = body.call(thisArg, _);
+        } catch (e) {
+          op = [6, e];
+          y = 0;
+        } finally {
+          f = t = 0;
+        }
+        if (op[0] & 5) throw op[1];
         return { value: op[0] ? op[1] : void 0, done: true };
       }
     };
@@ -20087,8 +19906,7 @@ var require_geturl = __commonJS({
     };
     var __generator2 = exports2 && exports2.__generator || function(thisArg, body) {
       var _ = { label: 0, sent: function() {
-        if (t[0] & 1)
-          throw t[1];
+        if (t[0] & 1) throw t[1];
         return t[1];
       }, trys: [], ops: [] }, f, y, t, g;
       return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() {
@@ -20100,64 +19918,58 @@ var require_geturl = __commonJS({
         };
       }
       function step(op) {
-        if (f)
-          throw new TypeError("Generator is already executing.");
-        while (_)
-          try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done)
-              return t;
-            if (y = 0, t)
-              op = [op[0] & 2, t.value];
-            switch (op[0]) {
-              case 0:
-              case 1:
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+          if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+          if (y = 0, t) op = [op[0] & 2, t.value];
+          switch (op[0]) {
+            case 0:
+            case 1:
+              t = op;
+              break;
+            case 4:
+              _.label++;
+              return { value: op[1], done: false };
+            case 5:
+              _.label++;
+              y = op[1];
+              op = [0];
+              continue;
+            case 7:
+              op = _.ops.pop();
+              _.trys.pop();
+              continue;
+            default:
+              if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
+                _ = 0;
+                continue;
+              }
+              if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
+                _.label = op[1];
+                break;
+              }
+              if (op[0] === 6 && _.label < t[1]) {
+                _.label = t[1];
                 t = op;
                 break;
-              case 4:
-                _.label++;
-                return { value: op[1], done: false };
-              case 5:
-                _.label++;
-                y = op[1];
-                op = [0];
-                continue;
-              case 7:
-                op = _.ops.pop();
-                _.trys.pop();
-                continue;
-              default:
-                if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
-                  _ = 0;
-                  continue;
-                }
-                if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
-                  _.label = op[1];
-                  break;
-                }
-                if (op[0] === 6 && _.label < t[1]) {
-                  _.label = t[1];
-                  t = op;
-                  break;
-                }
-                if (t && _.label < t[2]) {
-                  _.label = t[2];
-                  _.ops.push(op);
-                  break;
-                }
-                if (t[2])
-                  _.ops.pop();
-                _.trys.pop();
-                continue;
-            }
-            op = body.call(thisArg, _);
-          } catch (e) {
-            op = [6, e];
-            y = 0;
-          } finally {
-            f = t = 0;
+              }
+              if (t && _.label < t[2]) {
+                _.label = t[2];
+                _.ops.push(op);
+                break;
+              }
+              if (t[2]) _.ops.pop();
+              _.trys.pop();
+              continue;
           }
-        if (op[0] & 5)
-          throw op[1];
+          op = body.call(thisArg, _);
+        } catch (e) {
+          op = [6, e];
+          y = 0;
+        } finally {
+          f = t = 0;
+        }
+        if (op[0] & 5) throw op[1];
         return { value: op[0] ? op[1] : void 0, done: true };
       }
     };
@@ -20303,8 +20115,7 @@ var require_lib27 = __commonJS({
     };
     var __generator2 = exports2 && exports2.__generator || function(thisArg, body) {
       var _ = { label: 0, sent: function() {
-        if (t[0] & 1)
-          throw t[1];
+        if (t[0] & 1) throw t[1];
         return t[1];
       }, trys: [], ops: [] }, f, y, t, g;
       return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() {
@@ -20316,64 +20127,58 @@ var require_lib27 = __commonJS({
         };
       }
       function step(op) {
-        if (f)
-          throw new TypeError("Generator is already executing.");
-        while (_)
-          try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done)
-              return t;
-            if (y = 0, t)
-              op = [op[0] & 2, t.value];
-            switch (op[0]) {
-              case 0:
-              case 1:
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+          if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+          if (y = 0, t) op = [op[0] & 2, t.value];
+          switch (op[0]) {
+            case 0:
+            case 1:
+              t = op;
+              break;
+            case 4:
+              _.label++;
+              return { value: op[1], done: false };
+            case 5:
+              _.label++;
+              y = op[1];
+              op = [0];
+              continue;
+            case 7:
+              op = _.ops.pop();
+              _.trys.pop();
+              continue;
+            default:
+              if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
+                _ = 0;
+                continue;
+              }
+              if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
+                _.label = op[1];
+                break;
+              }
+              if (op[0] === 6 && _.label < t[1]) {
+                _.label = t[1];
                 t = op;
                 break;
-              case 4:
-                _.label++;
-                return { value: op[1], done: false };
-              case 5:
-                _.label++;
-                y = op[1];
-                op = [0];
-                continue;
-              case 7:
-                op = _.ops.pop();
-                _.trys.pop();
-                continue;
-              default:
-                if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
-                  _ = 0;
-                  continue;
-                }
-                if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
-                  _.label = op[1];
-                  break;
-                }
-                if (op[0] === 6 && _.label < t[1]) {
-                  _.label = t[1];
-                  t = op;
-                  break;
-                }
-                if (t && _.label < t[2]) {
-                  _.label = t[2];
-                  _.ops.push(op);
-                  break;
-                }
-                if (t[2])
-                  _.ops.pop();
-                _.trys.pop();
-                continue;
-            }
-            op = body.call(thisArg, _);
-          } catch (e) {
-            op = [6, e];
-            y = 0;
-          } finally {
-            f = t = 0;
+              }
+              if (t && _.label < t[2]) {
+                _.label = t[2];
+                _.ops.push(op);
+                break;
+              }
+              if (t[2]) _.ops.pop();
+              _.trys.pop();
+              continue;
           }
-        if (op[0] & 5)
-          throw op[1];
+          op = body.call(thisArg, _);
+        } catch (e) {
+          op = [6, e];
+          y = 0;
+        } finally {
+          f = t = 0;
+        }
+        if (op[0] & 5) throw op[1];
         return { value: op[0] ? op[1] : void 0, done: true };
       }
     };
@@ -20531,8 +20336,7 @@ var require_lib27 = __commonJS({
                 attempt = 0;
                 _a7.label = 1;
               case 1:
-                if (!(attempt < attemptLimit))
-                  return [3, 20];
+                if (!(attempt < attemptLimit)) return [3, 20];
                 response2 = null;
                 _a7.label = 2;
               case 2:
@@ -20540,10 +20344,8 @@ var require_lib27 = __commonJS({
                 return [4, (0, geturl_1.getUrl)(url, options2)];
               case 3:
                 response2 = _a7.sent();
-                if (!(attempt < attemptLimit))
-                  return [3, 8];
-                if (!(response2.statusCode === 301 || response2.statusCode === 302))
-                  return [3, 4];
+                if (!(attempt < attemptLimit)) return [3, 8];
+                if (!(response2.statusCode === 301 || response2.statusCode === 302)) return [3, 4];
                 location_1 = response2.headers.location || "";
                 if (options2.method === "GET" && location_1.match(/^https:/)) {
                   url = response2.headers.location;
@@ -20551,18 +20353,15 @@ var require_lib27 = __commonJS({
                 }
                 return [3, 8];
               case 4:
-                if (!(response2.statusCode === 429))
-                  return [3, 8];
+                if (!(response2.statusCode === 429)) return [3, 8];
                 tryAgain = true;
-                if (!throttleCallback)
-                  return [3, 6];
+                if (!throttleCallback) return [3, 6];
                 return [4, throttleCallback(attempt, url)];
               case 5:
                 tryAgain = _a7.sent();
                 _a7.label = 6;
               case 6:
-                if (!tryAgain)
-                  return [3, 8];
+                if (!tryAgain) return [3, 8];
                 stall = 0;
                 retryAfter = response2.headers["retry-after"];
                 if (typeof retryAfter === "string" && retryAfter.match(/^[1-9][0-9]*$/)) {
@@ -20604,8 +20403,7 @@ var require_lib27 = __commonJS({
                     url
                   });
                 }
-                if (!processFunc)
-                  return [3, 18];
+                if (!processFunc) return [3, 18];
                 _a7.label = 11;
               case 11:
                 _a7.trys.push([11, 13, , 18]);
@@ -20616,18 +20414,15 @@ var require_lib27 = __commonJS({
                 return [2, result2];
               case 13:
                 error_2 = _a7.sent();
-                if (!(error_2.throttleRetry && attempt < attemptLimit))
-                  return [3, 17];
+                if (!(error_2.throttleRetry && attempt < attemptLimit)) return [3, 17];
                 tryAgain = true;
-                if (!throttleCallback)
-                  return [3, 15];
+                if (!throttleCallback) return [3, 15];
                 return [4, throttleCallback(attempt, url)];
               case 14:
                 tryAgain = _a7.sent();
                 _a7.label = 15;
               case 15:
-                if (!tryAgain)
-                  return [3, 17];
+                if (!tryAgain) return [3, 17];
                 timeout_1 = throttleSlotInterval * parseInt(String(Math.random() * Math.pow(2, attempt)));
                 return [4, staller(timeout_1)];
               case 16:
@@ -20782,14 +20577,12 @@ var require_utils5 = __commonJS({
   "node_modules/ethers/lib/utils.js"(exports2) {
     "use strict";
     var __createBinding2 = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
-      if (k2 === void 0)
-        k2 = k;
+      if (k2 === void 0) k2 = k;
       Object.defineProperty(o, k2, { enumerable: true, get: function() {
         return m[k];
       } });
     } : function(o, m, k, k2) {
-      if (k2 === void 0)
-        k2 = k;
+      if (k2 === void 0) k2 = k;
       o[k2] = m[k];
     });
     var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
@@ -20798,13 +20591,10 @@ var require_utils5 = __commonJS({
       o["default"] = v;
     });
     var __importStar2 = exports2 && exports2.__importStar || function(mod) {
-      if (mod && mod.__esModule)
-        return mod;
+      if (mod && mod.__esModule) return mod;
       var result = {};
       if (mod != null) {
-        for (var k in mod)
-          if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k))
-            __createBinding2(result, mod, k);
+        for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding2(result, mod, k);
       }
       __setModuleDefault(result, mod);
       return result;
@@ -21147,9 +20937,7 @@ var require_lib28 = __commonJS({
         extendStatics2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
           d2.__proto__ = b2;
         } || function(d2, b2) {
-          for (var p in b2)
-            if (Object.prototype.hasOwnProperty.call(b2, p))
-              d2[p] = b2[p];
+          for (var p in b2) if (Object.prototype.hasOwnProperty.call(b2, p)) d2[p] = b2[p];
         };
         return extendStatics2(d, b);
       };
@@ -21192,8 +20980,7 @@ var require_lib28 = __commonJS({
     };
     var __generator2 = exports2 && exports2.__generator || function(thisArg, body) {
       var _ = { label: 0, sent: function() {
-        if (t[0] & 1)
-          throw t[1];
+        if (t[0] & 1) throw t[1];
         return t[1];
       }, trys: [], ops: [] }, f, y, t, g;
       return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() {
@@ -21205,76 +20992,68 @@ var require_lib28 = __commonJS({
         };
       }
       function step(op) {
-        if (f)
-          throw new TypeError("Generator is already executing.");
-        while (_)
-          try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done)
-              return t;
-            if (y = 0, t)
-              op = [op[0] & 2, t.value];
-            switch (op[0]) {
-              case 0:
-              case 1:
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+          if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+          if (y = 0, t) op = [op[0] & 2, t.value];
+          switch (op[0]) {
+            case 0:
+            case 1:
+              t = op;
+              break;
+            case 4:
+              _.label++;
+              return { value: op[1], done: false };
+            case 5:
+              _.label++;
+              y = op[1];
+              op = [0];
+              continue;
+            case 7:
+              op = _.ops.pop();
+              _.trys.pop();
+              continue;
+            default:
+              if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
+                _ = 0;
+                continue;
+              }
+              if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
+                _.label = op[1];
+                break;
+              }
+              if (op[0] === 6 && _.label < t[1]) {
+                _.label = t[1];
                 t = op;
                 break;
-              case 4:
-                _.label++;
-                return { value: op[1], done: false };
-              case 5:
-                _.label++;
-                y = op[1];
-                op = [0];
-                continue;
-              case 7:
-                op = _.ops.pop();
-                _.trys.pop();
-                continue;
-              default:
-                if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
-                  _ = 0;
-                  continue;
-                }
-                if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
-                  _.label = op[1];
-                  break;
-                }
-                if (op[0] === 6 && _.label < t[1]) {
-                  _.label = t[1];
-                  t = op;
-                  break;
-                }
-                if (t && _.label < t[2]) {
-                  _.label = t[2];
-                  _.ops.push(op);
-                  break;
-                }
-                if (t[2])
-                  _.ops.pop();
-                _.trys.pop();
-                continue;
-            }
-            op = body.call(thisArg, _);
-          } catch (e) {
-            op = [6, e];
-            y = 0;
-          } finally {
-            f = t = 0;
+              }
+              if (t && _.label < t[2]) {
+                _.label = t[2];
+                _.ops.push(op);
+                break;
+              }
+              if (t[2]) _.ops.pop();
+              _.trys.pop();
+              continue;
           }
-        if (op[0] & 5)
-          throw op[1];
+          op = body.call(thisArg, _);
+        } catch (e) {
+          op = [6, e];
+          y = 0;
+        } finally {
+          f = t = 0;
+        }
+        if (op[0] & 5) throw op[1];
         return { value: op[0] ? op[1] : void 0, done: true };
       }
     };
     var __spreadArray = exports2 && exports2.__spreadArray || function(to, from, pack) {
-      if (pack || arguments.length === 2)
-        for (var i = 0, l = from.length, ar; i < l; i++) {
-          if (ar || !(i in from)) {
-            if (!ar)
-              ar = Array.prototype.slice.call(from, 0, i);
-            ar[i] = from[i];
-          }
+      if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+          if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+          ar[i] = from[i];
         }
+      }
       return to.concat(ar || Array.prototype.slice.call(from));
     };
     Object.defineProperty(exports2, "__esModule", { value: true });
@@ -21342,28 +21121,24 @@ var require_lib28 = __commonJS({
         return __generator2(this, function(_a7) {
           switch (_a7.label) {
             case 0:
-              if (!Array.isArray(paramType))
-                return [3, 2];
+              if (!Array.isArray(paramType)) return [3, 2];
               return [4, Promise.all(paramType.map(function(paramType2, index) {
                 return resolveAddresses(resolver, Array.isArray(value) ? value[index] : value[paramType2.name], paramType2);
               }))];
             case 1:
               return [2, _a7.sent()];
             case 2:
-              if (!(paramType.type === "address"))
-                return [3, 4];
+              if (!(paramType.type === "address")) return [3, 4];
               return [4, resolveName(resolver, value)];
             case 3:
               return [2, _a7.sent()];
             case 4:
-              if (!(paramType.type === "tuple"))
-                return [3, 6];
+              if (!(paramType.type === "tuple")) return [3, 6];
               return [4, resolveAddresses(resolver, value, paramType.components)];
             case 5:
               return [2, _a7.sent()];
             case 6:
-              if (!(paramType.baseType === "array"))
-                return [3, 8];
+              if (!(paramType.baseType === "array")) return [3, 8];
               if (!Array.isArray(value)) {
                 return [2, Promise.reject(logger2.makeError("invalid value for array", logger_1.Logger.errors.INVALID_ARGUMENT, {
                   argument: "value",
@@ -21590,11 +21365,9 @@ var require_lib28 = __commonJS({
             switch (_a7.label) {
               case 0:
                 blockTag = void 0;
-                if (!(args.length === fragment.inputs.length + 1 && typeof args[args.length - 1] === "object"))
-                  return [3, 3];
+                if (!(args.length === fragment.inputs.length + 1 && typeof args[args.length - 1] === "object")) return [3, 3];
                 overrides = (0, properties_1.shallowCopy)(args.pop());
-                if (!(overrides.blockTag != null))
-                  return [3, 2];
+                if (!(overrides.blockTag != null)) return [3, 2];
                 return [4, overrides.blockTag];
               case 1:
                 blockTag = _a7.sent();
@@ -21604,8 +21377,7 @@ var require_lib28 = __commonJS({
                 args.push(overrides);
                 _a7.label = 3;
               case 3:
-                if (!(contract.deployTransaction != null))
-                  return [3, 5];
+                if (!(contract.deployTransaction != null)) return [3, 5];
                 return [4, contract._deployed(blockTag)];
               case 4:
                 _a7.sent();
@@ -21656,8 +21428,7 @@ var require_lib28 = __commonJS({
                     operation: "sendTransaction"
                   });
                 }
-                if (!(contract.deployTransaction != null))
-                  return [3, 2];
+                if (!(contract.deployTransaction != null)) return [3, 2];
                 return [4, contract._deployed()];
               case 1:
                 _a7.sent();
@@ -22957,8 +22728,7 @@ var require_bech32 = __commonJS({
     var ALPHABET_MAP = {};
     for (z = 0; z < ALPHABET.length; z++) {
       x = ALPHABET.charAt(z);
-      if (ALPHABET_MAP[x] !== void 0)
-        throw new TypeError(x + " is ambiguous");
+      if (ALPHABET_MAP[x] !== void 0) throw new TypeError(x + " is ambiguous");
       ALPHABET_MAP[x] = z;
     }
     var x;
@@ -22971,8 +22741,7 @@ var require_bech32 = __commonJS({
       var chk = 1;
       for (var i = 0; i < prefix.length; ++i) {
         var c = prefix.charCodeAt(i);
-        if (c < 33 || c > 126)
-          return "Invalid prefix (" + prefix + ")";
+        if (c < 33 || c > 126) return "Invalid prefix (" + prefix + ")";
         chk = polymodStep(chk) ^ c >> 5;
       }
       chk = polymodStep(chk);
@@ -22984,17 +22753,14 @@ var require_bech32 = __commonJS({
     }
     function encode(prefix, words, LIMIT) {
       LIMIT = LIMIT || 90;
-      if (prefix.length + 7 + words.length > LIMIT)
-        throw new TypeError("Exceeds length limit");
+      if (prefix.length + 7 + words.length > LIMIT) throw new TypeError("Exceeds length limit");
       prefix = prefix.toLowerCase();
       var chk = prefixChk(prefix);
-      if (typeof chk === "string")
-        throw new Error(chk);
+      if (typeof chk === "string") throw new Error(chk);
       var result = prefix + "1";
       for (var i = 0; i < words.length; ++i) {
         var x2 = words[i];
-        if (x2 >> 5 !== 0)
-          throw new Error("Non 5-bit word");
+        if (x2 >> 5 !== 0) throw new Error("Non 5-bit word");
         chk = polymodStep(chk) ^ x2;
         result += ALPHABET.charAt(x2);
       }
@@ -23010,51 +22776,39 @@ var require_bech32 = __commonJS({
     }
     function __decode(str2, LIMIT) {
       LIMIT = LIMIT || 90;
-      if (str2.length < 8)
-        return str2 + " too short";
-      if (str2.length > LIMIT)
-        return "Exceeds length limit";
+      if (str2.length < 8) return str2 + " too short";
+      if (str2.length > LIMIT) return "Exceeds length limit";
       var lowered = str2.toLowerCase();
       var uppered = str2.toUpperCase();
-      if (str2 !== lowered && str2 !== uppered)
-        return "Mixed-case string " + str2;
+      if (str2 !== lowered && str2 !== uppered) return "Mixed-case string " + str2;
       str2 = lowered;
       var split = str2.lastIndexOf("1");
-      if (split === -1)
-        return "No separator character for " + str2;
-      if (split === 0)
-        return "Missing prefix for " + str2;
+      if (split === -1) return "No separator character for " + str2;
+      if (split === 0) return "Missing prefix for " + str2;
       var prefix = str2.slice(0, split);
       var wordChars = str2.slice(split + 1);
-      if (wordChars.length < 6)
-        return "Data too short";
+      if (wordChars.length < 6) return "Data too short";
       var chk = prefixChk(prefix);
-      if (typeof chk === "string")
-        return chk;
+      if (typeof chk === "string") return chk;
       var words = [];
       for (var i = 0; i < wordChars.length; ++i) {
         var c = wordChars.charAt(i);
         var v = ALPHABET_MAP[c];
-        if (v === void 0)
-          return "Unknown character " + c;
+        if (v === void 0) return "Unknown character " + c;
         chk = polymodStep(chk) ^ v;
-        if (i + 6 >= wordChars.length)
-          continue;
+        if (i + 6 >= wordChars.length) continue;
         words.push(v);
       }
-      if (chk !== 1)
-        return "Invalid checksum for " + str2;
+      if (chk !== 1) return "Invalid checksum for " + str2;
       return { prefix, words };
     }
     function decodeUnsafe() {
       var res = __decode.apply(null, arguments);
-      if (typeof res === "object")
-        return res;
+      if (typeof res === "object") return res;
     }
     function decode(str2) {
       var res = __decode.apply(null, arguments);
-      if (typeof res === "object")
-        return res;
+      if (typeof res === "object") return res;
       throw new Error(res);
     }
     function convert(data, inBits, outBits, pad) {
@@ -23075,33 +22829,27 @@ var require_bech32 = __commonJS({
           result.push(value << outBits - bits & maxV);
         }
       } else {
-        if (bits >= inBits)
-          return "Excess padding";
-        if (value << outBits - bits & maxV)
-          return "Non-zero padding";
+        if (bits >= inBits) return "Excess padding";
+        if (value << outBits - bits & maxV) return "Non-zero padding";
       }
       return result;
     }
     function toWordsUnsafe(bytes) {
       var res = convert(bytes, 8, 5, true);
-      if (Array.isArray(res))
-        return res;
+      if (Array.isArray(res)) return res;
     }
     function toWords(bytes) {
       var res = convert(bytes, 8, 5, true);
-      if (Array.isArray(res))
-        return res;
+      if (Array.isArray(res)) return res;
       throw new Error(res);
     }
     function fromWordsUnsafe(words) {
       var res = convert(words, 5, 8, false);
-      if (Array.isArray(res))
-        return res;
+      if (Array.isArray(res)) return res;
     }
     function fromWords(words) {
       var res = convert(words, 5, 8, false);
-      if (Array.isArray(res))
-        return res;
+      if (Array.isArray(res)) return res;
       throw new Error(res);
     }
     module2.exports = {
@@ -23569,9 +23317,7 @@ var require_base_provider = __commonJS({
         extendStatics2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
           d2.__proto__ = b2;
         } || function(d2, b2) {
-          for (var p in b2)
-            if (Object.prototype.hasOwnProperty.call(b2, p))
-              d2[p] = b2[p];
+          for (var p in b2) if (Object.prototype.hasOwnProperty.call(b2, p)) d2[p] = b2[p];
         };
         return extendStatics2(d, b);
       };
@@ -23614,8 +23360,7 @@ var require_base_provider = __commonJS({
     };
     var __generator2 = exports2 && exports2.__generator || function(thisArg, body) {
       var _ = { label: 0, sent: function() {
-        if (t[0] & 1)
-          throw t[1];
+        if (t[0] & 1) throw t[1];
         return t[1];
       }, trys: [], ops: [] }, f, y, t, g;
       return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() {
@@ -23627,64 +23372,58 @@ var require_base_provider = __commonJS({
         };
       }
       function step(op) {
-        if (f)
-          throw new TypeError("Generator is already executing.");
-        while (_)
-          try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done)
-              return t;
-            if (y = 0, t)
-              op = [op[0] & 2, t.value];
-            switch (op[0]) {
-              case 0:
-              case 1:
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+          if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+          if (y = 0, t) op = [op[0] & 2, t.value];
+          switch (op[0]) {
+            case 0:
+            case 1:
+              t = op;
+              break;
+            case 4:
+              _.label++;
+              return { value: op[1], done: false };
+            case 5:
+              _.label++;
+              y = op[1];
+              op = [0];
+              continue;
+            case 7:
+              op = _.ops.pop();
+              _.trys.pop();
+              continue;
+            default:
+              if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
+                _ = 0;
+                continue;
+              }
+              if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
+                _.label = op[1];
+                break;
+              }
+              if (op[0] === 6 && _.label < t[1]) {
+                _.label = t[1];
                 t = op;
                 break;
-              case 4:
-                _.label++;
-                return { value: op[1], done: false };
-              case 5:
-                _.label++;
-                y = op[1];
-                op = [0];
-                continue;
-              case 7:
-                op = _.ops.pop();
-                _.trys.pop();
-                continue;
-              default:
-                if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
-                  _ = 0;
-                  continue;
-                }
-                if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
-                  _.label = op[1];
-                  break;
-                }
-                if (op[0] === 6 && _.label < t[1]) {
-                  _.label = t[1];
-                  t = op;
-                  break;
-                }
-                if (t && _.label < t[2]) {
-                  _.label = t[2];
-                  _.ops.push(op);
-                  break;
-                }
-                if (t[2])
-                  _.ops.pop();
-                _.trys.pop();
-                continue;
-            }
-            op = body.call(thisArg, _);
-          } catch (e) {
-            op = [6, e];
-            y = 0;
-          } finally {
-            f = t = 0;
+              }
+              if (t && _.label < t[2]) {
+                _.label = t[2];
+                _.ops.push(op);
+                break;
+              }
+              if (t[2]) _.ops.pop();
+              _.trys.pop();
+              continue;
           }
-        if (op[0] & 5)
-          throw op[1];
+          op = body.call(thisArg, _);
+        } catch (e) {
+          op = [6, e];
+          y = 0;
+        } finally {
+          f = t = 0;
+        }
+        if (op[0] & 5) throw op[1];
         return { value: op[0] ? op[1] : void 0, done: true };
       }
     };
@@ -23988,8 +23727,7 @@ var require_base_provider = __commonJS({
                   if (coinType == null) {
                     coinType = 60;
                   }
-                  if (!(coinType === 60))
-                    return [3, 4];
+                  if (!(coinType === 60)) return [3, 4];
                   _a7.label = 1;
                 case 1:
                   _a7.trys.push([1, 3, , 4]);
@@ -24049,8 +23787,7 @@ var require_base_provider = __commonJS({
                   i = 0;
                   _h.label = 3;
                 case 3:
-                  if (!(i < matchers.length))
-                    return [3, 18];
+                  if (!(i < matchers.length)) return [3, 18];
                   match = avatar.match(matchers[i]);
                   if (match == null) {
                     return [3, 17];
@@ -24083,8 +23820,7 @@ var require_base_provider = __commonJS({
                   selector = scheme === "erc721" ? "0xc87b56dd" : "0x0e89341c";
                   linkage.push({ type: scheme, content: avatar });
                   _b = this._resolvedAddress;
-                  if (_b)
-                    return [3, 9];
+                  if (_b) return [3, 9];
                   return [4, this.getAddress()];
                 case 8:
                   _b = _h.sent();
@@ -24099,8 +23835,7 @@ var require_base_provider = __commonJS({
                 case 10:
                   addr = _h.sent();
                   tokenId = (0, bytes_1.hexZeroPad)(bignumber_1.BigNumber.from(comps[1]).toHexString(), 32);
-                  if (!(scheme === "erc721"))
-                    return [3, 12];
+                  if (!(scheme === "erc721")) return [3, 12];
                   _d = (_c = this.provider.formatter).callAddress;
                   return [4, this.provider.call({
                     to: addr,
@@ -24114,8 +23849,7 @@ var require_base_provider = __commonJS({
                   linkage.push({ type: "owner", content: tokenOwner });
                   return [3, 14];
                 case 12:
-                  if (!(scheme === "erc1155"))
-                    return [3, 14];
+                  if (!(scheme === "erc1155")) return [3, 14];
                   _f = (_e = bignumber_1.BigNumber).from;
                   return [4, this.provider.call({
                     to: addr,
@@ -24289,11 +24023,9 @@ var require_base_provider = __commonJS({
             return __generator2(this, function(_a7) {
               switch (_a7.label) {
                 case 0:
-                  if (!(this._network == null))
-                    return [3, 7];
+                  if (!(this._network == null)) return [3, 7];
                   network = null;
-                  if (!this._networkPromise)
-                    return [3, 4];
+                  if (!this._networkPromise) return [3, 4];
                   _a7.label = 1;
                 case 1:
                   _a7.trys.push([1, 3, , 4]);
@@ -24305,8 +24037,7 @@ var require_base_provider = __commonJS({
                   error_4 = _a7.sent();
                   return [3, 4];
                 case 4:
-                  if (!(network == null))
-                    return [3, 6];
+                  if (!(network == null)) return [3, 6];
                   return [4, this.detectNetwork()];
                 case 5:
                   network = _a7.sent();
@@ -24369,12 +24100,10 @@ var require_base_provider = __commonJS({
                   return [4, this._ready()];
                 case 1:
                   _a7.sent();
-                  if (!(maxAge > 0))
-                    return [3, 7];
+                  if (!(maxAge > 0)) return [3, 7];
                   _a7.label = 2;
                 case 2:
-                  if (!this._internalBlockNumber)
-                    return [3, 7];
+                  if (!this._internalBlockNumber) return [3, 7];
                   internalBlockNumber = this._internalBlockNumber;
                   _a7.label = 3;
                 case 3:
@@ -24587,10 +24316,8 @@ var require_base_provider = __commonJS({
                   return [4, this.detectNetwork()];
                 case 2:
                   currentNetwork = _a7.sent();
-                  if (!(network.chainId !== currentNetwork.chainId))
-                    return [3, 5];
-                  if (!this.anyNetwork)
-                    return [3, 4];
+                  if (!(network.chainId !== currentNetwork.chainId)) return [3, 5];
+                  if (!this.anyNetwork) return [3, 4];
                   this._network = currentNetwork;
                   this._lastBlockNumber = -2;
                   this._fastBlockNumber = null;
@@ -24779,8 +24506,7 @@ var require_base_provider = __commonJS({
                                               /*return*/
                                             ];
                                           }
-                                          if (!(nonce <= replaceable.nonce))
-                                            return [3, 1];
+                                          if (!(nonce <= replaceable.nonce)) return [3, 1];
                                           lastBlockNumber_1 = blockNumber;
                                           return [3, 9];
                                         case 1:
@@ -24801,8 +24527,7 @@ var require_base_provider = __commonJS({
                                           }
                                           _a9.label = 3;
                                         case 3:
-                                          if (!(scannedBlock_1 <= blockNumber))
-                                            return [3, 9];
+                                          if (!(scannedBlock_1 <= blockNumber)) return [3, 9];
                                           if (done) {
                                             return [
                                               2
@@ -24815,8 +24540,7 @@ var require_base_provider = __commonJS({
                                           ti = 0;
                                           _a9.label = 5;
                                         case 5:
-                                          if (!(ti < block.transactions.length))
-                                            return [3, 8];
+                                          if (!(ti < block.transactions.length)) return [3, 8];
                                           tx = block.transactions[ti];
                                           if (tx.hash === transactionHash) {
                                             return [
@@ -24824,8 +24548,7 @@ var require_base_provider = __commonJS({
                                               /*return*/
                                             ];
                                           }
-                                          if (!(tx.from === replaceable.from && tx.nonce === replaceable.nonce))
-                                            return [3, 7];
+                                          if (!(tx.from === replaceable.from && tx.nonce === replaceable.nonce)) return [3, 7];
                                           if (done) {
                                             return [
                                               2
@@ -25399,8 +25122,7 @@ var require_base_provider = __commonJS({
                   params = {
                     includeTransactions: !!includeTransactions
                   };
-                  if (!(0, bytes_1.isHexString)(blockHashOrBlockTag, 32))
-                    return [3, 3];
+                  if (!(0, bytes_1.isHexString)(blockHashOrBlockTag, 32)) return [3, 3];
                   params.blockHash = blockHashOrBlockTag;
                   return [3, 6];
                 case 3:
@@ -25441,24 +25163,19 @@ var require_base_provider = __commonJS({
                               }
                               return [2, void 0];
                             }
-                            if (!includeTransactions)
-                              return [3, 8];
+                            if (!includeTransactions) return [3, 8];
                             blockNumber_1 = null;
                             i = 0;
                             _a8.label = 2;
                           case 2:
-                            if (!(i < block.transactions.length))
-                              return [3, 7];
+                            if (!(i < block.transactions.length)) return [3, 7];
                             tx = block.transactions[i];
-                            if (!(tx.blockNumber == null))
-                              return [3, 3];
+                            if (!(tx.blockNumber == null)) return [3, 3];
                             tx.confirmations = 0;
                             return [3, 6];
                           case 3:
-                            if (!(tx.confirmations == null))
-                              return [3, 6];
-                            if (!(blockNumber_1 == null))
-                              return [3, 5];
+                            if (!(tx.confirmations == null)) return [3, 6];
+                            if (!(blockNumber_1 == null)) return [3, 5];
                             return [4, this._getInternalBlockNumber(100 + 2 * this.pollingInterval)];
                           case 4:
                             blockNumber_1 = _a8.sent();
@@ -25525,13 +25242,11 @@ var require_base_provider = __commonJS({
                               return [2, void 0];
                             }
                             tx = this.formatter.transactionResponse(result);
-                            if (!(tx.blockNumber == null))
-                              return [3, 2];
+                            if (!(tx.blockNumber == null)) return [3, 2];
                             tx.confirmations = 0;
                             return [3, 4];
                           case 2:
-                            if (!(tx.confirmations == null))
-                              return [3, 4];
+                            if (!(tx.confirmations == null)) return [3, 4];
                             return [4, this._getInternalBlockNumber(100 + 2 * this.pollingInterval)];
                           case 3:
                             blockNumber = _a8.sent();
@@ -25584,13 +25299,11 @@ var require_base_provider = __commonJS({
                               return [2, void 0];
                             }
                             receipt = this.formatter.receipt(result);
-                            if (!(receipt.blockNumber == null))
-                              return [3, 2];
+                            if (!(receipt.blockNumber == null)) return [3, 2];
                             receipt.confirmations = 0;
                             return [3, 4];
                           case 2:
-                            if (!(receipt.confirmations == null))
-                              return [3, 4];
+                            if (!(receipt.confirmations == null)) return [3, 4];
                             return [4, this._getInternalBlockNumber(100 + 2 * this.pollingInterval)];
                           case 3:
                             blockNumber = _a8.sent();
@@ -25657,8 +25370,7 @@ var require_base_provider = __commonJS({
                   return [4, blockTag];
                 case 1:
                   blockTag = _a7.sent();
-                  if (!(typeof blockTag === "number" && blockTag < 0))
-                    return [3, 3];
+                  if (!(typeof blockTag === "number" && blockTag < 0)) return [3, 3];
                   if (blockTag % 1) {
                     logger2.throwArgumentError("invalid BlockTag", "blockTag", blockTag);
                   }
@@ -25830,8 +25542,7 @@ var require_base_provider = __commonJS({
               switch (_a7.label) {
                 case 0:
                   resolver = null;
-                  if (!(0, bytes_1.isHexString)(nameOrAddress))
-                    return [3, 2];
+                  if (!(0, bytes_1.isHexString)(nameOrAddress)) return [3, 2];
                   address = this.formatter.address(nameOrAddress);
                   reverseName = address.substring(2).toLowerCase() + ".addr.reverse";
                   return [4, this._getResolver(reverseName)];
@@ -25998,9 +25709,7 @@ var require_json_rpc_provider = __commonJS({
         extendStatics2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
           d2.__proto__ = b2;
         } || function(d2, b2) {
-          for (var p in b2)
-            if (Object.prototype.hasOwnProperty.call(b2, p))
-              d2[p] = b2[p];
+          for (var p in b2) if (Object.prototype.hasOwnProperty.call(b2, p)) d2[p] = b2[p];
         };
         return extendStatics2(d, b);
       };
@@ -26043,8 +25752,7 @@ var require_json_rpc_provider = __commonJS({
     };
     var __generator2 = exports2 && exports2.__generator || function(thisArg, body) {
       var _ = { label: 0, sent: function() {
-        if (t[0] & 1)
-          throw t[1];
+        if (t[0] & 1) throw t[1];
         return t[1];
       }, trys: [], ops: [] }, f, y, t, g;
       return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() {
@@ -26056,64 +25764,58 @@ var require_json_rpc_provider = __commonJS({
         };
       }
       function step(op) {
-        if (f)
-          throw new TypeError("Generator is already executing.");
-        while (_)
-          try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done)
-              return t;
-            if (y = 0, t)
-              op = [op[0] & 2, t.value];
-            switch (op[0]) {
-              case 0:
-              case 1:
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+          if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+          if (y = 0, t) op = [op[0] & 2, t.value];
+          switch (op[0]) {
+            case 0:
+            case 1:
+              t = op;
+              break;
+            case 4:
+              _.label++;
+              return { value: op[1], done: false };
+            case 5:
+              _.label++;
+              y = op[1];
+              op = [0];
+              continue;
+            case 7:
+              op = _.ops.pop();
+              _.trys.pop();
+              continue;
+            default:
+              if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
+                _ = 0;
+                continue;
+              }
+              if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
+                _.label = op[1];
+                break;
+              }
+              if (op[0] === 6 && _.label < t[1]) {
+                _.label = t[1];
                 t = op;
                 break;
-              case 4:
-                _.label++;
-                return { value: op[1], done: false };
-              case 5:
-                _.label++;
-                y = op[1];
-                op = [0];
-                continue;
-              case 7:
-                op = _.ops.pop();
-                _.trys.pop();
-                continue;
-              default:
-                if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
-                  _ = 0;
-                  continue;
-                }
-                if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
-                  _.label = op[1];
-                  break;
-                }
-                if (op[0] === 6 && _.label < t[1]) {
-                  _.label = t[1];
-                  t = op;
-                  break;
-                }
-                if (t && _.label < t[2]) {
-                  _.label = t[2];
-                  _.ops.push(op);
-                  break;
-                }
-                if (t[2])
-                  _.ops.pop();
-                _.trys.pop();
-                continue;
-            }
-            op = body.call(thisArg, _);
-          } catch (e) {
-            op = [6, e];
-            y = 0;
-          } finally {
-            f = t = 0;
+              }
+              if (t && _.label < t[2]) {
+                _.label = t[2];
+                _.ops.push(op);
+                break;
+              }
+              if (t[2]) _.ops.pop();
+              _.trys.pop();
+              continue;
           }
-        if (op[0] & 5)
-          throw op[1];
+          op = body.call(thisArg, _);
+        } catch (e) {
+          op = [6, e];
+          y = 0;
+        } finally {
+          f = t = 0;
+        }
+        if (op[0] & 5) throw op[1];
         return { value: op[0] ? op[1] : void 0, done: true };
       }
     };
@@ -26704,13 +26406,10 @@ var require_json_rpc_provider = __commonJS({
             return __generator2(this, function(_a7) {
               switch (_a7.label) {
                 case 0:
-                  if (!(method === "call" || method === "estimateGas"))
-                    return [3, 2];
+                  if (!(method === "call" || method === "estimateGas")) return [3, 2];
                   tx = params.transaction;
-                  if (!(tx && tx.type != null && bignumber_1.BigNumber.from(tx.type).isZero()))
-                    return [3, 2];
-                  if (!(tx.maxFeePerGas == null && tx.maxPriorityFeePerGas == null))
-                    return [3, 2];
+                  if (!(tx && tx.type != null && bignumber_1.BigNumber.from(tx.type).isZero())) return [3, 2];
+                  if (!(tx.maxFeePerGas == null && tx.maxPriorityFeePerGas == null)) return [3, 2];
                   return [4, this.getFeeData()];
                 case 1:
                   feeData = _a7.sent();
@@ -26878,24 +26577,19 @@ var require_node_gyp_build = __commonJS({
       dir = path2.resolve(dir || ".");
       try {
         var name2 = runtimeRequire(path2.join(dir, "package.json")).name.toUpperCase().replace(/-/g, "_");
-        if (process.env[name2 + "_PREBUILD"])
-          dir = process.env[name2 + "_PREBUILD"];
+        if (process.env[name2 + "_PREBUILD"]) dir = process.env[name2 + "_PREBUILD"];
       } catch (err) {
       }
       if (!prebuildsOnly) {
         var release = getFirst(path2.join(dir, "build/Release"), matchBuild);
-        if (release)
-          return release;
+        if (release) return release;
         var debug = getFirst(path2.join(dir, "build/Debug"), matchBuild);
-        if (debug)
-          return debug;
+        if (debug) return debug;
       }
       var prebuild = resolve(dir);
-      if (prebuild)
-        return prebuild;
+      if (prebuild) return prebuild;
       var nearby = resolve(path2.dirname(process.execPath));
-      if (nearby)
-        return nearby;
+      if (nearby) return nearby;
       var target = [
         "platform=" + platform,
         "arch=" + arch,
@@ -26913,14 +26607,12 @@ var require_node_gyp_build = __commonJS({
       function resolve(dir2) {
         var tuples = readdirSync(path2.join(dir2, "prebuilds")).map(parseTuple);
         var tuple = tuples.filter(matchTuple(platform, arch)).sort(compareTuples)[0];
-        if (!tuple)
-          return;
+        if (!tuple) return;
         var prebuilds = path2.join(dir2, "prebuilds", tuple.name);
         var parsed = readdirSync(prebuilds).map(parseTags);
         var candidates = parsed.filter(matchTags(runtime, abi));
         var winner = candidates.sort(compareTags(runtime))[0];
-        if (winner)
-          return path2.join(prebuilds, winner.file);
+        if (winner) return path2.join(prebuilds, winner.file);
       }
     };
     function readdirSync(dir) {
@@ -26939,24 +26631,18 @@ var require_node_gyp_build = __commonJS({
     }
     function parseTuple(name2) {
       var arr = name2.split("-");
-      if (arr.length !== 2)
-        return;
+      if (arr.length !== 2) return;
       var platform2 = arr[0];
       var architectures = arr[1].split("+");
-      if (!platform2)
-        return;
-      if (!architectures.length)
-        return;
-      if (!architectures.every(Boolean))
-        return;
+      if (!platform2) return;
+      if (!architectures.length) return;
+      if (!architectures.every(Boolean)) return;
       return { name: name2, platform: platform2, architectures };
     }
     function matchTuple(platform2, arch2) {
       return function(tuple) {
-        if (tuple == null)
-          return false;
-        if (tuple.platform !== platform2)
-          return false;
+        if (tuple == null) return false;
+        if (tuple.platform !== platform2) return false;
         return tuple.architectures.includes(arch2);
       };
     }
@@ -26967,8 +26653,7 @@ var require_node_gyp_build = __commonJS({
       var arr = file3.split(".");
       var extension = arr.pop();
       var tags = { file: file3, specificity: 0 };
-      if (extension !== "node")
-        return;
+      if (extension !== "node") return;
       for (var i = 0; i < arr.length; i++) {
         var tag = arr[i];
         if (tag === "node" || tag === "electron" || tag === "node-webkit") {
@@ -26992,18 +26677,12 @@ var require_node_gyp_build = __commonJS({
     }
     function matchTags(runtime2, abi2) {
       return function(tags) {
-        if (tags == null)
-          return false;
-        if (tags.runtime !== runtime2 && !runtimeAgnostic(tags))
-          return false;
-        if (tags.abi !== abi2 && !tags.napi)
-          return false;
-        if (tags.uv && tags.uv !== uv)
-          return false;
-        if (tags.armv && tags.armv !== armv)
-          return false;
-        if (tags.libc && tags.libc !== libc)
-          return false;
+        if (tags == null) return false;
+        if (tags.runtime !== runtime2 && !runtimeAgnostic(tags)) return false;
+        if (tags.abi !== abi2 && !tags.napi) return false;
+        if (tags.uv && tags.uv !== uv) return false;
+        if (tags.armv && tags.armv !== armv) return false;
+        if (tags.libc && tags.libc !== libc) return false;
         return true;
       };
     }
@@ -27024,10 +26703,8 @@ var require_node_gyp_build = __commonJS({
       };
     }
     function isElectron() {
-      if (process.versions && process.versions.electron)
-        return true;
-      if (process.env.ELECTRON_RUN_AS_NODE)
-        return true;
+      if (process.versions && process.versions.electron) return true;
+      if (process.env.ELECTRON_RUN_AS_NODE) return true;
       return typeof window !== "undefined" && window.process && window.process.type === "renderer";
     }
     function isAlpine(platform2) {
@@ -27079,10 +26756,8 @@ var require_buffer_util = __commonJS({
     "use strict";
     var { EMPTY_BUFFER } = require_constants();
     function concat(list, totalLength) {
-      if (list.length === 0)
-        return EMPTY_BUFFER;
-      if (list.length === 1)
-        return list[0];
+      if (list.length === 0) return EMPTY_BUFFER;
+      if (list.length === 1) return list[0];
       const target = Buffer.allocUnsafe(totalLength);
       let offset = 0;
       for (let i = 0; i < list.length; i++) {
@@ -27090,8 +26765,7 @@ var require_buffer_util = __commonJS({
         target.set(buf, offset);
         offset += buf.length;
       }
-      if (offset < totalLength)
-        return target.slice(0, offset);
+      if (offset < totalLength) return target.slice(0, offset);
       return target;
     }
     function _mask(source, mask, output, offset, length) {
@@ -27113,8 +26787,7 @@ var require_buffer_util = __commonJS({
     }
     function toBuffer(data) {
       toBuffer.readOnly = true;
-      if (Buffer.isBuffer(data))
-        return data;
+      if (Buffer.isBuffer(data)) return data;
       let buf;
       if (data instanceof ArrayBuffer) {
         buf = Buffer.from(data);
@@ -27132,18 +26805,14 @@ var require_buffer_util = __commonJS({
       module2.exports = {
         concat,
         mask(source, mask, output, offset, length) {
-          if (length < 48)
-            _mask(source, mask, output, offset, length);
-          else
-            bu.mask(source, mask, output, offset, length);
+          if (length < 48) _mask(source, mask, output, offset, length);
+          else bu.mask(source, mask, output, offset, length);
         },
         toArrayBuffer,
         toBuffer,
         unmask(buffer, mask) {
-          if (buffer.length < 32)
-            _unmask(buffer, mask);
-          else
-            bu.unmask(buffer, mask);
+          if (buffer.length < 32) _unmask(buffer, mask);
+          else bu.unmask(buffer, mask);
         }
       };
     } catch (e) {
@@ -27196,8 +26865,7 @@ var require_limiter = __commonJS({
        * @private
        */
       [kRun]() {
-        if (this.pending === this.concurrency)
-          return;
+        if (this.pending === this.concurrency) return;
         if (this.jobs.length) {
           const job = this.jobs.shift();
           this.pending++;
@@ -27491,8 +27159,7 @@ var require_permessage_deflate = __commonJS({
         }
         this._inflate[kCallback] = callback;
         this._inflate.write(data);
-        if (fin)
-          this._inflate.write(TRAILER);
+        if (fin) this._inflate.write(TRAILER);
         this._inflate.flush(() => {
           const err = this._inflate[kError];
           if (err) {
@@ -27549,8 +27216,7 @@ var require_permessage_deflate = __commonJS({
             this._deflate[kBuffers],
             this._deflate[kTotalLength]
           );
-          if (fin)
-            data2 = data2.slice(0, data2.length - 4);
+          if (fin) data2 = data2.slice(0, data2.length - 4);
           this._deflate[kCallback] = null;
           this._deflate[kTotalLength] = 0;
           this._deflate[kBuffers] = [];
@@ -27751,8 +27417,7 @@ var require_receiver = __commonJS({
        * @private
        */
       _write(chunk, encoding, cb) {
-        if (this._opcode === 8 && this._state == GET_INFO)
-          return cb();
+        if (this._opcode === 8 && this._state == GET_INFO) return cb();
         this._bufferedBytes += chunk.length;
         this._buffers.push(chunk);
         this.startLoop(cb);
@@ -27766,8 +27431,7 @@ var require_receiver = __commonJS({
        */
       consume(n) {
         this._bufferedBytes -= n;
-        if (n === this._buffers[0].length)
-          return this._buffers.shift();
+        if (n === this._buffers[0].length) return this._buffers.shift();
         if (n < this._buffers[0].length) {
           const buf = this._buffers[0];
           this._buffers[0] = buf.slice(n);
@@ -27882,8 +27546,7 @@ var require_receiver = __commonJS({
           this._loop = false;
           return error(RangeError, `invalid opcode ${this._opcode}`, true, 1002);
         }
-        if (!this._fin && !this._fragmented)
-          this._fragmented = this._opcode;
+        if (!this._fin && !this._fragmented) this._fragmented = this._opcode;
         this._masked = (buf[1] & 128) === 128;
         if (this._isServer) {
           if (!this._masked) {
@@ -27894,12 +27557,9 @@ var require_receiver = __commonJS({
           this._loop = false;
           return error(RangeError, "MASK must be clear", true, 1002);
         }
-        if (this._payloadLength === 126)
-          this._state = GET_PAYLOAD_LENGTH_16;
-        else if (this._payloadLength === 127)
-          this._state = GET_PAYLOAD_LENGTH_64;
-        else
-          return this.haveLength();
+        if (this._payloadLength === 126) this._state = GET_PAYLOAD_LENGTH_16;
+        else if (this._payloadLength === 127) this._state = GET_PAYLOAD_LENGTH_64;
+        else return this.haveLength();
       }
       /**
        * Gets extended payload length (7+16).
@@ -27954,10 +27614,8 @@ var require_receiver = __commonJS({
             return error(RangeError, "Max payload size exceeded", false, 1009);
           }
         }
-        if (this._masked)
-          this._state = GET_MASK;
-        else
-          this._state = GET_DATA;
+        if (this._masked) this._state = GET_MASK;
+        else this._state = GET_DATA;
       }
       /**
        * Reads mask bytes.
@@ -27987,11 +27645,9 @@ var require_receiver = __commonJS({
             return;
           }
           data = this.consume(this._payloadLength);
-          if (this._masked)
-            unmask(data, this._mask);
+          if (this._masked) unmask(data, this._mask);
         }
-        if (this._opcode > 7)
-          return this.controlMessage(data);
+        if (this._opcode > 7) return this.controlMessage(data);
         if (this._compressed) {
           this._state = INFLATING;
           this.decompress(data, cb);
@@ -28013,8 +27669,7 @@ var require_receiver = __commonJS({
       decompress(data, cb) {
         const perMessageDeflate = this._extensions[PerMessageDeflate.extensionName];
         perMessageDeflate.decompress(data, this._fin, (err, buf) => {
-          if (err)
-            return cb(err);
+          if (err) return cb(err);
           if (buf.length) {
             this._messageLength += buf.length;
             if (this._messageLength > this._maxPayload && this._maxPayload > 0) {
@@ -28025,8 +27680,7 @@ var require_receiver = __commonJS({
             this._fragments.push(buf);
           }
           const er = this.dataMessage();
-          if (er)
-            return cb(er);
+          if (er) return cb(er);
           this.startLoop(cb);
         });
       }
@@ -28168,8 +27822,7 @@ var require_sender = __commonJS({
         }
         const target = Buffer.allocUnsafe(merge ? data.length + offset : offset);
         target[0] = options2.fin ? options2.opcode | 128 : options2.opcode;
-        if (options2.rsv1)
-          target[0] |= 64;
+        if (options2.rsv1) target[0] |= 64;
         target[1] = payloadLength;
         if (payloadLength === 126) {
           target.writeUInt16BE(data.length, 2);
@@ -28177,8 +27830,7 @@ var require_sender = __commonJS({
           target.writeUInt32BE(0, 2);
           target.writeUInt32BE(data.length, 6);
         }
-        if (!options2.mask)
-          return [target, data];
+        if (!options2.mask) return [target, data];
         randomFillSync(mask, 0, 4);
         target[1] |= 128;
         target[offset - 4] = mask[0];
@@ -28356,8 +28008,7 @@ var require_sender = __commonJS({
           rsv1 = false;
           opcode = 0;
         }
-        if (options2.fin)
-          this._firstFragment = true;
+        if (options2.fin) this._firstFragment = true;
         if (perMessageDeflate) {
           const opts = {
             fin: options2.fin,
@@ -28416,12 +28067,10 @@ var require_sender = __commonJS({
             const err = new Error(
               "The socket was closed while data was being compressed"
             );
-            if (typeof cb === "function")
-              cb(err);
+            if (typeof cb === "function") cb(err);
             for (let i = 0; i < this._queue.length; i++) {
               const callback = this._queue[i][4];
-              if (typeof callback === "function")
-                callback(err);
+              if (typeof callback === "function") callback(err);
             }
             return;
           }
@@ -28563,8 +28212,7 @@ var require_event_target = __commonJS({
        * @public
        */
       addEventListener(type, listener, options2) {
-        if (typeof listener !== "function")
-          return;
+        if (typeof listener !== "function") return;
         function onMessage(data) {
           listener.call(this, new MessageEvent(data, this));
         }
@@ -28757,15 +28405,12 @@ var require_extension = __commonJS({
       // 112 - 127
     ];
     function push(dest, name2, elem) {
-      if (dest[name2] === void 0)
-        dest[name2] = [elem];
-      else
-        dest[name2].push(elem);
+      if (dest[name2] === void 0) dest[name2] = [elem];
+      else dest[name2].push(elem);
     }
     function parse2(header) {
       const offers = /* @__PURE__ */ Object.create(null);
-      if (header === void 0 || header === "")
-        return offers;
+      if (header === void 0 || header === "") return offers;
       let params = /* @__PURE__ */ Object.create(null);
       let mustUnescape = false;
       let isEscaping = false;
@@ -28779,17 +28424,14 @@ var require_extension = __commonJS({
         const code = header.charCodeAt(i);
         if (extensionName === void 0) {
           if (end === -1 && tokenChars[code] === 1) {
-            if (start === -1)
-              start = i;
+            if (start === -1) start = i;
           } else if (code === 32 || code === 9) {
-            if (end === -1 && start !== -1)
-              end = i;
+            if (end === -1 && start !== -1) end = i;
           } else if (code === 59 || code === 44) {
             if (start === -1) {
               throw new SyntaxError(`Unexpected character at index ${i}`);
             }
-            if (end === -1)
-              end = i;
+            if (end === -1) end = i;
             const name2 = header.slice(start, end);
             if (code === 44) {
               push(offers, name2, params);
@@ -28803,17 +28445,14 @@ var require_extension = __commonJS({
           }
         } else if (paramName === void 0) {
           if (end === -1 && tokenChars[code] === 1) {
-            if (start === -1)
-              start = i;
+            if (start === -1) start = i;
           } else if (code === 32 || code === 9) {
-            if (end === -1 && start !== -1)
-              end = i;
+            if (end === -1 && start !== -1) end = i;
           } else if (code === 59 || code === 44) {
             if (start === -1) {
               throw new SyntaxError(`Unexpected character at index ${i}`);
             }
-            if (end === -1)
-              end = i;
+            if (end === -1) end = i;
             push(params, header.slice(start, end), true);
             if (code === 44) {
               push(offers, extensionName, params);
@@ -28832,15 +28471,12 @@ var require_extension = __commonJS({
             if (tokenChars[code] !== 1) {
               throw new SyntaxError(`Unexpected character at index ${i}`);
             }
-            if (start === -1)
-              start = i;
-            else if (!mustUnescape)
-              mustUnescape = true;
+            if (start === -1) start = i;
+            else if (!mustUnescape) mustUnescape = true;
             isEscaping = false;
           } else if (inQuotes) {
             if (tokenChars[code] === 1) {
-              if (start === -1)
-                start = i;
+              if (start === -1) start = i;
             } else if (code === 34 && start !== -1) {
               inQuotes = false;
               end = i;
@@ -28852,17 +28488,14 @@ var require_extension = __commonJS({
           } else if (code === 34 && header.charCodeAt(i - 1) === 61) {
             inQuotes = true;
           } else if (end === -1 && tokenChars[code] === 1) {
-            if (start === -1)
-              start = i;
+            if (start === -1) start = i;
           } else if (start !== -1 && (code === 32 || code === 9)) {
-            if (end === -1)
-              end = i;
+            if (end === -1) end = i;
           } else if (code === 59 || code === 44) {
             if (start === -1) {
               throw new SyntaxError(`Unexpected character at index ${i}`);
             }
-            if (end === -1)
-              end = i;
+            if (end === -1) end = i;
             let value = header.slice(start, end);
             if (mustUnescape) {
               value = value.replace(/\\/g, "");
@@ -28884,8 +28517,7 @@ var require_extension = __commonJS({
       if (start === -1 || inQuotes) {
         throw new SyntaxError("Unexpected end of input");
       }
-      if (end === -1)
-        end = i;
+      if (end === -1) end = i;
       const token = header.slice(start, end);
       if (extensionName === void 0) {
         push(offers, token, params);
@@ -28904,14 +28536,12 @@ var require_extension = __commonJS({
     function format(extensions) {
       return Object.keys(extensions).map((extension) => {
         let configurations = extensions[extension];
-        if (!Array.isArray(configurations))
-          configurations = [configurations];
+        if (!Array.isArray(configurations)) configurations = [configurations];
         return configurations.map((params) => {
           return [extension].concat(
             Object.keys(params).map((k) => {
               let values = params[k];
-              if (!Array.isArray(values))
-                values = [values];
+              if (!Array.isArray(values)) values = [values];
               return values.map((v) => v === true ? k : `${k}=${v}`).join("; ");
             })
           ).join("; ");
@@ -28998,18 +28628,15 @@ var require_websocket = __commonJS({
         return this._binaryType;
       }
       set binaryType(type) {
-        if (!BINARY_TYPES.includes(type))
-          return;
+        if (!BINARY_TYPES.includes(type)) return;
         this._binaryType = type;
-        if (this._receiver)
-          this._receiver._binaryType = type;
+        if (this._receiver) this._receiver._binaryType = type;
       }
       /**
        * @type {Number}
        */
       get bufferedAmount() {
-        if (!this._socket)
-          return this._bufferedAmount;
+        if (!this._socket) return this._bufferedAmount;
         return this._socket._writableState.length + this._sender._bufferedBytes;
       }
       /**
@@ -29064,8 +28691,7 @@ var require_websocket = __commonJS({
         receiver.on("pong", receiverOnPong);
         socket.setTimeout(0);
         socket.setNoDelay();
-        if (head.length > 0)
-          socket.unshift(head);
+        if (head.length > 0) socket.unshift(head);
         socket.on("close", socketOnClose);
         socket.on("data", socketOnData);
         socket.on("end", socketOnEnd);
@@ -29111,24 +28737,20 @@ var require_websocket = __commonJS({
        * @public
        */
       close(code, data) {
-        if (this.readyState === _WebSocket.CLOSED)
-          return;
+        if (this.readyState === _WebSocket.CLOSED) return;
         if (this.readyState === _WebSocket.CONNECTING) {
           const msg = "WebSocket was closed before the connection was established";
           return abortHandshake(this, this._req, msg);
         }
         if (this.readyState === _WebSocket.CLOSING) {
-          if (this._closeFrameSent && this._closeFrameReceived)
-            this._socket.end();
+          if (this._closeFrameSent && this._closeFrameReceived) this._socket.end();
           return;
         }
         this._readyState = _WebSocket.CLOSING;
         this._sender.close(code, data, !this._isServer, (err) => {
-          if (err)
-            return;
+          if (err) return;
           this._closeFrameSent = true;
-          if (this._closeFrameReceived)
-            this._socket.end();
+          if (this._closeFrameReceived) this._socket.end();
         });
         this._closeTimer = setTimeout(
           this._socket.destroy.bind(this._socket),
@@ -29154,14 +28776,12 @@ var require_websocket = __commonJS({
           cb = mask;
           mask = void 0;
         }
-        if (typeof data === "number")
-          data = data.toString();
+        if (typeof data === "number") data = data.toString();
         if (this.readyState !== _WebSocket.OPEN) {
           sendAfterClose(this, data, cb);
           return;
         }
-        if (mask === void 0)
-          mask = !this._isServer;
+        if (mask === void 0) mask = !this._isServer;
         this._sender.ping(data || EMPTY_BUFFER, mask, cb);
       }
       /**
@@ -29183,14 +28803,12 @@ var require_websocket = __commonJS({
           cb = mask;
           mask = void 0;
         }
-        if (typeof data === "number")
-          data = data.toString();
+        if (typeof data === "number") data = data.toString();
         if (this.readyState !== _WebSocket.OPEN) {
           sendAfterClose(this, data, cb);
           return;
         }
-        if (mask === void 0)
-          mask = !this._isServer;
+        if (mask === void 0) mask = !this._isServer;
         this._sender.pong(data || EMPTY_BUFFER, mask, cb);
       }
       /**
@@ -29216,8 +28834,7 @@ var require_websocket = __commonJS({
           cb = options2;
           options2 = {};
         }
-        if (typeof data === "number")
-          data = data.toString();
+        if (typeof data === "number") data = data.toString();
         if (this.readyState !== _WebSocket.OPEN) {
           sendAfterClose(this, data, cb);
           return;
@@ -29239,8 +28856,7 @@ var require_websocket = __commonJS({
        * @public
        */
       terminate() {
-        if (this.readyState === _WebSocket.CLOSED)
-          return;
+        if (this.readyState === _WebSocket.CLOSED) return;
         if (this.readyState === _WebSocket.CONNECTING) {
           const msg = "WebSocket was closed before the connection was established";
           return abortHandshake(this, this._req, msg);
@@ -29279,8 +28895,7 @@ var require_websocket = __commonJS({
         get() {
           const listeners = this.listeners(method);
           for (let i = 0; i < listeners.length; i++) {
-            if (listeners[i]._listener)
-              return listeners[i]._listener;
+            if (listeners[i]._listener) return listeners[i]._listener;
           }
           return void 0;
         },
@@ -29293,8 +28908,7 @@ var require_websocket = __commonJS({
         set(listener) {
           const listeners = this.listeners(method);
           for (let i = 0; i < listeners.length; i++) {
-            if (listeners[i]._listener)
-              this.removeListener(method, listeners[i]);
+            if (listeners[i]._listener) this.removeListener(method, listeners[i]);
           }
           this.addEventListener(method, listener);
         }
@@ -29390,8 +29004,7 @@ var require_websocket = __commonJS({
         });
       }
       req.on("error", (err) => {
-        if (req === null || req.aborted)
-          return;
+        if (req === null || req.aborted) return;
         req = websocket._req = null;
         websocket._readyState = WebSocket.CLOSING;
         websocket.emit("error", err);
@@ -29418,8 +29031,7 @@ var require_websocket = __commonJS({
       });
       req.on("upgrade", (res, socket, head) => {
         websocket.emit("upgrade", res);
-        if (websocket.readyState !== WebSocket.CONNECTING)
-          return;
+        if (websocket.readyState !== WebSocket.CONNECTING) return;
         req = websocket._req = null;
         const digest = createHash("sha1").update(key + GUID).digest("base64");
         if (res.headers["sec-websocket-accept"] !== digest) {
@@ -29440,8 +29052,7 @@ var require_websocket = __commonJS({
           abortHandshake(websocket, socket, protError);
           return;
         }
-        if (serverProt)
-          websocket._protocol = serverProt;
+        if (serverProt) websocket._protocol = serverProt;
         if (perMessageDeflate) {
           try {
             const extensions = parse2(res.headers["sec-websocket-extensions"]);
@@ -29492,10 +29103,8 @@ var require_websocket = __commonJS({
     function sendAfterClose(websocket, data, cb) {
       if (data) {
         const length = toBuffer(data).length;
-        if (websocket._socket)
-          websocket._sender._bufferedBytes += length;
-        else
-          websocket._bufferedAmount += length;
+        if (websocket._socket) websocket._sender._bufferedBytes += length;
+        else websocket._bufferedAmount += length;
       }
       if (cb) {
         const err = new Error(
@@ -29511,10 +29120,8 @@ var require_websocket = __commonJS({
       websocket._closeFrameReceived = true;
       websocket._closeMessage = reason;
       websocket._closeCode = code;
-      if (code === 1005)
-        websocket.close();
-      else
-        websocket.close(code, reason);
+      if (code === 1005) websocket.close();
+      else websocket.close(code, reason);
     }
     function receiverOnDrain() {
       this[kWebSocket]._socket.resume();
@@ -29604,8 +29211,7 @@ var require_stream = __commonJS({
     function createWebSocketStream(ws, options2) {
       let resumeOnReceiverDrain = true;
       function receiverOnDrain() {
-        if (resumeOnReceiverDrain)
-          ws._socket.resume();
+        if (resumeOnReceiverDrain) ws._socket.resume();
       }
       if (ws.readyState === ws.CONNECTING) {
         ws.once("open", function open() {
@@ -29629,13 +29235,11 @@ var require_stream = __commonJS({
         }
       });
       ws.once("error", function error(err) {
-        if (duplex.destroyed)
-          return;
+        if (duplex.destroyed) return;
         duplex.destroy(err);
       });
       ws.once("close", function close() {
-        if (duplex.destroyed)
-          return;
+        if (duplex.destroyed) return;
         duplex.push(null);
       });
       duplex._destroy = function(err, callback) {
@@ -29650,8 +29254,7 @@ var require_stream = __commonJS({
           callback(err2);
         });
         ws.once("close", function close() {
-          if (!called)
-            callback(err);
+          if (!called) callback(err);
           process.nextTick(emitClose, duplex);
         });
         ws.terminate();
@@ -29663,12 +29266,10 @@ var require_stream = __commonJS({
           });
           return;
         }
-        if (ws._socket === null)
-          return;
+        if (ws._socket === null) return;
         if (ws._socket._writableState.finished) {
           callback();
-          if (duplex._readableState.endEmitted)
-            duplex.destroy();
+          if (duplex._readableState.endEmitted) duplex.destroy();
         } else {
           ws._socket.once("finish", function finish() {
             callback();
@@ -29679,8 +29280,7 @@ var require_stream = __commonJS({
       duplex._read = function() {
         if (ws.readyState === ws.OPEN && !resumeOnReceiverDrain) {
           resumeOnReceiverDrain = true;
-          if (!ws._receiver._writableState.needDrain)
-            ws._socket.resume();
+          if (!ws._receiver._writableState.needDrain) ws._socket.resume();
         }
       };
       duplex._write = function(chunk, encoding, callback) {
@@ -29783,10 +29383,8 @@ var require_websocket_server = __commonJS({
             }
           });
         }
-        if (options2.perMessageDeflate === true)
-          options2.perMessageDeflate = {};
-        if (options2.clientTracking)
-          this.clients = /* @__PURE__ */ new Set();
+        if (options2.perMessageDeflate === true) options2.perMessageDeflate = {};
+        if (options2.clientTracking) this.clients = /* @__PURE__ */ new Set();
         this.options = options2;
       }
       /**
@@ -29802,8 +29400,7 @@ var require_websocket_server = __commonJS({
         if (this.options.noServer) {
           throw new Error('The server is operating in "noServer" mode');
         }
-        if (!this._server)
-          return null;
+        if (!this._server) return null;
         return this._server.address();
       }
       /**
@@ -29813,11 +29410,9 @@ var require_websocket_server = __commonJS({
        * @public
        */
       close(cb) {
-        if (cb)
-          this.once("close", cb);
+        if (cb) this.once("close", cb);
         if (this.clients) {
-          for (const client of this.clients)
-            client.terminate();
+          for (const client of this.clients) client.terminate();
         }
         const server = this._server;
         if (server) {
@@ -29841,8 +29436,7 @@ var require_websocket_server = __commonJS({
         if (this.options.path) {
           const index = req.url.indexOf("?");
           const pathname = index !== -1 ? req.url.slice(0, index) : req.url;
-          if (pathname !== this.options.path)
-            return false;
+          if (pathname !== this.options.path) return false;
         }
         return true;
       }
@@ -29894,8 +29488,7 @@ var require_websocket_server = __commonJS({
             });
             return;
           }
-          if (!this.options.verifyClient(info))
-            return abortHandshake(socket, 401);
+          if (!this.options.verifyClient(info)) return abortHandshake(socket, 401);
         }
         this.completeUpgrade(key, extensions, req, socket, head, cb);
       }
@@ -29912,8 +29505,7 @@ var require_websocket_server = __commonJS({
        * @private
        */
       completeUpgrade(key, extensions, req, socket, head, cb) {
-        if (!socket.readable || !socket.writable)
-          return socket.destroy();
+        if (!socket.readable || !socket.writable) return socket.destroy();
         if (socket[kWebSocket]) {
           throw new Error(
             "server.handleUpgrade() was called more than once with the same socket, possibly due to a misconfiguration"
@@ -29961,8 +29553,7 @@ var require_websocket_server = __commonJS({
     };
     module2.exports = WebSocketServer;
     function addListeners(server, map) {
-      for (const event of Object.keys(map))
-        server.on(event, map[event]);
+      for (const event of Object.keys(map)) server.on(event, map[event]);
       return function removeListeners() {
         for (const event of Object.keys(map)) {
           server.removeListener(event, map[event]);
@@ -30033,9 +29624,7 @@ var require_websocket_provider = __commonJS({
         extendStatics2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
           d2.__proto__ = b2;
         } || function(d2, b2) {
-          for (var p in b2)
-            if (Object.prototype.hasOwnProperty.call(b2, p))
-              d2[p] = b2[p];
+          for (var p in b2) if (Object.prototype.hasOwnProperty.call(b2, p)) d2[p] = b2[p];
         };
         return extendStatics2(d, b);
       };
@@ -30078,8 +29667,7 @@ var require_websocket_provider = __commonJS({
     };
     var __generator2 = exports2 && exports2.__generator || function(thisArg, body) {
       var _ = { label: 0, sent: function() {
-        if (t[0] & 1)
-          throw t[1];
+        if (t[0] & 1) throw t[1];
         return t[1];
       }, trys: [], ops: [] }, f, y, t, g;
       return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() {
@@ -30091,64 +29679,58 @@ var require_websocket_provider = __commonJS({
         };
       }
       function step(op) {
-        if (f)
-          throw new TypeError("Generator is already executing.");
-        while (_)
-          try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done)
-              return t;
-            if (y = 0, t)
-              op = [op[0] & 2, t.value];
-            switch (op[0]) {
-              case 0:
-              case 1:
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+          if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+          if (y = 0, t) op = [op[0] & 2, t.value];
+          switch (op[0]) {
+            case 0:
+            case 1:
+              t = op;
+              break;
+            case 4:
+              _.label++;
+              return { value: op[1], done: false };
+            case 5:
+              _.label++;
+              y = op[1];
+              op = [0];
+              continue;
+            case 7:
+              op = _.ops.pop();
+              _.trys.pop();
+              continue;
+            default:
+              if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
+                _ = 0;
+                continue;
+              }
+              if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
+                _.label = op[1];
+                break;
+              }
+              if (op[0] === 6 && _.label < t[1]) {
+                _.label = t[1];
                 t = op;
                 break;
-              case 4:
-                _.label++;
-                return { value: op[1], done: false };
-              case 5:
-                _.label++;
-                y = op[1];
-                op = [0];
-                continue;
-              case 7:
-                op = _.ops.pop();
-                _.trys.pop();
-                continue;
-              default:
-                if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
-                  _ = 0;
-                  continue;
-                }
-                if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
-                  _.label = op[1];
-                  break;
-                }
-                if (op[0] === 6 && _.label < t[1]) {
-                  _.label = t[1];
-                  t = op;
-                  break;
-                }
-                if (t && _.label < t[2]) {
-                  _.label = t[2];
-                  _.ops.push(op);
-                  break;
-                }
-                if (t[2])
-                  _.ops.pop();
-                _.trys.pop();
-                continue;
-            }
-            op = body.call(thisArg, _);
-          } catch (e) {
-            op = [6, e];
-            y = 0;
-          } finally {
-            f = t = 0;
+              }
+              if (t && _.label < t[2]) {
+                _.label = t[2];
+                _.ops.push(op);
+                break;
+              }
+              if (t[2]) _.ops.pop();
+              _.trys.pop();
+              continue;
           }
-        if (op[0] & 5)
-          throw op[1];
+          op = body.call(thisArg, _);
+        } catch (e) {
+          op = [6, e];
+          y = 0;
+        } finally {
+          f = t = 0;
+        }
+        if (op[0] & 5) throw op[1];
         return { value: op[0] ? op[1] : void 0, done: true };
       }
     };
@@ -30372,6 +29954,7 @@ var require_websocket_provider = __commonJS({
               });
               break;
             }
+            // Nothing is needed
             case "debug":
             case "poll":
             case "willPoll":
@@ -30415,8 +29998,7 @@ var require_websocket_provider = __commonJS({
             return __generator2(this, function(_a7) {
               switch (_a7.label) {
                 case 0:
-                  if (!(this._websocket.readyState === ws_1.WebSocket.CONNECTING))
-                    return [3, 2];
+                  if (!(this._websocket.readyState === ws_1.WebSocket.CONNECTING)) return [3, 2];
                   return [4, new Promise(function(resolve) {
                     _this._websocket.onopen = function() {
                       resolve(true);
@@ -30454,9 +30036,7 @@ var require_url_json_rpc_provider = __commonJS({
         extendStatics2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
           d2.__proto__ = b2;
         } || function(d2, b2) {
-          for (var p in b2)
-            if (Object.prototype.hasOwnProperty.call(b2, p))
-              d2[p] = b2[p];
+          for (var p in b2) if (Object.prototype.hasOwnProperty.call(b2, p)) d2[p] = b2[p];
         };
         return extendStatics2(d, b);
       };
@@ -30499,8 +30079,7 @@ var require_url_json_rpc_provider = __commonJS({
     };
     var __generator2 = exports2 && exports2.__generator || function(thisArg, body) {
       var _ = { label: 0, sent: function() {
-        if (t[0] & 1)
-          throw t[1];
+        if (t[0] & 1) throw t[1];
         return t[1];
       }, trys: [], ops: [] }, f, y, t, g;
       return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() {
@@ -30512,64 +30091,58 @@ var require_url_json_rpc_provider = __commonJS({
         };
       }
       function step(op) {
-        if (f)
-          throw new TypeError("Generator is already executing.");
-        while (_)
-          try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done)
-              return t;
-            if (y = 0, t)
-              op = [op[0] & 2, t.value];
-            switch (op[0]) {
-              case 0:
-              case 1:
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+          if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+          if (y = 0, t) op = [op[0] & 2, t.value];
+          switch (op[0]) {
+            case 0:
+            case 1:
+              t = op;
+              break;
+            case 4:
+              _.label++;
+              return { value: op[1], done: false };
+            case 5:
+              _.label++;
+              y = op[1];
+              op = [0];
+              continue;
+            case 7:
+              op = _.ops.pop();
+              _.trys.pop();
+              continue;
+            default:
+              if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
+                _ = 0;
+                continue;
+              }
+              if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
+                _.label = op[1];
+                break;
+              }
+              if (op[0] === 6 && _.label < t[1]) {
+                _.label = t[1];
                 t = op;
                 break;
-              case 4:
-                _.label++;
-                return { value: op[1], done: false };
-              case 5:
-                _.label++;
-                y = op[1];
-                op = [0];
-                continue;
-              case 7:
-                op = _.ops.pop();
-                _.trys.pop();
-                continue;
-              default:
-                if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
-                  _ = 0;
-                  continue;
-                }
-                if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
-                  _.label = op[1];
-                  break;
-                }
-                if (op[0] === 6 && _.label < t[1]) {
-                  _.label = t[1];
-                  t = op;
-                  break;
-                }
-                if (t && _.label < t[2]) {
-                  _.label = t[2];
-                  _.ops.push(op);
-                  break;
-                }
-                if (t[2])
-                  _.ops.pop();
-                _.trys.pop();
-                continue;
-            }
-            op = body.call(thisArg, _);
-          } catch (e) {
-            op = [6, e];
-            y = 0;
-          } finally {
-            f = t = 0;
+              }
+              if (t && _.label < t[2]) {
+                _.label = t[2];
+                _.ops.push(op);
+                break;
+              }
+              if (t[2]) _.ops.pop();
+              _.trys.pop();
+              continue;
           }
-        if (op[0] & 5)
-          throw op[1];
+          op = body.call(thisArg, _);
+        } catch (e) {
+          op = [6, e];
+          y = 0;
+        } finally {
+          f = t = 0;
+        }
+        if (op[0] & 5) throw op[1];
         return { value: op[0] ? op[1] : void 0, done: true };
       }
     };
@@ -30594,8 +30167,7 @@ var require_url_json_rpc_provider = __commonJS({
               switch (_a7.label) {
                 case 0:
                   network = this.network;
-                  if (!(network == null))
-                    return [3, 2];
+                  if (!(network == null)) return [3, 2];
                   return [4, _super.prototype.detectNetwork.call(this)];
                 case 1:
                   network = _a7.sent();
@@ -30674,9 +30246,7 @@ var require_alchemy_provider = __commonJS({
         extendStatics2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
           d2.__proto__ = b2;
         } || function(d2, b2) {
-          for (var p in b2)
-            if (Object.prototype.hasOwnProperty.call(b2, p))
-              d2[p] = b2[p];
+          for (var p in b2) if (Object.prototype.hasOwnProperty.call(b2, p)) d2[p] = b2[p];
         };
         return extendStatics2(d, b);
       };
@@ -30807,9 +30377,7 @@ var require_cloudflare_provider = __commonJS({
         extendStatics2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
           d2.__proto__ = b2;
         } || function(d2, b2) {
-          for (var p in b2)
-            if (Object.prototype.hasOwnProperty.call(b2, p))
-              d2[p] = b2[p];
+          for (var p in b2) if (Object.prototype.hasOwnProperty.call(b2, p)) d2[p] = b2[p];
         };
         return extendStatics2(d, b);
       };
@@ -30852,8 +30420,7 @@ var require_cloudflare_provider = __commonJS({
     };
     var __generator2 = exports2 && exports2.__generator || function(thisArg, body) {
       var _ = { label: 0, sent: function() {
-        if (t[0] & 1)
-          throw t[1];
+        if (t[0] & 1) throw t[1];
         return t[1];
       }, trys: [], ops: [] }, f, y, t, g;
       return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() {
@@ -30865,64 +30432,58 @@ var require_cloudflare_provider = __commonJS({
         };
       }
       function step(op) {
-        if (f)
-          throw new TypeError("Generator is already executing.");
-        while (_)
-          try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done)
-              return t;
-            if (y = 0, t)
-              op = [op[0] & 2, t.value];
-            switch (op[0]) {
-              case 0:
-              case 1:
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+          if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+          if (y = 0, t) op = [op[0] & 2, t.value];
+          switch (op[0]) {
+            case 0:
+            case 1:
+              t = op;
+              break;
+            case 4:
+              _.label++;
+              return { value: op[1], done: false };
+            case 5:
+              _.label++;
+              y = op[1];
+              op = [0];
+              continue;
+            case 7:
+              op = _.ops.pop();
+              _.trys.pop();
+              continue;
+            default:
+              if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
+                _ = 0;
+                continue;
+              }
+              if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
+                _.label = op[1];
+                break;
+              }
+              if (op[0] === 6 && _.label < t[1]) {
+                _.label = t[1];
                 t = op;
                 break;
-              case 4:
-                _.label++;
-                return { value: op[1], done: false };
-              case 5:
-                _.label++;
-                y = op[1];
-                op = [0];
-                continue;
-              case 7:
-                op = _.ops.pop();
-                _.trys.pop();
-                continue;
-              default:
-                if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
-                  _ = 0;
-                  continue;
-                }
-                if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
-                  _.label = op[1];
-                  break;
-                }
-                if (op[0] === 6 && _.label < t[1]) {
-                  _.label = t[1];
-                  t = op;
-                  break;
-                }
-                if (t && _.label < t[2]) {
-                  _.label = t[2];
-                  _.ops.push(op);
-                  break;
-                }
-                if (t[2])
-                  _.ops.pop();
-                _.trys.pop();
-                continue;
-            }
-            op = body.call(thisArg, _);
-          } catch (e) {
-            op = [6, e];
-            y = 0;
-          } finally {
-            f = t = 0;
+              }
+              if (t && _.label < t[2]) {
+                _.label = t[2];
+                _.ops.push(op);
+                break;
+              }
+              if (t[2]) _.ops.pop();
+              _.trys.pop();
+              continue;
           }
-        if (op[0] & 5)
-          throw op[1];
+          op = body.call(thisArg, _);
+        } catch (e) {
+          op = [6, e];
+          y = 0;
+        } finally {
+          f = t = 0;
+        }
+        if (op[0] & 5) throw op[1];
         return { value: op[0] ? op[1] : void 0, done: true };
       }
     };
@@ -30962,8 +30523,7 @@ var require_cloudflare_provider = __commonJS({
             return __generator2(this, function(_a7) {
               switch (_a7.label) {
                 case 0:
-                  if (!(method === "getBlockNumber"))
-                    return [3, 2];
+                  if (!(method === "getBlockNumber")) return [3, 2];
                   return [4, _super.prototype.perform.call(this, "getBlock", { blockTag: "latest" })];
                 case 1:
                   block = _a7.sent();
@@ -30990,9 +30550,7 @@ var require_etherscan_provider = __commonJS({
         extendStatics2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
           d2.__proto__ = b2;
         } || function(d2, b2) {
-          for (var p in b2)
-            if (Object.prototype.hasOwnProperty.call(b2, p))
-              d2[p] = b2[p];
+          for (var p in b2) if (Object.prototype.hasOwnProperty.call(b2, p)) d2[p] = b2[p];
         };
         return extendStatics2(d, b);
       };
@@ -31035,8 +30593,7 @@ var require_etherscan_provider = __commonJS({
     };
     var __generator2 = exports2 && exports2.__generator || function(thisArg, body) {
       var _ = { label: 0, sent: function() {
-        if (t[0] & 1)
-          throw t[1];
+        if (t[0] & 1) throw t[1];
         return t[1];
       }, trys: [], ops: [] }, f, y, t, g;
       return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() {
@@ -31048,64 +30605,58 @@ var require_etherscan_provider = __commonJS({
         };
       }
       function step(op) {
-        if (f)
-          throw new TypeError("Generator is already executing.");
-        while (_)
-          try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done)
-              return t;
-            if (y = 0, t)
-              op = [op[0] & 2, t.value];
-            switch (op[0]) {
-              case 0:
-              case 1:
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+          if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+          if (y = 0, t) op = [op[0] & 2, t.value];
+          switch (op[0]) {
+            case 0:
+            case 1:
+              t = op;
+              break;
+            case 4:
+              _.label++;
+              return { value: op[1], done: false };
+            case 5:
+              _.label++;
+              y = op[1];
+              op = [0];
+              continue;
+            case 7:
+              op = _.ops.pop();
+              _.trys.pop();
+              continue;
+            default:
+              if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
+                _ = 0;
+                continue;
+              }
+              if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
+                _.label = op[1];
+                break;
+              }
+              if (op[0] === 6 && _.label < t[1]) {
+                _.label = t[1];
                 t = op;
                 break;
-              case 4:
-                _.label++;
-                return { value: op[1], done: false };
-              case 5:
-                _.label++;
-                y = op[1];
-                op = [0];
-                continue;
-              case 7:
-                op = _.ops.pop();
-                _.trys.pop();
-                continue;
-              default:
-                if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
-                  _ = 0;
-                  continue;
-                }
-                if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
-                  _.label = op[1];
-                  break;
-                }
-                if (op[0] === 6 && _.label < t[1]) {
-                  _.label = t[1];
-                  t = op;
-                  break;
-                }
-                if (t && _.label < t[2]) {
-                  _.label = t[2];
-                  _.ops.push(op);
-                  break;
-                }
-                if (t[2])
-                  _.ops.pop();
-                _.trys.pop();
-                continue;
-            }
-            op = body.call(thisArg, _);
-          } catch (e) {
-            op = [6, e];
-            y = 0;
-          } finally {
-            f = t = 0;
+              }
+              if (t && _.label < t[2]) {
+                _.label = t[2];
+                _.ops.push(op);
+                break;
+              }
+              if (t[2]) _.ops.pop();
+              _.trys.pop();
+              continue;
           }
-        if (op[0] & 5)
-          throw op[1];
+          op = body.call(thisArg, _);
+        } catch (e) {
+          op = [6, e];
+          y = 0;
+        } finally {
+          f = t = 0;
+        }
+        if (op[0] & 5) throw op[1];
         return { value: op[0] ? op[1] : void 0, done: true };
       }
     };
@@ -31502,14 +31053,12 @@ var require_etherscan_provider = __commonJS({
                   i = 0;
                   _c.label = 21;
                 case 21:
-                  if (!(i < logs.length))
-                    return [3, 25];
+                  if (!(i < logs.length)) return [3, 25];
                   log = logs[i];
                   if (log.blockHash != null) {
                     return [3, 24];
                   }
-                  if (!(blocks[log.blockNumber] == null))
-                    return [3, 23];
+                  if (!(blocks[log.blockNumber] == null)) return [3, 23];
                   return [4, this.getBlock(log.blockNumber)];
                 case 22:
                   block = _c.sent();
@@ -31596,9 +31145,7 @@ var require_fallback_provider = __commonJS({
         extendStatics2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
           d2.__proto__ = b2;
         } || function(d2, b2) {
-          for (var p in b2)
-            if (Object.prototype.hasOwnProperty.call(b2, p))
-              d2[p] = b2[p];
+          for (var p in b2) if (Object.prototype.hasOwnProperty.call(b2, p)) d2[p] = b2[p];
         };
         return extendStatics2(d, b);
       };
@@ -31641,8 +31188,7 @@ var require_fallback_provider = __commonJS({
     };
     var __generator2 = exports2 && exports2.__generator || function(thisArg, body) {
       var _ = { label: 0, sent: function() {
-        if (t[0] & 1)
-          throw t[1];
+        if (t[0] & 1) throw t[1];
         return t[1];
       }, trys: [], ops: [] }, f, y, t, g;
       return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() {
@@ -31654,64 +31200,58 @@ var require_fallback_provider = __commonJS({
         };
       }
       function step(op) {
-        if (f)
-          throw new TypeError("Generator is already executing.");
-        while (_)
-          try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done)
-              return t;
-            if (y = 0, t)
-              op = [op[0] & 2, t.value];
-            switch (op[0]) {
-              case 0:
-              case 1:
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+          if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+          if (y = 0, t) op = [op[0] & 2, t.value];
+          switch (op[0]) {
+            case 0:
+            case 1:
+              t = op;
+              break;
+            case 4:
+              _.label++;
+              return { value: op[1], done: false };
+            case 5:
+              _.label++;
+              y = op[1];
+              op = [0];
+              continue;
+            case 7:
+              op = _.ops.pop();
+              _.trys.pop();
+              continue;
+            default:
+              if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
+                _ = 0;
+                continue;
+              }
+              if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
+                _.label = op[1];
+                break;
+              }
+              if (op[0] === 6 && _.label < t[1]) {
+                _.label = t[1];
                 t = op;
                 break;
-              case 4:
-                _.label++;
-                return { value: op[1], done: false };
-              case 5:
-                _.label++;
-                y = op[1];
-                op = [0];
-                continue;
-              case 7:
-                op = _.ops.pop();
-                _.trys.pop();
-                continue;
-              default:
-                if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
-                  _ = 0;
-                  continue;
-                }
-                if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
-                  _.label = op[1];
-                  break;
-                }
-                if (op[0] === 6 && _.label < t[1]) {
-                  _.label = t[1];
-                  t = op;
-                  break;
-                }
-                if (t && _.label < t[2]) {
-                  _.label = t[2];
-                  _.ops.push(op);
-                  break;
-                }
-                if (t[2])
-                  _.ops.pop();
-                _.trys.pop();
-                continue;
-            }
-            op = body.call(thisArg, _);
-          } catch (e) {
-            op = [6, e];
-            y = 0;
-          } finally {
-            f = t = 0;
+              }
+              if (t && _.label < t[2]) {
+                _.label = t[2];
+                _.ops.push(op);
+                break;
+              }
+              if (t[2]) _.ops.pop();
+              _.trys.pop();
+              continue;
           }
-        if (op[0] & 5)
-          throw op[1];
+          op = body.call(thisArg, _);
+        } catch (e) {
+          op = [6, e];
+          y = 0;
+        } finally {
+          f = t = 0;
+        }
+        if (op[0] & 5) throw op[1];
         return { value: op[0] ? op[1] : void 0, done: true };
       }
     };
@@ -31905,6 +31445,7 @@ var require_fallback_provider = __commonJS({
               return c.result;
             }));
           };
+        // No additional normalizing required; serialize is enough
         case "getBalance":
         case "getTransactionCount":
         case "getCode":
@@ -31913,6 +31454,7 @@ var require_fallback_provider = __commonJS({
         case "estimateGas":
         case "getLogs":
           break;
+        // We drop the confirmations from transactions as it is approximate
         case "getTransaction":
         case "getTransactionReceipt":
           normalize = function(tx) {
@@ -31924,6 +31466,7 @@ var require_fallback_provider = __commonJS({
             return serialize(tx);
           };
           break;
+        // We drop the confirmations from transactions as it is approximate
         case "getBlock":
           if (params.includeTransactions) {
             normalize = function(block) {
@@ -32021,8 +31564,7 @@ var require_fallback_provider = __commonJS({
               }
               return [3, 19];
             case 3:
-              if (!(params.blockTag && (0, bytes_1.isHexString)(params.blockTag)))
-                return [3, 5];
+              if (!(params.blockTag && (0, bytes_1.isHexString)(params.blockTag))) return [3, 5];
               return [4, waitForSync(config, currentBlockNumber)];
             case 4:
               provider = _b.sent();
@@ -32030,8 +31572,7 @@ var require_fallback_provider = __commonJS({
             case 5:
               return [2, provider[method](params.address, params.blockTag || "latest")];
             case 6:
-              if (!(params.blockTag && (0, bytes_1.isHexString)(params.blockTag)))
-                return [3, 8];
+              if (!(params.blockTag && (0, bytes_1.isHexString)(params.blockTag))) return [3, 8];
               return [4, waitForSync(config, currentBlockNumber)];
             case 7:
               provider = _b.sent();
@@ -32039,8 +31580,7 @@ var require_fallback_provider = __commonJS({
             case 8:
               return [2, provider.getStorageAt(params.address, params.position, params.blockTag || "latest")];
             case 9:
-              if (!(params.blockTag && (0, bytes_1.isHexString)(params.blockTag)))
-                return [3, 11];
+              if (!(params.blockTag && (0, bytes_1.isHexString)(params.blockTag))) return [3, 11];
               return [4, waitForSync(config, currentBlockNumber)];
             case 10:
               provider = _b.sent();
@@ -32048,8 +31588,7 @@ var require_fallback_provider = __commonJS({
             case 11:
               return [2, provider[params.includeTransactions ? "getBlockWithTransactions" : "getBlock"](params.blockTag || params.blockHash)];
             case 12:
-              if (!(params.blockTag && (0, bytes_1.isHexString)(params.blockTag)))
-                return [3, 14];
+              if (!(params.blockTag && (0, bytes_1.isHexString)(params.blockTag))) return [3, 14];
               return [4, waitForSync(config, currentBlockNumber)];
             case 13:
               provider = _b.sent();
@@ -32060,8 +31599,7 @@ var require_fallback_provider = __commonJS({
               return [2, provider[method](params.transactionHash)];
             case 16:
               filter = params.filter;
-              if (!(filter.fromBlock && (0, bytes_1.isHexString)(filter.fromBlock) || filter.toBlock && (0, bytes_1.isHexString)(filter.toBlock)))
-                return [3, 18];
+              if (!(filter.fromBlock && (0, bytes_1.isHexString)(filter.fromBlock) || filter.toBlock && (0, bytes_1.isHexString)(filter.toBlock))) return [3, 18];
               return [4, waitForSync(config, currentBlockNumber)];
             case 17:
               provider = _b.sent();
@@ -32157,8 +31695,7 @@ var require_fallback_provider = __commonJS({
             return __generator2(this, function(_a7) {
               switch (_a7.label) {
                 case 0:
-                  if (!(method === "sendTransaction"))
-                    return [3, 2];
+                  if (!(method === "sendTransaction")) return [3, 2];
                   return [4, Promise.all(this.providerConfigs.map(function(c) {
                     return c.provider.sendTransaction(params.signedTransaction).then(function(result2) {
                       return result2.hash;
@@ -32176,8 +31713,7 @@ var require_fallback_provider = __commonJS({
                   }
                   throw results[0];
                 case 2:
-                  if (!(this._highestBlockNumber === -1 && method !== "getBlockNumber"))
-                    return [3, 4];
+                  if (!(this._highestBlockNumber === -1 && method !== "getBlockNumber")) return [3, 4];
                   return [4, this.getBlockNumber()];
                 case 3:
                   _a7.sent();
@@ -32259,8 +31795,7 @@ var require_fallback_provider = __commonJS({
                               waiting.push(c.staller.getPromise());
                             }
                           });
-                          if (!waiting.length)
-                            return [3, 2];
+                          if (!waiting.length) return [3, 2];
                           return [4, Promise.race(waiting)];
                         case 1:
                           _b.sent();
@@ -32269,8 +31804,7 @@ var require_fallback_provider = __commonJS({
                           results2 = configs.filter(function(c) {
                             return c.done && c.error == null;
                           });
-                          if (!(results2.length >= this_1.quorum))
-                            return [3, 5];
+                          if (!(results2.length >= this_1.quorum)) return [3, 5];
                           result2 = processFunc(results2);
                           if (result2 !== void 0) {
                             configs.forEach(function(c) {
@@ -32281,8 +31815,7 @@ var require_fallback_provider = __commonJS({
                             });
                             return [2, { value: result2 }];
                           }
-                          if (!!first)
-                            return [3, 4];
+                          if (!!first) return [3, 4];
                           return [4, stall(100).getPromise()];
                         case 3:
                           _b.sent();
@@ -32340,8 +31873,7 @@ var require_fallback_provider = __commonJS({
                   this_1 = this;
                   _a7.label = 5;
                 case 5:
-                  if (false)
-                    return [3, 7];
+                  if (false) return [3, 7];
                   return [5, _loop_1()];
                 case 6:
                   state_1 = _a7.sent();
@@ -32387,9 +31919,7 @@ var require_ipc_provider = __commonJS({
         extendStatics2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
           d2.__proto__ = b2;
         } || function(d2, b2) {
-          for (var p in b2)
-            if (Object.prototype.hasOwnProperty.call(b2, p))
-              d2[p] = b2[p];
+          for (var p in b2) if (Object.prototype.hasOwnProperty.call(b2, p)) d2[p] = b2[p];
         };
         return extendStatics2(d, b);
       };
@@ -32473,9 +32003,7 @@ var require_infura_provider = __commonJS({
         extendStatics2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
           d2.__proto__ = b2;
         } || function(d2, b2) {
-          for (var p in b2)
-            if (Object.prototype.hasOwnProperty.call(b2, p))
-              d2[p] = b2[p];
+          for (var p in b2) if (Object.prototype.hasOwnProperty.call(b2, p)) d2[p] = b2[p];
         };
         return extendStatics2(d, b);
       };
@@ -32635,9 +32163,7 @@ var require_json_rpc_batch_provider = __commonJS({
         extendStatics2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
           d2.__proto__ = b2;
         } || function(d2, b2) {
-          for (var p in b2)
-            if (Object.prototype.hasOwnProperty.call(b2, p))
-              d2[p] = b2[p];
+          for (var p in b2) if (Object.prototype.hasOwnProperty.call(b2, p)) d2[p] = b2[p];
         };
         return extendStatics2(d, b);
       };
@@ -32742,9 +32268,7 @@ var require_nodesmith_provider = __commonJS({
         extendStatics2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
           d2.__proto__ = b2;
         } || function(d2, b2) {
-          for (var p in b2)
-            if (Object.prototype.hasOwnProperty.call(b2, p))
-              d2[p] = b2[p];
+          for (var p in b2) if (Object.prototype.hasOwnProperty.call(b2, p)) d2[p] = b2[p];
         };
         return extendStatics2(d, b);
       };
@@ -32818,9 +32342,7 @@ var require_pocket_provider = __commonJS({
         extendStatics2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
           d2.__proto__ = b2;
         } || function(d2, b2) {
-          for (var p in b2)
-            if (Object.prototype.hasOwnProperty.call(b2, p))
-              d2[p] = b2[p];
+          for (var p in b2) if (Object.prototype.hasOwnProperty.call(b2, p)) d2[p] = b2[p];
         };
         return extendStatics2(d, b);
       };
@@ -32955,9 +32477,7 @@ var require_web3_provider = __commonJS({
         extendStatics2 = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d2, b2) {
           d2.__proto__ = b2;
         } || function(d2, b2) {
-          for (var p in b2)
-            if (Object.prototype.hasOwnProperty.call(b2, p))
-              d2[p] = b2[p];
+          for (var p in b2) if (Object.prototype.hasOwnProperty.call(b2, p)) d2[p] = b2[p];
         };
         return extendStatics2(d, b);
       };
@@ -33270,14 +32790,12 @@ var require_ethers = __commonJS({
   "node_modules/ethers/lib/ethers.js"(exports2) {
     "use strict";
     var __createBinding2 = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
-      if (k2 === void 0)
-        k2 = k;
+      if (k2 === void 0) k2 = k;
       Object.defineProperty(o, k2, { enumerable: true, get: function() {
         return m[k];
       } });
     } : function(o, m, k, k2) {
-      if (k2 === void 0)
-        k2 = k;
+      if (k2 === void 0) k2 = k;
       o[k2] = m[k];
     });
     var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
@@ -33286,13 +32804,10 @@ var require_ethers = __commonJS({
       o["default"] = v;
     });
     var __importStar2 = exports2 && exports2.__importStar || function(mod) {
-      if (mod && mod.__esModule)
-        return mod;
+      if (mod && mod.__esModule) return mod;
       var result = {};
       if (mod != null) {
-        for (var k in mod)
-          if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k))
-            __createBinding2(result, mod, k);
+        for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding2(result, mod, k);
       }
       __setModuleDefault(result, mod);
       return result;
@@ -33362,14 +32877,12 @@ var require_lib31 = __commonJS({
   "node_modules/ethers/lib/index.js"(exports2) {
     "use strict";
     var __createBinding2 = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
-      if (k2 === void 0)
-        k2 = k;
+      if (k2 === void 0) k2 = k;
       Object.defineProperty(o, k2, { enumerable: true, get: function() {
         return m[k];
       } });
     } : function(o, m, k, k2) {
-      if (k2 === void 0)
-        k2 = k;
+      if (k2 === void 0) k2 = k;
       o[k2] = m[k];
     });
     var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
@@ -33378,13 +32891,10 @@ var require_lib31 = __commonJS({
       o["default"] = v;
     });
     var __importStar2 = exports2 && exports2.__importStar || function(mod) {
-      if (mod && mod.__esModule)
-        return mod;
+      if (mod && mod.__esModule) return mod;
       var result = {};
       if (mod != null) {
-        for (var k in mod)
-          if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k))
-            __createBinding2(result, mod, k);
+        for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding2(result, mod, k);
       }
       __setModuleDefault(result, mod);
       return result;
@@ -33653,13 +33163,12 @@ var require_types2 = __commonJS({
       43114: "avalanche",
       43113: "fuji",
       42161: "arbitrum_one",
-      421611: "arbitrum_rinkeby",
       421613: "arbitrum_goerli",
+      421614: "arbitrum_sepolia",
       250: "fantom_opera",
       4002: "fantom_testnet",
       10: "optimism",
-      69: "optimism_kovan",
-      420: "optimism_goerli",
+      11155420: "optimism_sepolia",
       16666e5: "harmony",
       16667e5: "harmony_testnet",
       11155111: "sepolia",
@@ -33667,7 +33176,9 @@ var require_types2 = __commonJS({
       534351: "scroll_sepolia",
       534352: "scroll",
       1088: "metis_andromeda",
-      8453: "base"
+      8453: "base",
+      84532: "base_sepolia",
+      56: "bnb"
     };
     var ChainId3;
     (function(ChainId4) {
@@ -33682,13 +33193,12 @@ var require_types2 = __commonJS({
       ChainId4[ChainId4["avalanche"] = 43114] = "avalanche";
       ChainId4[ChainId4["fuji"] = 43113] = "fuji";
       ChainId4[ChainId4["arbitrum_one"] = 42161] = "arbitrum_one";
-      ChainId4[ChainId4["arbitrum_rinkeby"] = 421611] = "arbitrum_rinkeby";
       ChainId4[ChainId4["arbitrum_goerli"] = 421613] = "arbitrum_goerli";
+      ChainId4[ChainId4["arbitrum_sepolia"] = 421614] = "arbitrum_sepolia";
       ChainId4[ChainId4["fantom"] = 250] = "fantom";
       ChainId4[ChainId4["fantom_testnet"] = 4002] = "fantom_testnet";
       ChainId4[ChainId4["optimism"] = 10] = "optimism";
-      ChainId4[ChainId4["optimism_kovan"] = 69] = "optimism_kovan";
-      ChainId4[ChainId4["optimism_goerli"] = 420] = "optimism_goerli";
+      ChainId4[ChainId4["optimism_sepolia"] = 11155420] = "optimism_sepolia";
       ChainId4[ChainId4["harmony"] = 16666e5] = "harmony";
       ChainId4[ChainId4["harmony_testnet"] = 16667e5] = "harmony_testnet";
       ChainId4[ChainId4["zkevm_testnet"] = 1402] = "zkevm_testnet";
@@ -33698,6 +33208,8 @@ var require_types2 = __commonJS({
       ChainId4[ChainId4["scroll"] = 534352] = "scroll";
       ChainId4[ChainId4["metis_andromeda"] = 1088] = "metis_andromeda";
       ChainId4[ChainId4["base"] = 8453] = "base";
+      ChainId4[ChainId4["base_sepolia"] = 84532] = "base_sepolia";
+      ChainId4[ChainId4["bnb"] = 56] = "bnb";
     })(ChainId3 = exports2.ChainId || (exports2.ChainId = {}));
     var eEthereumTxType;
     (function(eEthereumTxType2) {
@@ -33706,7 +33218,7 @@ var require_types2 = __commonJS({
       eEthereumTxType2["GOVERNANCE_ACTION"] = "GOVERNANCE_ACTION";
       eEthereumTxType2["GOV_DELEGATION_ACTION"] = "GOV_DELEGATION_ACTION";
       eEthereumTxType2["STAKE_ACTION"] = "STAKE_ACTION";
-      eEthereumTxType2["MIGRATION_LEND_AAVE"] = "MIGRATION_LEND_AAVE";
+      eEthereumTxType2["MIGRATION_LEND_PSYS"] = "MIGRATION_LEND_PSYS";
       eEthereumTxType2["FAUCET_MINT"] = "FAUCET_MINT";
       eEthereumTxType2["REWARD_ACTION"] = "REWARD_ACTION";
       eEthereumTxType2["V3_MIGRATION_ACTION"] = "V3_MIGRATION_ACTION";
@@ -33722,6 +33234,8 @@ var require_types2 = __commonJS({
       ProtocolAction2["liquidationCall"] = "liquidationCall";
       ProtocolAction2["liquidationFlash"] = "liquidationFlash";
       ProtocolAction2["repay"] = "repay";
+      ProtocolAction2["repayETH"] = "repayETH";
+      ProtocolAction2["repayWithATokens"] = "repayWithATokens";
       ProtocolAction2["swapCollateral"] = "swapCollateral";
       ProtocolAction2["repayCollateral"] = "repayCollateral";
       ProtocolAction2["withdrawETH"] = "withdrawETH";
@@ -33743,6 +33257,9 @@ var require_types2 = __commonJS({
       ProtocolAction2["claimRewardsAndStake"] = "claimRewardsAndStake";
       ProtocolAction2["setUsageAsCollateral"] = "setUsageAsCollateral";
       ProtocolAction2["withdrawAndSwitch"] = "withdrawAndSwitch";
+      ProtocolAction2["batchMetaDelegate"] = "batchMetaDelegate";
+      ProtocolAction2["updateRepresentatives"] = "updateRepresentatives";
+      ProtocolAction2["migrateABPT"] = "migrateABPT";
     })(ProtocolAction = exports2.ProtocolAction || (exports2.ProtocolAction = {}));
     var GovernanceVote;
     (function(GovernanceVote2) {
@@ -33752,8 +33269,10 @@ var require_types2 = __commonJS({
     })(GovernanceVote = exports2.GovernanceVote || (exports2.GovernanceVote = {}));
     var Stake;
     (function(Stake2) {
-      Stake2["aave"] = "aave";
+      Stake2["pegasys"] = "pegasys";
       Stake2["bpt"] = "bpt";
+      Stake2["gho"] = "gho";
+      Stake2["bptv2"] = "bptv2";
     })(Stake = exports2.Stake || (exports2.Stake = {}));
     exports2.DEFAULT_DEADLINE = Math.floor(Date.now() / 1e3 + 3600).toString();
   }
@@ -33806,8 +33325,7 @@ var require_bignumber2 = __commonJS({
         }, ALPHABET = "0123456789abcdefghijklmnopqrstuvwxyz", alphabetHasNormalDecimalDigits = true;
         function BigNumber3(v, b) {
           var alphabet, c, caseChanged, e, i, isNum, len, str2, x = this;
-          if (!(x instanceof BigNumber3))
-            return new BigNumber3(v, b);
+          if (!(x instanceof BigNumber3)) return new BigNumber3(v, b);
           if (b == null) {
             if (v && v._isBigNumber === true) {
               x.s = v.s;
@@ -33824,8 +33342,7 @@ var require_bignumber2 = __commonJS({
             if ((isNum = typeof v == "number") && v * 0 == 0) {
               x.s = 1 / v < 0 ? (v = -v, -1) : 1;
               if (v === ~~v) {
-                for (e = 0, i = v; i >= 10; i /= 10, e++)
-                  ;
+                for (e = 0, i = v; i >= 10; i /= 10, e++) ;
                 if (e > MAX_EXP) {
                   x.c = x.e = null;
                 } else {
@@ -33836,15 +33353,12 @@ var require_bignumber2 = __commonJS({
               }
               str2 = String(v);
             } else {
-              if (!isNumeric2.test(str2 = String(v)))
-                return parseNumeric(x, str2, isNum);
+              if (!isNumeric2.test(str2 = String(v))) return parseNumeric(x, str2, isNum);
               x.s = str2.charCodeAt(0) == 45 ? (str2 = str2.slice(1), -1) : 1;
             }
-            if ((e = str2.indexOf(".")) > -1)
-              str2 = str2.replace(".", "");
+            if ((e = str2.indexOf(".")) > -1) str2 = str2.replace(".", "");
             if ((i = str2.search(/e/i)) > 0) {
-              if (e < 0)
-                e = i;
+              if (e < 0) e = i;
               e += +str2.slice(i + 1);
               str2 = str2.substring(0, i);
             } else if (e < 0) {
@@ -33858,8 +33372,7 @@ var require_bignumber2 = __commonJS({
             }
             str2 = String(v);
             if (isNum = typeof v == "number") {
-              if (v * 0 != 0)
-                return parseNumeric(x, str2, isNum, b);
+              if (v * 0 != 0) return parseNumeric(x, str2, isNum, b);
               x.s = 1 / v < 0 ? (str2 = str2.slice(1), -1) : 1;
               if (BigNumber3.DEBUG && str2.replace(/^0\.0*|\./, "").length > 15) {
                 throw Error(tooManyDigits2 + v);
@@ -33889,15 +33402,11 @@ var require_bignumber2 = __commonJS({
             }
             isNum = false;
             str2 = convertBase(str2, b, 10, x.s);
-            if ((e = str2.indexOf(".")) > -1)
-              str2 = str2.replace(".", "");
-            else
-              e = str2.length;
+            if ((e = str2.indexOf(".")) > -1) str2 = str2.replace(".", "");
+            else e = str2.length;
           }
-          for (i = 0; str2.charCodeAt(i) === 48; i++)
-            ;
-          for (len = str2.length; str2.charCodeAt(--len) === 48; )
-            ;
+          for (i = 0; str2.charCodeAt(i) === 48; i++) ;
+          for (len = str2.length; str2.charCodeAt(--len) === 48; ) ;
           if (str2 = str2.slice(i, ++len)) {
             len -= i;
             if (isNum && BigNumber3.DEBUG && len > 15 && (v > MAX_SAFE_INTEGER2 || v !== mathfloor2(v))) {
@@ -33911,11 +33420,9 @@ var require_bignumber2 = __commonJS({
               x.e = e;
               x.c = [];
               i = (e + 1) % LOG_BASE2;
-              if (e < 0)
-                i += LOG_BASE2;
+              if (e < 0) i += LOG_BASE2;
               if (i < len) {
-                if (i)
-                  x.c.push(+str2.slice(0, i));
+                if (i) x.c.push(+str2.slice(0, i));
                 for (len -= LOG_BASE2; i < len; ) {
                   x.c.push(+str2.slice(i, i += LOG_BASE2));
                 }
@@ -33923,8 +33430,7 @@ var require_bignumber2 = __commonJS({
               } else {
                 i -= len;
               }
-              for (; i--; str2 += "0")
-                ;
+              for (; i--; str2 += "0") ;
               x.c.push(+str2);
             }
           } else {
@@ -34013,10 +33519,8 @@ var require_bignumber2 = __commonJS({
               }
               if (obj.hasOwnProperty(p = "FORMAT")) {
                 v = obj[p];
-                if (typeof v == "object")
-                  FORMAT = v;
-                else
-                  throw Error(bignumberError2 + p + " not an object: " + v);
+                if (typeof v == "object") FORMAT = v;
+                else throw Error(bignumberError2 + p + " not an object: " + v);
               }
               if (obj.hasOwnProperty(p = "ALPHABET")) {
                 v = obj[p];
@@ -34044,35 +33548,28 @@ var require_bignumber2 = __commonJS({
           };
         };
         BigNumber3.isBigNumber = function(v) {
-          if (!v || v._isBigNumber !== true)
-            return false;
-          if (!BigNumber3.DEBUG)
-            return true;
+          if (!v || v._isBigNumber !== true) return false;
+          if (!BigNumber3.DEBUG) return true;
           var i, n, c = v.c, e = v.e, s = v.s;
-          out:
-            if ({}.toString.call(c) == "[object Array]") {
-              if ((s === 1 || s === -1) && e >= -MAX2 && e <= MAX2 && e === mathfloor2(e)) {
-                if (c[0] === 0) {
-                  if (e === 0 && c.length === 1)
-                    return true;
-                  break out;
-                }
-                i = (e + 1) % LOG_BASE2;
-                if (i < 1)
-                  i += LOG_BASE2;
-                if (String(c[0]).length == i) {
-                  for (i = 0; i < c.length; i++) {
-                    n = c[i];
-                    if (n < 0 || n >= BASE2 || n !== mathfloor2(n))
-                      break out;
-                  }
-                  if (n !== 0)
-                    return true;
-                }
+          out: if ({}.toString.call(c) == "[object Array]") {
+            if ((s === 1 || s === -1) && e >= -MAX2 && e <= MAX2 && e === mathfloor2(e)) {
+              if (c[0] === 0) {
+                if (e === 0 && c.length === 1) return true;
+                break out;
               }
-            } else if (c === null && e === null && (s === null || s === 1 || s === -1)) {
-              return true;
+              i = (e + 1) % LOG_BASE2;
+              if (i < 1) i += LOG_BASE2;
+              if (String(c[0]).length == i) {
+                for (i = 0; i < c.length; i++) {
+                  n = c[i];
+                  if (n < 0 || n >= BASE2 || n !== mathfloor2(n)) break out;
+                }
+                if (n !== 0) return true;
+              }
             }
+          } else if (c === null && e === null && (s === null || s === 1 || s === -1)) {
+            return true;
+          }
           throw Error(bignumberError2 + "Invalid BigNumber: " + v);
         };
         BigNumber3.maximum = BigNumber3.max = function() {
@@ -34090,10 +33587,8 @@ var require_bignumber2 = __commonJS({
           };
           return function(dp) {
             var a, b, e, k, v, i = 0, c = [], rand = new BigNumber3(ONE);
-            if (dp == null)
-              dp = DECIMAL_PLACES;
-            else
-              intCheck2(dp, 0, MAX2);
+            if (dp == null) dp = DECIMAL_PLACES;
+            else intCheck2(dp, 0, MAX2);
             k = mathceil2(dp / LOG_BASE2);
             if (CRYPTO) {
               if (crypto.getRandomValues) {
@@ -34130,8 +33625,7 @@ var require_bignumber2 = __commonJS({
             if (!CRYPTO) {
               for (; i < k; ) {
                 v = random53bitInt();
-                if (v < 9e15)
-                  c[i++] = v % 1e14;
+                if (v < 9e15) c[i++] = v % 1e14;
               }
             }
             k = c[--i];
@@ -34140,17 +33634,13 @@ var require_bignumber2 = __commonJS({
               v = POWS_TEN2[LOG_BASE2 - dp];
               c[i] = mathfloor2(k / v) * v;
             }
-            for (; c[i] === 0; c.pop(), i--)
-              ;
+            for (; c[i] === 0; c.pop(), i--) ;
             if (i < 0) {
               c = [e = 0];
             } else {
-              for (e = -1; c[0] === 0; c.splice(0, 1), e -= LOG_BASE2)
-                ;
-              for (i = 1, v = c[0]; v >= 10; v /= 10, i++)
-                ;
-              if (i < LOG_BASE2)
-                e -= LOG_BASE2 - i;
+              for (e = -1; c[0] === 0; c.splice(0, 1), e -= LOG_BASE2) ;
+              for (i = 1, v = c[0]; v >= 10; v /= 10, i++) ;
+              if (i < LOG_BASE2) e -= LOG_BASE2 - i;
             }
             rand.e = e;
             rand.c = c;
@@ -34159,8 +33649,7 @@ var require_bignumber2 = __commonJS({
         }();
         BigNumber3.sum = function() {
           var i = 1, args = arguments, sum = new BigNumber3(args[0]);
-          for (; i < args.length; )
-            sum = sum.plus(args[i++]);
+          for (; i < args.length; ) sum = sum.plus(args[i++]);
           return sum;
         };
         convertBase = /* @__PURE__ */ function() {
@@ -34168,13 +33657,11 @@ var require_bignumber2 = __commonJS({
           function toBaseOut(str2, baseIn, baseOut, alphabet) {
             var j, arr = [0], arrL, i = 0, len = str2.length;
             for (; i < len; ) {
-              for (arrL = arr.length; arrL--; arr[arrL] *= baseIn)
-                ;
+              for (arrL = arr.length; arrL--; arr[arrL] *= baseIn) ;
               arr[0] += alphabet.indexOf(str2.charAt(i++));
               for (j = 0; j < arr.length; j++) {
                 if (arr[j] > baseOut - 1) {
-                  if (arr[j + 1] == null)
-                    arr[j + 1] = 0;
+                  if (arr[j + 1] == null) arr[j + 1] = 0;
                   arr[j + 1] += arr[j] / baseOut | 0;
                   arr[j] %= baseOut;
                 }
@@ -34201,10 +33688,8 @@ var require_bignumber2 = __commonJS({
             }
             xc = toBaseOut(str2, baseIn, baseOut, callerIsToString ? (alphabet = ALPHABET, decimal) : (alphabet = decimal, ALPHABET));
             e = k = xc.length;
-            for (; xc[--k] == 0; xc.pop())
-              ;
-            if (!xc[0])
-              return alphabet.charAt(0);
+            for (; xc[--k] == 0; xc.pop()) ;
+            if (!xc[0]) return alphabet.charAt(0);
             if (i < 0) {
               --e;
             } else {
@@ -34234,10 +33719,8 @@ var require_bignumber2 = __commonJS({
                   }
                 }
               }
-              for (k = xc.length; !xc[--k]; )
-                ;
-              for (i = 0, str2 = ""; i <= k; str2 += alphabet.charAt(xc[i++]))
-                ;
+              for (k = xc.length; !xc[--k]; ) ;
+              for (i = 0, str2 = ""; i <= k; str2 += alphabet.charAt(xc[i++])) ;
               str2 = toFixedPoint2(str2, e, alphabet.charAt(0));
             }
             return str2;
@@ -34254,8 +33737,7 @@ var require_bignumber2 = __commonJS({
               carry = (temp / base | 0) + (m / SQRT_BASE2 | 0) + khi * xhi;
               x[i] = temp % base;
             }
-            if (carry)
-              x = [carry].concat(x);
+            if (carry) x = [carry].concat(x);
             return x;
           }
           function compare3(a, b, aL, bL) {
@@ -34279,8 +33761,7 @@ var require_bignumber2 = __commonJS({
               i = a[aL] < b[aL] ? 1 : 0;
               a[aL] = i * base + a[aL] - b[aL];
             }
-            for (; !a[0] && a.length > 1; a.splice(0, 1))
-              ;
+            for (; !a[0] && a.length > 1; a.splice(0, 1)) ;
           }
           return function(x, y, dp, rm, base) {
             var cmp, e, i, more, n, prod, prodL, q, qc, rem, remL, rem0, xi, xL, yc0, yL, yz, s = x.s == y.s ? 1 : -1, xc = x.c, yc = y.c;
@@ -34302,10 +33783,8 @@ var require_bignumber2 = __commonJS({
               e = bitFloor2(x.e / LOG_BASE2) - bitFloor2(y.e / LOG_BASE2);
               s = s / LOG_BASE2 | 0;
             }
-            for (i = 0; yc[i] == (xc[i] || 0); i++)
-              ;
-            if (yc[i] > (xc[i] || 0))
-              e--;
+            for (i = 0; yc[i] == (xc[i] || 0); i++) ;
+            if (yc[i] > (xc[i] || 0)) e--;
             if (s < 0) {
               qc.push(1);
               more = true;
@@ -34324,24 +33803,20 @@ var require_bignumber2 = __commonJS({
               xi = yL;
               rem = xc.slice(0, yL);
               remL = rem.length;
-              for (; remL < yL; rem[remL++] = 0)
-                ;
+              for (; remL < yL; rem[remL++] = 0) ;
               yz = yc.slice();
               yz = [0].concat(yz);
               yc0 = yc[0];
-              if (yc[1] >= base / 2)
-                yc0++;
+              if (yc[1] >= base / 2) yc0++;
               do {
                 n = 0;
                 cmp = compare3(yc, rem, yL, remL);
                 if (cmp < 0) {
                   rem0 = rem[0];
-                  if (yL != remL)
-                    rem0 = rem0 * base + (rem[1] || 0);
+                  if (yL != remL) rem0 = rem0 * base + (rem[1] || 0);
                   n = mathfloor2(rem0 / yc0);
                   if (n > 1) {
-                    if (n >= base)
-                      n = base - 1;
+                    if (n >= base) n = base - 1;
                     prod = multiply(yc, n, base);
                     prodL = prod.length;
                     remL = rem.length;
@@ -34358,8 +33833,7 @@ var require_bignumber2 = __commonJS({
                     prod = yc.slice();
                     prodL = prod.length;
                   }
-                  if (prodL < remL)
-                    prod = [0].concat(prod);
+                  if (prodL < remL) prod = [0].concat(prod);
                   subtract(rem, prod, remL, base);
                   remL = rem.length;
                   if (cmp == -1) {
@@ -34382,12 +33856,10 @@ var require_bignumber2 = __commonJS({
                 }
               } while ((xi++ < xL || rem[0] != null) && s--);
               more = rem[0] != null;
-              if (!qc[0])
-                qc.splice(0, 1);
+              if (!qc[0]) qc.splice(0, 1);
             }
             if (base == BASE2) {
-              for (i = 1, s = qc[0]; s >= 10; s /= 10, i++)
-                ;
+              for (i = 1, s = qc[0]; s >= 10; s /= 10, i++) ;
               round(q, dp + (q.e = i + e * LOG_BASE2 - 1) + 1, rm, more);
             } else {
               q.e = e;
@@ -34398,12 +33870,9 @@ var require_bignumber2 = __commonJS({
         }();
         function format(n, i, rm, id) {
           var c0, e, ne, len, str2;
-          if (rm == null)
-            rm = ROUNDING_MODE;
-          else
-            intCheck2(rm, 0, 8);
-          if (!n.c)
-            return n.toString();
+          if (rm == null) rm = ROUNDING_MODE;
+          else intCheck2(rm, 0, 8);
+          if (!n.c) return n.toString();
           c0 = n.c[0];
           ne = n.e;
           if (i == null) {
@@ -34415,23 +33884,18 @@ var require_bignumber2 = __commonJS({
             str2 = coeffToString2(n.c);
             len = str2.length;
             if (id == 1 || id == 2 && (i <= e || e <= TO_EXP_NEG)) {
-              for (; len < i; str2 += "0", len++)
-                ;
+              for (; len < i; str2 += "0", len++) ;
               str2 = toExponential2(str2, e);
             } else {
               i -= ne;
               str2 = toFixedPoint2(str2, e, "0");
               if (e + 1 > len) {
-                if (--i > 0)
-                  for (str2 += "."; i--; str2 += "0")
-                    ;
+                if (--i > 0) for (str2 += "."; i--; str2 += "0") ;
               } else {
                 i += e - len;
                 if (i > 0) {
-                  if (e + 1 == len)
-                    str2 += ".";
-                  for (; i--; str2 += "0")
-                    ;
+                  if (e + 1 == len) str2 += ".";
+                  for (; i--; str2 += "0") ;
                 }
               }
             }
@@ -34453,10 +33917,8 @@ var require_bignumber2 = __commonJS({
         }
         function normalise(n, c, e) {
           var i = 1, j = c.length;
-          for (; !c[--j]; c.pop())
-            ;
-          for (j = c[0]; j >= 10; j /= 10, i++)
-            ;
+          for (; !c[--j]; c.pop()) ;
+          for (j = c[0]; j >= 10; j /= 10, i++) ;
           if ((e = i + e * LOG_BASE2 - 1) > MAX_EXP) {
             n.c = n.e = null;
           } else if (e < MIN_EXP) {
@@ -34483,8 +33945,7 @@ var require_bignumber2 = __commonJS({
                   base = b;
                   s = s.replace(dotAfter, "$1").replace(dotBefore, "0.$1");
                 }
-                if (str2 != s)
-                  return new BigNumber3(s, base);
+                if (str2 != s) return new BigNumber3(s, base);
               }
               if (BigNumber3.DEBUG) {
                 throw Error(bignumberError2 + "Not a" + (b ? " base " + b : "") + " number: " + str2);
@@ -34498,8 +33959,7 @@ var require_bignumber2 = __commonJS({
           var d, i, j, k, n, ni, rd, xc = x.c, pows10 = POWS_TEN2;
           if (xc) {
             out: {
-              for (d = 1, k = xc[0]; k >= 10; k /= 10, d++)
-                ;
+              for (d = 1, k = xc[0]; k >= 10; k /= 10, d++) ;
               i = sd - d;
               if (i < 0) {
                 i += LOG_BASE2;
@@ -34510,8 +33970,7 @@ var require_bignumber2 = __commonJS({
                 ni = mathceil2((i + 1) / LOG_BASE2);
                 if (ni >= xc.length) {
                   if (r) {
-                    for (; xc.length <= ni; xc.push(0))
-                      ;
+                    for (; xc.length <= ni; xc.push(0)) ;
                     n = rd = 0;
                     d = 1;
                     i %= LOG_BASE2;
@@ -34521,8 +33980,7 @@ var require_bignumber2 = __commonJS({
                   }
                 } else {
                   n = k = xc[ni];
-                  for (d = 1; k >= 10; k /= 10, d++)
-                    ;
+                  for (d = 1; k >= 10; k /= 10, d++) ;
                   i %= LOG_BASE2;
                   j = i - LOG_BASE2 + d;
                   rd = j < 0 ? 0 : n / pows10[d - j - 1] % 10 | 0;
@@ -34557,28 +34015,23 @@ var require_bignumber2 = __commonJS({
               if (r) {
                 for (; ; ) {
                   if (ni == 0) {
-                    for (i = 1, j = xc[0]; j >= 10; j /= 10, i++)
-                      ;
+                    for (i = 1, j = xc[0]; j >= 10; j /= 10, i++) ;
                     j = xc[0] += k;
-                    for (k = 1; j >= 10; j /= 10, k++)
-                      ;
+                    for (k = 1; j >= 10; j /= 10, k++) ;
                     if (i != k) {
                       x.e++;
-                      if (xc[0] == BASE2)
-                        xc[0] = 1;
+                      if (xc[0] == BASE2) xc[0] = 1;
                     }
                     break;
                   } else {
                     xc[ni] += k;
-                    if (xc[ni] != BASE2)
-                      break;
+                    if (xc[ni] != BASE2) break;
                     xc[ni--] = 0;
                     k = 1;
                   }
                 }
               }
-              for (i = xc.length; xc[--i] === 0; xc.pop())
-                ;
+              for (i = xc.length; xc[--i] === 0; xc.pop()) ;
             }
             if (x.e > MAX_EXP) {
               x.c = x.e = null;
@@ -34590,16 +34043,14 @@ var require_bignumber2 = __commonJS({
         }
         function valueOf(n) {
           var str2, e = n.e;
-          if (e === null)
-            return n.toString();
+          if (e === null) return n.toString();
           str2 = coeffToString2(n.c);
           str2 = e <= TO_EXP_NEG || e >= TO_EXP_POS ? toExponential2(str2, e) : toFixedPoint2(str2, e, "0");
           return n.s < 0 ? "-" + str2 : str2;
         }
         P.absoluteValue = P.abs = function() {
           var x = new BigNumber3(this);
-          if (x.s < 0)
-            x.s = 1;
+          if (x.s < 0) x.s = 1;
           return x;
         };
         P.comparedTo = function(y, b) {
@@ -34609,20 +34060,14 @@ var require_bignumber2 = __commonJS({
           var c, n, v, x = this;
           if (dp != null) {
             intCheck2(dp, 0, MAX2);
-            if (rm == null)
-              rm = ROUNDING_MODE;
-            else
-              intCheck2(rm, 0, 8);
+            if (rm == null) rm = ROUNDING_MODE;
+            else intCheck2(rm, 0, 8);
             return round(new BigNumber3(x), dp + x.e + 1, rm);
           }
-          if (!(c = x.c))
-            return null;
+          if (!(c = x.c)) return null;
           n = ((v = c.length - 1) - bitFloor2(this.e / LOG_BASE2)) * LOG_BASE2;
-          if (v = c[v])
-            for (; v % 10 == 0; v /= 10, n--)
-              ;
-          if (n < 0)
-            n = 0;
+          if (v = c[v]) for (; v % 10 == 0; v /= 10, n--) ;
+          if (n < 0) n = 0;
           return n;
         };
         P.dividedBy = P.div = function(y, b) {
@@ -34637,8 +34082,7 @@ var require_bignumber2 = __commonJS({
           if (n.c && !n.isInteger()) {
             throw Error(bignumberError2 + "Exponent not an integer: " + valueOf(n));
           }
-          if (m != null)
-            m = new BigNumber3(m);
+          if (m != null) m = new BigNumber3(m);
           nIsBig = n.e > 14;
           if (!x.c || !x.c[0] || x.c[0] == 1 && !x.e && x.c.length == 1 || !n.c || !n.c[0]) {
             y = new BigNumber3(Math.pow(+valueOf(x), nIsBig ? n.s * (2 - isOdd2(n)) : +valueOf(n)));
@@ -34646,23 +34090,19 @@ var require_bignumber2 = __commonJS({
           }
           nIsNeg = n.s < 0;
           if (m) {
-            if (m.c ? !m.c[0] : !m.s)
-              return new BigNumber3(NaN);
+            if (m.c ? !m.c[0] : !m.s) return new BigNumber3(NaN);
             isModExp = !nIsNeg && x.isInteger() && m.isInteger();
-            if (isModExp)
-              x = x.mod(m);
+            if (isModExp) x = x.mod(m);
           } else if (n.e > 9 && (x.e > 0 || x.e < -1 || (x.e == 0 ? x.c[0] > 1 || nIsBig && x.c[1] >= 24e7 : x.c[0] < 8e13 || nIsBig && x.c[0] <= 9999975e7))) {
             k = x.s < 0 && isOdd2(n) ? -0 : 0;
-            if (x.e > -1)
-              k = 1 / k;
+            if (x.e > -1) k = 1 / k;
             return new BigNumber3(nIsNeg ? 1 / k : k);
           } else if (POW_PRECISION) {
             k = mathceil2(POW_PRECISION / LOG_BASE2 + 2);
           }
           if (nIsBig) {
             half = new BigNumber3(0.5);
-            if (nIsNeg)
-              n.s = 1;
+            if (nIsNeg) n.s = 1;
             nIsOdd = isOdd2(n);
           } else {
             i = Math.abs(+valueOf(n));
@@ -34672,19 +34112,16 @@ var require_bignumber2 = __commonJS({
           for (; ; ) {
             if (nIsOdd) {
               y = y.times(x);
-              if (!y.c)
-                break;
+              if (!y.c) break;
               if (k) {
-                if (y.c.length > k)
-                  y.c.length = k;
+                if (y.c.length > k) y.c.length = k;
               } else if (isModExp) {
                 y = y.mod(m);
               }
             }
             if (i) {
               i = mathfloor2(i / 2);
-              if (i === 0)
-                break;
+              if (i === 0) break;
               nIsOdd = i % 2;
             } else {
               n = n.times(half);
@@ -34693,31 +34130,25 @@ var require_bignumber2 = __commonJS({
                 nIsOdd = isOdd2(n);
               } else {
                 i = +valueOf(n);
-                if (i === 0)
-                  break;
+                if (i === 0) break;
                 nIsOdd = i % 2;
               }
             }
             x = x.times(x);
             if (k) {
-              if (x.c && x.c.length > k)
-                x.c.length = k;
+              if (x.c && x.c.length > k) x.c.length = k;
             } else if (isModExp) {
               x = x.mod(m);
             }
           }
-          if (isModExp)
-            return y;
-          if (nIsNeg)
-            y = ONE.div(y);
+          if (isModExp) return y;
+          if (nIsNeg) y = ONE.div(y);
           return m ? y.mod(m) : k ? round(y, POW_PRECISION, ROUNDING_MODE, more) : y;
         };
         P.integerValue = function(rm) {
           var n = new BigNumber3(this);
-          if (rm == null)
-            rm = ROUNDING_MODE;
-          else
-            intCheck2(rm, 0, 8);
+          if (rm == null) rm = ROUNDING_MODE;
+          else intCheck2(rm, 0, 8);
           return round(n, n.e + 1, rm);
         };
         P.isEqualTo = P.eq = function(y, b) {
@@ -34757,16 +34188,14 @@ var require_bignumber2 = __commonJS({
           var i, j, t, xLTy, x = this, a = x.s;
           y = new BigNumber3(y, b);
           b = y.s;
-          if (!a || !b)
-            return new BigNumber3(NaN);
+          if (!a || !b) return new BigNumber3(NaN);
           if (a != b) {
             y.s = -b;
             return x.plus(y);
           }
           var xe = x.e / LOG_BASE2, ye = y.e / LOG_BASE2, xc = x.c, yc = y.c;
           if (!xe || !ye) {
-            if (!xc || !yc)
-              return xc ? (y.s = -b, y) : new BigNumber3(yc ? x : NaN);
+            if (!xc || !yc) return xc ? (y.s = -b, y) : new BigNumber3(yc ? x : NaN);
             if (!xc[0] || !yc[0]) {
               return yc[0] ? (y.s = -b, y) : new BigNumber3(xc[0] ? x : (
                 // IEEE 754 (2008) 6.3: n - n = -0 when rounding to -Infinity
@@ -34786,8 +34215,7 @@ var require_bignumber2 = __commonJS({
               t = yc;
             }
             t.reverse();
-            for (b = a; b--; t.push(0))
-              ;
+            for (b = a; b--; t.push(0)) ;
             t.reverse();
           } else {
             j = (xLTy = (a = xc.length) < (b = yc.length)) ? a : b;
@@ -34805,21 +34233,17 @@ var require_bignumber2 = __commonJS({
             y.s = -y.s;
           }
           b = (j = yc.length) - (i = xc.length);
-          if (b > 0)
-            for (; b--; xc[i++] = 0)
-              ;
+          if (b > 0) for (; b--; xc[i++] = 0) ;
           b = BASE2 - 1;
           for (; j > a; ) {
             if (xc[--j] < yc[j]) {
-              for (i = j; i && !xc[--i]; xc[i] = b)
-                ;
+              for (i = j; i && !xc[--i]; xc[i] = b) ;
               --xc[i];
               xc[j] += BASE2;
             }
             xc[j] -= yc[j];
           }
-          for (; xc[0] == 0; xc.splice(0, 1), --ye)
-            ;
+          for (; xc[0] == 0; xc.splice(0, 1), --ye) ;
           if (!xc[0]) {
             y.s = ROUNDING_MODE == 3 ? -1 : 1;
             y.c = [y.e = 0];
@@ -34845,8 +34269,7 @@ var require_bignumber2 = __commonJS({
             q = div(x, y, 0, MODULO_MODE);
           }
           y = x.minus(q.times(y));
-          if (!y.c[0] && MODULO_MODE == 1)
-            y.s = x.s;
+          if (!y.c[0] && MODULO_MODE == 1) y.s = x.s;
           return y;
         };
         P.multipliedBy = P.times = function(y, b) {
@@ -34877,8 +34300,7 @@ var require_bignumber2 = __commonJS({
             xcL = ycL;
             ycL = i;
           }
-          for (i = xcL + ycL, zc = []; i--; zc.push(0))
-            ;
+          for (i = xcL + ycL, zc = []; i--; zc.push(0)) ;
           base = BASE2;
           sqrtBase = SQRT_BASE2;
           for (i = ycL; --i >= 0; ) {
@@ -34911,18 +34333,15 @@ var require_bignumber2 = __commonJS({
           var t, x = this, a = x.s;
           y = new BigNumber3(y, b);
           b = y.s;
-          if (!a || !b)
-            return new BigNumber3(NaN);
+          if (!a || !b) return new BigNumber3(NaN);
           if (a != b) {
             y.s = -b;
             return x.minus(y);
           }
           var xe = x.e / LOG_BASE2, ye = y.e / LOG_BASE2, xc = x.c, yc = y.c;
           if (!xe || !ye) {
-            if (!xc || !yc)
-              return new BigNumber3(a / 0);
-            if (!xc[0] || !yc[0])
-              return yc[0] ? y : new BigNumber3(xc[0] ? x : a * 0);
+            if (!xc || !yc) return new BigNumber3(a / 0);
+            if (!xc[0] || !yc[0]) return yc[0] ? y : new BigNumber3(xc[0] ? x : a * 0);
           }
           xe = bitFloor2(xe);
           ye = bitFloor2(ye);
@@ -34936,8 +34355,7 @@ var require_bignumber2 = __commonJS({
               t = xc;
             }
             t.reverse();
-            for (; a--; t.push(0))
-              ;
+            for (; a--; t.push(0)) ;
             t.reverse();
           }
           a = xc.length;
@@ -34962,24 +34380,18 @@ var require_bignumber2 = __commonJS({
           var c, n, v, x = this;
           if (sd != null && sd !== !!sd) {
             intCheck2(sd, 1, MAX2);
-            if (rm == null)
-              rm = ROUNDING_MODE;
-            else
-              intCheck2(rm, 0, 8);
+            if (rm == null) rm = ROUNDING_MODE;
+            else intCheck2(rm, 0, 8);
             return round(new BigNumber3(x), sd, rm);
           }
-          if (!(c = x.c))
-            return null;
+          if (!(c = x.c)) return null;
           v = c.length - 1;
           n = v * LOG_BASE2 + 1;
           if (v = c[v]) {
-            for (; v % 10 == 0; v /= 10, n--)
-              ;
-            for (v = c[0]; v >= 10; v /= 10, n++)
-              ;
+            for (; v % 10 == 0; v /= 10, n--) ;
+            for (v = c[0]; v >= 10; v /= 10, n++) ;
           }
-          if (sd && x.e + 1 > n)
-            n = x.e + 1;
+          if (sd && x.e + 1 > n) n = x.e + 1;
           return n;
         };
         P.shiftedBy = function(k) {
@@ -34994,8 +34406,7 @@ var require_bignumber2 = __commonJS({
           s = Math.sqrt(+valueOf(x));
           if (s == 0 || s == 1 / 0) {
             n = coeffToString2(c);
-            if ((n.length + e) % 2 == 0)
-              n += "0";
+            if ((n.length + e) % 2 == 0) n += "0";
             s = Math.sqrt(+n);
             e = bitFloor2((e + 1) / 2) - (e < 0 || e % 2);
             if (s == 1 / 0) {
@@ -35011,14 +34422,12 @@ var require_bignumber2 = __commonJS({
           if (r.c[0]) {
             e = r.e;
             s = e + dp;
-            if (s < 3)
-              s = 0;
+            if (s < 3) s = 0;
             for (; ; ) {
               t = r;
               r = half.times(t.plus(div(x, t, dp, 1)));
               if (coeffToString2(t.c).slice(0, s) === (n = coeffToString2(r.c)).slice(0, s)) {
-                if (r.e < e)
-                  --s;
+                if (r.e < e) --s;
                 n = n.slice(s - 3, s + 1);
                 if (n == "9999" || !rep && n == "4999") {
                   if (!rep) {
@@ -35084,12 +34493,9 @@ var require_bignumber2 = __commonJS({
             if (g1 > 0 && len > 0) {
               i = len % g1 || g1;
               intPart = intDigits.substr(0, i);
-              for (; i < len; i += g1)
-                intPart += groupSeparator + intDigits.substr(i, g1);
-              if (g2 > 0)
-                intPart += groupSeparator + intDigits.slice(i);
-              if (isNeg)
-                intPart = "-" + intPart;
+              for (; i < len; i += g1) intPart += groupSeparator + intDigits.substr(i, g1);
+              if (g2 > 0) intPart += groupSeparator + intDigits.slice(i);
+              if (isNeg) intPart = "-" + intPart;
             }
             str2 = fractionPart ? intPart + (format2.decimalSeparator || "") + ((g2 = +format2.fractionGroupSize) ? fractionPart.replace(
               new RegExp("\\d{" + g2 + "}\\B", "g"),
@@ -35106,8 +34512,7 @@ var require_bignumber2 = __commonJS({
               throw Error(bignumberError2 + "Argument " + (n.isInteger() ? "out of range: " : "not an integer: ") + valueOf(n));
             }
           }
-          if (!xc)
-            return new BigNumber3(x);
+          if (!xc) return new BigNumber3(x);
           d = new BigNumber3(ONE);
           n1 = d0 = new BigNumber3(ONE);
           d1 = n0 = new BigNumber3(ONE);
@@ -35122,8 +34527,7 @@ var require_bignumber2 = __commonJS({
           for (; ; ) {
             q = div(n, d, 0, 1);
             d2 = d0.plus(q.times(d1));
-            if (d2.comparedTo(md) == 1)
-              break;
+            if (d2.comparedTo(md) == 1) break;
             d0 = d1;
             d1 = d2;
             n1 = n0.plus(q.times(d2 = n1));
@@ -35146,8 +34550,7 @@ var require_bignumber2 = __commonJS({
           return +valueOf(this);
         };
         P.toPrecision = function(sd, rm) {
-          if (sd != null)
-            intCheck2(sd, 1, MAX2);
+          if (sd != null) intCheck2(sd, 1, MAX2);
           return format(this, sd, rm, 2);
         };
         P.toString = function(b) {
@@ -35155,8 +34558,7 @@ var require_bignumber2 = __commonJS({
           if (e === null) {
             if (s) {
               str2 = "Infinity";
-              if (s < 0)
-                str2 = "-" + str2;
+              if (s < 0) str2 = "-" + str2;
             } else {
               str2 = "NaN";
             }
@@ -35170,8 +34572,7 @@ var require_bignumber2 = __commonJS({
               intCheck2(b, 2, ALPHABET.length, "Base");
               str2 = convertBase(toFixedPoint2(coeffToString2(n.c), e, "0"), 10, b, s, true);
             }
-            if (s < 0 && n.c[0])
-              str2 = "-" + str2;
+            if (s < 0 && n.c[0]) str2 = "-" + str2;
           }
           return str2;
         };
@@ -35179,8 +34580,7 @@ var require_bignumber2 = __commonJS({
           return valueOf(this);
         };
         P._isBigNumber = true;
-        if (configObject != null)
-          BigNumber3.set(configObject);
+        if (configObject != null) BigNumber3.set(configObject);
         return BigNumber3;
       }
       function bitFloor2(n) {
@@ -35192,34 +34592,25 @@ var require_bignumber2 = __commonJS({
         for (; i < j; ) {
           s = a[i++] + "";
           z = LOG_BASE2 - s.length;
-          for (; z--; s = "0" + s)
-            ;
+          for (; z--; s = "0" + s) ;
           r += s;
         }
-        for (j = r.length; r.charCodeAt(--j) === 48; )
-          ;
+        for (j = r.length; r.charCodeAt(--j) === 48; ) ;
         return r.slice(0, j + 1 || 1);
       }
       function compare2(x, y) {
         var a, b, xc = x.c, yc = y.c, i = x.s, j = y.s, k = x.e, l = y.e;
-        if (!i || !j)
-          return null;
+        if (!i || !j) return null;
         a = xc && !xc[0];
         b = yc && !yc[0];
-        if (a || b)
-          return a ? b ? 0 : -j : i;
-        if (i != j)
-          return i;
+        if (a || b) return a ? b ? 0 : -j : i;
+        if (i != j) return i;
         a = i < 0;
         b = k == l;
-        if (!xc || !yc)
-          return b ? 0 : !xc ^ a ? 1 : -1;
-        if (!b)
-          return k > l ^ a ? 1 : -1;
+        if (!xc || !yc) return b ? 0 : !xc ^ a ? 1 : -1;
+        if (!b) return k > l ^ a ? 1 : -1;
         j = (k = xc.length) < (l = yc.length) ? k : l;
-        for (i = 0; i < j; i++)
-          if (xc[i] != yc[i])
-            return xc[i] > yc[i] ^ a ? 1 : -1;
+        for (i = 0; i < j; i++) if (xc[i] != yc[i]) return xc[i] > yc[i] ^ a ? 1 : -1;
         return k == l ? 0 : k > l ^ a ? 1 : -1;
       }
       function intCheck2(n, min, max, name2) {
@@ -35237,14 +34628,12 @@ var require_bignumber2 = __commonJS({
       function toFixedPoint2(str2, e, z) {
         var len, zs;
         if (e < 0) {
-          for (zs = z + "."; ++e; zs += z)
-            ;
+          for (zs = z + "."; ++e; zs += z) ;
           str2 = zs + str2;
         } else {
           len = str2.length;
           if (++e > len) {
-            for (zs = z, e -= len; --e; zs += z)
-              ;
+            for (zs = z, e -= len; --e; zs += z) ;
             str2 += zs;
           } else if (e < len) {
             str2 = str2.slice(0, e) + "." + str2.slice(e);
@@ -35341,6 +34730,10 @@ var require_utils6 = __commonJS({
         limit: "300000",
         recommended: "300000"
       },
+      [types_1.ProtocolAction.repayETH]: {
+        limit: "350000",
+        recommended: "300000"
+      },
       [types_1.ProtocolAction.borrowETH]: {
         limit: "450000",
         recommended: "450000"
@@ -35369,6 +34762,10 @@ var require_utils6 = __commonJS({
         limit: "350000",
         recommended: "350000"
       },
+      [types_1.ProtocolAction.stake]: {
+        limit: "350000",
+        recommended: "350000"
+      },
       [types_1.ProtocolAction.stakeWithPermit]: {
         limit: "400000",
         recommended: "400000"
@@ -35376,10 +34773,6 @@ var require_utils6 = __commonJS({
       [types_1.ProtocolAction.vote]: {
         limit: "125000",
         recommended: "125000"
-      },
-      [types_1.ProtocolAction.stake]: {
-        limit: "395000",
-        recommended: "395000"
       },
       [types_1.ProtocolAction.claimRewards]: {
         limit: "275000",
@@ -35389,13 +34782,29 @@ var require_utils6 = __commonJS({
         limit: "138000",
         recommended: "138000"
       },
+      [types_1.ProtocolAction.repayWithATokens]: {
+        limit: "300000",
+        recommended: "300000"
+      },
       [types_1.ProtocolAction.withdrawAndSwitch]: {
         limit: "1000000",
         recommended: "1000000"
+      },
+      [types_1.ProtocolAction.batchMetaDelegate]: {
+        limit: "200000",
+        recommended: "200000"
+      },
+      [types_1.ProtocolAction.updateRepresentatives]: {
+        limit: "60000",
+        recommended: "60000"
+      },
+      [types_1.ProtocolAction.migrateABPT]: {
+        limit: "750000",
+        recommended: "750000"
       }
     };
     exports2.mintAmountsPerToken = {
-      AAVE: (0, exports2.valueToWei)("100", 18),
+      PSYS: (0, exports2.valueToWei)("100", 18),
       BAT: (0, exports2.valueToWei)("100000", 18),
       BUSD: (0, exports2.valueToWei)("10000", 18),
       DAI: (0, exports2.valueToWei)("10000", 18),
@@ -35439,15 +34848,21 @@ var require_utils6 = __commonJS({
       switch (calldata.slice(0, 10)) {
         case "0x935fb84b":
           return 36;
+        // 4 + 1 * 32
         case "0xc03786b0":
           return 100;
+        // 4 + 3 * 32
         case "0xb2f1e6db":
           return 68;
+        // 4 + 2 * 32
         case "0xb66bcbac":
+        // Augustus V5 buy (old)
         case "0x35326910":
           return 164;
+        // 4 + 5 * 32
         case "0x87a63926":
           return 68;
+        // 4 + 2 * 32
         default:
           throw new Error("Unrecognized function selector for Augustus");
       }
@@ -36931,8 +36346,8 @@ var require_methodValidators = __commonJS({
       descriptor.value = function() {
         if (
           // @ts-expect-error todo: check why this ignore is needed
-          !ethers_1.utils.isAddress(this.aaveGovernanceV2Address) || // @ts-expect-error todo: check why this ignore is needed
-          !ethers_1.utils.isAddress(this.aaveGovernanceV2HelperAddress)
+          !ethers_1.utils.isAddress(this.pegasysGovernanceV2Address) || // @ts-expect-error todo: check why this ignore is needed
+          !ethers_1.utils.isAddress(this.pegasysGovernanceV2HelperAddress)
         ) {
           console.error(`[GovernanceValidator] You need to pass valid addresses`);
           return [];
@@ -36949,7 +36364,7 @@ var require_methodValidators = __commonJS({
       descriptor.value = function() {
         if (
           // @ts-expect-error todo: check why this ignore is needed
-          !ethers_1.utils.isAddress(this.aaveGovernanceV2Address)
+          !ethers_1.utils.isAddress(this.pegasysGovernanceV2Address)
         ) {
           console.error(`[GovernanceValidator] You need to pass valid addresses`);
           return [];
@@ -38646,7 +38061,7 @@ var require_v3_UiPoolDataProvider_contract = __commonJS({
       "0x004375dff511095cc5a197a54140a24efef3a416": "UNIWBTCUSDC",
       "0xa478c2975ab1ea89e8196811f51a7b7ade33eb11": "UNIDAIWETH",
       "0xb4e16d0168e52d35cacd2c6185b44281ec28c9dc": "UNIUSDCWETH",
-      "0xdfc14d2af169b0d36c4eff567ada9b2e0cae044f": "UNIAAVEWETH",
+      "0xdfc14d2af169b0d36c4eff567ada9b2e0cae044f": "UNIPSYSWETH",
       "0xb6909b960dbbe7392d405429eb2b3649752b4838": "UNIBATWETH",
       "0x3da1313ae46132a397d90d95b1424a9a7e3e0fce": "UNICRVWETH",
       "0xa2107fa5b38d9bbd2c461d6edf11b11a50f6b974": "UNILINKWETH",
@@ -38997,11 +38412,11 @@ var require_StakedTokenDataProviderFactory = __commonJS({
       constructor(signer) {
         super(_abi, _bytecode, signer);
       }
-      deploy(aave, stkAave, bpt, stkBpt, ethUsdPriceFeed, aavePriceFeed, bptPriceFeed, overrides) {
-        return super.deploy(aave, stkAave, bpt, stkBpt, ethUsdPriceFeed, aavePriceFeed, bptPriceFeed, overrides || {});
+      deploy(pegasys, stkPegasys, bpt, stkBpt, ethUsdPriceFeed, pegasysPriceFeed, bptPriceFeed, overrides) {
+        return super.deploy(pegasys, stkPegasys, bpt, stkBpt, ethUsdPriceFeed, pegasysPriceFeed, bptPriceFeed, overrides || {});
       }
-      getDeployTransaction(aave, stkAave, bpt, stkBpt, ethUsdPriceFeed, aavePriceFeed, bptPriceFeed, overrides) {
-        return super.getDeployTransaction(aave, stkAave, bpt, stkBpt, ethUsdPriceFeed, aavePriceFeed, bptPriceFeed, overrides || {});
+      getDeployTransaction(pegasys, stkPegasys, bpt, stkBpt, ethUsdPriceFeed, pegasysPriceFeed, bptPriceFeed, overrides) {
+        return super.getDeployTransaction(pegasys, stkPegasys, bpt, stkBpt, ethUsdPriceFeed, pegasysPriceFeed, bptPriceFeed, overrides || {});
       }
       attach(address) {
         return super.attach(address);
@@ -39019,12 +38434,12 @@ var require_StakedTokenDataProviderFactory = __commonJS({
         inputs: [
           {
             internalType: "address",
-            name: "aave",
+            name: "pegasys",
             type: "address"
           },
           {
             internalType: "address",
-            name: "stkAave",
+            name: "stkPegasys",
             type: "address"
           },
           {
@@ -39044,7 +38459,7 @@ var require_StakedTokenDataProviderFactory = __commonJS({
           },
           {
             internalType: "address",
-            name: "aavePriceFeed",
+            name: "pegasysPriceFeed",
             type: "address"
           },
           {
@@ -39058,7 +38473,7 @@ var require_StakedTokenDataProviderFactory = __commonJS({
       },
       {
         inputs: [],
-        name: "AAVE",
+        name: "PSYS",
         outputs: [
           {
             internalType: "address",
@@ -39071,7 +38486,7 @@ var require_StakedTokenDataProviderFactory = __commonJS({
       },
       {
         inputs: [],
-        name: "AAVE_PRICE_FEED",
+        name: "PSYS_PRICE_FEED",
         outputs: [
           {
             internalType: "address",
@@ -39123,7 +38538,7 @@ var require_StakedTokenDataProviderFactory = __commonJS({
       },
       {
         inputs: [],
-        name: "STAKED_AAVE",
+        name: "STAKED_PSYS",
         outputs: [
           {
             internalType: "address",
@@ -39200,7 +38615,7 @@ var require_StakedTokenDataProviderFactory = __commonJS({
               }
             ],
             internalType: "struct IStakedTokenDataProvider.StakedTokenData",
-            name: "stkAaveData",
+            name: "stkPegasysData",
             type: "tuple"
           },
           {
@@ -39323,7 +38738,7 @@ var require_StakedTokenDataProviderFactory = __commonJS({
               }
             ],
             internalType: "struct IStakedTokenDataProvider.StakedTokenData",
-            name: "stkAaveData",
+            name: "stkPegasysData",
             type: "tuple"
           },
           {
@@ -39360,7 +38775,7 @@ var require_StakedTokenDataProviderFactory = __commonJS({
               }
             ],
             internalType: "struct IStakedTokenDataProvider.StakedTokenUserData",
-            name: "stkAaveUserData",
+            name: "stkPegasysUserData",
             type: "tuple"
           },
           {
@@ -39463,7 +38878,7 @@ var require_StakedTokenDataProviderFactory = __commonJS({
       },
       {
         inputs: [],
-        name: "getStkAaveData",
+        name: "getStkPegasysData",
         outputs: [
           {
             components: [
@@ -39514,7 +38929,7 @@ var require_StakedTokenDataProviderFactory = __commonJS({
               }
             ],
             internalType: "struct IStakedTokenDataProvider.StakedTokenData",
-            name: "stkAaveData",
+            name: "stkPegasysData",
             type: "tuple"
           }
         ],
@@ -39529,7 +38944,7 @@ var require_StakedTokenDataProviderFactory = __commonJS({
             type: "address"
           }
         ],
-        name: "getStkAaveUserData",
+        name: "getStkPegasysUserData",
         outputs: [
           {
             components: [
@@ -39580,7 +38995,7 @@ var require_StakedTokenDataProviderFactory = __commonJS({
               }
             ],
             internalType: "struct IStakedTokenDataProvider.StakedTokenData",
-            name: "stkAaveData",
+            name: "stkPegasysData",
             type: "tuple"
           },
           {
@@ -39617,7 +39032,7 @@ var require_StakedTokenDataProviderFactory = __commonJS({
               }
             ],
             internalType: "struct IStakedTokenDataProvider.StakedTokenUserData",
-            name: "stkAaveUserData",
+            name: "stkPegasysUserData",
             type: "tuple"
           }
         ],
@@ -39632,7 +39047,7 @@ var require_StakedTokenDataProviderFactory = __commonJS({
             type: "address"
           }
         ],
-        name: "getStkBptAaveUserData",
+        name: "getStkBptPegasysUserData",
         outputs: [
           {
             components: [
@@ -39808,9 +39223,9 @@ var require_uiStakeDataProvider_contract = __commonJS({
       }
       getUserStakeUIData(_0) {
         return __async(this, arguments, function* ({ user }) {
-          const { stkAaveData, stkAaveUserData, stkBptData, stkBptUserData, ethPrice } = yield this._contract.getAllStakedTokenUserData(user);
+          const { stkPegasysData, stkPegasysUserData, stkBptData, stkBptUserData, ethPrice } = yield this._contract.getAllStakedTokenUserData(user);
           return {
-            stkAaveData: Object.assign(Object.assign({}, stkAaveData), { stakedTokenUserBalance: stkAaveUserData.stakedTokenUserBalance, underlyingTokenUserBalance: stkAaveUserData.underlyingTokenUserBalance, stakedTokenRedeemableAmount: stkAaveUserData.stakedTokenRedeemableAmount, userCooldownAmount: stkAaveUserData.userCooldownAmount, userCooldownTimestamp: stkAaveUserData.userCooldownTimestamp, rewardsToClaim: stkAaveUserData.rewardsToClaim }),
+            stkPegasysData: Object.assign(Object.assign({}, stkPegasysData), { stakedTokenUserBalance: stkPegasysUserData.stakedTokenUserBalance, underlyingTokenUserBalance: stkPegasysUserData.underlyingTokenUserBalance, stakedTokenRedeemableAmount: stkPegasysUserData.stakedTokenRedeemableAmount, userCooldownAmount: stkPegasysUserData.userCooldownAmount, userCooldownTimestamp: stkPegasysUserData.userCooldownTimestamp, rewardsToClaim: stkPegasysUserData.rewardsToClaim }),
             stkBptData: Object.assign(Object.assign({}, stkBptData), { stakedTokenUserBalance: stkBptUserData.stakedTokenUserBalance, underlyingTokenUserBalance: stkBptUserData.underlyingTokenUserBalance, stakedTokenRedeemableAmount: stkBptUserData.stakedTokenRedeemableAmount, userCooldownAmount: stkBptUserData.userCooldownAmount, userCooldownTimestamp: stkBptUserData.userCooldownTimestamp, rewardsToClaim: stkBptUserData.rewardsToClaim }),
             ethPrice
           };
@@ -39820,13 +39235,13 @@ var require_uiStakeDataProvider_contract = __commonJS({
         return __async(this, arguments, function* ({ user }) {
           const contractResult = yield this.getUserStakeUIData({ user });
           return {
-            aave: {
-              stakeTokenUserBalance: contractResult.stkAaveData.stakedTokenUserBalance.toString(),
-              underlyingTokenUserBalance: contractResult.stkAaveData.underlyingTokenUserBalance.toString(),
-              stakeTokenRedeemableAmount: contractResult.stkAaveData.stakedTokenRedeemableAmount.toString(),
-              userCooldownAmount: contractResult.stkAaveData.userCooldownAmount.toString(),
-              userCooldownTimestamp: contractResult.stkAaveData.userCooldownTimestamp,
-              userIncentivesToClaim: contractResult.stkAaveData.rewardsToClaim.toString()
+            pegasys: {
+              stakeTokenUserBalance: contractResult.stkPegasysData.stakedTokenUserBalance.toString(),
+              underlyingTokenUserBalance: contractResult.stkPegasysData.underlyingTokenUserBalance.toString(),
+              stakeTokenRedeemableAmount: contractResult.stkPegasysData.stakedTokenRedeemableAmount.toString(),
+              userCooldownAmount: contractResult.stkPegasysData.userCooldownAmount.toString(),
+              userCooldownTimestamp: contractResult.stkPegasysData.userCooldownTimestamp,
+              userIncentivesToClaim: contractResult.stkPegasysData.rewardsToClaim.toString()
             },
             bpt: {
               stakeTokenUserBalance: contractResult.stkBptData.stakedTokenUserBalance.toString(),
@@ -39842,9 +39257,9 @@ var require_uiStakeDataProvider_contract = __commonJS({
       }
       getGeneralStakeUIData() {
         return __async(this, null, function* () {
-          const { stkAaveData, stkBptData, ethPrice } = yield this._contract.getAllStakedTokenData();
+          const { stkPegasysData, stkBptData, ethPrice } = yield this._contract.getAllStakedTokenData();
           return {
-            stkAaveData,
+            stkPegasysData,
             stkBptData,
             ethPrice
           };
@@ -39854,20 +39269,20 @@ var require_uiStakeDataProvider_contract = __commonJS({
         return __async(this, null, function* () {
           const contractResult = yield this.getGeneralStakeUIData();
           return {
-            aave: {
-              stakeTokenTotalSupply: contractResult.stkAaveData.stakedTokenTotalSupply.toString(),
-              stakeTokenTotalRedeemableAmount: contractResult.stkAaveData.stakedTokenTotalRedeemableAmount.toString(),
-              stakeCooldownSeconds: contractResult.stkAaveData.stakeCooldownSeconds.toNumber(),
-              stakeUnstakeWindow: contractResult.stkAaveData.stakeUnstakeWindow.toNumber(),
-              stakeTokenPriceEth: contractResult.stkAaveData.stakedTokenPriceEth.toString(),
-              rewardTokenPriceEth: contractResult.stkAaveData.rewardTokenPriceEth.toString(),
-              stakeApy: contractResult.stkAaveData.stakeApy.toString(),
-              distributionPerSecond: contractResult.stkAaveData.distributionPerSecond.toString(),
-              distributionEnd: contractResult.stkAaveData.distributionEnd.toString()
+            pegasys: {
+              stakeTokenTotalSupply: contractResult.stkPegasysData.stakedTokenTotalSupply.toString(),
+              stakeTokenTotalRedeemableAmount: contractResult.stkPegasysData.stakedTokenTotalRedeemableAmount.toString(),
+              stakeCooldownSeconds: contractResult.stkPegasysData.stakeCooldownSeconds.toNumber(),
+              stakeUnstakeWindow: contractResult.stkPegasysData.stakeUnstakeWindow.toNumber(),
+              stakeTokenPriceEth: contractResult.stkPegasysData.stakedTokenPriceEth.toString(),
+              rewardTokenPriceEth: contractResult.stkPegasysData.rewardTokenPriceEth.toString(),
+              stakeApy: contractResult.stkPegasysData.stakeApy.toString(),
+              distributionPerSecond: contractResult.stkPegasysData.distributionPerSecond.toString(),
+              distributionEnd: contractResult.stkPegasysData.distributionEnd.toString()
             },
             bpt: {
               stakeTokenTotalSupply: contractResult.stkBptData.stakedTokenTotalSupply.toString(),
-              stakeTokenTotalRedeemableAmount: contractResult.stkAaveData.stakedTokenTotalRedeemableAmount.toString(),
+              stakeTokenTotalRedeemableAmount: contractResult.stkPegasysData.stakedTokenTotalRedeemableAmount.toString(),
               stakeCooldownSeconds: contractResult.stkBptData.stakeCooldownSeconds.toNumber(),
               stakeUnstakeWindow: contractResult.stkBptData.stakeUnstakeWindow.toNumber(),
               stakeTokenPriceEth: contractResult.stkBptData.stakedTokenPriceEth.toString(),
@@ -39899,19 +39314,3072 @@ var require_uiStakeDataProvider_contract = __commonJS({
   }
 });
 
-// node_modules/@pollum-io/contract-helpers/dist/cjs/incentive-controller/typechain/IAaveIncentivesController__factory.js
-var require_IAaveIncentivesController_factory = __commonJS({
-  "node_modules/@pollum-io/contract-helpers/dist/cjs/incentive-controller/typechain/IAaveIncentivesController__factory.js"(exports2) {
+// node_modules/@pollum-io/contract-helpers/dist/cjs/V3-uiStakeDataProvider-contract/typechain/factories/Abi__factory.js
+var require_Abi_factory = __commonJS({
+  "node_modules/@pollum-io/contract-helpers/dist/cjs/V3-uiStakeDataProvider-contract/typechain/factories/Abi__factory.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.IAaveIncentivesController__factory = void 0;
+    exports2.Abi__factory = void 0;
     var ethers_1 = require_lib31();
-    var IAaveIncentivesController__factory = class {
+    var _abi = [
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "stkPegasys",
+            type: "address"
+          },
+          {
+            internalType: "address",
+            name: "ethUsdPriceFeed",
+            type: "address"
+          },
+          {
+            internalType: "address",
+            name: "pegasysUsdPriceFeed",
+            type: "address"
+          }
+        ],
+        stateMutability: "nonpayable",
+        type: "constructor"
+      },
+      {
+        inputs: [],
+        name: "PSYS_USD_PRICE_FEED",
+        outputs: [
+          {
+            internalType: "address",
+            name: "",
+            type: "address"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "ETH_USD_PRICE_FEED",
+        outputs: [
+          {
+            internalType: "address",
+            name: "",
+            type: "address"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "STAKED_PSYS",
+        outputs: [
+          {
+            internalType: "address",
+            name: "",
+            type: "address"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "stakedAsset",
+            type: "address"
+          },
+          {
+            internalType: "address",
+            name: "oracle",
+            type: "address"
+          }
+        ],
+        name: "getStakedAssetData",
+        outputs: [
+          {
+            components: [
+              {
+                internalType: "uint256",
+                name: "stakedTokenTotalSupply",
+                type: "uint256"
+              },
+              {
+                internalType: "uint256",
+                name: "stakedTokenTotalRedeemableAmount",
+                type: "uint256"
+              },
+              {
+                internalType: "uint256",
+                name: "stakeCooldownSeconds",
+                type: "uint256"
+              },
+              {
+                internalType: "uint256",
+                name: "stakeUnstakeWindow",
+                type: "uint256"
+              },
+              {
+                internalType: "uint256",
+                name: "stakedTokenPriceUsd",
+                type: "uint256"
+              },
+              {
+                internalType: "uint256",
+                name: "rewardTokenPriceUsd",
+                type: "uint256"
+              },
+              {
+                internalType: "uint256",
+                name: "stakeApy",
+                type: "uint256"
+              },
+              {
+                internalType: "uint128",
+                name: "distributionPerSecond",
+                type: "uint128"
+              },
+              {
+                internalType: "bool",
+                name: "inPostSlashingPeriod",
+                type: "bool"
+              },
+              {
+                internalType: "uint256",
+                name: "distributionEnd",
+                type: "uint256"
+              },
+              {
+                internalType: "uint256",
+                name: "maxSlashablePercentage",
+                type: "uint256"
+              }
+            ],
+            internalType: "struct IStakedTokenDataProvider.StakedTokenData",
+            name: "",
+            type: "tuple"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address[]",
+            name: "stakedAssets",
+            type: "address[]"
+          },
+          {
+            internalType: "address[]",
+            name: "oracles",
+            type: "address[]"
+          }
+        ],
+        name: "getStakedAssetDataBatch",
+        outputs: [
+          {
+            components: [
+              {
+                internalType: "uint256",
+                name: "stakedTokenTotalSupply",
+                type: "uint256"
+              },
+              {
+                internalType: "uint256",
+                name: "stakedTokenTotalRedeemableAmount",
+                type: "uint256"
+              },
+              {
+                internalType: "uint256",
+                name: "stakeCooldownSeconds",
+                type: "uint256"
+              },
+              {
+                internalType: "uint256",
+                name: "stakeUnstakeWindow",
+                type: "uint256"
+              },
+              {
+                internalType: "uint256",
+                name: "stakedTokenPriceUsd",
+                type: "uint256"
+              },
+              {
+                internalType: "uint256",
+                name: "rewardTokenPriceUsd",
+                type: "uint256"
+              },
+              {
+                internalType: "uint256",
+                name: "stakeApy",
+                type: "uint256"
+              },
+              {
+                internalType: "uint128",
+                name: "distributionPerSecond",
+                type: "uint128"
+              },
+              {
+                internalType: "bool",
+                name: "inPostSlashingPeriod",
+                type: "bool"
+              },
+              {
+                internalType: "uint256",
+                name: "distributionEnd",
+                type: "uint256"
+              },
+              {
+                internalType: "uint256",
+                name: "maxSlashablePercentage",
+                type: "uint256"
+              }
+            ],
+            internalType: "struct IStakedTokenDataProvider.StakedTokenData[]",
+            name: "",
+            type: "tuple[]"
+          },
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "stakedAsset",
+            type: "address"
+          },
+          {
+            internalType: "address",
+            name: "oracle",
+            type: "address"
+          },
+          {
+            internalType: "address",
+            name: "user",
+            type: "address"
+          }
+        ],
+        name: "getStakedUserData",
+        outputs: [
+          {
+            components: [
+              {
+                internalType: "uint256",
+                name: "stakedTokenTotalSupply",
+                type: "uint256"
+              },
+              {
+                internalType: "uint256",
+                name: "stakedTokenTotalRedeemableAmount",
+                type: "uint256"
+              },
+              {
+                internalType: "uint256",
+                name: "stakeCooldownSeconds",
+                type: "uint256"
+              },
+              {
+                internalType: "uint256",
+                name: "stakeUnstakeWindow",
+                type: "uint256"
+              },
+              {
+                internalType: "uint256",
+                name: "stakedTokenPriceUsd",
+                type: "uint256"
+              },
+              {
+                internalType: "uint256",
+                name: "rewardTokenPriceUsd",
+                type: "uint256"
+              },
+              {
+                internalType: "uint256",
+                name: "stakeApy",
+                type: "uint256"
+              },
+              {
+                internalType: "uint128",
+                name: "distributionPerSecond",
+                type: "uint128"
+              },
+              {
+                internalType: "bool",
+                name: "inPostSlashingPeriod",
+                type: "bool"
+              },
+              {
+                internalType: "uint256",
+                name: "distributionEnd",
+                type: "uint256"
+              },
+              {
+                internalType: "uint256",
+                name: "maxSlashablePercentage",
+                type: "uint256"
+              }
+            ],
+            internalType: "struct IStakedTokenDataProvider.StakedTokenData",
+            name: "",
+            type: "tuple"
+          },
+          {
+            components: [
+              {
+                internalType: "uint256",
+                name: "stakedTokenUserBalance",
+                type: "uint256"
+              },
+              {
+                internalType: "uint256",
+                name: "stakedTokenRedeemableAmount",
+                type: "uint256"
+              },
+              {
+                internalType: "uint256",
+                name: "underlyingTokenUserBalance",
+                type: "uint256"
+              },
+              {
+                internalType: "uint256",
+                name: "rewardsToClaim",
+                type: "uint256"
+              },
+              {
+                internalType: "uint40",
+                name: "userCooldownTimestamp",
+                type: "uint40"
+              },
+              {
+                internalType: "uint216",
+                name: "userCooldownAmount",
+                type: "uint216"
+              }
+            ],
+            internalType: "struct IStakedTokenDataProvider.StakedTokenUserData",
+            name: "",
+            type: "tuple"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address[]",
+            name: "stakedAssets",
+            type: "address[]"
+          },
+          {
+            internalType: "address[]",
+            name: "oracles",
+            type: "address[]"
+          },
+          {
+            internalType: "address",
+            name: "user",
+            type: "address"
+          }
+        ],
+        name: "getStakedUserDataBatch",
+        outputs: [
+          {
+            components: [
+              {
+                internalType: "uint256",
+                name: "stakedTokenTotalSupply",
+                type: "uint256"
+              },
+              {
+                internalType: "uint256",
+                name: "stakedTokenTotalRedeemableAmount",
+                type: "uint256"
+              },
+              {
+                internalType: "uint256",
+                name: "stakeCooldownSeconds",
+                type: "uint256"
+              },
+              {
+                internalType: "uint256",
+                name: "stakeUnstakeWindow",
+                type: "uint256"
+              },
+              {
+                internalType: "uint256",
+                name: "stakedTokenPriceUsd",
+                type: "uint256"
+              },
+              {
+                internalType: "uint256",
+                name: "rewardTokenPriceUsd",
+                type: "uint256"
+              },
+              {
+                internalType: "uint256",
+                name: "stakeApy",
+                type: "uint256"
+              },
+              {
+                internalType: "uint128",
+                name: "distributionPerSecond",
+                type: "uint128"
+              },
+              {
+                internalType: "bool",
+                name: "inPostSlashingPeriod",
+                type: "bool"
+              },
+              {
+                internalType: "uint256",
+                name: "distributionEnd",
+                type: "uint256"
+              },
+              {
+                internalType: "uint256",
+                name: "maxSlashablePercentage",
+                type: "uint256"
+              }
+            ],
+            internalType: "struct IStakedTokenDataProvider.StakedTokenData[]",
+            name: "",
+            type: "tuple[]"
+          },
+          {
+            components: [
+              {
+                internalType: "uint256",
+                name: "stakedTokenUserBalance",
+                type: "uint256"
+              },
+              {
+                internalType: "uint256",
+                name: "stakedTokenRedeemableAmount",
+                type: "uint256"
+              },
+              {
+                internalType: "uint256",
+                name: "underlyingTokenUserBalance",
+                type: "uint256"
+              },
+              {
+                internalType: "uint256",
+                name: "rewardsToClaim",
+                type: "uint256"
+              },
+              {
+                internalType: "uint40",
+                name: "userCooldownTimestamp",
+                type: "uint40"
+              },
+              {
+                internalType: "uint216",
+                name: "userCooldownAmount",
+                type: "uint216"
+              }
+            ],
+            internalType: "struct IStakedTokenDataProvider.StakedTokenUserData[]",
+            name: "",
+            type: "tuple[]"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      }
+    ];
+    var Abi__factory = class {
+      static createInterface() {
+        return new ethers_1.utils.Interface(_abi);
+      }
       static connect(address, signerOrProvider) {
         return new ethers_1.Contract(address, _abi, signerOrProvider);
       }
     };
-    exports2.IAaveIncentivesController__factory = IAaveIncentivesController__factory;
+    exports2.Abi__factory = Abi__factory;
+    Abi__factory.abi = _abi;
+  }
+});
+
+// node_modules/@pollum-io/contract-helpers/dist/cjs/V3-uiStakeDataProvider-contract/index.js
+var require_V3_uiStakeDataProvider_contract = __commonJS({
+  "node_modules/@pollum-io/contract-helpers/dist/cjs/V3-uiStakeDataProvider-contract/index.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.UiStakeDataProviderV3 = void 0;
+    var Abi__factory_1 = require_Abi_factory();
+    var UiStakeDataProviderV3 = class {
+      constructor(context) {
+        this._contract = Abi__factory_1.Abi__factory.connect(context.uiStakeDataProvider, context.provider);
+      }
+      getUserStakeUIDataHumanized(_0) {
+        return __async(this, arguments, function* ({ user, stakedAssets, oracles }) {
+          const [, stakedUserData] = yield this._contract.getStakedUserDataBatch(stakedAssets, oracles, user);
+          const [, ethPrice] = yield this._contract.getStakedAssetDataBatch(stakedAssets, oracles);
+          const parsedUserStakedData = handleUserStakedData(stakedUserData);
+          return {
+            stakeUserData: parsedUserStakedData,
+            ethPriceUsd: ethPrice.toString()
+          };
+        });
+      }
+      getStakedAssetDataBatch(stakedAssets, oracles) {
+        return __async(this, null, function* () {
+          const [stakedData, ethPrice] = yield this._contract.getStakedAssetDataBatch(stakedAssets, oracles);
+          const parsedStakedData = handleParsedStakedData(stakedData);
+          return { stakeData: parsedStakedData, ethPriceUsd: ethPrice.toString() };
+        });
+      }
+    };
+    exports2.UiStakeDataProviderV3 = UiStakeDataProviderV3;
+    function handleUserStakedData(stakeUserData) {
+      return stakeUserData.map((data) => {
+        return {
+          stakeTokenUserBalance: data.stakedTokenUserBalance.toString(),
+          underlyingTokenUserBalance: data.underlyingTokenUserBalance.toString(),
+          stakeTokenRedeemableAmount: data.stakedTokenRedeemableAmount.toString(),
+          userCooldownAmount: data.userCooldownAmount.toString(),
+          userCooldownTimestamp: data.userCooldownTimestamp,
+          userIncentivesToClaim: data.rewardsToClaim.toString()
+        };
+      });
+    }
+    function handleParsedStakedData(stakedData) {
+      return stakedData.map((data) => {
+        return {
+          inPostSlashingPeriod: data.inPostSlashingPeriod || false,
+          stakeTokenTotalSupply: data.stakedTokenTotalSupply.toString(),
+          stakeTokenTotalRedeemableAmount: data.stakedTokenTotalRedeemableAmount.toString(),
+          stakeCooldownSeconds: data.stakeCooldownSeconds.toNumber(),
+          stakeUnstakeWindow: data.stakeUnstakeWindow.toNumber(),
+          stakeTokenPriceUSD: data.stakedTokenPriceUsd.toString(),
+          rewardTokenPriceUSD: data.rewardTokenPriceUsd.toString(),
+          stakeApy: data.stakeApy.toString(),
+          distributionPerSecond: data.distributionPerSecond.toString(),
+          distributionEnd: data.distributionEnd.toString(),
+          maxSlashablePercentage: data.maxSlashablePercentage.toString()
+        };
+      });
+    }
+  }
+});
+
+// node_modules/@pollum-io/contract-helpers/dist/cjs/erc20-2612/typechain/IERC202612__factory.js
+var require_IERC202612_factory = __commonJS({
+  "node_modules/@pollum-io/contract-helpers/dist/cjs/erc20-2612/typechain/IERC202612__factory.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.IERC202612__factory = void 0;
+    var ethers_1 = require_lib31();
+    var _abi = [
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "owner",
+            type: "address"
+          }
+        ],
+        name: "_nonces",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "owner",
+            type: "address"
+          }
+        ],
+        name: "nonces",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      }
+    ];
+    var IERC202612__factory = class {
+      static createInterface() {
+        return new ethers_1.utils.Interface(_abi);
+      }
+      static connect(address, signerOrProvider) {
+        return new ethers_1.Contract(address, _abi, signerOrProvider);
+      }
+    };
+    exports2.IERC202612__factory = IERC202612__factory;
+    IERC202612__factory.abi = _abi;
+  }
+});
+
+// node_modules/@pollum-io/contract-helpers/dist/cjs/erc20-2612/index.js
+var require_erc20_2612 = __commonJS({
+  "node_modules/@pollum-io/contract-helpers/dist/cjs/erc20-2612/index.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.ERC20_2612Service = void 0;
+    var tslib_1 = (init_tslib_es6(), __toCommonJS(tslib_es6_exports));
+    var BaseService_1 = tslib_1.__importDefault(require_BaseService());
+    var methodValidators_1 = require_methodValidators();
+    var paramValidators_1 = require_paramValidators();
+    var IERC202612__factory_1 = require_IERC202612_factory();
+    var ERC20_2612Service = class extends BaseService_1.default {
+      constructor(provider) {
+        super(provider, IERC202612__factory_1.IERC202612__factory);
+        this.getNonce = this.getNonce.bind(this);
+      }
+      getNonce(_0) {
+        return __async(this, arguments, function* ({ token, owner }) {
+          const tokenContract = this.getContractInstance(token);
+          let nonce;
+          try {
+            nonce = yield tokenContract.nonces(owner);
+            return nonce.toNumber();
+          } catch (_) {
+          }
+          try {
+            nonce = yield tokenContract._nonces(owner);
+            return nonce.toNumber();
+          } catch (_) {
+            console.log(`Token ${token} does not implement nonces or _nonces method`);
+          }
+          return null;
+        });
+      }
+    };
+    tslib_1.__decorate([
+      methodValidators_1.ERC20Validator,
+      tslib_1.__param(0, (0, paramValidators_1.isEthAddress)("token")),
+      tslib_1.__param(0, (0, paramValidators_1.isEthAddress)("owner")),
+      tslib_1.__metadata("design:type", Function),
+      tslib_1.__metadata("design:paramtypes", [Object]),
+      tslib_1.__metadata("design:returntype", Promise)
+    ], ERC20_2612Service.prototype, "getNonce", null);
+    exports2.ERC20_2612Service = ERC20_2612Service;
+  }
+});
+
+// node_modules/@pollum-io/contract-helpers/dist/cjs/erc20-contract/typechain/IERC20Detailed__factory.js
+var require_IERC20Detailed_factory = __commonJS({
+  "node_modules/@pollum-io/contract-helpers/dist/cjs/erc20-contract/typechain/IERC20Detailed__factory.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.IERC20Detailed__factory = void 0;
+    var ethers_1 = require_lib31();
+    var IERC20Detailed__factory = class {
+      static connect(address, signerOrProvider) {
+        return new ethers_1.Contract(address, _abi, signerOrProvider);
+      }
+      static createInterface() {
+        return new ethers_1.utils.Interface(_abi);
+      }
+    };
+    exports2.IERC20Detailed__factory = IERC20Detailed__factory;
+    var _abi = [
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "owner",
+            type: "address"
+          },
+          {
+            internalType: "address",
+            name: "spender",
+            type: "address"
+          }
+        ],
+        name: "allowance",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "spender",
+            type: "address"
+          },
+          {
+            internalType: "uint256",
+            name: "amount",
+            type: "uint256"
+          }
+        ],
+        name: "approve",
+        outputs: [
+          {
+            internalType: "bool",
+            name: "",
+            type: "bool"
+          }
+        ],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "decimals",
+        outputs: [
+          {
+            internalType: "uint8",
+            name: "",
+            type: "uint8"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "name",
+        outputs: [
+          {
+            internalType: "string",
+            name: "",
+            type: "string"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "symbol",
+        outputs: [
+          {
+            internalType: "string",
+            name: "",
+            type: "string"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      }
+    ];
+  }
+});
+
+// node_modules/@pollum-io/contract-helpers/dist/cjs/erc20-contract/index.js
+var require_erc20_contract = __commonJS({
+  "node_modules/@pollum-io/contract-helpers/dist/cjs/erc20-contract/index.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.ERC20Service = void 0;
+    var tslib_1 = (init_tslib_es6(), __toCommonJS(tslib_es6_exports));
+    var ethers_1 = require_lib31();
+    var utils_1 = require_utils5();
+    var BaseService_1 = tslib_1.__importDefault(require_BaseService());
+    var types_1 = require_types2();
+    var utils_2 = require_utils6();
+    var methodValidators_1 = require_methodValidators();
+    var paramValidators_1 = require_paramValidators();
+    var IERC20Detailed__factory_1 = require_IERC20Detailed_factory();
+    var ERC20Service = class extends BaseService_1.default {
+      constructor(provider) {
+        super(provider, IERC20Detailed__factory_1.IERC20Detailed__factory);
+        this.tokenDecimals = {};
+        this.tokenMetadata = {};
+        this.approve = this.approve.bind(this);
+        this.approveTxData = this.approveTxData.bind(this);
+        this.isApproved = this.isApproved.bind(this);
+        this.getTokenData = this.getTokenData.bind(this);
+        this.decimalsOf = this.decimalsOf.bind(this);
+        this.contractInterface = IERC20Detailed__factory_1.IERC20Detailed__factory.createInterface();
+      }
+      /**
+       * Generate approval tx data with legacy method, call tx() and gas() callbacks for tx data and gas estimation respectively
+       * @param {string} user - Address to check allowance for
+       * @param {string} token - Token which the user is spending
+       * @param {string} spender - Address which is spending the tokens
+       * @param {string} amount - Amount to approve
+       * @returns {EthereumTransactionTypeExtended} legacy transaction response
+       */
+      approve({ user, token, spender, amount }) {
+        const erc20Contract = this.getContractInstance(token);
+        const txCallback = this.generateTxCallback({
+          rawTxMethod: () => __async(this, null, function* () {
+            return erc20Contract.populateTransaction.approve(spender, amount);
+          }),
+          from: user
+        });
+        return {
+          tx: txCallback,
+          txType: types_1.eEthereumTxType.ERC20_APPROVAL,
+          gas: this.generateTxPriceEstimation([], txCallback)
+        };
+      }
+      /**
+       * Generate approval tx data, ready to sign and submit to blockchain
+       * @param {string} user - Address to check allowance for
+       * @param {string} token - Token which the user is spending
+       * @param {string} spender - Address which is spending the tokens
+       * @param {string} amount - Amount to approve
+       * @returns {PopulatedTransaction} Transaction response
+       */
+      approveTxData({ user, token, spender, amount }) {
+        const tx = {};
+        const txData = this.contractInterface.encodeFunctionData("approve", [
+          spender,
+          amount
+        ]);
+        tx.data = txData;
+        tx.to = token;
+        tx.from = user;
+        tx.gasLimit = ethers_1.BigNumber.from(utils_2.gasLimitRecommendations[types_1.ProtocolAction.approval].recommended);
+        return tx;
+      }
+      /**
+       * Qeuries whether user has approved spender to transfer tokens up to the specific amount
+       * @param {string} user - Address to check allowance for
+       * @param {string} token - Token which the user is spending
+       * @param {string} spender - Address which is spending the tokens
+       * @param {string} amount - Amount of token to checkif spender has allowance for
+       * @returns {boolean} true if user has approved spender contract for greater than passed amount, false otherwise
+       */
+      isApproved(_0) {
+        return __async(this, arguments, function* ({ user, token, spender, amount, nativeDecimals }) {
+          if (token.toLowerCase() === utils_2.API_ETH_MOCK_ADDRESS.toLowerCase())
+            return true;
+          const decimals = yield this.decimalsOf(token);
+          const erc20Contract = this.getContractInstance(token);
+          const allowance = yield erc20Contract.allowance(user, spender);
+          const amountBNWithDecimals = amount === "-1" ? ethers_1.BigNumber.from(utils_2.SUPER_BIG_ALLOWANCE_NUMBER) : ethers_1.BigNumber.from((0, utils_2.valueToWei)(nativeDecimals ? (0, utils_1.formatUnits)(amount, decimals) : amount, decimals));
+          return allowance.gte(amountBNWithDecimals);
+        });
+      }
+      /**
+       * Fetches the approval allowance of a user for a specific token and spender
+       * @param {string} user - Address to check allowance for
+       * @param {string} token - Token which the user is spending
+       * @param {string} spender - Address which is spending the tokens
+       * @returns {number} The user's approved allowance, in standard decimal units, -1 for max allowance
+       */
+      approvedAmount(_0) {
+        return __async(this, arguments, function* ({ user, token, spender }) {
+          if (token.toLowerCase() === utils_2.API_ETH_MOCK_ADDRESS.toLowerCase())
+            return -1;
+          const erc20Contract = this.getContractInstance(token);
+          const allowance = yield erc20Contract.allowance(user, spender);
+          if (allowance.toString() === utils_2.MAX_UINT_AMOUNT) {
+            return -1;
+          }
+          const decimals = yield this.decimalsOf(token);
+          return Number(ethers_1.ethers.utils.formatUnits(allowance, decimals));
+        });
+      }
+      /**
+       * Fetches the decimals of an ERC20 token, used for formatting amounts
+       * @param {string} token - ERC20 token address
+       * @returns {number} Decimal units of token amounts
+       */
+      decimalsOf(token) {
+        return __async(this, null, function* () {
+          if (token.toLowerCase() === utils_2.API_ETH_MOCK_ADDRESS.toLowerCase())
+            return 18;
+          if (!this.tokenDecimals[token]) {
+            const erc20Contract = this.getContractInstance(token);
+            this.tokenDecimals[token] = yield erc20Contract.decimals();
+          }
+          return this.tokenDecimals[token];
+        });
+      }
+      /**
+       * Return basic details of an ERC20
+       * @param {string} token - ERC20 token address
+       * @returns {TokenMetadataType} ERC20 token metadata
+       */
+      getTokenData(token) {
+        return __async(this, null, function* () {
+          if (token.toLowerCase() === utils_2.API_ETH_MOCK_ADDRESS.toLowerCase()) {
+            return {
+              name: "Ethereum",
+              symbol: "ETH",
+              decimals: 18,
+              address: token
+            };
+          }
+          if (token.toLowerCase() === "0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2".toLowerCase()) {
+            return {
+              name: "Maker",
+              symbol: "MKR",
+              decimals: 18,
+              address: token
+            };
+          }
+          if (!this.tokenMetadata[token]) {
+            const { name: nameGetter, symbol: symbolGetter } = this.getContractInstance(token);
+            const [name2, symbol, decimals] = yield Promise.all([
+              nameGetter(),
+              symbolGetter(),
+              this.decimalsOf(token)
+            ]);
+            this.tokenMetadata[token] = {
+              name: name2,
+              symbol,
+              decimals,
+              address: token
+            };
+          }
+          return this.tokenMetadata[token];
+        });
+      }
+    };
+    tslib_1.__decorate([
+      methodValidators_1.ERC20Validator,
+      tslib_1.__param(0, (0, paramValidators_1.isEthAddress)("user")),
+      tslib_1.__param(0, (0, paramValidators_1.isEthAddress)("token")),
+      tslib_1.__param(0, (0, paramValidators_1.isEthAddress)("spender")),
+      tslib_1.__param(0, (0, paramValidators_1.isPositiveAmount)("amount")),
+      tslib_1.__metadata("design:type", Function),
+      tslib_1.__metadata("design:paramtypes", [Object]),
+      tslib_1.__metadata("design:returntype", Object)
+    ], ERC20Service.prototype, "approve", null);
+    tslib_1.__decorate([
+      methodValidators_1.ERC20Validator,
+      tslib_1.__param(0, (0, paramValidators_1.isEthAddress)("user")),
+      tslib_1.__param(0, (0, paramValidators_1.isEthAddress)("token")),
+      tslib_1.__param(0, (0, paramValidators_1.isEthAddress)("spender")),
+      tslib_1.__param(0, (0, paramValidators_1.isPositiveAmount)("amount")),
+      tslib_1.__metadata("design:type", Function),
+      tslib_1.__metadata("design:paramtypes", [Object]),
+      tslib_1.__metadata("design:returntype", Object)
+    ], ERC20Service.prototype, "approveTxData", null);
+    tslib_1.__decorate([
+      methodValidators_1.ERC20Validator,
+      tslib_1.__param(0, (0, paramValidators_1.isEthAddress)("user")),
+      tslib_1.__param(0, (0, paramValidators_1.isEthAddress)("token")),
+      tslib_1.__param(0, (0, paramValidators_1.isEthAddress)("spender")),
+      tslib_1.__param(0, (0, paramValidators_1.isPositiveOrMinusOneAmount)("amount")),
+      tslib_1.__metadata("design:type", Function),
+      tslib_1.__metadata("design:paramtypes", [Object]),
+      tslib_1.__metadata("design:returntype", Promise)
+    ], ERC20Service.prototype, "isApproved", null);
+    tslib_1.__decorate([
+      methodValidators_1.ERC20Validator,
+      tslib_1.__param(0, (0, paramValidators_1.isEthAddress)("user")),
+      tslib_1.__param(0, (0, paramValidators_1.isEthAddress)("token")),
+      tslib_1.__param(0, (0, paramValidators_1.isEthAddress)("spender")),
+      tslib_1.__metadata("design:type", Function),
+      tslib_1.__metadata("design:paramtypes", [Object]),
+      tslib_1.__metadata("design:returntype", Promise)
+    ], ERC20Service.prototype, "approvedAmount", null);
+    tslib_1.__decorate([
+      methodValidators_1.ERC20Validator,
+      tslib_1.__param(0, (0, paramValidators_1.isEthAddress)()),
+      tslib_1.__metadata("design:type", Function),
+      tslib_1.__metadata("design:paramtypes", [String]),
+      tslib_1.__metadata("design:returntype", Promise)
+    ], ERC20Service.prototype, "decimalsOf", null);
+    tslib_1.__decorate([
+      methodValidators_1.ERC20Validator,
+      tslib_1.__param(0, (0, paramValidators_1.isEthAddress)()),
+      tslib_1.__metadata("design:type", Function),
+      tslib_1.__metadata("design:paramtypes", [String]),
+      tslib_1.__metadata("design:returntype", Promise)
+    ], ERC20Service.prototype, "getTokenData", null);
+    exports2.ERC20Service = ERC20Service;
+  }
+});
+
+// node_modules/@pollum-io/contract-helpers/dist/cjs/v3-staking-contract/typechain/factories/Abi__factory.js
+var require_Abi_factory2 = __commonJS({
+  "node_modules/@pollum-io/contract-helpers/dist/cjs/v3-staking-contract/typechain/factories/Abi__factory.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.Abi__factory = void 0;
+    var ethers_1 = require_lib31();
+    var _abi = [
+      {
+        inputs: [
+          {
+            internalType: "string",
+            name: "name",
+            type: "string"
+          },
+          {
+            internalType: "contract IERC20",
+            name: "stakedToken",
+            type: "address"
+          },
+          {
+            internalType: "contract IERC20",
+            name: "rewardToken",
+            type: "address"
+          },
+          {
+            internalType: "uint256",
+            name: "unstakeWindow",
+            type: "uint256"
+          },
+          {
+            internalType: "address",
+            name: "_rewardsVault",
+            type: "address"
+          },
+          {
+            internalType: "address",
+            name: "emissionManager",
+            type: "address"
+          }
+        ],
+        stateMutability: "nonpayable",
+        type: "constructor"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "target",
+            type: "address"
+          }
+        ],
+        name: "AddressEmptyCode",
+        type: "error"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "account",
+            type: "address"
+          }
+        ],
+        name: "AddressInsufficientBalance",
+        type: "error"
+      },
+      {
+        inputs: [],
+        name: "ECDSAInvalidSignature",
+        type: "error"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "length",
+            type: "uint256"
+          }
+        ],
+        name: "ECDSAInvalidSignatureLength",
+        type: "error"
+      },
+      {
+        inputs: [
+          {
+            internalType: "bytes32",
+            name: "s",
+            type: "bytes32"
+          }
+        ],
+        name: "ECDSAInvalidSignatureS",
+        type: "error"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "spender",
+            type: "address"
+          },
+          {
+            internalType: "uint256",
+            name: "allowance",
+            type: "uint256"
+          },
+          {
+            internalType: "uint256",
+            name: "needed",
+            type: "uint256"
+          }
+        ],
+        name: "ERC20InsufficientAllowance",
+        type: "error"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "sender",
+            type: "address"
+          },
+          {
+            internalType: "uint256",
+            name: "balance",
+            type: "uint256"
+          },
+          {
+            internalType: "uint256",
+            name: "needed",
+            type: "uint256"
+          }
+        ],
+        name: "ERC20InsufficientBalance",
+        type: "error"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "approver",
+            type: "address"
+          }
+        ],
+        name: "ERC20InvalidApprover",
+        type: "error"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "receiver",
+            type: "address"
+          }
+        ],
+        name: "ERC20InvalidReceiver",
+        type: "error"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "sender",
+            type: "address"
+          }
+        ],
+        name: "ERC20InvalidSender",
+        type: "error"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "spender",
+            type: "address"
+          }
+        ],
+        name: "ERC20InvalidSpender",
+        type: "error"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "deadline",
+            type: "uint256"
+          }
+        ],
+        name: "ERC2612ExpiredSignature",
+        type: "error"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "signer",
+            type: "address"
+          },
+          {
+            internalType: "address",
+            name: "owner",
+            type: "address"
+          }
+        ],
+        name: "ERC2612InvalidSigner",
+        type: "error"
+      },
+      {
+        inputs: [],
+        name: "FailedInnerCall",
+        type: "error"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "account",
+            type: "address"
+          },
+          {
+            internalType: "uint256",
+            name: "currentNonce",
+            type: "uint256"
+          }
+        ],
+        name: "InvalidAccountNonce",
+        type: "error"
+      },
+      {
+        inputs: [],
+        name: "InvalidInitialization",
+        type: "error"
+      },
+      {
+        inputs: [],
+        name: "InvalidShortString",
+        type: "error"
+      },
+      {
+        inputs: [],
+        name: "NotInitializing",
+        type: "error"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint8",
+            name: "bits",
+            type: "uint8"
+          },
+          {
+            internalType: "uint256",
+            name: "value",
+            type: "uint256"
+          }
+        ],
+        name: "SafeCastOverflowedUintDowncast",
+        type: "error"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "token",
+            type: "address"
+          }
+        ],
+        name: "SafeERC20FailedOperation",
+        type: "error"
+      },
+      {
+        inputs: [
+          {
+            internalType: "string",
+            name: "str",
+            type: "string"
+          }
+        ],
+        name: "StringTooLong",
+        type: "error"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "address",
+            name: "owner",
+            type: "address"
+          },
+          {
+            indexed: true,
+            internalType: "address",
+            name: "spender",
+            type: "address"
+          },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "value",
+            type: "uint256"
+          }
+        ],
+        name: "Approval",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "address",
+            name: "asset",
+            type: "address"
+          },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "emission",
+            type: "uint256"
+          }
+        ],
+        name: "AssetConfigUpdated",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "address",
+            name: "asset",
+            type: "address"
+          },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "index",
+            type: "uint256"
+          }
+        ],
+        name: "AssetIndexUpdated",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "address",
+            name: "user",
+            type: "address"
+          },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "amount",
+            type: "uint256"
+          }
+        ],
+        name: "Cooldown",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "cooldownSeconds",
+            type: "uint256"
+          }
+        ],
+        name: "CooldownSecondsChanged",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "endTimestamp",
+            type: "uint256"
+          }
+        ],
+        name: "DistributionEndChanged",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [],
+        name: "EIP712DomainChanged",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: false,
+            internalType: "uint216",
+            name: "exchangeRate",
+            type: "uint216"
+          }
+        ],
+        name: "ExchangeRateChanged",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "amount",
+            type: "uint256"
+          }
+        ],
+        name: "FundsReturned",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: false,
+            internalType: "uint64",
+            name: "version",
+            type: "uint64"
+          }
+        ],
+        name: "Initialized",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "newPercentage",
+            type: "uint256"
+          }
+        ],
+        name: "MaxSlashablePercentageChanged",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "address",
+            name: "newPendingAdmin",
+            type: "address"
+          },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "role",
+            type: "uint256"
+          }
+        ],
+        name: "PendingAdminChanged",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "address",
+            name: "from",
+            type: "address"
+          },
+          {
+            indexed: true,
+            internalType: "address",
+            name: "to",
+            type: "address"
+          },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "assets",
+            type: "uint256"
+          },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "shares",
+            type: "uint256"
+          }
+        ],
+        name: "Redeem",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: false,
+            internalType: "address",
+            name: "user",
+            type: "address"
+          },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "amount",
+            type: "uint256"
+          }
+        ],
+        name: "RewardsAccrued",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "address",
+            name: "from",
+            type: "address"
+          },
+          {
+            indexed: true,
+            internalType: "address",
+            name: "to",
+            type: "address"
+          },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "amount",
+            type: "uint256"
+          }
+        ],
+        name: "RewardsClaimed",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "address",
+            name: "newAdmin",
+            type: "address"
+          },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "role",
+            type: "uint256"
+          }
+        ],
+        name: "RoleClaimed",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "address",
+            name: "destination",
+            type: "address"
+          },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "amount",
+            type: "uint256"
+          }
+        ],
+        name: "Slashed",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "windowSeconds",
+            type: "uint256"
+          }
+        ],
+        name: "SlashingExitWindowDurationChanged",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [],
+        name: "SlashingSettled",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "address",
+            name: "from",
+            type: "address"
+          },
+          {
+            indexed: true,
+            internalType: "address",
+            name: "to",
+            type: "address"
+          },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "assets",
+            type: "uint256"
+          },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "shares",
+            type: "uint256"
+          }
+        ],
+        name: "Staked",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "address",
+            name: "from",
+            type: "address"
+          },
+          {
+            indexed: true,
+            internalType: "address",
+            name: "to",
+            type: "address"
+          },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "value",
+            type: "uint256"
+          }
+        ],
+        name: "Transfer",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "address",
+            name: "user",
+            type: "address"
+          },
+          {
+            indexed: true,
+            internalType: "address",
+            name: "asset",
+            type: "address"
+          },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "index",
+            type: "uint256"
+          }
+        ],
+        name: "UserIndexUpdated",
+        type: "event"
+      },
+      {
+        inputs: [],
+        name: "CLAIM_HELPER_ROLE",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "COOLDOWN_ADMIN_ROLE",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "DOMAIN_SEPARATOR",
+        outputs: [
+          {
+            internalType: "bytes32",
+            name: "",
+            type: "bytes32"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "EMISSION_MANAGER",
+        outputs: [
+          {
+            internalType: "address",
+            name: "",
+            type: "address"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "EXCHANGE_RATE_UNIT",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "INITIAL_EXCHANGE_RATE",
+        outputs: [
+          {
+            internalType: "uint216",
+            name: "",
+            type: "uint216"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "LOWER_BOUND",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "PRECISION",
+        outputs: [
+          {
+            internalType: "uint8",
+            name: "",
+            type: "uint8"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "REWARDS_VAULT",
+        outputs: [
+          {
+            internalType: "address",
+            name: "",
+            type: "address"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "REWARD_TOKEN",
+        outputs: [
+          {
+            internalType: "contract IERC20",
+            name: "",
+            type: "address"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "SLASH_ADMIN_ROLE",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "STAKED_TOKEN",
+        outputs: [
+          {
+            internalType: "contract IERC20",
+            name: "",
+            type: "address"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "UNSTAKE_WINDOW",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "owner",
+            type: "address"
+          },
+          {
+            internalType: "address",
+            name: "spender",
+            type: "address"
+          }
+        ],
+        name: "allowance",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "spender",
+            type: "address"
+          },
+          {
+            internalType: "uint256",
+            name: "value",
+            type: "uint256"
+          }
+        ],
+        name: "approve",
+        outputs: [
+          {
+            internalType: "bool",
+            name: "",
+            type: "bool"
+          }
+        ],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "",
+            type: "address"
+          }
+        ],
+        name: "assets",
+        outputs: [
+          {
+            internalType: "uint128",
+            name: "emissionPerSecond",
+            type: "uint128"
+          },
+          {
+            internalType: "uint128",
+            name: "lastUpdateTimestamp",
+            type: "uint128"
+          },
+          {
+            internalType: "uint256",
+            name: "index",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "account",
+            type: "address"
+          }
+        ],
+        name: "balanceOf",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "to",
+            type: "address"
+          },
+          {
+            internalType: "uint256",
+            name: "amount",
+            type: "uint256"
+          }
+        ],
+        name: "claimRewards",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "to",
+            type: "address"
+          },
+          {
+            internalType: "uint256",
+            name: "claimAmount",
+            type: "uint256"
+          },
+          {
+            internalType: "uint256",
+            name: "redeemAmount",
+            type: "uint256"
+          }
+        ],
+        name: "claimRewardsAndRedeem",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "from",
+            type: "address"
+          },
+          {
+            internalType: "address",
+            name: "to",
+            type: "address"
+          },
+          {
+            internalType: "uint256",
+            name: "claimAmount",
+            type: "uint256"
+          },
+          {
+            internalType: "uint256",
+            name: "redeemAmount",
+            type: "uint256"
+          }
+        ],
+        name: "claimRewardsAndRedeemOnBehalf",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "from",
+            type: "address"
+          },
+          {
+            internalType: "address",
+            name: "to",
+            type: "address"
+          },
+          {
+            internalType: "uint256",
+            name: "amount",
+            type: "uint256"
+          }
+        ],
+        name: "claimRewardsOnBehalf",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "role",
+            type: "uint256"
+          }
+        ],
+        name: "claimRoleAdmin",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            components: [
+              {
+                internalType: "uint128",
+                name: "emissionPerSecond",
+                type: "uint128"
+              },
+              {
+                internalType: "uint256",
+                name: "totalStaked",
+                type: "uint256"
+              },
+              {
+                internalType: "address",
+                name: "underlyingAsset",
+                type: "address"
+              }
+            ],
+            internalType: "struct DistributionTypes.AssetConfigInput[]",
+            name: "assetsConfigInput",
+            type: "tuple[]"
+          }
+        ],
+        name: "configureAssets",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "cooldown",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "from",
+            type: "address"
+          }
+        ],
+        name: "cooldownOnBehalfOf",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "decimals",
+        outputs: [
+          {
+            internalType: "uint8",
+            name: "",
+            type: "uint8"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "distributionEnd",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "eip712Domain",
+        outputs: [
+          {
+            internalType: "bytes1",
+            name: "fields",
+            type: "bytes1"
+          },
+          {
+            internalType: "string",
+            name: "name",
+            type: "string"
+          },
+          {
+            internalType: "string",
+            name: "version",
+            type: "string"
+          },
+          {
+            internalType: "uint256",
+            name: "chainId",
+            type: "uint256"
+          },
+          {
+            internalType: "address",
+            name: "verifyingContract",
+            type: "address"
+          },
+          {
+            internalType: "bytes32",
+            name: "salt",
+            type: "bytes32"
+          },
+          {
+            internalType: "uint256[]",
+            name: "extensions",
+            type: "uint256[]"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "role",
+            type: "uint256"
+          }
+        ],
+        name: "getAdmin",
+        outputs: [
+          {
+            internalType: "address",
+            name: "",
+            type: "address"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "getCooldownSeconds",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "getExchangeRate",
+        outputs: [
+          {
+            internalType: "uint216",
+            name: "",
+            type: "uint216"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "getMaxSlashablePercentage",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "role",
+            type: "uint256"
+          }
+        ],
+        name: "getPendingAdmin",
+        outputs: [
+          {
+            internalType: "address",
+            name: "",
+            type: "address"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "staker",
+            type: "address"
+          }
+        ],
+        name: "getTotalRewardsBalance",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "user",
+            type: "address"
+          },
+          {
+            internalType: "address",
+            name: "asset",
+            type: "address"
+          }
+        ],
+        name: "getUserAssetData",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "inPostSlashingPeriod",
+        outputs: [
+          {
+            internalType: "bool",
+            name: "",
+            type: "bool"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "string",
+            name: "name",
+            type: "string"
+          },
+          {
+            internalType: "string",
+            name: "symbol",
+            type: "string"
+          },
+          {
+            internalType: "address",
+            name: "slashingAdmin",
+            type: "address"
+          },
+          {
+            internalType: "address",
+            name: "cooldownPauseAdmin",
+            type: "address"
+          },
+          {
+            internalType: "address",
+            name: "claimHelper",
+            type: "address"
+          },
+          {
+            internalType: "uint256",
+            name: "maxSlashablePercentage",
+            type: "uint256"
+          },
+          {
+            internalType: "uint256",
+            name: "cooldownSeconds",
+            type: "uint256"
+          }
+        ],
+        name: "initialize",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "name",
+        outputs: [
+          {
+            internalType: "string",
+            name: "",
+            type: "string"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "owner",
+            type: "address"
+          }
+        ],
+        name: "nonces",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "owner",
+            type: "address"
+          },
+          {
+            internalType: "address",
+            name: "spender",
+            type: "address"
+          },
+          {
+            internalType: "uint256",
+            name: "value",
+            type: "uint256"
+          },
+          {
+            internalType: "uint256",
+            name: "deadline",
+            type: "uint256"
+          },
+          {
+            internalType: "uint8",
+            name: "v",
+            type: "uint8"
+          },
+          {
+            internalType: "bytes32",
+            name: "r",
+            type: "bytes32"
+          },
+          {
+            internalType: "bytes32",
+            name: "s",
+            type: "bytes32"
+          }
+        ],
+        name: "permit",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "shares",
+            type: "uint256"
+          }
+        ],
+        name: "previewRedeem",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "assets",
+            type: "uint256"
+          }
+        ],
+        name: "previewStake",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "to",
+            type: "address"
+          },
+          {
+            internalType: "uint256",
+            name: "amount",
+            type: "uint256"
+          }
+        ],
+        name: "redeem",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "from",
+            type: "address"
+          },
+          {
+            internalType: "address",
+            name: "to",
+            type: "address"
+          },
+          {
+            internalType: "uint256",
+            name: "amount",
+            type: "uint256"
+          }
+        ],
+        name: "redeemOnBehalf",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "amount",
+            type: "uint256"
+          }
+        ],
+        name: "returnFunds",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "cooldownSeconds",
+            type: "uint256"
+          }
+        ],
+        name: "setCooldownSeconds",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "newDistributionEnd",
+            type: "uint256"
+          }
+        ],
+        name: "setDistributionEnd",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "percentage",
+            type: "uint256"
+          }
+        ],
+        name: "setMaxSlashablePercentage",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "role",
+            type: "uint256"
+          },
+          {
+            internalType: "address",
+            name: "newPendingAdmin",
+            type: "address"
+          }
+        ],
+        name: "setPendingAdmin",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "settleSlashing",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "destination",
+            type: "address"
+          },
+          {
+            internalType: "uint256",
+            name: "amount",
+            type: "uint256"
+          }
+        ],
+        name: "slash",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "to",
+            type: "address"
+          },
+          {
+            internalType: "uint256",
+            name: "amount",
+            type: "uint256"
+          }
+        ],
+        name: "stake",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "amount",
+            type: "uint256"
+          },
+          {
+            internalType: "uint256",
+            name: "deadline",
+            type: "uint256"
+          },
+          {
+            internalType: "uint8",
+            name: "v",
+            type: "uint8"
+          },
+          {
+            internalType: "bytes32",
+            name: "r",
+            type: "bytes32"
+          },
+          {
+            internalType: "bytes32",
+            name: "s",
+            type: "bytes32"
+          }
+        ],
+        name: "stakeWithPermit",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "",
+            type: "address"
+          }
+        ],
+        name: "stakerRewardsToClaim",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "",
+            type: "address"
+          }
+        ],
+        name: "stakersCooldowns",
+        outputs: [
+          {
+            internalType: "uint40",
+            name: "timestamp",
+            type: "uint40"
+          },
+          {
+            internalType: "uint216",
+            name: "amount",
+            type: "uint216"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "symbol",
+        outputs: [
+          {
+            internalType: "string",
+            name: "",
+            type: "string"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "totalSupply",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "to",
+            type: "address"
+          },
+          {
+            internalType: "uint256",
+            name: "value",
+            type: "uint256"
+          }
+        ],
+        name: "transfer",
+        outputs: [
+          {
+            internalType: "bool",
+            name: "",
+            type: "bool"
+          }
+        ],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "from",
+            type: "address"
+          },
+          {
+            internalType: "address",
+            name: "to",
+            type: "address"
+          },
+          {
+            internalType: "uint256",
+            name: "value",
+            type: "uint256"
+          }
+        ],
+        name: "transferFrom",
+        outputs: [
+          {
+            internalType: "bool",
+            name: "",
+            type: "bool"
+          }
+        ],
+        stateMutability: "nonpayable",
+        type: "function"
+      }
+    ];
+    var Abi__factory = class {
+      static createInterface() {
+        return new ethers_1.utils.Interface(_abi);
+      }
+      static connect(address, signerOrProvider) {
+        return new ethers_1.Contract(address, _abi, signerOrProvider);
+      }
+    };
+    exports2.Abi__factory = Abi__factory;
+    Abi__factory.abi = _abi;
+  }
+});
+
+// node_modules/@pollum-io/contract-helpers/dist/cjs/v3-staking-contract/index.js
+var require_v3_staking_contract = __commonJS({
+  "node_modules/@pollum-io/contract-helpers/dist/cjs/v3-staking-contract/index.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.StakingServiceV3 = void 0;
+    var tslib_1 = (init_tslib_es6(), __toCommonJS(tslib_es6_exports));
+    var ethers_1 = require_lib31();
+    var BaseService_1 = tslib_1.__importDefault(require_BaseService());
+    var types_1 = require_types2();
+    var utils_1 = require_utils6();
+    var methodValidators_1 = require_methodValidators();
+    var paramValidators_1 = require_paramValidators();
+    var erc20_2612_1 = require_erc20_2612();
+    var erc20_contract_1 = require_erc20_contract();
+    var Abi__factory_1 = require_Abi_factory2();
+    var StakingServiceV3 = class extends BaseService_1.default {
+      constructor(provider, stakingServiceConfig) {
+        super(provider, Abi__factory_1.Abi__factory);
+        this.erc20Service = new erc20_contract_1.ERC20Service(provider);
+        this.erc20_2612Service = new erc20_2612_1.ERC20_2612Service(provider);
+        this.stakingContractAddress = stakingServiceConfig.TOKEN_STAKING_ADDRESS;
+      }
+      signStaking(user, amount, deadline) {
+        return __async(this, null, function* () {
+          const { getTokenData } = this.erc20Service;
+          const stakingContract = this.getContractInstance(this.stakingContractAddress);
+          const stakedToken = yield stakingContract.STAKED_TOKEN();
+          const { name: name2, decimals } = yield getTokenData(stakedToken);
+          const convertedAmount = (0, utils_1.valueToWei)(amount, decimals);
+          const { chainId } = yield this.provider.getNetwork();
+          const nonce = yield this.erc20_2612Service.getNonce({
+            token: stakedToken,
+            owner: user
+          });
+          if (nonce === null) {
+            return "";
+          }
+          const typeData = {
+            types: {
+              EIP712Domain: [
+                { name: "name", type: "string" },
+                { name: "version", type: "string" },
+                { name: "chainId", type: "uint256" },
+                { name: "verifyingContract", type: "address" }
+              ],
+              Permit: [
+                { name: "owner", type: "address" },
+                { name: "spender", type: "address" },
+                { name: "value", type: "uint256" },
+                { name: "nonce", type: "uint256" },
+                { name: "deadline", type: "uint256" }
+              ]
+            },
+            primaryType: "Permit",
+            domain: {
+              name: name2,
+              version: "1",
+              chainId,
+              verifyingContract: stakedToken
+            },
+            message: {
+              owner: user,
+              spender: this.stakingContractAddress,
+              value: convertedAmount,
+              nonce,
+              deadline
+            }
+          };
+          return JSON.stringify(typeData);
+        });
+      }
+      stakeWithPermit(user, amount, signature, deadline) {
+        return __async(this, null, function* () {
+          const txs = [];
+          const { decimalsOf } = this.erc20Service;
+          const stakingContract = this.getContractInstance(this.stakingContractAddress);
+          const stakedToken = yield stakingContract.STAKED_TOKEN();
+          const stakedTokenDecimals = yield decimalsOf(stakedToken);
+          const convertedAmount = (0, utils_1.valueToWei)(amount, stakedTokenDecimals);
+          const sig = ethers_1.utils.splitSignature(signature);
+          const txCallback = this.generateTxCallback({
+            rawTxMethod: () => __async(this, null, function* () {
+              return stakingContract.populateTransaction.stakeWithPermit(
+                // user,
+                convertedAmount,
+                deadline,
+                sig.v,
+                // todo how does sig change?
+                sig.r,
+                sig.s
+              );
+            }),
+            from: user
+          });
+          txs.push({
+            tx: txCallback,
+            txType: types_1.eEthereumTxType.STAKE_ACTION,
+            gas: this.generateTxPriceEstimation(txs, txCallback, types_1.ProtocolAction.stakeWithPermit)
+          });
+          return txs;
+        });
+      }
+      stake(user, amount, onBehalfOf) {
+        return __async(this, null, function* () {
+          const txs = [];
+          const { decimalsOf, isApproved, approve } = this.erc20Service;
+          const stakingContract = this.getContractInstance(this.stakingContractAddress);
+          const stakedToken = yield stakingContract.STAKED_TOKEN();
+          const stakedTokenDecimals = yield decimalsOf(stakedToken);
+          const convertedAmount = (0, utils_1.valueToWei)(amount, stakedTokenDecimals);
+          const approved = yield isApproved({
+            token: stakedToken,
+            user,
+            spender: this.stakingContractAddress,
+            amount
+          });
+          if (!approved) {
+            const approveTx = approve({
+              user,
+              token: stakedToken,
+              spender: this.stakingContractAddress,
+              amount: utils_1.DEFAULT_APPROVE_AMOUNT
+            });
+            txs.push(approveTx);
+          }
+          const txCallback = this.generateTxCallback({
+            rawTxMethod: () => __async(this, null, function* () {
+              return stakingContract.populateTransaction.stake(onBehalfOf !== null && onBehalfOf !== void 0 ? onBehalfOf : user, convertedAmount);
+            }),
+            from: user,
+            action: types_1.ProtocolAction.stake
+          });
+          txs.push({
+            tx: txCallback,
+            txType: types_1.eEthereumTxType.STAKE_ACTION,
+            gas: this.generateTxPriceEstimation(txs, txCallback, types_1.ProtocolAction.stake)
+          });
+          return txs;
+        });
+      }
+      redeem(user, amount) {
+        return __async(this, null, function* () {
+          let convertedAmount;
+          const stakingContract = this.getContractInstance(this.stakingContractAddress);
+          if (amount === "-1") {
+            convertedAmount = ethers_1.constants.MaxUint256.toString();
+          } else {
+            const { decimalsOf } = this.erc20Service;
+            const stakedToken = yield stakingContract.STAKED_TOKEN();
+            const stakedTokenDecimals = yield decimalsOf(stakedToken);
+            convertedAmount = (0, utils_1.valueToWei)(amount, stakedTokenDecimals);
+          }
+          const txCallback = this.generateTxCallback({
+            rawTxMethod: () => __async(this, null, function* () {
+              return stakingContract.populateTransaction.redeem(user, convertedAmount);
+            }),
+            from: user,
+            gasSurplus: 20
+          });
+          return [
+            {
+              tx: txCallback,
+              txType: types_1.eEthereumTxType.STAKE_ACTION,
+              gas: this.generateTxPriceEstimation([], txCallback)
+            }
+          ];
+        });
+      }
+      cooldown(user) {
+        const stakingContract = this.getContractInstance(this.stakingContractAddress);
+        const txCallback = this.generateTxCallback({
+          rawTxMethod: () => __async(this, null, function* () {
+            return stakingContract.populateTransaction.cooldown();
+          }),
+          from: user
+        });
+        return [
+          {
+            tx: txCallback,
+            txType: types_1.eEthereumTxType.STAKE_ACTION,
+            gas: this.generateTxPriceEstimation([], txCallback)
+          }
+        ];
+      }
+      claimRewards(user, amount) {
+        return __async(this, null, function* () {
+          let convertedAmount;
+          const stakingContract = this.getContractInstance(this.stakingContractAddress);
+          if (amount === "-1") {
+            convertedAmount = ethers_1.constants.MaxUint256.toString();
+          } else {
+            const { decimalsOf } = this.erc20Service;
+            const stakedToken = yield stakingContract.REWARD_TOKEN();
+            const stakedTokenDecimals = yield decimalsOf(stakedToken);
+            convertedAmount = (0, utils_1.valueToWei)(amount, stakedTokenDecimals);
+          }
+          const txCallback = this.generateTxCallback({
+            rawTxMethod: () => __async(this, null, function* () {
+              return stakingContract.populateTransaction.claimRewards(user, convertedAmount);
+            }),
+            from: user,
+            gasSurplus: 20,
+            action: types_1.ProtocolAction.claimRewards
+          });
+          return [
+            {
+              tx: txCallback,
+              txType: types_1.eEthereumTxType.STAKE_ACTION,
+              gas: this.generateTxPriceEstimation([], txCallback, types_1.ProtocolAction.claimRewards)
+            }
+          ];
+        });
+      }
+    };
+    tslib_1.__decorate([
+      methodValidators_1.SignStakingValidator,
+      tslib_1.__param(0, (0, paramValidators_1.isEthAddress)()),
+      tslib_1.__param(1, (0, paramValidators_1.isPositiveAmount)()),
+      tslib_1.__metadata("design:type", Function),
+      tslib_1.__metadata("design:paramtypes", [String, String, String]),
+      tslib_1.__metadata("design:returntype", Promise)
+    ], StakingServiceV3.prototype, "signStaking", null);
+    tslib_1.__decorate([
+      methodValidators_1.SignStakingValidator,
+      tslib_1.__param(0, (0, paramValidators_1.isEthAddress)()),
+      tslib_1.__param(1, (0, paramValidators_1.isPositiveAmount)()),
+      tslib_1.__metadata("design:type", Function),
+      tslib_1.__metadata("design:paramtypes", [String, String, Object, String]),
+      tslib_1.__metadata("design:returntype", Promise)
+    ], StakingServiceV3.prototype, "stakeWithPermit", null);
+    tslib_1.__decorate([
+      methodValidators_1.StakingValidator,
+      tslib_1.__param(0, (0, paramValidators_1.isEthAddress)()),
+      tslib_1.__param(1, (0, paramValidators_1.isPositiveAmount)()),
+      tslib_1.__param(2, (0, paramValidators_1.isEthAddress)()),
+      tslib_1.__metadata("design:type", Function),
+      tslib_1.__metadata("design:paramtypes", [String, String, String]),
+      tslib_1.__metadata("design:returntype", Promise)
+    ], StakingServiceV3.prototype, "stake", null);
+    tslib_1.__decorate([
+      methodValidators_1.StakingValidator,
+      tslib_1.__param(0, (0, paramValidators_1.isEthAddress)()),
+      tslib_1.__param(1, (0, paramValidators_1.isPositiveOrMinusOneAmount)()),
+      tslib_1.__metadata("design:type", Function),
+      tslib_1.__metadata("design:paramtypes", [String, String]),
+      tslib_1.__metadata("design:returntype", Promise)
+    ], StakingServiceV3.prototype, "redeem", null);
+    tslib_1.__decorate([
+      methodValidators_1.StakingValidator,
+      tslib_1.__param(0, (0, paramValidators_1.isEthAddress)()),
+      tslib_1.__metadata("design:type", Function),
+      tslib_1.__metadata("design:paramtypes", [String]),
+      tslib_1.__metadata("design:returntype", Array)
+    ], StakingServiceV3.prototype, "cooldown", null);
+    tslib_1.__decorate([
+      methodValidators_1.StakingValidator,
+      tslib_1.__param(0, (0, paramValidators_1.isEthAddress)()),
+      tslib_1.__param(1, (0, paramValidators_1.isPositiveOrMinusOneAmount)()),
+      tslib_1.__metadata("design:type", Function),
+      tslib_1.__metadata("design:paramtypes", [String, String]),
+      tslib_1.__metadata("design:returntype", Promise)
+    ], StakingServiceV3.prototype, "claimRewards", null);
+    exports2.StakingServiceV3 = StakingServiceV3;
+  }
+});
+
+// node_modules/@pollum-io/contract-helpers/dist/cjs/incentive-controller/typechain/IPegasysIncentivesController__factory.js
+var require_IPegasysIncentivesController_factory = __commonJS({
+  "node_modules/@pollum-io/contract-helpers/dist/cjs/incentive-controller/typechain/IPegasysIncentivesController__factory.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.IPegasysIncentivesController__factory = void 0;
+    var ethers_1 = require_lib31();
+    var IPegasysIncentivesController__factory = class {
+      static connect(address, signerOrProvider) {
+        return new ethers_1.Contract(address, _abi, signerOrProvider);
+      }
+    };
+    exports2.IPegasysIncentivesController__factory = IPegasysIncentivesController__factory;
     var _abi = [
       {
         inputs: [
@@ -39958,10 +42426,10 @@ var require_incentive_controller = __commonJS({
     var types_1 = require_types2();
     var methodValidators_1 = require_methodValidators();
     var paramValidators_1 = require_paramValidators();
-    var IAaveIncentivesController__factory_1 = require_IAaveIncentivesController_factory();
+    var IPegasysIncentivesController__factory_1 = require_IPegasysIncentivesController_factory();
     var IncentivesController = class extends BaseService_1.default {
       constructor(provider) {
-        super(provider, IAaveIncentivesController__factory_1.IAaveIncentivesController__factory);
+        super(provider, IPegasysIncentivesController__factory_1.IPegasysIncentivesController__factory);
       }
       claimRewards({ user, assets, to, incentivesControllerAddress }) {
         const incentivesContract = this.getContractInstance(incentivesControllerAddress);
@@ -39994,12 +42462,12 @@ var require_incentive_controller = __commonJS({
   }
 });
 
-// node_modules/@pollum-io/contract-helpers/dist/cjs/incentive-controller-v2/typechain/IAaveIncentivesControllerV2__factory.js
-var require_IAaveIncentivesControllerV2_factory = __commonJS({
-  "node_modules/@pollum-io/contract-helpers/dist/cjs/incentive-controller-v2/typechain/IAaveIncentivesControllerV2__factory.js"(exports2) {
+// node_modules/@pollum-io/contract-helpers/dist/cjs/incentive-controller-v2/typechain/IPegasysIncentivesControllerV2__factory.js
+var require_IPegasysIncentivesControllerV2_factory = __commonJS({
+  "node_modules/@pollum-io/contract-helpers/dist/cjs/incentive-controller-v2/typechain/IPegasysIncentivesControllerV2__factory.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.IAaveIncentivesControllerV2__factory = void 0;
+    exports2.IPegasysIncentivesControllerV2__factory = void 0;
     var ethers_1 = require_lib31();
     var _abi = [
       {
@@ -40834,7 +43302,7 @@ var require_IAaveIncentivesControllerV2_factory = __commonJS({
         type: "function"
       }
     ];
-    var IAaveIncentivesControllerV2__factory = class {
+    var IPegasysIncentivesControllerV2__factory = class {
       static createInterface() {
         return new ethers_1.utils.Interface(_abi);
       }
@@ -40842,8 +43310,8 @@ var require_IAaveIncentivesControllerV2_factory = __commonJS({
         return new ethers_1.Contract(address, _abi, signerOrProvider);
       }
     };
-    exports2.IAaveIncentivesControllerV2__factory = IAaveIncentivesControllerV2__factory;
-    IAaveIncentivesControllerV2__factory.abi = _abi;
+    exports2.IPegasysIncentivesControllerV2__factory = IPegasysIncentivesControllerV2__factory;
+    IPegasysIncentivesControllerV2__factory.abi = _abi;
   }
 });
 
@@ -40859,10 +43327,10 @@ var require_incentive_controller_v2 = __commonJS({
     var types_1 = require_types2();
     var methodValidators_1 = require_methodValidators();
     var paramValidators_1 = require_paramValidators();
-    var IAaveIncentivesControllerV2__factory_1 = require_IAaveIncentivesControllerV2_factory();
+    var IPegasysIncentivesControllerV2__factory_1 = require_IPegasysIncentivesControllerV2_factory();
     var IncentivesControllerV2 = class extends BaseService_1.default {
       constructor(provider) {
-        super(provider, IAaveIncentivesControllerV2__factory_1.IAaveIncentivesControllerV2__factory);
+        super(provider, IPegasysIncentivesControllerV2__factory_1.IPegasysIncentivesControllerV2__factory);
       }
       claimRewards({ user, assets, to, incentivesControllerAddress, reward }) {
         const incentivesContract = this.getContractInstance(incentivesControllerAddress);
@@ -40919,336 +43387,6 @@ var require_incentive_controller_v2 = __commonJS({
       tslib_1.__metadata("design:returntype", Array)
     ], IncentivesControllerV2.prototype, "claimAllRewards", null);
     exports2.IncentivesControllerV2 = IncentivesControllerV2;
-  }
-});
-
-// node_modules/@pollum-io/contract-helpers/dist/cjs/erc20-contract/typechain/IERC20Detailed__factory.js
-var require_IERC20Detailed_factory = __commonJS({
-  "node_modules/@pollum-io/contract-helpers/dist/cjs/erc20-contract/typechain/IERC20Detailed__factory.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.IERC20Detailed__factory = void 0;
-    var ethers_1 = require_lib31();
-    var IERC20Detailed__factory = class {
-      static connect(address, signerOrProvider) {
-        return new ethers_1.Contract(address, _abi, signerOrProvider);
-      }
-      static createInterface() {
-        return new ethers_1.utils.Interface(_abi);
-      }
-    };
-    exports2.IERC20Detailed__factory = IERC20Detailed__factory;
-    var _abi = [
-      {
-        inputs: [
-          {
-            internalType: "address",
-            name: "owner",
-            type: "address"
-          },
-          {
-            internalType: "address",
-            name: "spender",
-            type: "address"
-          }
-        ],
-        name: "allowance",
-        outputs: [
-          {
-            internalType: "uint256",
-            name: "",
-            type: "uint256"
-          }
-        ],
-        stateMutability: "view",
-        type: "function"
-      },
-      {
-        inputs: [
-          {
-            internalType: "address",
-            name: "spender",
-            type: "address"
-          },
-          {
-            internalType: "uint256",
-            name: "amount",
-            type: "uint256"
-          }
-        ],
-        name: "approve",
-        outputs: [
-          {
-            internalType: "bool",
-            name: "",
-            type: "bool"
-          }
-        ],
-        stateMutability: "nonpayable",
-        type: "function"
-      },
-      {
-        inputs: [],
-        name: "decimals",
-        outputs: [
-          {
-            internalType: "uint8",
-            name: "",
-            type: "uint8"
-          }
-        ],
-        stateMutability: "view",
-        type: "function"
-      },
-      {
-        inputs: [],
-        name: "name",
-        outputs: [
-          {
-            internalType: "string",
-            name: "",
-            type: "string"
-          }
-        ],
-        stateMutability: "view",
-        type: "function"
-      },
-      {
-        inputs: [],
-        name: "symbol",
-        outputs: [
-          {
-            internalType: "string",
-            name: "",
-            type: "string"
-          }
-        ],
-        stateMutability: "view",
-        type: "function"
-      }
-    ];
-  }
-});
-
-// node_modules/@pollum-io/contract-helpers/dist/cjs/erc20-contract/index.js
-var require_erc20_contract = __commonJS({
-  "node_modules/@pollum-io/contract-helpers/dist/cjs/erc20-contract/index.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.ERC20Service = void 0;
-    var tslib_1 = (init_tslib_es6(), __toCommonJS(tslib_es6_exports));
-    var ethers_1 = require_lib31();
-    var utils_1 = require_utils5();
-    var BaseService_1 = tslib_1.__importDefault(require_BaseService());
-    var types_1 = require_types2();
-    var utils_2 = require_utils6();
-    var methodValidators_1 = require_methodValidators();
-    var paramValidators_1 = require_paramValidators();
-    var IERC20Detailed__factory_1 = require_IERC20Detailed_factory();
-    var ERC20Service = class extends BaseService_1.default {
-      constructor(provider) {
-        super(provider, IERC20Detailed__factory_1.IERC20Detailed__factory);
-        this.tokenDecimals = {};
-        this.tokenMetadata = {};
-        this.approve = this.approve.bind(this);
-        this.approveTxData = this.approveTxData.bind(this);
-        this.isApproved = this.isApproved.bind(this);
-        this.getTokenData = this.getTokenData.bind(this);
-        this.decimalsOf = this.decimalsOf.bind(this);
-        this.contractInterface = IERC20Detailed__factory_1.IERC20Detailed__factory.createInterface();
-      }
-      /**
-       * Generate approval tx data with legacy method, call tx() and gas() callbacks for tx data and gas estimation respectively
-       * @param {string} user - Address to check allowance for
-       * @param {string} token - Token which the user is spending
-       * @param {string} spender - Address which is spending the tokens
-       * @param {string} amount - Amount to approve
-       * @returns {EthereumTransactionTypeExtended} legacy transaction response
-       */
-      approve({ user, token, spender, amount }) {
-        const erc20Contract = this.getContractInstance(token);
-        const txCallback = this.generateTxCallback({
-          rawTxMethod: () => __async(this, null, function* () {
-            return erc20Contract.populateTransaction.approve(spender, amount);
-          }),
-          from: user
-        });
-        return {
-          tx: txCallback,
-          txType: types_1.eEthereumTxType.ERC20_APPROVAL,
-          gas: this.generateTxPriceEstimation([], txCallback)
-        };
-      }
-      /**
-       * Generate approval tx data, ready to sign and submit to blockchain
-       * @param {string} user - Address to check allowance for
-       * @param {string} token - Token which the user is spending
-       * @param {string} spender - Address which is spending the tokens
-       * @param {string} amount - Amount to approve
-       * @returns {PopulatedTransaction} Transaction response
-       */
-      approveTxData({ user, token, spender, amount }) {
-        const tx = {};
-        const txData = this.contractInterface.encodeFunctionData("approve", [
-          spender,
-          amount
-        ]);
-        tx.data = txData;
-        tx.to = token;
-        tx.from = user;
-        tx.gasLimit = ethers_1.BigNumber.from(utils_2.gasLimitRecommendations[types_1.ProtocolAction.approval].recommended);
-        return tx;
-      }
-      /**
-       * Qeuries whether user has approved spender to transfer tokens up to the specific amount
-       * @param {string} user - Address to check allowance for
-       * @param {string} token - Token which the user is spending
-       * @param {string} spender - Address which is spending the tokens
-       * @param {string} amount - Amount of token to checkif spender has allowance for
-       * @returns {boolean} true if user has approved spender contract for greater than passed amount, false otherwise
-       */
-      isApproved(_0) {
-        return __async(this, arguments, function* ({ user, token, spender, amount, nativeDecimals }) {
-          if (token.toLowerCase() === utils_2.API_ETH_MOCK_ADDRESS.toLowerCase())
-            return true;
-          const decimals = yield this.decimalsOf(token);
-          const erc20Contract = this.getContractInstance(token);
-          const allowance = yield erc20Contract.allowance(user, spender);
-          const amountBNWithDecimals = amount === "-1" ? ethers_1.BigNumber.from(utils_2.SUPER_BIG_ALLOWANCE_NUMBER) : ethers_1.BigNumber.from((0, utils_2.valueToWei)(nativeDecimals ? (0, utils_1.formatUnits)(amount, decimals) : amount, decimals));
-          return allowance.gte(amountBNWithDecimals);
-        });
-      }
-      /**
-       * Fetches the approval allowance of a user for a specific token and spender
-       * @param {string} user - Address to check allowance for
-       * @param {string} token - Token which the user is spending
-       * @param {string} spender - Address which is spending the tokens
-       * @returns {number} The user's approved allowance, in standard decimal units, -1 for max allowance
-       */
-      approvedAmount(_0) {
-        return __async(this, arguments, function* ({ user, token, spender }) {
-          if (token.toLowerCase() === utils_2.API_ETH_MOCK_ADDRESS.toLowerCase())
-            return -1;
-          const erc20Contract = this.getContractInstance(token);
-          const allowance = yield erc20Contract.allowance(user, spender);
-          if (allowance.toString() === utils_2.MAX_UINT_AMOUNT) {
-            return -1;
-          }
-          const decimals = yield this.decimalsOf(token);
-          return Number(ethers_1.ethers.utils.formatUnits(allowance, decimals));
-        });
-      }
-      /**
-       * Fetches the decimals of an ERC20 token, used for formatting amounts
-       * @param {string} token - ERC20 token address
-       * @returns {number} Decimal units of token amounts
-       */
-      decimalsOf(token) {
-        return __async(this, null, function* () {
-          if (token.toLowerCase() === utils_2.API_ETH_MOCK_ADDRESS.toLowerCase())
-            return 18;
-          if (!this.tokenDecimals[token]) {
-            const erc20Contract = this.getContractInstance(token);
-            this.tokenDecimals[token] = yield erc20Contract.decimals();
-          }
-          return this.tokenDecimals[token];
-        });
-      }
-      /**
-       * Return basic details of an ERC20
-       * @param {string} token - ERC20 token address
-       * @returns {TokenMetadataType} ERC20 token metadata
-       */
-      getTokenData(token) {
-        return __async(this, null, function* () {
-          if (token.toLowerCase() === utils_2.API_ETH_MOCK_ADDRESS.toLowerCase()) {
-            return {
-              name: "Ethereum",
-              symbol: "ETH",
-              decimals: 18,
-              address: token
-            };
-          }
-          if (token.toLowerCase() === "0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2".toLowerCase()) {
-            return {
-              name: "Maker",
-              symbol: "MKR",
-              decimals: 18,
-              address: token
-            };
-          }
-          if (!this.tokenMetadata[token]) {
-            const { name: nameGetter, symbol: symbolGetter } = this.getContractInstance(token);
-            const [name2, symbol, decimals] = yield Promise.all([
-              nameGetter(),
-              symbolGetter(),
-              this.decimalsOf(token)
-            ]);
-            this.tokenMetadata[token] = {
-              name: name2,
-              symbol,
-              decimals,
-              address: token
-            };
-          }
-          return this.tokenMetadata[token];
-        });
-      }
-    };
-    tslib_1.__decorate([
-      methodValidators_1.ERC20Validator,
-      tslib_1.__param(0, (0, paramValidators_1.isEthAddress)("user")),
-      tslib_1.__param(0, (0, paramValidators_1.isEthAddress)("token")),
-      tslib_1.__param(0, (0, paramValidators_1.isEthAddress)("spender")),
-      tslib_1.__param(0, (0, paramValidators_1.isPositiveAmount)("amount")),
-      tslib_1.__metadata("design:type", Function),
-      tslib_1.__metadata("design:paramtypes", [Object]),
-      tslib_1.__metadata("design:returntype", Object)
-    ], ERC20Service.prototype, "approve", null);
-    tslib_1.__decorate([
-      methodValidators_1.ERC20Validator,
-      tslib_1.__param(0, (0, paramValidators_1.isEthAddress)("user")),
-      tslib_1.__param(0, (0, paramValidators_1.isEthAddress)("token")),
-      tslib_1.__param(0, (0, paramValidators_1.isEthAddress)("spender")),
-      tslib_1.__param(0, (0, paramValidators_1.isPositiveAmount)("amount")),
-      tslib_1.__metadata("design:type", Function),
-      tslib_1.__metadata("design:paramtypes", [Object]),
-      tslib_1.__metadata("design:returntype", Object)
-    ], ERC20Service.prototype, "approveTxData", null);
-    tslib_1.__decorate([
-      methodValidators_1.ERC20Validator,
-      tslib_1.__param(0, (0, paramValidators_1.isEthAddress)("user")),
-      tslib_1.__param(0, (0, paramValidators_1.isEthAddress)("token")),
-      tslib_1.__param(0, (0, paramValidators_1.isEthAddress)("spender")),
-      tslib_1.__param(0, (0, paramValidators_1.isPositiveOrMinusOneAmount)("amount")),
-      tslib_1.__metadata("design:type", Function),
-      tslib_1.__metadata("design:paramtypes", [Object]),
-      tslib_1.__metadata("design:returntype", Promise)
-    ], ERC20Service.prototype, "isApproved", null);
-    tslib_1.__decorate([
-      methodValidators_1.ERC20Validator,
-      tslib_1.__param(0, (0, paramValidators_1.isEthAddress)("user")),
-      tslib_1.__param(0, (0, paramValidators_1.isEthAddress)("token")),
-      tslib_1.__param(0, (0, paramValidators_1.isEthAddress)("spender")),
-      tslib_1.__metadata("design:type", Function),
-      tslib_1.__metadata("design:paramtypes", [Object]),
-      tslib_1.__metadata("design:returntype", Promise)
-    ], ERC20Service.prototype, "approvedAmount", null);
-    tslib_1.__decorate([
-      methodValidators_1.ERC20Validator,
-      tslib_1.__param(0, (0, paramValidators_1.isEthAddress)()),
-      tslib_1.__metadata("design:type", Function),
-      tslib_1.__metadata("design:paramtypes", [String]),
-      tslib_1.__metadata("design:returntype", Promise)
-    ], ERC20Service.prototype, "decimalsOf", null);
-    tslib_1.__decorate([
-      methodValidators_1.ERC20Validator,
-      tslib_1.__param(0, (0, paramValidators_1.isEthAddress)()),
-      tslib_1.__metadata("design:type", Function),
-      tslib_1.__metadata("design:paramtypes", [String]),
-      tslib_1.__metadata("design:returntype", Promise)
-    ], ERC20Service.prototype, "getTokenData", null);
-    exports2.ERC20Service = ERC20Service;
   }
 });
 
@@ -41361,36 +43499,52 @@ var require_paraswap_liquiditySwapAdapter_contract = __commonJS({
       switch (calldata.slice(0, 10)) {
         case "0xda8567c8":
           return 100;
+        // 4 + 3 * 32
         case "0x58b9d179":
           return 4;
+        // 4 + 0 * 32
         case "0x0863b7ac":
           return 68;
+        // 4 + 2 * 32
         case "0x8f00eccb":
           return 68;
+        // 4 + 2 * 32
         case "0xec1d21dd":
           return 68;
+        // 4 + 2 * 32
         case "0x54840d1a":
           return 4;
+        // 4 + 0 * 32
         case "0xf5661034":
           return 68;
+        // 4 + 2 * 32
         case "0x0b86a4c1":
           return 36;
+        // 4 + 1 * 32
         case "0x64466805":
           return 68;
+        // 4 + 2 * 32
         case "0xa94e78ef":
           return 68;
+        // 4 + 2 * 32
         case "0x46c67b6d":
           return 68;
+        // 4 + 2 * 32
         case "0xb22f4db8":
           return 68;
+        // 4 + 2 * 32
         case "0x19fc5be0":
           return 68;
+        // 4 + 2 * 32
         case "0x3865bde6":
           return 68;
+        // 4 + 2 * 32
         case "0x58f15100":
           return 68;
+        // 4 + 2 * 32
         case "0xa6866da9":
           return 68;
+        // 4 + 2 * 32
         default:
           throw new Error("Unrecognized function selector for Augustus");
       }
@@ -42419,6 +44573,23 @@ var require_wethgateway_contract = __commonJS({
             to: this.wethGatewayAddress,
             from: args.user,
             gasLimit: ethers_1.BigNumber.from(utils_1.gasLimitRecommendations[types_1.ProtocolAction.borrowETH].limit)
+          };
+          return actionTx;
+        };
+        this.generateRepayEthTxData = ({ interestRateMode, lendingPool, amount, user, onBehalfOf }) => {
+          const numericRateMode = interestRateMode === types_1.InterestRate.Variable ? 2 : 1;
+          const txData = this.wethGatewayInstance.encodeFunctionData("repayETH", [
+            lendingPool,
+            amount,
+            numericRateMode,
+            onBehalfOf !== null && onBehalfOf !== void 0 ? onBehalfOf : user
+          ]);
+          const actionTx = {
+            data: txData,
+            to: this.wethGatewayAddress,
+            from: user,
+            value: ethers_1.BigNumber.from(amount),
+            gasLimit: ethers_1.BigNumber.from(utils_1.gasLimitRecommendations[types_1.ProtocolAction.repayETH].limit)
           };
           return actionTx;
         };
@@ -43658,6 +45829,32 @@ var require_lendingPool_contract_bundle = __commonJS({
             return actionTx;
           }
         };
+        this.repayTxBuilder = {
+          generateTxData: ({ user, reserve, onBehalfOf, interestRateMode, amount }) => {
+            const actionTx = {};
+            if (reserve.toLowerCase() === utils_1.API_ETH_MOCK_ADDRESS.toLowerCase()) {
+              return this.wethGatewayService.generateRepayEthTxData({
+                lendingPool: this.lendingPoolAddress,
+                user,
+                amount,
+                interestRateMode,
+                onBehalfOf
+              });
+            }
+            const numericRateMode = interestRateMode === types_1.InterestRate.Variable ? 2 : 1;
+            const txData = this.contractInterface.encodeFunctionData("repay", [
+              reserve,
+              amount === "-1" ? ethers_1.constants.MaxUint256.toString() : amount,
+              numericRateMode,
+              onBehalfOf !== null && onBehalfOf !== void 0 ? onBehalfOf : user
+            ]);
+            actionTx.to = this.lendingPoolAddress;
+            actionTx.from = user;
+            actionTx.data = txData;
+            actionTx.gasLimit = ethers_1.BigNumber.from(utils_1.gasLimitRecommendations[types_1.ProtocolAction.repay].recommended);
+            return actionTx;
+          }
+        };
       }
     };
     exports2.LendingPoolBundle = LendingPoolBundle;
@@ -43909,19 +46106,194 @@ var require_v3_faucet_contract = __commonJS({
   }
 });
 
-// node_modules/@pollum-io/contract-helpers/dist/cjs/erc20-2612/typechain/IERC202612__factory.js
-var require_IERC202612_factory = __commonJS({
-  "node_modules/@pollum-io/contract-helpers/dist/cjs/erc20-2612/typechain/IERC202612__factory.js"(exports2) {
+// node_modules/@pollum-io/contract-helpers/dist/cjs/governance-v3/typechain/factories/PegasysTokenV3__factory.js
+var require_PegasysTokenV3_factory = __commonJS({
+  "node_modules/@pollum-io/contract-helpers/dist/cjs/governance-v3/typechain/factories/PegasysTokenV3__factory.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.IERC202612__factory = void 0;
+    exports2.PegasysTokenV3__factory = void 0;
     var ethers_1 = require_lib31();
     var _abi = [
+      {
+        inputs: [],
+        name: "InvalidShortString",
+        type: "error"
+      },
+      {
+        inputs: [
+          {
+            internalType: "string",
+            name: "str",
+            type: "string"
+          }
+        ],
+        name: "StringTooLong",
+        type: "error"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "address",
+            name: "owner",
+            type: "address"
+          },
+          {
+            indexed: true,
+            internalType: "address",
+            name: "spender",
+            type: "address"
+          },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "value",
+            type: "uint256"
+          }
+        ],
+        name: "Approval",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "address",
+            name: "delegator",
+            type: "address"
+          },
+          {
+            indexed: true,
+            internalType: "address",
+            name: "delegatee",
+            type: "address"
+          },
+          {
+            indexed: false,
+            internalType: "enum IGovernancePowerDelegationToken.GovernancePowerType",
+            name: "delegationType",
+            type: "uint8"
+          }
+        ],
+        name: "DelegateChanged",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [],
+        name: "EIP712DomainChanged",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "address",
+            name: "from",
+            type: "address"
+          },
+          {
+            indexed: true,
+            internalType: "address",
+            name: "to",
+            type: "address"
+          },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "value",
+            type: "uint256"
+          }
+        ],
+        name: "Transfer",
+        type: "event"
+      },
+      {
+        inputs: [],
+        name: "DELEGATE_BY_TYPE_TYPEHASH",
+        outputs: [
+          {
+            internalType: "bytes32",
+            name: "",
+            type: "bytes32"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "DELEGATE_TYPEHASH",
+        outputs: [
+          {
+            internalType: "bytes32",
+            name: "",
+            type: "bytes32"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "DOMAIN_SEPARATOR",
+        outputs: [
+          {
+            internalType: "bytes32",
+            name: "",
+            type: "bytes32"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "PERMIT_TYPEHASH",
+        outputs: [
+          {
+            internalType: "bytes32",
+            name: "",
+            type: "bytes32"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "POWER_SCALE_FACTOR",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "REVISION",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
       {
         inputs: [
           {
             internalType: "address",
-            name: "owner",
+            name: "",
             type: "address"
           }
         ],
@@ -43942,9 +46314,14 @@ var require_IERC202612_factory = __commonJS({
             internalType: "address",
             name: "owner",
             type: "address"
+          },
+          {
+            internalType: "address",
+            name: "spender",
+            type: "address"
           }
         ],
-        name: "nonces",
+        name: "allowance",
         outputs: [
           {
             internalType: "uint256",
@@ -43954,340 +46331,248 @@ var require_IERC202612_factory = __commonJS({
         ],
         stateMutability: "view",
         type: "function"
-      }
-    ];
-    var IERC202612__factory = class {
-      static createInterface() {
-        return new ethers_1.utils.Interface(_abi);
-      }
-      static connect(address, signerOrProvider) {
-        return new ethers_1.Contract(address, _abi, signerOrProvider);
-      }
-    };
-    exports2.IERC202612__factory = IERC202612__factory;
-    IERC202612__factory.abi = _abi;
-  }
-});
-
-// node_modules/@pollum-io/contract-helpers/dist/cjs/erc20-2612/index.js
-var require_erc20_2612 = __commonJS({
-  "node_modules/@pollum-io/contract-helpers/dist/cjs/erc20-2612/index.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.ERC20_2612Service = void 0;
-    var tslib_1 = (init_tslib_es6(), __toCommonJS(tslib_es6_exports));
-    var BaseService_1 = tslib_1.__importDefault(require_BaseService());
-    var methodValidators_1 = require_methodValidators();
-    var paramValidators_1 = require_paramValidators();
-    var IERC202612__factory_1 = require_IERC202612_factory();
-    var ERC20_2612Service = class extends BaseService_1.default {
-      constructor(provider) {
-        super(provider, IERC202612__factory_1.IERC202612__factory);
-        this.getNonce = this.getNonce.bind(this);
-      }
-      getNonce(_0) {
-        return __async(this, arguments, function* ({ token, owner }) {
-          const tokenContract = this.getContractInstance(token);
-          let nonce;
-          try {
-            nonce = yield tokenContract.nonces(owner);
-            return nonce.toNumber();
-          } catch (_) {
-          }
-          try {
-            nonce = yield tokenContract._nonces(owner);
-            return nonce.toNumber();
-          } catch (_) {
-            console.log(`Token ${token} does not implement nonces or _nonces method`);
-          }
-          return null;
-        });
-      }
-    };
-    tslib_1.__decorate([
-      methodValidators_1.ERC20Validator,
-      tslib_1.__param(0, (0, paramValidators_1.isEthAddress)("token")),
-      tslib_1.__param(0, (0, paramValidators_1.isEthAddress)("owner")),
-      tslib_1.__metadata("design:type", Function),
-      tslib_1.__metadata("design:paramtypes", [Object]),
-      tslib_1.__metadata("design:returntype", Promise)
-    ], ERC20_2612Service.prototype, "getNonce", null);
-    exports2.ERC20_2612Service = ERC20_2612Service;
-  }
-});
-
-// node_modules/@pollum-io/contract-helpers/dist/cjs/staking-contract/typechain/IStakedAaveV3__factory.js
-var require_IStakedAaveV3_factory = __commonJS({
-  "node_modules/@pollum-io/contract-helpers/dist/cjs/staking-contract/typechain/IStakedAaveV3__factory.js"(exports2) {
-    "use strict";
-    Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.IStakedAaveV3__factory = void 0;
-    var ethers_1 = require_lib31();
-    var IStakedAaveV3__factory = class {
-      static connect(address, signerOrProvider) {
-        return new ethers_1.Contract(address, _abi, signerOrProvider);
-      }
-    };
-    exports2.IStakedAaveV3__factory = IStakedAaveV3__factory;
-    var _abi = [
+      },
       {
-        anonymous: false,
         inputs: [
           {
-            indexed: true,
+            internalType: "address",
+            name: "spender",
+            type: "address"
+          },
+          {
+            internalType: "uint256",
+            name: "amount",
+            type: "uint256"
+          }
+        ],
+        name: "approve",
+        outputs: [
+          {
+            internalType: "bool",
+            name: "",
+            type: "bool"
+          }
+        ],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "account",
+            type: "address"
+          }
+        ],
+        name: "balanceOf",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "decimals",
+        outputs: [
+          {
+            internalType: "uint8",
+            name: "",
+            type: "uint8"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "spender",
+            type: "address"
+          },
+          {
+            internalType: "uint256",
+            name: "subtractedValue",
+            type: "uint256"
+          }
+        ],
+        name: "decreaseAllowance",
+        outputs: [
+          {
+            internalType: "bool",
+            name: "",
+            type: "bool"
+          }
+        ],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "delegatee",
+            type: "address"
+          }
+        ],
+        name: "delegate",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "delegatee",
+            type: "address"
+          },
+          {
+            internalType: "enum IGovernancePowerDelegationToken.GovernancePowerType",
+            name: "delegationType",
+            type: "uint8"
+          }
+        ],
+        name: "delegateByType",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "eip712Domain",
+        outputs: [
+          {
+            internalType: "bytes1",
+            name: "fields",
+            type: "bytes1"
+          },
+          {
+            internalType: "string",
+            name: "name",
+            type: "string"
+          },
+          {
+            internalType: "string",
+            name: "version",
+            type: "string"
+          },
+          {
+            internalType: "uint256",
+            name: "chainId",
+            type: "uint256"
+          },
+          {
+            internalType: "address",
+            name: "verifyingContract",
+            type: "address"
+          },
+          {
+            internalType: "bytes32",
+            name: "salt",
+            type: "bytes32"
+          },
+          {
+            internalType: "uint256[]",
+            name: "extensions",
+            type: "uint256[]"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "delegator",
+            type: "address"
+          },
+          {
+            internalType: "enum IGovernancePowerDelegationToken.GovernancePowerType",
+            name: "delegationType",
+            type: "uint8"
+          }
+        ],
+        name: "getDelegateeByType",
+        outputs: [
+          {
+            internalType: "address",
+            name: "",
+            type: "address"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "delegator",
+            type: "address"
+          }
+        ],
+        name: "getDelegates",
+        outputs: [
+          {
+            internalType: "address",
+            name: "",
+            type: "address"
+          },
+          {
+            internalType: "address",
+            name: "",
+            type: "address"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
             internalType: "address",
             name: "user",
             type: "address"
           },
           {
-            indexed: false,
+            internalType: "enum IGovernancePowerDelegationToken.GovernancePowerType",
+            name: "delegationType",
+            type: "uint8"
+          }
+        ],
+        name: "getPowerCurrent",
+        outputs: [
+          {
             internalType: "uint256",
-            name: "amount",
+            name: "",
             type: "uint256"
           }
         ],
-        name: "Cooldown",
-        type: "event"
+        stateMutability: "view",
+        type: "function"
       },
       {
-        anonymous: false,
         inputs: [
           {
-            indexed: false,
-            internalType: "uint256",
-            name: "cooldownSeconds",
-            type: "uint256"
-          }
-        ],
-        name: "CooldownSecondsChanged",
-        type: "event"
-      },
-      {
-        anonymous: false,
-        inputs: [
-          {
-            indexed: false,
-            internalType: "uint216",
-            name: "exchangeRate",
-            type: "uint216"
-          }
-        ],
-        name: "ExchangeRateChanged",
-        type: "event"
-      },
-      {
-        anonymous: false,
-        inputs: [
-          {
-            indexed: false,
-            internalType: "uint256",
-            name: "amount",
-            type: "uint256"
-          }
-        ],
-        name: "FundsReturned",
-        type: "event"
-      },
-      {
-        anonymous: false,
-        inputs: [
-          {
-            indexed: true,
-            internalType: "address",
-            name: "newDebtToken",
-            type: "address"
-          }
-        ],
-        name: "GHODebtTokenChanged",
-        type: "event"
-      },
-      {
-        anonymous: false,
-        inputs: [
-          {
-            indexed: false,
-            internalType: "uint256",
-            name: "newPercentage",
-            type: "uint256"
-          }
-        ],
-        name: "MaxSlashablePercentageChanged",
-        type: "event"
-      },
-      {
-        anonymous: false,
-        inputs: [
-          {
-            indexed: true,
-            internalType: "address",
-            name: "from",
-            type: "address"
-          },
-          {
-            indexed: true,
-            internalType: "address",
-            name: "to",
-            type: "address"
-          },
-          {
-            indexed: false,
-            internalType: "uint256",
-            name: "assets",
-            type: "uint256"
-          },
-          {
-            indexed: false,
-            internalType: "uint256",
-            name: "shares",
-            type: "uint256"
-          }
-        ],
-        name: "Redeem",
-        type: "event"
-      },
-      {
-        anonymous: false,
-        inputs: [
-          {
-            indexed: false,
             internalType: "address",
             name: "user",
             type: "address"
-          },
-          {
-            indexed: false,
-            internalType: "uint256",
-            name: "amount",
-            type: "uint256"
           }
         ],
-        name: "RewardsAccrued",
-        type: "event"
-      },
-      {
-        anonymous: false,
-        inputs: [
-          {
-            indexed: true,
-            internalType: "address",
-            name: "from",
-            type: "address"
-          },
-          {
-            indexed: true,
-            internalType: "address",
-            name: "to",
-            type: "address"
-          },
-          {
-            indexed: false,
-            internalType: "uint256",
-            name: "amount",
-            type: "uint256"
-          }
-        ],
-        name: "RewardsClaimed",
-        type: "event"
-      },
-      {
-        anonymous: false,
-        inputs: [
-          {
-            indexed: true,
-            internalType: "address",
-            name: "destination",
-            type: "address"
-          },
-          {
-            indexed: false,
-            internalType: "uint256",
-            name: "amount",
-            type: "uint256"
-          }
-        ],
-        name: "Slashed",
-        type: "event"
-      },
-      {
-        anonymous: false,
-        inputs: [
-          {
-            indexed: false,
-            internalType: "uint256",
-            name: "windowSeconds",
-            type: "uint256"
-          }
-        ],
-        name: "SlashingExitWindowDurationChanged",
-        type: "event"
-      },
-      {
-        anonymous: false,
-        inputs: [],
-        name: "SlashingSettled",
-        type: "event"
-      },
-      {
-        anonymous: false,
-        inputs: [
-          {
-            indexed: true,
-            internalType: "address",
-            name: "from",
-            type: "address"
-          },
-          {
-            indexed: true,
-            internalType: "address",
-            name: "to",
-            type: "address"
-          },
-          {
-            indexed: false,
-            internalType: "uint256",
-            name: "assets",
-            type: "uint256"
-          },
-          {
-            indexed: false,
-            internalType: "uint256",
-            name: "shares",
-            type: "uint256"
-          }
-        ],
-        name: "Staked",
-        type: "event"
-      },
-      {
-        inputs: [],
-        name: "REWARD_TOKEN",
+        name: "getPowersCurrent",
         outputs: [
           {
-            internalType: "address",
+            internalType: "uint256",
             name: "",
-            type: "address"
-          }
-        ],
-        stateMutability: "view",
-        type: "function"
-      },
-      {
-        inputs: [],
-        name: "STAKED_TOKEN",
-        outputs: [
-          {
-            internalType: "address",
-            name: "",
-            type: "address"
-          }
-        ],
-        stateMutability: "view",
-        type: "function"
-      },
-      {
-        inputs: [],
-        name: "COOLDOWN_SECONDS",
-        outputs: [
+            type: "uint256"
+          },
           {
             internalType: "uint256",
             name: "",
@@ -44301,16 +46586,29 @@ var require_IStakedAaveV3_factory = __commonJS({
         inputs: [
           {
             internalType: "address",
-            name: "to",
+            name: "spender",
             type: "address"
           },
           {
             internalType: "uint256",
-            name: "amount",
+            name: "addedValue",
             type: "uint256"
           }
         ],
-        name: "claimRewards",
+        name: "increaseAllowance",
+        outputs: [
+          {
+            internalType: "bool",
+            name: "",
+            type: "bool"
+          }
+        ],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "initialize",
         outputs: [],
         stateMutability: "nonpayable",
         type: "function"
@@ -44319,21 +46617,36 @@ var require_IStakedAaveV3_factory = __commonJS({
         inputs: [
           {
             internalType: "address",
-            name: "to",
+            name: "delegator",
+            type: "address"
+          },
+          {
+            internalType: "address",
+            name: "delegatee",
             type: "address"
           },
           {
             internalType: "uint256",
-            name: "claimAmount",
+            name: "deadline",
             type: "uint256"
           },
           {
-            internalType: "uint256",
-            name: "redeemAmount",
-            type: "uint256"
+            internalType: "uint8",
+            name: "v",
+            type: "uint8"
+          },
+          {
+            internalType: "bytes32",
+            name: "r",
+            type: "bytes32"
+          },
+          {
+            internalType: "bytes32",
+            name: "s",
+            type: "bytes32"
           }
         ],
-        name: "claimRewardsAndRedeem",
+        name: "metaDelegate",
         outputs: [],
         stateMutability: "nonpayable",
         type: "function"
@@ -44342,229 +46655,53 @@ var require_IStakedAaveV3_factory = __commonJS({
         inputs: [
           {
             internalType: "address",
-            name: "from",
+            name: "delegator",
             type: "address"
           },
           {
             internalType: "address",
-            name: "to",
+            name: "delegatee",
             type: "address"
           },
           {
-            internalType: "uint256",
-            name: "claimAmount",
-            type: "uint256"
+            internalType: "enum IGovernancePowerDelegationToken.GovernancePowerType",
+            name: "delegationType",
+            type: "uint8"
           },
           {
             internalType: "uint256",
-            name: "redeemAmount",
+            name: "deadline",
             type: "uint256"
-          }
-        ],
-        name: "claimRewardsAndRedeemOnBehalf",
-        outputs: [],
-        stateMutability: "nonpayable",
-        type: "function"
-      },
-      {
-        inputs: [
-          {
-            internalType: "address",
-            name: "to",
-            type: "address"
           },
           {
-            internalType: "uint256",
-            name: "amount",
-            type: "uint256"
-          }
-        ],
-        name: "claimRewardsAndStake",
-        outputs: [
-          {
-            internalType: "uint256",
-            name: "",
-            type: "uint256"
-          }
-        ],
-        stateMutability: "nonpayable",
-        type: "function"
-      },
-      {
-        inputs: [
-          {
-            internalType: "address",
-            name: "from",
-            type: "address"
+            internalType: "uint8",
+            name: "v",
+            type: "uint8"
           },
           {
-            internalType: "address",
-            name: "to",
-            type: "address"
+            internalType: "bytes32",
+            name: "r",
+            type: "bytes32"
           },
           {
-            internalType: "uint256",
-            name: "amount",
-            type: "uint256"
+            internalType: "bytes32",
+            name: "s",
+            type: "bytes32"
           }
         ],
-        name: "claimRewardsAndStakeOnBehalf",
-        outputs: [
-          {
-            internalType: "uint256",
-            name: "",
-            type: "uint256"
-          }
-        ],
-        stateMutability: "nonpayable",
-        type: "function"
-      },
-      {
-        inputs: [
-          {
-            internalType: "address",
-            name: "from",
-            type: "address"
-          },
-          {
-            internalType: "address",
-            name: "to",
-            type: "address"
-          },
-          {
-            internalType: "uint256",
-            name: "amount",
-            type: "uint256"
-          }
-        ],
-        name: "claimRewardsOnBehalf",
-        outputs: [
-          {
-            internalType: "uint256",
-            name: "",
-            type: "uint256"
-          }
-        ],
-        stateMutability: "nonpayable",
-        type: "function"
-      },
-      {
-        inputs: [],
-        name: "cooldown",
-        outputs: [],
-        stateMutability: "nonpayable",
-        type: "function"
-      },
-      {
-        inputs: [
-          {
-            internalType: "address",
-            name: "from",
-            type: "address"
-          }
-        ],
-        name: "cooldownOnBehalfOf",
+        name: "metaDelegateByType",
         outputs: [],
         stateMutability: "nonpayable",
         type: "function"
       },
       {
         inputs: [],
-        name: "getCooldownSeconds",
+        name: "name",
         outputs: [
           {
-            internalType: "uint256",
+            internalType: "string",
             name: "",
-            type: "uint256"
-          }
-        ],
-        stateMutability: "view",
-        type: "function"
-      },
-      {
-        inputs: [],
-        name: "getExchangeRate",
-        outputs: [
-          {
-            internalType: "uint216",
-            name: "",
-            type: "uint216"
-          }
-        ],
-        stateMutability: "view",
-        type: "function"
-      },
-      {
-        inputs: [
-          {
-            internalType: "uint32",
-            name: "index",
-            type: "uint32"
-          }
-        ],
-        name: "getExchangeRateSnapshot",
-        outputs: [
-          {
-            components: [
-              {
-                internalType: "uint40",
-                name: "blockNumber",
-                type: "uint40"
-              },
-              {
-                internalType: "uint216",
-                name: "value",
-                type: "uint216"
-              }
-            ],
-            internalType: "struct IStakedAaveV3.ExchangeRateSnapshot",
-            name: "",
-            type: "tuple"
-          }
-        ],
-        stateMutability: "view",
-        type: "function"
-      },
-      {
-        inputs: [],
-        name: "getExchangeRateSnapshotsCount",
-        outputs: [
-          {
-            internalType: "uint32",
-            name: "",
-            type: "uint32"
-          }
-        ],
-        stateMutability: "view",
-        type: "function"
-      },
-      {
-        inputs: [],
-        name: "getMaxSlashablePercentage",
-        outputs: [
-          {
-            internalType: "uint256",
-            name: "",
-            type: "uint256"
-          }
-        ],
-        stateMutability: "view",
-        type: "function"
-      },
-      {
-        inputs: [
-          {
-            internalType: "address",
-            name: "staker",
-            type: "address"
-          }
-        ],
-        name: "getTotalRewardsBalance",
-        outputs: [
-          {
-            internalType: "uint256",
-            name: "",
-            type: "uint256"
+            type: "string"
           }
         ],
         stateMutability: "view",
@@ -44614,33 +46751,21 @@ var require_IStakedAaveV3_factory = __commonJS({
         type: "function"
       },
       {
-        inputs: [
-          {
-            internalType: "uint256",
-            name: "shares",
-            type: "uint256"
-          }
-        ],
-        name: "previewRedeem",
+        inputs: [],
+        name: "symbol",
         outputs: [
           {
-            internalType: "uint256",
+            internalType: "string",
             name: "",
-            type: "uint256"
+            type: "string"
           }
         ],
         stateMutability: "view",
         type: "function"
       },
       {
-        inputs: [
-          {
-            internalType: "uint256",
-            name: "assets",
-            type: "uint256"
-          }
-        ],
-        name: "previewStake",
+        inputs: [],
+        name: "totalSupply",
         outputs: [
           {
             internalType: "uint256",
@@ -44664,8 +46789,14 @@ var require_IStakedAaveV3_factory = __commonJS({
             type: "uint256"
           }
         ],
-        name: "redeem",
-        outputs: [],
+        name: "transfer",
+        outputs: [
+          {
+            internalType: "bool",
+            name: "",
+            type: "bool"
+          }
+        ],
         stateMutability: "nonpayable",
         type: "function"
       },
@@ -44687,7 +46818,764 @@ var require_IStakedAaveV3_factory = __commonJS({
             type: "uint256"
           }
         ],
-        name: "redeemOnBehalf",
+        name: "transferFrom",
+        outputs: [
+          {
+            internalType: "bool",
+            name: "",
+            type: "bool"
+          }
+        ],
+        stateMutability: "nonpayable",
+        type: "function"
+      }
+    ];
+    var _bytecode = "0x61016060405260006006553480156200001757600080fd5b506040518060400160405280600d81526020016c4161766520746f6b656e20563360981b815250604051806040016040528060018152602001601960f91b81525062000069826200011560201b60201c565b61012052620000788162000115565b61014052815160208084019190912060e052815190820120610100524660a0526200010660e05161010051604080517f8b73c3c69bb8fe3d512ecc4cf759cc79239f7b179b0ffacaa9a75d522b39400f60208201529081019290925260608201524660808201523060a082015260009060c00160405160208183030381529060405280519060200120905090565b60805250503060c052620001d9565b600080829050601f815111156200014c578260405163305a27a960e01b815260040162000143919062000161565b60405180910390fd5b80516200015982620001b1565b179392505050565b600060208083528351808285015260005b81811015620001905785810183015185820160400152820162000172565b506000604082860101526040601f19601f8301168501019250505092915050565b80516020808301519190811015620001d3576000198160200360031b1b821691505b50919050565b60805160a05160c05160e0516101005161012051610140516121cf62000234600039600061149101526000611466015260006112b40152600061128c015260006111e7015260006112110152600061123b01526121cf6000f3fe608060405234801561001057600080fd5b50600436106101cf5760003560e01c80636f50458d11610104578063a9059cbb116100a2578063d505accf11610071578063d505accf1461043d578063dc937e1c14610450578063dd62ed3e14610463578063dde43cba1461049c57600080fd5b8063a9059cbb146103d0578063aa9fbe02146103e3578063b2f4201d1461040a578063b9844d8d1461041d57600080fd5b806384b0196e116100de57806384b0196e1461038757806395d89b41146103a2578063a095ac19146103aa578063a457c2d7146103bd57600080fd5b80636f50458d1461034157806370a082311461036c5780638129fc1c1461037f57600080fd5b8063313ce5671161017157806341cbf54a1161014b57806341cbf54a146102e6578063570a97141461030d5780635c19a95c14610319578063657f0cde1461032e57600080fd5b8063313ce567146102bc5780633644e515146102cb57806339509351146102d357600080fd5b806318160ddd116101ad57806318160ddd1461024857806323b872dd1461025a5780632a8b36681461026d57806330adf81f1461029557600080fd5b806306fdde03146101d4578063095ea7b3146101f2578063169db77d14610215575b600080fd5b6101dc6104a4565b6040516101e99190611c86565b60405180910390f35b610205610200366004611cb5565b610536565b60405190151581526020016101e9565b610228610223366004611cdf565b610550565b604080516001600160a01b039384168152929091166020830152016101e9565b6002545b6040519081526020016101e9565b610205610268366004611cfa565b610582565b61028061027b366004611cdf565b6105a8565b604080519283526020830191909152016101e9565b61024c7f6e71edae12b1b97f4d1f60370fef10105fa2faae0126114a169c64845d6126c981565b604051601281526020016101e9565b61024c6105ca565b6102056102e1366004611cb5565b6105d9565b61024c7fd46e8b93b5190df6403875402a5c13897b72d2a576da5d1bfea20a63638d216e81565b61024c6402540be40081565b61032c610327366004611cdf565b610618565b005b61032c61033c366004611d56565b610633565b61035461034f366004611dc7565b610778565b6040516001600160a01b0390911681526020016101e9565b61024c61037a366004611cdf565b61078d565b61032c6107b1565b61038f610821565b6040516101e99796959493929190611dfa565b6101dc610867565b61032c6103b8366004611e90565b610876565b6102056103cb366004611cb5565b6109a8565b6102056103de366004611cb5565b610a45565b61024c7f6e77642f8f60cdece0498bfeeb2f06ccfef0e8f86d28a1b6255c5e48f1d72a0381565b61024c610418366004611dc7565b610a53565b61024c61042b366004611cdf565b60396020526000908152604090205481565b61032c61044b366004611eef565b610ad5565b61032c61045e366004611dc7565b610c1c565b61024c610471366004611f3d565b6001600160a01b03918216600090815260016020908152604080832093909416825291909152205490565b61024c600481565b6060600380546104b390611f67565b80601f01602080910402602001604051908101604052809291908181526020018280546104df90611f67565b801561052c5780601f106105015761010080835404028352916020019161052c565b820191906000526020600020905b81548152906001019060200180831161050f57829003601f168201915b5050505050905090565b600033610544818585610c2b565b60019150505b92915050565b600080600061055e84610d50565b905061056c84826000610e53565b61057885836001610e53565b9250925050915091565b600033610590858285610f03565b61059b858585610f95565b60019150505b9392505050565b6000806105b6836000610a53565b6105c1846001610a53565b91509150915091565b60006105d46111da565b905090565b3360008181526001602090815260408083206001600160a01b03871684529091528120549091906105449082908690610613908790611fb7565b610c2b565b61062433826000611305565b61063033826001611305565b50565b6001600160a01b0387166106625760405162461bcd60e51b815260040161065990611fca565b60405180910390fd5b834211156106825760405162461bcd60e51b815260040161065990611ff1565b600061072561068f61142d565b7f6e77642f8f60cdece0498bfeeb2f06ccfef0e8f86d28a1b6255c5e48f1d72a038a8a8a6106da8e6001600160a01b0316600090815260396020526040902080546001810190915590565b8b6040516020016106f096959493929190612055565b6040516020818303038152906040528051906020012060405161190160f01b8152600281019290925260228201526042902090565b905061073381858585611437565b6001600160a01b0316886001600160a01b0316146107635760405162461bcd60e51b815260040161065990612094565b61076e888888611305565b5050505050505050565b60006105a18361078785610d50565b84610e53565b6001600160a01b03166000908152602081905260409020546001600160681b031690565b600654600490811161081c5760405162461bcd60e51b815260206004820152602e60248201527f436f6e747261637420696e7374616e63652068617320616c726561647920626560448201526d195b881a5b9a5d1a585b1a5e995960921b6064820152608401610659565b600655565b60006060806000806000606061083561145f565b61083d61148a565b60408051600080825260208201909252600f60f81b9b939a50919850469750309650945092509050565b6060600480546104b390611f67565b6001600160a01b03861661089c5760405162461bcd60e51b815260040161065990611fca565b834211156108bc5760405162461bcd60e51b815260040161065990611ff1565b60006109496108c961142d565b7fd46e8b93b5190df6403875402a5c13897b72d2a576da5d1bfea20a63638d216e89896109138c6001600160a01b0316600090815260396020526040902080546001810190915590565b6040805160208101959095526001600160a01b039384169085015291166060830152608082015260a0810188905260c0016106f0565b905061095781858585611437565b6001600160a01b0316876001600160a01b0316146109875760405162461bcd60e51b815260040161065990612094565b61099387876000611305565b61099f87876001611305565b50505050505050565b3360008181526001602090815260408083206001600160a01b038716845290915281205490919083811015610a2d5760405162461bcd60e51b815260206004820152602560248201527f45524332303a2064656372656173656420616c6c6f77616e63652062656c6f77604482015264207a65726f60d81b6064820152608401610659565b610a3a8286868403610c2b565b506001949350505050565b600033610544818585610f95565b600080610a5f84610d50565b90506000836001811115610a7557610a7561201d565b610a809060016120bf565b82604001516003811115610a9657610a9661201d565b1660ff16600014610aa8576000610ab1565b610ab18561078d565b90506000610abf83866114b5565b9050610acb8183611fb7565b9695505050505050565b6001600160a01b038716610afb5760405162461bcd60e51b815260040161065990611fca565b83421115610b1b5760405162461bcd60e51b815260040161065990611ff1565b6001600160a01b0387811660008181526039602090815260408083205481517f6e71edae12b1b97f4d1f60370fef10105fa2faae0126114a169c64845d6126c9938101939093529082019390935292891660608401526080830188905260a0830182905260c083018790529091610baa9060e001604051602081830303815290604052805190602001206114f4565b9050610bb881868686611437565b6001600160a01b0316896001600160a01b031614610be85760405162461bcd60e51b815260040161065990612094565b6001600160a01b0389166000908152603960205260409020600183019055610c11898989610c2b565b505050505050505050565b610c27338383611305565b5050565b6001600160a01b038316610c8d5760405162461bcd60e51b8152602060048201526024808201527f45524332303a20617070726f76652066726f6d20746865207a65726f206164646044820152637265737360e01b6064820152608401610659565b6001600160a01b038216610cee5760405162461bcd60e51b815260206004820152602260248201527f45524332303a20617070726f766520746f20746865207a65726f206164647265604482015261737360f01b6064820152608401610659565b6001600160a01b0383811660008181526001602090815260408083209487168084529482529182902085905590518481527f8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b92591015b60405180910390a3505050565b610d7160408051606081018252600080825260208201819052909182015290565b6001600160a01b038216600090815260208181526040808320815160808101835281546001600160681b03811682526001600160481b03600160681b8204811695830195909552600160b01b8104909416928101929092529091606083019060ff600160f81b909104166003811115610dec57610dec61201d565b6003811115610dfd57610dfd61201d565b815250509050604051806060016040528082602001516001600160481b0316815260200182604001516001600160481b0316815260200182606001516003811115610e4a57610e4a61201d565b90529392505050565b600080826001811115610e6857610e6861201d565b03610eba57600183604001516003811115610e8557610e8561201d565b1660ff16600003610e97576000610eb3565b6001600160a01b03808516600090815260426020526040902054165b90506105a1565b600283604001516003811115610ed257610ed261201d565b1015610edf576000610efb565b6001600160a01b03808516600090815260436020526040902054165b949350505050565b6001600160a01b038381166000908152600160209081526040808320938616835292905220546000198114610f8f5781811015610f825760405162461bcd60e51b815260206004820152601d60248201527f45524332303a20696e73756666696369656e7420616c6c6f77616e63650000006044820152606401610659565b610f8f8484848403610c2b565b50505050565b6001600160a01b038316610ff95760405162461bcd60e51b815260206004820152602560248201527f45524332303a207472616e736665722066726f6d20746865207a65726f206164604482015264647265737360d81b6064820152608401610659565b6001600160a01b03821661105b5760405162461bcd60e51b815260206004820152602360248201527f45524332303a207472616e7366657220746f20746865207a65726f206164647260448201526265737360e81b6064820152608401610659565b816001600160a01b0316836001600160a01b031614611195576001600160a01b038084166000908152602081905260408082205492851682529020546001600160681b039182169116828210156111035760405162461bcd60e51b815260206004820152602660248201527f45524332303a207472616e7366657220616d6f756e7420657863656564732062604482015265616c616e636560d01b6064820152608401610659565b6001600160a01b038516600090815260208190526040902080546cffffffffffffffffffffffffff19168484036001600160681b031617905561114683826120d8565b6001600160a01b038516600090815260208190526040902080546cffffffffffffffffffffffffff19166001600160681b03928316179055611192908690869085811690851687611521565b50505b816001600160a01b0316836001600160a01b03167fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef83604051610d4391815260200190565b6000306001600160a01b037f00000000000000000000000000000000000000000000000000000000000000001614801561123357507f000000000000000000000000000000000000000000000000000000000000000046145b1561125d57507f000000000000000000000000000000000000000000000000000000000000000090565b6105d4604080517f8b73c3c69bb8fe3d512ecc4cf759cc79239f7b179b0ffacaa9a75d522b39400f60208201527f0000000000000000000000000000000000000000000000000000000000000000918101919091527f000000000000000000000000000000000000000000000000000000000000000060608201524660808201523060a082015260009060c00160405160208183030381529060405280519060200120905090565b6000836001600160a01b0316836001600160a01b0316146113265782611329565b60005b9050600061133685610d50565b90506000611345868386610e53565b9050806001600160a01b0316836001600160a01b03160361136857505050505050565b6001600160a01b038181161515908416151560006113858961078d565b9050821561139a5761139a816000868a611535565b81156113ad576113ad600082888a611535565b6113b88988886115ff565b821515821515146113d7576113d7896113d2878a866116a2565b6117c2565b856001600160a01b0316896001600160a01b03167fe8d51c8e11bd570db1734c8ec775785330e77007feed45c43b608ef33ff914bd8960405161141a91906120ff565b60405180910390a3505050505050505050565b60006105d46105ca565b600080600061144887878787611862565b9150915061145581611926565b5095945050505050565b60606105d47f0000000000000000000000000000000000000000000000000000000000000000611a70565b60606105d47f0000000000000000000000000000000000000000000000000000000000000000611a70565b6000808260018111156114ca576114ca61201d565b146114d65782516114dc565b82602001515b6105a1906001600160481b03166402540be40061210d565b600061054a6115016111da565b8360405161190160f01b8152600281019290925260228201526042902090565b61152e8585858585611aaf565b5050505050565b6001600160a01b03821615610f8f57838314610f8f57600061156461155f6402540be40087612124565b611bac565b9050600061157a61155f6402540be40087612124565b9050600061158785610d50565b9050600084600181111561159d5761159d61201d565b036115d057818382602001516115b39190612146565b6115bd9190612166565b6001600160481b031660208201526115f5565b805182906115df908590612146565b6115e99190612166565b6001600160481b031681525b61099f85826117c2565b6000836001600160a01b0316826001600160a01b0316146116205781611623565b60005b905060008360018111156116395761163961201d565b03611671576001600160a01b03848116600090815260426020526040902080546001600160a01b031916918316919091179055610f8f565b6001600160a01b03938416600090815260436020526040902080546001600160a01b03191691909416179092555050565b6116c360408051606081018252600080825260208201819052909182015290565b8115611742578260018111156116db576116db61201d565b6116e69060016120bf565b846040015160038111156116fc576116fc61201d565b1760ff1660038111156117115761171161201d565b846040019060038111156117275761172761201d565b9081600381111561173a5761173a61201d565b9052506117ba565b60038360018111156117565761175661201d565b6117619060016120bf565b18846040015160038111156117785761177861201d565b1660ff16600381111561178d5761178d61201d565b846040019060038111156117a3576117a361201d565b908160038111156117b6576117b661201d565b9052505b509192915050565b6001600160a01b03821660009081526020818152604091829020835181549285015171ffffffffffffffffffffffffffffffffffff60681b19909316600160681b6001600160481b039283160268ffffffffffffffffff60b01b191617600160b01b91909316029190911780825591830151909182906001600160f81b0316600160f81b8360038111156118585761185861201d565b0217905550505050565b6000807f7fffffffffffffffffffffffffffffff5d576e7357a4501ddfe92f46681b20a0831115611899575060009050600361191d565b6040805160008082526020820180845289905260ff881692820192909252606081018690526080810185905260019060a0016020604051602081039080840390855afa1580156118ed573d6000803e3d6000fd5b5050604051601f1901519150506001600160a01b0381166119165760006001925092505061191d565b9150600090505b94509492505050565b600081600481111561193a5761193a61201d565b036119425750565b60018160048111156119565761195661201d565b036119a35760405162461bcd60e51b815260206004820152601860248201527f45434453413a20696e76616c6964207369676e617475726500000000000000006044820152606401610659565b60028160048111156119b7576119b761201d565b03611a045760405162461bcd60e51b815260206004820152601f60248201527f45434453413a20696e76616c6964207369676e6174757265206c656e677468006044820152606401610659565b6003816004811115611a1857611a1861201d565b036106305760405162461bcd60e51b815260206004820152602260248201527f45434453413a20696e76616c6964207369676e6174757265202773272076616c604482015261756560f01b6064820152608401610659565b60606000611a7d83611c18565b604080516020808252818301909252919250600091906020820181803683375050509182525060208101929092525090565b836001600160a01b0316856001600160a01b0316031561152e576001600160a01b03851615611b43576000611ae386610d50565b90506000611af18386612186565b9050600082604001516003811115611b0b57611b0b61201d565b14611b4057611b288582611b218a866000610e53565b6000611535565b611b408582611b398a866001610e53565b6001611535565b50505b6001600160a01b0384161561152e576000611b5d85610d50565b90506000611b6b8385611fb7565b9050600082604001516003811115611b8557611b8561201d565b1461099f57611b9b8482611b2189866000610e53565b61099f8482611b3989866001610e53565b60006001600160481b03821115611c145760405162461bcd60e51b815260206004820152602660248201527f53616665436173743a2076616c756520646f65736e27742066697420696e203760448201526532206269747360d01b6064820152608401610659565b5090565b600060ff8216601f81111561054a57604051632cd44ac360e21b815260040160405180910390fd5b6000815180845260005b81811015611c6657602081850181015186830182015201611c4a565b506000602082860101526020601f19601f83011685010191505092915050565b6020815260006105a16020830184611c40565b80356001600160a01b0381168114611cb057600080fd5b919050565b60008060408385031215611cc857600080fd5b611cd183611c99565b946020939093013593505050565b600060208284031215611cf157600080fd5b6105a182611c99565b600080600060608486031215611d0f57600080fd5b611d1884611c99565b9250611d2660208501611c99565b9150604084013590509250925092565b803560028110611cb057600080fd5b803560ff81168114611cb057600080fd5b600080600080600080600060e0888a031215611d7157600080fd5b611d7a88611c99565b9650611d8860208901611c99565b9550611d9660408901611d36565b945060608801359350611dab60808901611d45565b925060a0880135915060c0880135905092959891949750929550565b60008060408385031215611dda57600080fd5b611de383611c99565b9150611df160208401611d36565b90509250929050565b60ff60f81b881681526000602060e081840152611e1a60e084018a611c40565b8381036040850152611e2c818a611c40565b606085018990526001600160a01b038816608086015260a0850187905284810360c0860152855180825283870192509083019060005b81811015611e7e57835183529284019291840191600101611e62565b50909c9b505050505050505050505050565b60008060008060008060c08789031215611ea957600080fd5b611eb287611c99565b9550611ec060208801611c99565b945060408701359350611ed560608801611d45565b92506080870135915060a087013590509295509295509295565b600080600080600080600060e0888a031215611f0a57600080fd5b611f1388611c99565b9650611f2160208901611c99565b95506040880135945060608801359350611dab60808901611d45565b60008060408385031215611f5057600080fd5b611f5983611c99565b9150611df160208401611c99565b600181811c90821680611f7b57607f821691505b602082108103611f9b57634e487b7160e01b600052602260045260246000fd5b50919050565b634e487b7160e01b600052601160045260246000fd5b8082018082111561054a5761054a611fa1565b6020808252600d908201526c24a72b20a624a22fa7aba722a960991b604082015260600190565b60208082526012908201527124a72b20a624a22fa2ac2824a920aa24a7a760711b604082015260600190565b634e487b7160e01b600052602160045260246000fd5b6002811061205157634e487b7160e01b600052602160045260246000fd5b9052565b8681526001600160a01b0386811660208301528516604082015260c081016120806060830186612033565b608082019390935260a00152949350505050565b602080825260119082015270494e56414c49445f5349474e415455524560781b604082015260600190565b60ff818116838216019081111561054a5761054a611fa1565b6001600160681b038181168382160190808211156120f8576120f8611fa1565b5092915050565b6020810161054a8284612033565b808202811582820484141761054a5761054a611fa1565b60008261214157634e487b7160e01b600052601260045260246000fd5b500490565b6001600160481b038281168282160390808211156120f8576120f8611fa1565b6001600160481b038181168382160190808211156120f8576120f8611fa1565b8181038181111561054a5761054a611fa156fea2646970667358221220031d3febae0d90117808e443ab3b4b6923733bd26a4184ff7cedb41ae7c1a14564736f6c63430008140033";
+    var isSuperArgs = (xs) => xs.length > 1;
+    var PegasysTokenV3__factory = class extends ethers_1.ContractFactory {
+      constructor(...args) {
+        if (isSuperArgs(args)) {
+          super(...args);
+        } else {
+          super(_abi, _bytecode, args[0]);
+        }
+      }
+      deploy(overrides) {
+        return super.deploy(overrides || {});
+      }
+      getDeployTransaction(overrides) {
+        return super.getDeployTransaction(overrides || {});
+      }
+      attach(address) {
+        return super.attach(address);
+      }
+      connect(signer) {
+        return super.connect(signer);
+      }
+      static createInterface() {
+        return new ethers_1.utils.Interface(_abi);
+      }
+      static connect(address, signerOrProvider) {
+        return new ethers_1.Contract(address, _abi, signerOrProvider);
+      }
+    };
+    exports2.PegasysTokenV3__factory = PegasysTokenV3__factory;
+    PegasysTokenV3__factory.bytecode = _bytecode;
+    PegasysTokenV3__factory.abi = _abi;
+  }
+});
+
+// node_modules/@pollum-io/contract-helpers/dist/cjs/governance-v3/pegasys-token-v3/index.js
+var require_pegasys_token_v3 = __commonJS({
+  "node_modules/@pollum-io/contract-helpers/dist/cjs/governance-v3/pegasys-token-v3/index.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.PegasysTokenV3Service = exports2.GovernancePowerType = void 0;
+    var ethers_1 = require_lib31();
+    var PegasysTokenV3__factory_1 = require_PegasysTokenV3_factory();
+    var GovernancePowerType;
+    (function(GovernancePowerType2) {
+      GovernancePowerType2[GovernancePowerType2["VOTING"] = 0] = "VOTING";
+      GovernancePowerType2[GovernancePowerType2["PROPOSITION"] = 1] = "PROPOSITION";
+      GovernancePowerType2[GovernancePowerType2["ALL"] = 2] = "ALL";
+    })(GovernancePowerType = exports2.GovernancePowerType || (exports2.GovernancePowerType = {}));
+    var PegasysTokenV3Service = class {
+      constructor(tokenAddress, provider) {
+        this._contractInterface = PegasysTokenV3__factory_1.PegasysTokenV3__factory.createInterface();
+        this._contract = PegasysTokenV3__factory_1.PegasysTokenV3__factory.connect(tokenAddress, provider);
+      }
+      balanceOf(user) {
+        return __async(this, null, function* () {
+          return this._contract.balanceOf(user);
+        });
+      }
+      getPowerAt(blockNumber, user, delegationType) {
+        return __async(this, null, function* () {
+          return this._contract.functions.getPowerCurrent(user, delegationType, {
+            blockTag: blockNumber
+          });
+        });
+      }
+      getPowers(user) {
+        return __async(this, null, function* () {
+          const powers = yield this._contract.getPowersCurrent(user);
+          return {
+            votingPower: powers[0],
+            propositionPower: powers[1]
+          };
+        });
+      }
+      getDelegateeData(user) {
+        return __async(this, null, function* () {
+          const data = yield this._contract.getDelegates(user);
+          return {
+            votingDelegatee: data[0],
+            propositionDelegatee: data[1]
+          };
+        });
+      }
+      getDelegateTxData(user, delegateTo, type) {
+        const tx = {};
+        if (type === GovernancePowerType.ALL) {
+          tx.data = this._contractInterface.encodeFunctionData("delegate", [
+            delegateTo
+          ]);
+        } else {
+          tx.data = this._contractInterface.encodeFunctionData("delegateByType", [
+            delegateTo,
+            type
+          ]);
+        }
+        return Object.assign(Object.assign({}, tx), { to: this._contract.address, from: user, gasLimit: ethers_1.BigNumber.from("100000") });
+      }
+      getEip712Domain() {
+        return __async(this, null, function* () {
+          return this._contract.functions.eip712Domain();
+        });
+      }
+    };
+    exports2.PegasysTokenV3Service = PegasysTokenV3Service;
+  }
+});
+
+// node_modules/@pollum-io/contract-helpers/dist/cjs/staking-contract/typechain/IStakedPegasysV3__factory.js
+var require_IStakedPegasysV3_factory = __commonJS({
+  "node_modules/@pollum-io/contract-helpers/dist/cjs/staking-contract/typechain/IStakedPegasysV3__factory.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.StakedPegasysV3__factory = void 0;
+    var ethers_1 = require_lib31();
+    var _abi = [
+      {
+        inputs: [
+          { internalType: "contract IERC20", name: "stakedToken", type: "address" },
+          { internalType: "contract IERC20", name: "rewardToken", type: "address" },
+          { internalType: "uint256", name: "unstakeWindow", type: "uint256" },
+          { internalType: "address", name: "rewardsVault", type: "address" },
+          { internalType: "address", name: "emissionManager", type: "address" },
+          {
+            internalType: "uint128",
+            name: "distributionDuration",
+            type: "uint128"
+          }
+        ],
+        stateMutability: "nonpayable",
+        type: "constructor"
+      },
+      { inputs: [], name: "ECDSAInvalidSignature", type: "error" },
+      {
+        inputs: [{ internalType: "uint256", name: "length", type: "uint256" }],
+        name: "ECDSAInvalidSignatureLength",
+        type: "error"
+      },
+      {
+        inputs: [{ internalType: "bytes32", name: "s", type: "bytes32" }],
+        name: "ECDSAInvalidSignatureS",
+        type: "error"
+      },
+      { inputs: [], name: "InvalidShortString", type: "error" },
+      {
+        inputs: [{ internalType: "string", name: "str", type: "string" }],
+        name: "StringTooLong",
+        type: "error"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "address",
+            name: "owner",
+            type: "address"
+          },
+          {
+            indexed: true,
+            internalType: "address",
+            name: "spender",
+            type: "address"
+          },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "value",
+            type: "uint256"
+          }
+        ],
+        name: "Approval",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "address",
+            name: "asset",
+            type: "address"
+          },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "emission",
+            type: "uint256"
+          }
+        ],
+        name: "AssetConfigUpdated",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "address",
+            name: "asset",
+            type: "address"
+          },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "index",
+            type: "uint256"
+          }
+        ],
+        name: "AssetIndexUpdated",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          { indexed: true, internalType: "address", name: "user", type: "address" },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "amount",
+            type: "uint256"
+          }
+        ],
+        name: "Cooldown",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "cooldownSeconds",
+            type: "uint256"
+          }
+        ],
+        name: "CooldownSecondsChanged",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "address",
+            name: "delegator",
+            type: "address"
+          },
+          {
+            indexed: true,
+            internalType: "address",
+            name: "delegatee",
+            type: "address"
+          },
+          {
+            indexed: false,
+            internalType: "enum IGovernancePowerDelegationToken.GovernancePowerType",
+            name: "delegationType",
+            type: "uint8"
+          }
+        ],
+        name: "DelegateChanged",
+        type: "event"
+      },
+      { anonymous: false, inputs: [], name: "EIP712DomainChanged", type: "event" },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: false,
+            internalType: "uint216",
+            name: "exchangeRate",
+            type: "uint216"
+          }
+        ],
+        name: "ExchangeRateChanged",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "amount",
+            type: "uint256"
+          }
+        ],
+        name: "FundsReturned",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "newPercentage",
+            type: "uint256"
+          }
+        ],
+        name: "MaxSlashablePercentageChanged",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "address",
+            name: "newPendingAdmin",
+            type: "address"
+          },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "role",
+            type: "uint256"
+          }
+        ],
+        name: "PendingAdminChanged",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          { indexed: true, internalType: "address", name: "from", type: "address" },
+          { indexed: true, internalType: "address", name: "to", type: "address" },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "assets",
+            type: "uint256"
+          },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "shares",
+            type: "uint256"
+          }
+        ],
+        name: "Redeem",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: false,
+            internalType: "address",
+            name: "user",
+            type: "address"
+          },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "amount",
+            type: "uint256"
+          }
+        ],
+        name: "RewardsAccrued",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          { indexed: true, internalType: "address", name: "from", type: "address" },
+          { indexed: true, internalType: "address", name: "to", type: "address" },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "amount",
+            type: "uint256"
+          }
+        ],
+        name: "RewardsClaimed",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "address",
+            name: "newAdmin",
+            type: "address"
+          },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "role",
+            type: "uint256"
+          }
+        ],
+        name: "RoleClaimed",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "address",
+            name: "destination",
+            type: "address"
+          },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "amount",
+            type: "uint256"
+          }
+        ],
+        name: "Slashed",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "windowSeconds",
+            type: "uint256"
+          }
+        ],
+        name: "SlashingExitWindowDurationChanged",
+        type: "event"
+      },
+      { anonymous: false, inputs: [], name: "SlashingSettled", type: "event" },
+      {
+        anonymous: false,
+        inputs: [
+          { indexed: true, internalType: "address", name: "from", type: "address" },
+          { indexed: true, internalType: "address", name: "to", type: "address" },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "assets",
+            type: "uint256"
+          },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "shares",
+            type: "uint256"
+          }
+        ],
+        name: "Staked",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          { indexed: true, internalType: "address", name: "from", type: "address" },
+          { indexed: true, internalType: "address", name: "to", type: "address" },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "value",
+            type: "uint256"
+          }
+        ],
+        name: "Transfer",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          { indexed: true, internalType: "address", name: "user", type: "address" },
+          {
+            indexed: true,
+            internalType: "address",
+            name: "asset",
+            type: "address"
+          },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "index",
+            type: "uint256"
+          }
+        ],
+        name: "UserIndexUpdated",
+        type: "event"
+      },
+      {
+        inputs: [],
+        name: "CLAIM_HELPER_ROLE",
+        outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "COOLDOWN_ADMIN_ROLE",
+        outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "COOLDOWN_SECONDS",
+        outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "DELEGATE_BY_TYPE_TYPEHASH",
+        outputs: [{ internalType: "bytes32", name: "", type: "bytes32" }],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "DELEGATE_TYPEHASH",
+        outputs: [{ internalType: "bytes32", name: "", type: "bytes32" }],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "DISTRIBUTION_END",
+        outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "DOMAIN_SEPARATOR",
+        outputs: [{ internalType: "bytes32", name: "", type: "bytes32" }],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "EIP712_REVISION",
+        outputs: [{ internalType: "bytes", name: "", type: "bytes" }],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "EMISSION_MANAGER",
+        outputs: [{ internalType: "address", name: "", type: "address" }],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "EXCHANGE_RATE_UNIT",
+        outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "INITIAL_EXCHANGE_RATE",
+        outputs: [{ internalType: "uint216", name: "", type: "uint216" }],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "LOWER_BOUND",
+        outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "PERMIT_TYPEHASH",
+        outputs: [{ internalType: "bytes32", name: "", type: "bytes32" }],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "POWER_SCALE_FACTOR",
+        outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "PRECISION",
+        outputs: [{ internalType: "uint8", name: "", type: "uint8" }],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "REVISION",
+        outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+        stateMutability: "pure",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "REWARDS_VAULT",
+        outputs: [{ internalType: "address", name: "", type: "address" }],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "REWARD_TOKEN",
+        outputs: [{ internalType: "contract IERC20", name: "", type: "address" }],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "SLASH_ADMIN_ROLE",
+        outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "STAKED_TOKEN",
+        outputs: [{ internalType: "contract IERC20", name: "", type: "address" }],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "UNSTAKE_WINDOW",
+        outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [{ internalType: "address", name: "", type: "address" }],
+        name: "_nonces",
+        outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          { internalType: "address", name: "owner", type: "address" },
+          { internalType: "address", name: "spender", type: "address" }
+        ],
+        name: "allowance",
+        outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          { internalType: "address", name: "spender", type: "address" },
+          { internalType: "uint256", name: "amount", type: "uint256" }
+        ],
+        name: "approve",
+        outputs: [{ internalType: "bool", name: "", type: "bool" }],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [{ internalType: "address", name: "", type: "address" }],
+        name: "assets",
+        outputs: [
+          { internalType: "uint128", name: "emissionPerSecond", type: "uint128" },
+          { internalType: "uint128", name: "lastUpdateTimestamp", type: "uint128" },
+          { internalType: "uint256", name: "index", type: "uint256" }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [{ internalType: "address", name: "account", type: "address" }],
+        name: "balanceOf",
+        outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          { internalType: "address", name: "to", type: "address" },
+          { internalType: "uint256", name: "amount", type: "uint256" }
+        ],
+        name: "claimRewards",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          { internalType: "address", name: "to", type: "address" },
+          { internalType: "uint256", name: "claimAmount", type: "uint256" },
+          { internalType: "uint256", name: "redeemAmount", type: "uint256" }
+        ],
+        name: "claimRewardsAndRedeem",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          { internalType: "address", name: "from", type: "address" },
+          { internalType: "address", name: "to", type: "address" },
+          { internalType: "uint256", name: "claimAmount", type: "uint256" },
+          { internalType: "uint256", name: "redeemAmount", type: "uint256" }
+        ],
+        name: "claimRewardsAndRedeemOnBehalf",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          { internalType: "address", name: "to", type: "address" },
+          { internalType: "uint256", name: "amount", type: "uint256" }
+        ],
+        name: "claimRewardsAndStake",
+        outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          { internalType: "address", name: "from", type: "address" },
+          { internalType: "address", name: "to", type: "address" },
+          { internalType: "uint256", name: "amount", type: "uint256" }
+        ],
+        name: "claimRewardsAndStakeOnBehalf",
+        outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          { internalType: "address", name: "from", type: "address" },
+          { internalType: "address", name: "to", type: "address" },
+          { internalType: "uint256", name: "amount", type: "uint256" }
+        ],
+        name: "claimRewardsOnBehalf",
+        outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [{ internalType: "uint256", name: "role", type: "uint256" }],
+        name: "claimRoleAdmin",
         outputs: [],
         stateMutability: "nonpayable",
         type: "function"
@@ -44695,11 +47583,321 @@ var require_IStakedAaveV3_factory = __commonJS({
       {
         inputs: [
           {
-            internalType: "uint256",
-            name: "amount",
-            type: "uint256"
+            components: [
+              {
+                internalType: "uint128",
+                name: "emissionPerSecond",
+                type: "uint128"
+              },
+              { internalType: "uint256", name: "totalStaked", type: "uint256" },
+              { internalType: "address", name: "underlyingAsset", type: "address" }
+            ],
+            internalType: "struct DistributionTypes.AssetConfigInput[]",
+            name: "assetsConfigInput",
+            type: "tuple[]"
           }
         ],
+        name: "configureAssets",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "cooldown",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [{ internalType: "address", name: "from", type: "address" }],
+        name: "cooldownOnBehalfOf",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "decimals",
+        outputs: [{ internalType: "uint8", name: "", type: "uint8" }],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          { internalType: "address", name: "spender", type: "address" },
+          { internalType: "uint256", name: "subtractedValue", type: "uint256" }
+        ],
+        name: "decreaseAllowance",
+        outputs: [{ internalType: "bool", name: "", type: "bool" }],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [{ internalType: "address", name: "delegatee", type: "address" }],
+        name: "delegate",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          { internalType: "address", name: "delegatee", type: "address" },
+          {
+            internalType: "enum IGovernancePowerDelegationToken.GovernancePowerType",
+            name: "delegationType",
+            type: "uint8"
+          }
+        ],
+        name: "delegateByType",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "eip712Domain",
+        outputs: [
+          { internalType: "bytes1", name: "fields", type: "bytes1" },
+          { internalType: "string", name: "name", type: "string" },
+          { internalType: "string", name: "version", type: "string" },
+          { internalType: "uint256", name: "chainId", type: "uint256" },
+          { internalType: "address", name: "verifyingContract", type: "address" },
+          { internalType: "bytes32", name: "salt", type: "bytes32" },
+          { internalType: "uint256[]", name: "extensions", type: "uint256[]" }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [{ internalType: "uint256", name: "role", type: "uint256" }],
+        name: "getAdmin",
+        outputs: [{ internalType: "address", name: "", type: "address" }],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "getCooldownSeconds",
+        outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          { internalType: "address", name: "delegator", type: "address" },
+          {
+            internalType: "enum IGovernancePowerDelegationToken.GovernancePowerType",
+            name: "delegationType",
+            type: "uint8"
+          }
+        ],
+        name: "getDelegateeByType",
+        outputs: [{ internalType: "address", name: "", type: "address" }],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [{ internalType: "address", name: "delegator", type: "address" }],
+        name: "getDelegates",
+        outputs: [
+          { internalType: "address", name: "", type: "address" },
+          { internalType: "address", name: "", type: "address" }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "getExchangeRate",
+        outputs: [{ internalType: "uint216", name: "", type: "uint216" }],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "getMaxSlashablePercentage",
+        outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [{ internalType: "uint256", name: "role", type: "uint256" }],
+        name: "getPendingAdmin",
+        outputs: [{ internalType: "address", name: "", type: "address" }],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          { internalType: "address", name: "user", type: "address" },
+          {
+            internalType: "enum IGovernancePowerDelegationToken.GovernancePowerType",
+            name: "delegationType",
+            type: "uint8"
+          }
+        ],
+        name: "getPowerCurrent",
+        outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [{ internalType: "address", name: "user", type: "address" }],
+        name: "getPowersCurrent",
+        outputs: [
+          { internalType: "uint256", name: "", type: "uint256" },
+          { internalType: "uint256", name: "", type: "uint256" }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [{ internalType: "address", name: "staker", type: "address" }],
+        name: "getTotalRewardsBalance",
+        outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          { internalType: "address", name: "user", type: "address" },
+          { internalType: "address", name: "asset", type: "address" }
+        ],
+        name: "getUserAssetData",
+        outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "ghoDebtToken",
+        outputs: [
+          {
+            internalType: "contract IGhoVariableDebtTokenTransferHook",
+            name: "",
+            type: "address"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "inPostSlashingPeriod",
+        outputs: [{ internalType: "bool", name: "", type: "bool" }],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          { internalType: "address", name: "spender", type: "address" },
+          { internalType: "uint256", name: "addedValue", type: "uint256" }
+        ],
+        name: "increaseAllowance",
+        outputs: [{ internalType: "bool", name: "", type: "bool" }],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "initialize",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          { internalType: "address", name: "delegator", type: "address" },
+          { internalType: "address", name: "delegatee", type: "address" },
+          { internalType: "uint256", name: "deadline", type: "uint256" },
+          { internalType: "uint8", name: "v", type: "uint8" },
+          { internalType: "bytes32", name: "r", type: "bytes32" },
+          { internalType: "bytes32", name: "s", type: "bytes32" }
+        ],
+        name: "metaDelegate",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          { internalType: "address", name: "delegator", type: "address" },
+          { internalType: "address", name: "delegatee", type: "address" },
+          {
+            internalType: "enum IGovernancePowerDelegationToken.GovernancePowerType",
+            name: "delegationType",
+            type: "uint8"
+          },
+          { internalType: "uint256", name: "deadline", type: "uint256" },
+          { internalType: "uint8", name: "v", type: "uint8" },
+          { internalType: "bytes32", name: "r", type: "bytes32" },
+          { internalType: "bytes32", name: "s", type: "bytes32" }
+        ],
+        name: "metaDelegateByType",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "name",
+        outputs: [{ internalType: "string", name: "", type: "string" }],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          { internalType: "address", name: "owner", type: "address" },
+          { internalType: "address", name: "spender", type: "address" },
+          { internalType: "uint256", name: "value", type: "uint256" },
+          { internalType: "uint256", name: "deadline", type: "uint256" },
+          { internalType: "uint8", name: "v", type: "uint8" },
+          { internalType: "bytes32", name: "r", type: "bytes32" },
+          { internalType: "bytes32", name: "s", type: "bytes32" }
+        ],
+        name: "permit",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [{ internalType: "uint256", name: "shares", type: "uint256" }],
+        name: "previewRedeem",
+        outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [{ internalType: "uint256", name: "assets", type: "uint256" }],
+        name: "previewStake",
+        outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          { internalType: "address", name: "to", type: "address" },
+          { internalType: "uint256", name: "amount", type: "uint256" }
+        ],
+        name: "redeem",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          { internalType: "address", name: "from", type: "address" },
+          { internalType: "address", name: "to", type: "address" },
+          { internalType: "uint256", name: "amount", type: "uint256" }
+        ],
+        name: "redeemOnBehalf",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [{ internalType: "uint256", name: "amount", type: "uint256" }],
         name: "returnFunds",
         outputs: [],
         stateMutability: "nonpayable",
@@ -44707,11 +47905,7 @@ var require_IStakedAaveV3_factory = __commonJS({
       },
       {
         inputs: [
-          {
-            internalType: "uint256",
-            name: "cooldownSeconds",
-            type: "uint256"
-          }
+          { internalType: "uint256", name: "cooldownSeconds", type: "uint256" }
         ],
         name: "setCooldownSeconds",
         outputs: [],
@@ -44719,27 +47913,18 @@ var require_IStakedAaveV3_factory = __commonJS({
         type: "function"
       },
       {
-        inputs: [
-          {
-            internalType: "contract IGhoVariableDebtTokenTransferHook",
-            name: "newGHODebtToken",
-            type: "address"
-          }
-        ],
-        name: "setGHODebtToken",
+        inputs: [{ internalType: "uint256", name: "percentage", type: "uint256" }],
+        name: "setMaxSlashablePercentage",
         outputs: [],
         stateMutability: "nonpayable",
         type: "function"
       },
       {
         inputs: [
-          {
-            internalType: "uint256",
-            name: "percentage",
-            type: "uint256"
-          }
+          { internalType: "uint256", name: "role", type: "uint256" },
+          { internalType: "address", name: "newPendingAdmin", type: "address" }
         ],
-        name: "setMaxSlashablePercentage",
+        name: "setPendingAdmin",
         outputs: [],
         stateMutability: "nonpayable",
         type: "function"
@@ -44753,40 +47938,18 @@ var require_IStakedAaveV3_factory = __commonJS({
       },
       {
         inputs: [
-          {
-            internalType: "address",
-            name: "destination",
-            type: "address"
-          },
-          {
-            internalType: "uint256",
-            name: "amount",
-            type: "uint256"
-          }
+          { internalType: "address", name: "destination", type: "address" },
+          { internalType: "uint256", name: "amount", type: "uint256" }
         ],
         name: "slash",
-        outputs: [
-          {
-            internalType: "uint256",
-            name: "",
-            type: "uint256"
-          }
-        ],
+        outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
         stateMutability: "nonpayable",
         type: "function"
       },
       {
         inputs: [
-          {
-            internalType: "address",
-            name: "to",
-            type: "address"
-          },
-          {
-            internalType: "uint256",
-            name: "amount",
-            type: "uint256"
-          }
+          { internalType: "address", name: "to", type: "address" },
+          { internalType: "uint256", name: "amount", type: "uint256" }
         ],
         name: "stake",
         outputs: [],
@@ -44795,43 +47958,80 @@ var require_IStakedAaveV3_factory = __commonJS({
       },
       {
         inputs: [
-          {
-            internalType: "address",
-            name: "from",
-            type: "address"
-          },
-          {
-            internalType: "uint256",
-            name: "amount",
-            type: "uint256"
-          },
-          {
-            internalType: "uint256",
-            name: "deadline",
-            type: "uint256"
-          },
-          {
-            internalType: "uint8",
-            name: "v",
-            type: "uint8"
-          },
-          {
-            internalType: "bytes32",
-            name: "r",
-            type: "bytes32"
-          },
-          {
-            internalType: "bytes32",
-            name: "s",
-            type: "bytes32"
-          }
+          { internalType: "uint256", name: "amount", type: "uint256" },
+          { internalType: "uint256", name: "deadline", type: "uint256" },
+          { internalType: "uint8", name: "v", type: "uint8" },
+          { internalType: "bytes32", name: "r", type: "bytes32" },
+          { internalType: "bytes32", name: "s", type: "bytes32" }
         ],
         name: "stakeWithPermit",
         outputs: [],
         stateMutability: "nonpayable",
         type: "function"
+      },
+      {
+        inputs: [{ internalType: "address", name: "", type: "address" }],
+        name: "stakerRewardsToClaim",
+        outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [{ internalType: "address", name: "", type: "address" }],
+        name: "stakersCooldowns",
+        outputs: [
+          { internalType: "uint40", name: "timestamp", type: "uint40" },
+          { internalType: "uint216", name: "amount", type: "uint216" }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "symbol",
+        outputs: [{ internalType: "string", name: "", type: "string" }],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "totalSupply",
+        outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          { internalType: "address", name: "to", type: "address" },
+          { internalType: "uint256", name: "amount", type: "uint256" }
+        ],
+        name: "transfer",
+        outputs: [{ internalType: "bool", name: "", type: "bool" }],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          { internalType: "address", name: "from", type: "address" },
+          { internalType: "address", name: "to", type: "address" },
+          { internalType: "uint256", name: "amount", type: "uint256" }
+        ],
+        name: "transferFrom",
+        outputs: [{ internalType: "bool", name: "", type: "bool" }],
+        stateMutability: "nonpayable",
+        type: "function"
       }
     ];
+    var StakedPegasysV3__factory = class {
+      static createInterface() {
+        return new ethers_1.utils.Interface(_abi);
+      }
+      static connect(address, signerOrProvider) {
+        return new ethers_1.Contract(address, _abi, signerOrProvider);
+      }
+    };
+    exports2.StakedPegasysV3__factory = StakedPegasysV3__factory;
+    StakedPegasysV3__factory.abi = _abi;
   }
 });
 
@@ -44850,10 +48050,11 @@ var require_staking_contract = __commonJS({
     var paramValidators_1 = require_paramValidators();
     var erc20_2612_1 = require_erc20_2612();
     var erc20_contract_1 = require_erc20_contract();
-    var IStakedAaveV3__factory_1 = require_IStakedAaveV3_factory();
+    var pegasys_token_v3_1 = require_pegasys_token_v3();
+    var IStakedPegasysV3__factory_1 = require_IStakedPegasysV3_factory();
     var StakingService = class extends BaseService_1.default {
       constructor(provider, stakingServiceConfig) {
-        super(provider, IStakedAaveV3__factory_1.IStakedAaveV3__factory);
+        super(provider, IStakedPegasysV3__factory_1.StakedPegasysV3__factory);
         this.erc20Service = new erc20_contract_1.ERC20Service(provider);
         this.erc20_2612Service = new erc20_2612_1.ERC20_2612Service(provider);
         this.stakingContractAddress = stakingServiceConfig.TOKEN_STAKING_ADDRESS;
@@ -44863,9 +48064,11 @@ var require_staking_contract = __commonJS({
           const { getTokenData } = this.erc20Service;
           const stakingContract = this.getContractInstance(this.stakingContractAddress);
           const stakedToken = yield stakingContract.STAKED_TOKEN();
-          const { name: name2, decimals } = yield getTokenData(stakedToken);
+          const { decimals } = yield getTokenData(stakedToken);
           const convertedAmount = (0, utils_1.valueToWei)(amount, decimals);
           const { chainId } = yield this.provider.getNetwork();
+          const pegasysTokenV3Service = new pegasys_token_v3_1.PegasysTokenV3Service(stakedToken, this.provider);
+          const { name: name2, version } = yield pegasysTokenV3Service.getEip712Domain();
           const nonce = yield this.erc20_2612Service.getNonce({
             token: stakedToken,
             owner: user
@@ -44892,7 +48095,7 @@ var require_staking_contract = __commonJS({
             primaryType: "Permit",
             domain: {
               name: name2,
-              version: "1",
+              version,
               chainId,
               verifyingContract: stakedToken
             },
@@ -44918,7 +48121,7 @@ var require_staking_contract = __commonJS({
           const sig = ethers_1.utils.splitSignature(signature);
           const txCallback = this.generateTxCallback({
             rawTxMethod: () => __async(this, null, function* () {
-              return stakingContract.populateTransaction.stakeWithPermit(user, convertedAmount, deadline, sig.v, sig.r, sig.s);
+              return stakingContract.populateTransaction.stakeWithPermit(convertedAmount, deadline, sig.v, sig.r, sig.s);
             }),
             from: user
           });
@@ -45131,19 +48334,19 @@ var require_staking_contract = __commonJS({
   }
 });
 
-// node_modules/@pollum-io/contract-helpers/dist/cjs/governance-contract/typechain/IAaveGovernanceV2__factory.js
-var require_IAaveGovernanceV2_factory = __commonJS({
-  "node_modules/@pollum-io/contract-helpers/dist/cjs/governance-contract/typechain/IAaveGovernanceV2__factory.js"(exports2) {
+// node_modules/@pollum-io/contract-helpers/dist/cjs/governance-contract/typechain/IPegasysGovernanceV2__factory.js
+var require_IPegasysGovernanceV2_factory = __commonJS({
+  "node_modules/@pollum-io/contract-helpers/dist/cjs/governance-contract/typechain/IPegasysGovernanceV2__factory.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.IAaveGovernanceV2__factory = void 0;
+    exports2.IPegasysGovernanceV2__factory = void 0;
     var ethers_1 = require_lib31();
-    var IAaveGovernanceV2__factory = class {
+    var IPegasysGovernanceV2__factory = class {
       static connect(address, signerOrProvider) {
         return new ethers_1.Contract(address, _abi, signerOrProvider);
       }
     };
-    exports2.IAaveGovernanceV2__factory = IAaveGovernanceV2__factory;
+    exports2.IPegasysGovernanceV2__factory = IPegasysGovernanceV2__factory;
     var _abi = [
       {
         anonymous: false,
@@ -45595,7 +48798,7 @@ var require_IAaveGovernanceV2_factory = __commonJS({
                 type: "bytes32"
               }
             ],
-            internalType: "struct IAaveGovernanceV2.ProposalWithoutVotes",
+            internalType: "struct IPegasysGovernanceV2.ProposalWithoutVotes",
             name: "",
             type: "tuple"
           }
@@ -45614,7 +48817,7 @@ var require_IAaveGovernanceV2_factory = __commonJS({
         name: "getProposalState",
         outputs: [
           {
-            internalType: "enum IAaveGovernanceV2.ProposalState",
+            internalType: "enum IPegasysGovernanceV2.ProposalState",
             name: "",
             type: "uint8"
           }
@@ -45663,7 +48866,7 @@ var require_IAaveGovernanceV2_factory = __commonJS({
                 type: "uint248"
               }
             ],
-            internalType: "struct IAaveGovernanceV2.Vote",
+            internalType: "struct IPegasysGovernanceV2.Vote",
             name: "",
             type: "tuple"
           }
@@ -45826,7 +49029,7 @@ var require_IGovernanceStrategy_factory = __commonJS({
     var _abi = [
       {
         inputs: [],
-        name: "AAVE",
+        name: "PSYS",
         outputs: [
           {
             internalType: "address",
@@ -45839,7 +49042,7 @@ var require_IGovernanceStrategy_factory = __commonJS({
       },
       {
         inputs: [],
-        name: "STK_AAVE",
+        name: "STK_PSYS",
         outputs: [
           {
             internalType: "address",
@@ -46074,7 +49277,7 @@ var require_IGovernanceV2Helper_factory = __commonJS({
             type: "uint256"
           },
           {
-            internalType: "contract IAaveGovernanceV2",
+            internalType: "contract IPegasysGovernanceV2",
             name: "governance",
             type: "address"
           }
@@ -46194,7 +49397,7 @@ var require_IGovernanceV2Helper_factory = __commonJS({
                 type: "bytes32"
               },
               {
-                internalType: "enum IAaveGovernanceV2.ProposalState",
+                internalType: "enum IPegasysGovernanceV2.ProposalState",
                 name: "proposalState",
                 type: "uint8"
               }
@@ -46220,7 +49423,7 @@ var require_IGovernanceV2Helper_factory = __commonJS({
             type: "uint256"
           },
           {
-            internalType: "contract IAaveGovernanceV2",
+            internalType: "contract IPegasysGovernanceV2",
             name: "governance",
             type: "address"
           }
@@ -46340,7 +49543,7 @@ var require_IGovernanceV2Helper_factory = __commonJS({
                 type: "bytes32"
               },
               {
-                internalType: "enum IAaveGovernanceV2.ProposalState",
+                internalType: "enum IPegasysGovernanceV2.ProposalState",
                 name: "proposalState",
                 type: "uint8"
               }
@@ -46443,14 +49646,14 @@ var require_governance_contract = __commonJS({
   "node_modules/@pollum-io/contract-helpers/dist/cjs/governance-contract/index.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.AaveGovernanceService = exports2.humanizeProposal = void 0;
+    exports2.PegasysGovernanceService = exports2.humanizeProposal = void 0;
     var tslib_1 = (init_tslib_es6(), __toCommonJS(tslib_es6_exports));
     var utils_1 = require_utils5();
     var BaseService_1 = tslib_1.__importDefault(require_BaseService());
     var types_1 = require_types2();
     var methodValidators_1 = require_methodValidators();
     var paramValidators_1 = require_paramValidators();
-    var IAaveGovernanceV2__factory_1 = require_IAaveGovernanceV2_factory();
+    var IPegasysGovernanceV2__factory_1 = require_IPegasysGovernanceV2_factory();
     var IGovernanceStrategy__factory_1 = require_IGovernanceStrategy_factory();
     var IGovernanceV2Helper__factory_1 = require_IGovernanceV2Helper_factory();
     var types_2 = require_types5();
@@ -46482,16 +49685,16 @@ var require_governance_contract = __commonJS({
       };
     };
     exports2.humanizeProposal = humanizeProposal;
-    var AaveGovernanceService2 = class extends BaseService_1.default {
+    var PegasysGovernanceService2 = class extends BaseService_1.default {
       constructor(provider, config) {
         var _a7;
-        super(provider, IAaveGovernanceV2__factory_1.IAaveGovernanceV2__factory);
-        this.aaveGovernanceV2Address = config.GOVERNANCE_ADDRESS;
-        this.aaveGovernanceV2HelperAddress = (_a7 = config.GOVERNANCE_HELPER_ADDRESS) !== null && _a7 !== void 0 ? _a7 : "";
+        super(provider, IPegasysGovernanceV2__factory_1.IPegasysGovernanceV2__factory);
+        this.pegasysGovernanceV2Address = config.GOVERNANCE_ADDRESS;
+        this.pegasysGovernanceV2HelperAddress = (_a7 = config.GOVERNANCE_HELPER_ADDRESS) !== null && _a7 !== void 0 ? _a7 : "";
       }
       submitVote({ user, proposalId, support }) {
         const txs = [];
-        const govContract = this.getContractInstance(this.aaveGovernanceV2Address);
+        const govContract = this.getContractInstance(this.pegasysGovernanceV2Address);
         const txCallback = this.generateTxCallback({
           rawTxMethod: () => __async(this, null, function* () {
             return govContract.populateTransaction.submitVote(proposalId, support);
@@ -46508,15 +49711,15 @@ var require_governance_contract = __commonJS({
       }
       getProposals(_0) {
         return __async(this, arguments, function* ({ skip, limit }) {
-          const helper = IGovernanceV2Helper__factory_1.IGovernanceV2Helper__factory.connect(this.aaveGovernanceV2HelperAddress, this.provider);
-          const result = yield helper.getProposals(skip.toString(), limit.toString(), this.aaveGovernanceV2Address);
+          const helper = IGovernanceV2Helper__factory_1.IGovernanceV2Helper__factory.connect(this.pegasysGovernanceV2HelperAddress, this.provider);
+          const result = yield helper.getProposals(skip.toString(), limit.toString(), this.pegasysGovernanceV2Address);
           return result.map((proposal) => (0, exports2.humanizeProposal)(proposal));
         });
       }
       getProposal(_0) {
         return __async(this, arguments, function* ({ proposalId }) {
-          const helper = IGovernanceV2Helper__factory_1.IGovernanceV2Helper__factory.connect(this.aaveGovernanceV2HelperAddress, this.provider);
-          const result = yield helper.getProposal(proposalId, this.aaveGovernanceV2Address);
+          const helper = IGovernanceV2Helper__factory_1.IGovernanceV2Helper__factory.connect(this.pegasysGovernanceV2HelperAddress, this.provider);
+          const result = yield helper.getProposal(proposalId, this.pegasysGovernanceV2Address);
           return (0, exports2.humanizeProposal)(result);
         });
       }
@@ -46529,25 +49732,25 @@ var require_governance_contract = __commonJS({
       }
       getTokensPower(_0) {
         return __async(this, arguments, function* ({ user, tokens }) {
-          const helper = IGovernanceV2Helper__factory_1.IGovernanceV2Helper__factory.connect(this.aaveGovernanceV2HelperAddress, this.provider);
+          const helper = IGovernanceV2Helper__factory_1.IGovernanceV2Helper__factory.connect(this.pegasysGovernanceV2HelperAddress, this.provider);
           return helper.getTokensPower(user, tokens);
         });
       }
       getVoteOnProposal(_0) {
         return __async(this, arguments, function* ({ proposalId, user }) {
-          const govContract = this.getContractInstance(this.aaveGovernanceV2Address);
+          const govContract = this.getContractInstance(this.pegasysGovernanceV2Address);
           return govContract.getVoteOnProposal(proposalId, user);
         });
       }
       getProposalsCount() {
         return __async(this, null, function* () {
-          const govContract = this.getContractInstance(this.aaveGovernanceV2Address);
+          const govContract = this.getContractInstance(this.pegasysGovernanceV2Address);
           return (yield govContract.getProposalsCount()).toNumber();
         });
       }
       delegateTokensBySig(_0) {
         return __async(this, arguments, function* ({ user, tokens, data }) {
-          const helper = IGovernanceV2Helper__factory_1.IGovernanceV2Helper__factory.connect(this.aaveGovernanceV2HelperAddress, this.provider);
+          const helper = IGovernanceV2Helper__factory_1.IGovernanceV2Helper__factory.connect(this.pegasysGovernanceV2HelperAddress, this.provider);
           const txCallback = this.generateTxCallback({
             rawTxMethod: () => __async(this, null, function* () {
               return helper.populateTransaction.delegateTokensBySig(tokens, data);
@@ -46565,7 +49768,7 @@ var require_governance_contract = __commonJS({
       }
       delegateTokensByTypeBySig(_0) {
         return __async(this, arguments, function* ({ user, tokens, data }) {
-          const helper = IGovernanceV2Helper__factory_1.IGovernanceV2Helper__factory.connect(this.aaveGovernanceV2HelperAddress, this.provider);
+          const helper = IGovernanceV2Helper__factory_1.IGovernanceV2Helper__factory.connect(this.pegasysGovernanceV2HelperAddress, this.provider);
           const txCallback = this.generateTxCallback({
             rawTxMethod: () => __async(this, null, function* () {
               return helper.populateTransaction.delegateTokensByTypeBySig(tokens, data);
@@ -46589,27 +49792,27 @@ var require_governance_contract = __commonJS({
       tslib_1.__metadata("design:type", Function),
       tslib_1.__metadata("design:paramtypes", [Object]),
       tslib_1.__metadata("design:returntype", Array)
-    ], AaveGovernanceService2.prototype, "submitVote", null);
+    ], PegasysGovernanceService2.prototype, "submitVote", null);
     tslib_1.__decorate([
       methodValidators_1.GovHelperValidator,
       tslib_1.__metadata("design:type", Function),
       tslib_1.__metadata("design:paramtypes", [Object]),
       tslib_1.__metadata("design:returntype", Promise)
-    ], AaveGovernanceService2.prototype, "getProposals", null);
+    ], PegasysGovernanceService2.prototype, "getProposals", null);
     tslib_1.__decorate([
       methodValidators_1.GovHelperValidator,
       tslib_1.__param(0, (0, paramValidators_1.is0OrPositiveAmount)("proposalId")),
       tslib_1.__metadata("design:type", Function),
       tslib_1.__metadata("design:paramtypes", [Object]),
       tslib_1.__metadata("design:returntype", Promise)
-    ], AaveGovernanceService2.prototype, "getProposal", null);
+    ], PegasysGovernanceService2.prototype, "getProposal", null);
     tslib_1.__decorate([
       methodValidators_1.GovValidator,
       tslib_1.__param(0, (0, paramValidators_1.isEthAddress)("user")),
       tslib_1.__metadata("design:type", Function),
       tslib_1.__metadata("design:paramtypes", [Object]),
       tslib_1.__metadata("design:returntype", Promise)
-    ], AaveGovernanceService2.prototype, "getVotingPowerAt", null);
+    ], PegasysGovernanceService2.prototype, "getVotingPowerAt", null);
     tslib_1.__decorate([
       methodValidators_1.GovHelperValidator,
       tslib_1.__param(0, (0, paramValidators_1.isEthAddress)("user")),
@@ -46617,7 +49820,7 @@ var require_governance_contract = __commonJS({
       tslib_1.__metadata("design:type", Function),
       tslib_1.__metadata("design:paramtypes", [Object]),
       tslib_1.__metadata("design:returntype", Promise)
-    ], AaveGovernanceService2.prototype, "getTokensPower", null);
+    ], PegasysGovernanceService2.prototype, "getTokensPower", null);
     tslib_1.__decorate([
       methodValidators_1.GovValidator,
       tslib_1.__param(0, (0, paramValidators_1.isEthAddress)("user")),
@@ -46625,13 +49828,13 @@ var require_governance_contract = __commonJS({
       tslib_1.__metadata("design:type", Function),
       tslib_1.__metadata("design:paramtypes", [Object]),
       tslib_1.__metadata("design:returntype", Promise)
-    ], AaveGovernanceService2.prototype, "getVoteOnProposal", null);
+    ], PegasysGovernanceService2.prototype, "getVoteOnProposal", null);
     tslib_1.__decorate([
       methodValidators_1.GovValidator,
       tslib_1.__metadata("design:type", Function),
       tslib_1.__metadata("design:paramtypes", []),
       tslib_1.__metadata("design:returntype", Promise)
-    ], AaveGovernanceService2.prototype, "getProposalsCount", null);
+    ], PegasysGovernanceService2.prototype, "getProposalsCount", null);
     tslib_1.__decorate([
       methodValidators_1.GovHelperValidator,
       tslib_1.__param(0, (0, paramValidators_1.isEthAddress)("user")),
@@ -46639,7 +49842,7 @@ var require_governance_contract = __commonJS({
       tslib_1.__metadata("design:type", Function),
       tslib_1.__metadata("design:paramtypes", [Object]),
       tslib_1.__metadata("design:returntype", Promise)
-    ], AaveGovernanceService2.prototype, "delegateTokensBySig", null);
+    ], PegasysGovernanceService2.prototype, "delegateTokensBySig", null);
     tslib_1.__decorate([
       methodValidators_1.GovHelperValidator,
       tslib_1.__param(0, (0, paramValidators_1.isEthAddress)("user")),
@@ -46647,8 +49850,8 @@ var require_governance_contract = __commonJS({
       tslib_1.__metadata("design:type", Function),
       tslib_1.__metadata("design:paramtypes", [Object]),
       tslib_1.__metadata("design:returntype", Promise)
-    ], AaveGovernanceService2.prototype, "delegateTokensByTypeBySig", null);
-    exports2.AaveGovernanceService = AaveGovernanceService2;
+    ], PegasysGovernanceService2.prototype, "delegateTokensByTypeBySig", null);
+    exports2.PegasysGovernanceService = PegasysGovernanceService2;
   }
 });
 
@@ -49635,6 +52838,36 @@ var require_v3_pool_rollups = __commonJS({
           actionTx.gasLimit = ethers_1.BigNumber.from(utils_2.gasLimitRecommendations[types_1.ProtocolAction.supplyWithPermit].limit);
           return actionTx;
         };
+        this.generateEncodedRepayTxData = ({ encodedTxData, user }) => {
+          const actionTx = {};
+          const txData = this.l2PoolContractInstance.encodeFunctionData("repay", [
+            encodedTxData
+          ]);
+          actionTx.to = this.l2PoolAddress;
+          actionTx.data = txData;
+          actionTx.from = user;
+          actionTx.gasLimit = ethers_1.BigNumber.from(utils_2.gasLimitRecommendations[types_1.ProtocolAction.repay].limit);
+          return actionTx;
+        };
+        this.generateEncodedRepayWithPermitTxData = ({ encodedTxData, user, signature }) => {
+          const actionTx = {};
+          const decomposedSignature = (0, utils_1.splitSignature)(signature);
+          const txData = this.l2PoolContractInstance.encodeFunctionData("repayWithPermit", [encodedTxData, decomposedSignature.r, decomposedSignature.s]);
+          actionTx.to = this.l2PoolAddress;
+          actionTx.data = txData;
+          actionTx.from = user;
+          actionTx.gasLimit = ethers_1.BigNumber.from(utils_2.gasLimitRecommendations[types_1.ProtocolAction.repayWithPermit].limit);
+          return actionTx;
+        };
+        this.generateEncodedRepayWithATokensTxData = ({ encodedTxData, user }) => {
+          const actionTx = {};
+          const txData = this.l2PoolContractInstance.encodeFunctionData("repayWithATokens", [encodedTxData]);
+          actionTx.to = this.l2PoolAddress;
+          actionTx.data = txData;
+          actionTx.from = user;
+          actionTx.gasLimit = ethers_1.BigNumber.from(utils_2.gasLimitRecommendations[types_1.ProtocolAction.repayWithATokens].limit);
+          return actionTx;
+        };
       }
       supply(_0, _1) {
         return __async(this, arguments, function* ({ user, reserve, amount, referralCode }, txs) {
@@ -50974,6 +54207,12 @@ var require_v3_pool_contract_bundle = __commonJS({
             return Object.assign(Object.assign({}, props), { spender, amount: amount.toString() });
           }),
           generateTxData: ({ user, reserve, amount, onBehalfOf, referralCode, useOptimizedPath, encodedTxData }) => {
+            if (useOptimizedPath && encodedTxData) {
+              return this.l2PoolService.generateEncodedSupplyTxData({
+                encodedTxData,
+                user
+              });
+            }
             let actionTx = {};
             const onBehalfOfParam = onBehalfOf !== null && onBehalfOf !== void 0 ? onBehalfOf : user;
             const referralCodeParam = referralCode !== null && referralCode !== void 0 ? referralCode : "0";
@@ -50985,22 +54224,6 @@ var require_v3_pool_contract_bundle = __commonJS({
                 onBehalfOf: onBehalfOfParam,
                 referralCode: referralCodeParam
               });
-            } else if (useOptimizedPath) {
-              if (encodedTxData) {
-                actionTx = this.l2PoolService.generateEncodedSupplyTxData({
-                  encodedTxData,
-                  user
-                });
-              } else {
-                const args = {
-                  user,
-                  reserve,
-                  amount,
-                  onBehalfOf: onBehalfOfParam,
-                  referralCode: referralCodeParam
-                };
-                actionTx = this.l2PoolService.generateSupplyTxData(args);
-              }
             } else {
               const txData = this.contractInterface.encodeFunctionData("supply", [
                 reserve,
@@ -51016,52 +54239,49 @@ var require_v3_pool_contract_bundle = __commonJS({
             return actionTx;
           },
           generateSignedTxData: ({ user, reserve, amount, onBehalfOf, referralCode, useOptimizedPath, signature, deadline, encodedTxData }) => {
+            if (useOptimizedPath && encodedTxData) {
+              return this.l2PoolService.generateEncodedSupplyWithPermitTxData({
+                encodedTxData,
+                user,
+                signature
+              });
+            }
             const decomposedSignature = (0, bytes_1.splitSignature)(signature);
-            let populatedTx = {};
+            const populatedTx = {};
             const onBehalfOfParam = onBehalfOf !== null && onBehalfOf !== void 0 ? onBehalfOf : user;
             const referralCodeParam = referralCode !== null && referralCode !== void 0 ? referralCode : "0";
-            if (useOptimizedPath) {
-              if (encodedTxData) {
-                populatedTx = this.l2PoolService.generateEncodedSupplyWithPermitTxData({
-                  encodedTxData,
-                  user,
-                  signature
-                });
-              } else {
-                const args = {
-                  user,
-                  reserve,
-                  amount,
-                  referralCode: referralCodeParam,
-                  onBehalfOf: onBehalfOfParam,
-                  permitR: decomposedSignature.r,
-                  permitS: decomposedSignature.s,
-                  permitV: decomposedSignature.v,
-                  deadline: Number(deadline)
-                };
-                populatedTx = this.l2PoolService.generateSupplyWithPermitTxData(args);
-              }
-            } else {
-              const txData = this.contractInterface.encodeFunctionData("supplyWithPermit", [
-                reserve,
-                amount,
-                onBehalfOfParam,
-                referralCodeParam,
-                deadline,
-                decomposedSignature.v,
-                decomposedSignature.r,
-                decomposedSignature.s
-              ]);
-              populatedTx.to = this.poolAddress;
-              populatedTx.from = user;
-              populatedTx.data = txData;
-              populatedTx.gasLimit = ethers_1.BigNumber.from(utils_1.gasLimitRecommendations[types_1.ProtocolAction.supplyWithPermit].recommended);
-            }
+            const txData = this.contractInterface.encodeFunctionData("supplyWithPermit", [
+              reserve,
+              amount,
+              onBehalfOfParam,
+              referralCodeParam,
+              deadline,
+              decomposedSignature.v,
+              decomposedSignature.r,
+              decomposedSignature.s
+            ]);
+            populatedTx.to = this.poolAddress;
+            populatedTx.from = user;
+            populatedTx.data = txData;
+            populatedTx.gasLimit = ethers_1.BigNumber.from(utils_1.gasLimitRecommendations[types_1.ProtocolAction.supplyWithPermit].recommended);
             return populatedTx;
-          }
+          },
+          encodeSupplyParams: (_0) => __async(this, [_0], function* ({ reserve, amount, referralCode }) {
+            return this.l2PoolService.getEncoder().encodeSupplyParams(reserve, amount, referralCode !== null && referralCode !== void 0 ? referralCode : "0");
+          }),
+          encodeSupplyWithPermitParams: (_0) => __async(this, [_0], function* ({ reserve, amount, signature, deadline, referralCode }) {
+            const decomposedSignature = (0, bytes_1.splitSignature)(signature);
+            return this.l2PoolService.getEncoder().encodeSupplyWithPermitParams(reserve, amount, referralCode !== null && referralCode !== void 0 ? referralCode : "0", deadline, decomposedSignature.v, decomposedSignature.r, decomposedSignature.s);
+          })
         };
         this.borrowTxBuilder = {
           generateTxData: ({ user, reserve, amount, interestRateMode, debtTokenAddress, onBehalfOf, referralCode, useOptimizedPath, encodedTxData }) => {
+            if (useOptimizedPath && encodedTxData) {
+              return this.l2PoolService.generateEncodedBorrowTxData({
+                encodedTxData,
+                user
+              });
+            }
             let actionTx = {};
             const referralCodeParam = referralCode !== null && referralCode !== void 0 ? referralCode : "0";
             const onBehalfOfParam = onBehalfOf !== null && onBehalfOf !== void 0 ? onBehalfOf : user;
@@ -51078,23 +54298,6 @@ var require_v3_pool_contract_bundle = __commonJS({
                 interestRateMode,
                 referralCode: referralCodeParam
               });
-            } else if (useOptimizedPath) {
-              if (encodedTxData) {
-                actionTx = this.l2PoolService.generateEncodedBorrowTxData({
-                  encodedTxData,
-                  user
-                });
-              } else {
-                const args = {
-                  user,
-                  reserve,
-                  amount,
-                  onBehalfOf: onBehalfOfParam,
-                  referralCode: referralCodeParam,
-                  numericRateMode
-                };
-                actionTx = this.l2PoolService.generateBorrowTxData(args);
-              }
             } else {
               const txData = this.contractInterface.encodeFunctionData("borrow", [
                 reserve,
@@ -51109,7 +54312,113 @@ var require_v3_pool_contract_bundle = __commonJS({
               actionTx.gasLimit = ethers_1.BigNumber.from(utils_1.gasLimitRecommendations[types_1.ProtocolAction.borrow].recommended);
             }
             return actionTx;
-          }
+          },
+          encodeBorrowParams: (_0) => __async(this, [_0], function* ({ reserve, amount, interestRateMode, referralCode }) {
+            const numericRateMode = interestRateMode === types_1.InterestRate.Variable ? 2 : 1;
+            return this.l2PoolService.getEncoder().encodeBorrowParams(reserve, amount, numericRateMode, referralCode !== null && referralCode !== void 0 ? referralCode : "0");
+          })
+        };
+        this.repayTxBuilder = {
+          generateTxData: ({ user, reserve, amount, interestRateMode, onBehalfOf, useOptimizedPath, encodedTxData }) => {
+            const numericRateMode = interestRateMode === types_1.InterestRate.Variable ? 2 : 1;
+            const onBehalfOfParam = onBehalfOf !== null && onBehalfOf !== void 0 ? onBehalfOf : user;
+            if (reserve.toLowerCase() === utils_1.API_ETH_MOCK_ADDRESS.toLowerCase()) {
+              return this.wethGatewayService.generateRepayEthTxData({
+                lendingPool: this.poolAddress,
+                user,
+                amount,
+                interestRateMode,
+                onBehalfOf: onBehalfOfParam
+              });
+            }
+            if (useOptimizedPath && encodedTxData) {
+              return this.l2PoolService.generateEncodedRepayTxData({
+                encodedTxData,
+                user
+              });
+            }
+            const actionTx = {};
+            const txData = this.contractInterface.encodeFunctionData("repay", [
+              reserve,
+              amount === "-1" ? ethers_1.constants.MaxUint256.toString() : amount,
+              numericRateMode,
+              onBehalfOfParam
+            ]);
+            actionTx.to = this.poolAddress;
+            actionTx.from = user;
+            actionTx.data = txData;
+            actionTx.gasLimit = ethers_1.BigNumber.from(utils_1.gasLimitRecommendations[types_1.ProtocolAction.repay].recommended);
+            return actionTx;
+          },
+          generateSignedTxData: ({ onBehalfOf, signature, deadline, user, reserve, amount, interestRateMode, useOptimizedPath, encodedTxData }) => {
+            const decomposedSignature = (0, bytes_1.splitSignature)(signature);
+            const populatedTx = {};
+            const numericRateMode = interestRateMode === types_1.InterestRate.Variable ? 2 : 1;
+            const onBehalfOfParam = onBehalfOf !== null && onBehalfOf !== void 0 ? onBehalfOf : user;
+            if (useOptimizedPath && encodedTxData) {
+              return this.l2PoolService.generateEncodedRepayWithPermitTxData({
+                encodedTxData,
+                user,
+                signature
+              });
+            }
+            const txData = this.contractInterface.encodeFunctionData("repayWithPermit", [
+              reserve,
+              amount === "-1" ? ethers_1.constants.MaxUint256.toString() : amount,
+              numericRateMode,
+              onBehalfOfParam,
+              deadline,
+              decomposedSignature.v,
+              decomposedSignature.r,
+              decomposedSignature.s
+            ]);
+            populatedTx.to = this.poolAddress;
+            populatedTx.from = user;
+            populatedTx.data = txData;
+            populatedTx.gasLimit = ethers_1.BigNumber.from(utils_1.gasLimitRecommendations[types_1.ProtocolAction.repayWithPermit].recommended);
+            return populatedTx;
+          },
+          encodeRepayParams: (_0) => __async(this, [_0], function* ({ reserve, amount, interestRateMode }) {
+            const numericRateMode = interestRateMode === types_1.InterestRate.Variable ? 2 : 1;
+            const repayAmount = amount === "-1" ? ethers_1.constants.MaxUint256.toString() : amount;
+            return this.l2PoolService.getEncoder().encodeRepayParams(reserve, repayAmount, numericRateMode);
+          }),
+          encodeRepayWithPermitParams: (_0) => __async(this, [_0], function* ({ reserve, amount, interestRateMode, signature, deadline }) {
+            const decomposedSignature = (0, bytes_1.splitSignature)(signature);
+            const numericRateMode = interestRateMode === types_1.InterestRate.Variable ? 2 : 1;
+            const repayAmount = amount === "-1" ? ethers_1.constants.MaxUint256.toString() : amount;
+            return this.l2PoolService.getEncoder().encodeRepayWithPermitParams(reserve, repayAmount, numericRateMode, deadline, decomposedSignature.v, decomposedSignature.r, decomposedSignature.s);
+          })
+        };
+        this.repayWithATokensTxBuilder = {
+          generateTxData: ({ rateMode, user, amount, reserve, useOptimizedPath, encodedTxData }) => {
+            const actionTx = {};
+            const numericRateMode = rateMode === types_1.InterestRate.Variable ? 2 : 1;
+            if (reserve.toLowerCase() === utils_1.API_ETH_MOCK_ADDRESS.toLowerCase()) {
+              throw new Error("Can not repay with aTokens with eth. Should be WETH instead");
+            }
+            if (useOptimizedPath && encodedTxData) {
+              return this.l2PoolService.generateEncodedRepayWithATokensTxData({
+                encodedTxData,
+                user
+              });
+            }
+            const txData = this.contractInterface.encodeFunctionData("repayWithATokens", [
+              reserve,
+              amount === "-1" ? ethers_1.constants.MaxUint256.toString() : amount,
+              numericRateMode
+            ]);
+            actionTx.to = this.poolAddress;
+            actionTx.from = user;
+            actionTx.data = txData;
+            actionTx.gasLimit = ethers_1.BigNumber.from(utils_1.gasLimitRecommendations[types_1.ProtocolAction.repayWithATokens].recommended);
+            return actionTx;
+          },
+          encodeRepayWithATokensParams: (_0) => __async(this, [_0], function* ({ reserve, amount, rateMode }) {
+            const numericRateMode = rateMode === types_1.InterestRate.Variable ? 2 : 1;
+            const repayAmount = amount === "-1" ? ethers_1.constants.MaxUint256.toString() : amount;
+            return this.l2PoolService.getEncoder().encodeRepayWithATokensParams(reserve, repayAmount, numericRateMode);
+          })
         };
       }
     };
@@ -51168,12 +54477,12 @@ var require_IUiGhoDataProvider_factory = __commonJS({
               },
               {
                 internalType: "uint256",
-                name: "aaveFacilitatorBucketLevel",
+                name: "pegasysFacilitatorBucketLevel",
                 type: "uint256"
               },
               {
                 internalType: "uint256",
-                name: "aaveFacilitatorBucketMaxCapacity",
+                name: "pegasysFacilitatorBucketMaxCapacity",
                 type: "uint256"
               }
             ],
@@ -51266,8 +54575,8 @@ var require_GhoService = __commonJS({
             ghoBaseVariableBorrowRate: ghoReserveData.ghoBaseVariableBorrowRate.toString(),
             ghoDiscountedPerToken: ghoReserveData.ghoDiscountedPerToken.toString(),
             ghoDiscountRate: ghoReserveData.ghoDiscountRate.toString(),
-            aaveFacilitatorBucketMaxCapacity: ghoReserveData.aaveFacilitatorBucketMaxCapacity.toString(),
-            aaveFacilitatorBucketLevel: ghoReserveData.aaveFacilitatorBucketLevel.toString(),
+            pegasysFacilitatorBucketMaxCapacity: ghoReserveData.pegasysFacilitatorBucketMaxCapacity.toString(),
+            pegasysFacilitatorBucketLevel: ghoReserveData.pegasysFacilitatorBucketLevel.toString(),
             ghoMinDebtTokenBalanceForDiscount: ghoReserveData.ghoMinDebtTokenBalanceForDiscount.toString(),
             ghoMinDiscountTokenBalanceForDiscount: ghoReserveData.ghoMinDiscountTokenBalanceForDiscount.toString(),
             ghoCurrentBorrowIndex: ghoReserveData.ghoCurrentBorrowIndex.toString(),
@@ -52683,6 +55992,4221 @@ var require_paraswap_withdrawAndSwitchAdapter_contract = __commonJS({
   }
 });
 
+// node_modules/@pollum-io/contract-helpers/dist/cjs/token-wrapper/typechain/TokenWrapper_factory.js
+var require_TokenWrapper_factory = __commonJS({
+  "node_modules/@pollum-io/contract-helpers/dist/cjs/token-wrapper/typechain/TokenWrapper_factory.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.BaseTokenWrapper__factory = void 0;
+    var ethers_1 = require_lib31();
+    var _abi = [
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "address",
+            name: "previousOwner",
+            type: "address"
+          },
+          {
+            indexed: true,
+            internalType: "address",
+            name: "newOwner",
+            type: "address"
+          }
+        ],
+        name: "OwnershipTransferred",
+        type: "event"
+      },
+      {
+        inputs: [],
+        name: "POOL",
+        outputs: [
+          {
+            internalType: "contract IPool",
+            name: "",
+            type: "address"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "TOKEN_IN",
+        outputs: [
+          {
+            internalType: "address",
+            name: "",
+            type: "address"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "TOKEN_OUT",
+        outputs: [
+          {
+            internalType: "address",
+            name: "",
+            type: "address"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "amount",
+            type: "uint256"
+          }
+        ],
+        name: "getTokenInForTokenOut",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "amount",
+            type: "uint256"
+          }
+        ],
+        name: "getTokenOutForTokenIn",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "owner",
+        outputs: [
+          {
+            internalType: "address",
+            name: "",
+            type: "address"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "renounceOwnership",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "to",
+            type: "address"
+          },
+          {
+            internalType: "uint256",
+            name: "amount",
+            type: "uint256"
+          }
+        ],
+        name: "rescueETH",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "contract IERC20",
+            name: "token",
+            type: "address"
+          },
+          {
+            internalType: "address",
+            name: "to",
+            type: "address"
+          },
+          {
+            internalType: "uint256",
+            name: "amount",
+            type: "uint256"
+          }
+        ],
+        name: "rescueTokens",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "amount",
+            type: "uint256"
+          },
+          {
+            internalType: "address",
+            name: "onBehalfOf",
+            type: "address"
+          },
+          {
+            internalType: "uint16",
+            name: "referralCode",
+            type: "uint16"
+          }
+        ],
+        name: "supplyToken",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "amount",
+            type: "uint256"
+          },
+          {
+            internalType: "address",
+            name: "onBehalfOf",
+            type: "address"
+          },
+          {
+            internalType: "uint16",
+            name: "referralCode",
+            type: "uint16"
+          },
+          {
+            components: [
+              {
+                internalType: "uint256",
+                name: "deadline",
+                type: "uint256"
+              },
+              {
+                internalType: "uint8",
+                name: "v",
+                type: "uint8"
+              },
+              {
+                internalType: "bytes32",
+                name: "r",
+                type: "bytes32"
+              },
+              {
+                internalType: "bytes32",
+                name: "s",
+                type: "bytes32"
+              }
+            ],
+            internalType: "struct IBaseTokenWrapper.PermitSignature",
+            name: "signature",
+            type: "tuple"
+          }
+        ],
+        name: "supplyTokenWithPermit",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "newOwner",
+            type: "address"
+          }
+        ],
+        name: "transferOwnership",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "amount",
+            type: "uint256"
+          },
+          {
+            internalType: "address",
+            name: "to",
+            type: "address"
+          }
+        ],
+        name: "withdrawToken",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "amount",
+            type: "uint256"
+          },
+          {
+            internalType: "address",
+            name: "to",
+            type: "address"
+          },
+          {
+            components: [
+              {
+                internalType: "uint256",
+                name: "deadline",
+                type: "uint256"
+              },
+              {
+                internalType: "uint8",
+                name: "v",
+                type: "uint8"
+              },
+              {
+                internalType: "bytes32",
+                name: "r",
+                type: "bytes32"
+              },
+              {
+                internalType: "bytes32",
+                name: "s",
+                type: "bytes32"
+              }
+            ],
+            internalType: "struct IBaseTokenWrapper.PermitSignature",
+            name: "signature",
+            type: "tuple"
+          }
+        ],
+        name: "withdrawTokenWithPermit",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "nonpayable",
+        type: "function"
+      }
+    ];
+    var BaseTokenWrapper__factory = class {
+      static createInterface() {
+        return new ethers_1.utils.Interface(_abi);
+      }
+      static connect(address, signerOrProvider) {
+        return new ethers_1.Contract(address, _abi, signerOrProvider);
+      }
+    };
+    exports2.BaseTokenWrapper__factory = BaseTokenWrapper__factory;
+    BaseTokenWrapper__factory.abi = _abi;
+  }
+});
+
+// node_modules/@pollum-io/contract-helpers/dist/cjs/token-wrapper/index.js
+var require_token_wrapper = __commonJS({
+  "node_modules/@pollum-io/contract-helpers/dist/cjs/token-wrapper/index.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.TokenWrapperService = void 0;
+    var tslib_1 = (init_tslib_es6(), __toCommonJS(tslib_es6_exports));
+    var bytes_1 = require_lib2();
+    var BaseService_1 = tslib_1.__importDefault(require_BaseService());
+    var TokenWrapper_factory_1 = require_TokenWrapper_factory();
+    var TokenWrapperService = class extends BaseService_1.default {
+      constructor(provider, tokenWrapperAddress) {
+        super(provider, TokenWrapper_factory_1.BaseTokenWrapper__factory);
+        this.tokenWrapperAddress = tokenWrapperAddress;
+        this.contractInterface = TokenWrapper_factory_1.BaseTokenWrapper__factory.createInterface();
+        this._contract = TokenWrapper_factory_1.BaseTokenWrapper__factory.connect(tokenWrapperAddress, provider);
+      }
+      getTokenInForTokenOut(amount) {
+        return __async(this, null, function* () {
+          return this._contract.getTokenInForTokenOut(amount);
+        });
+      }
+      getTokenOutForTokenIn(amount) {
+        return __async(this, null, function* () {
+          return this._contract.getTokenOutForTokenIn(amount);
+        });
+      }
+      supplyToken(amount, onBehalfOf, referralCode) {
+        const data = this.contractInterface.encodeFunctionData("supplyToken", [
+          amount,
+          onBehalfOf,
+          referralCode
+        ]);
+        return {
+          to: this.tokenWrapperAddress,
+          from: onBehalfOf,
+          data
+        };
+      }
+      supplyTokenWithPermit({ amount, onBehalfOf, referralCode, deadline, signature }) {
+        const sig = (0, bytes_1.splitSignature)(signature);
+        const permitStruct = {
+          deadline,
+          v: sig.v,
+          r: sig.r,
+          s: sig.s
+        };
+        const data = this.contractInterface.encodeFunctionData("supplyTokenWithPermit", [amount, onBehalfOf, referralCode, permitStruct]);
+        return {
+          to: this.tokenWrapperAddress,
+          from: onBehalfOf,
+          data
+        };
+      }
+      withdrawToken(amount, user) {
+        const data = this.contractInterface.encodeFunctionData("withdrawToken", [
+          amount,
+          user
+        ]);
+        return {
+          to: this.tokenWrapperAddress,
+          from: user,
+          data
+        };
+      }
+      withdrawTokenWithPermit(amount, user, deadline, signature) {
+        const sig = (0, bytes_1.splitSignature)(signature);
+        const permitStruct = {
+          deadline,
+          v: sig.v,
+          r: sig.r,
+          s: sig.s
+        };
+        const data = this.contractInterface.encodeFunctionData("withdrawTokenWithPermit", [amount, user, permitStruct]);
+        return {
+          to: this.tokenWrapperAddress,
+          from: user,
+          data
+        };
+      }
+    };
+    exports2.TokenWrapperService = TokenWrapperService;
+  }
+});
+
+// node_modules/@pollum-io/contract-helpers/dist/cjs/governance-v3/typechain/factories/GovernanceDataHelper__factory.js
+var require_GovernanceDataHelper_factory = __commonJS({
+  "node_modules/@pollum-io/contract-helpers/dist/cjs/governance-v3/typechain/factories/GovernanceDataHelper__factory.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.GovernanceDataHelper__factory = void 0;
+    var ethers_1 = require_lib31();
+    var _abi = [
+      {
+        inputs: [
+          {
+            internalType: "contract IGovernanceCore",
+            name: "govCore",
+            type: "address"
+          },
+          {
+            internalType: "enum PayloadsControllerUtils.AccessControl[]",
+            name: "accessLevels",
+            type: "uint8[]"
+          }
+        ],
+        name: "getConstants",
+        outputs: [
+          {
+            components: [
+              {
+                components: [
+                  {
+                    internalType: "enum PayloadsControllerUtils.AccessControl",
+                    name: "accessLevel",
+                    type: "uint8"
+                  },
+                  {
+                    components: [
+                      {
+                        internalType: "uint24",
+                        name: "coolDownBeforeVotingStart",
+                        type: "uint24"
+                      },
+                      {
+                        internalType: "uint24",
+                        name: "votingDuration",
+                        type: "uint24"
+                      },
+                      {
+                        internalType: "uint56",
+                        name: "yesThreshold",
+                        type: "uint56"
+                      },
+                      {
+                        internalType: "uint56",
+                        name: "yesNoDifferential",
+                        type: "uint56"
+                      },
+                      {
+                        internalType: "uint56",
+                        name: "minPropositionPower",
+                        type: "uint56"
+                      }
+                    ],
+                    internalType: "struct IGovernanceCore.VotingConfig",
+                    name: "config",
+                    type: "tuple"
+                  }
+                ],
+                internalType: "struct IGovernanceDataHelper.VotingConfig[]",
+                name: "votingConfigs",
+                type: "tuple[]"
+              },
+              {
+                internalType: "uint256",
+                name: "precisionDivider",
+                type: "uint256"
+              },
+              {
+                internalType: "uint256",
+                name: "cooldownPeriod",
+                type: "uint256"
+              },
+              {
+                internalType: "uint256",
+                name: "expirationTime",
+                type: "uint256"
+              },
+              {
+                internalType: "uint256",
+                name: "cancellationFee",
+                type: "uint256"
+              }
+            ],
+            internalType: "struct IGovernanceDataHelper.Constants",
+            name: "",
+            type: "tuple"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "contract IGovernanceCore",
+            name: "govCore",
+            type: "address"
+          },
+          {
+            internalType: "uint256",
+            name: "from",
+            type: "uint256"
+          },
+          {
+            internalType: "uint256",
+            name: "to",
+            type: "uint256"
+          },
+          {
+            internalType: "uint256",
+            name: "pageSize",
+            type: "uint256"
+          }
+        ],
+        name: "getProposalsData",
+        outputs: [
+          {
+            components: [
+              {
+                internalType: "uint256",
+                name: "id",
+                type: "uint256"
+              },
+              {
+                internalType: "uint256",
+                name: "votingChainId",
+                type: "uint256"
+              },
+              {
+                components: [
+                  {
+                    internalType: "enum IGovernanceCore.State",
+                    name: "state",
+                    type: "uint8"
+                  },
+                  {
+                    internalType: "enum PayloadsControllerUtils.AccessControl",
+                    name: "accessLevel",
+                    type: "uint8"
+                  },
+                  {
+                    internalType: "uint40",
+                    name: "creationTime",
+                    type: "uint40"
+                  },
+                  {
+                    internalType: "uint24",
+                    name: "votingDuration",
+                    type: "uint24"
+                  },
+                  {
+                    internalType: "uint40",
+                    name: "votingActivationTime",
+                    type: "uint40"
+                  },
+                  {
+                    internalType: "uint40",
+                    name: "queuingTime",
+                    type: "uint40"
+                  },
+                  {
+                    internalType: "uint40",
+                    name: "cancelTimestamp",
+                    type: "uint40"
+                  },
+                  {
+                    internalType: "address",
+                    name: "creator",
+                    type: "address"
+                  },
+                  {
+                    internalType: "address",
+                    name: "votingPortal",
+                    type: "address"
+                  },
+                  {
+                    internalType: "bytes32",
+                    name: "snapshotBlockHash",
+                    type: "bytes32"
+                  },
+                  {
+                    internalType: "bytes32",
+                    name: "ipfsHash",
+                    type: "bytes32"
+                  },
+                  {
+                    internalType: "uint128",
+                    name: "forVotes",
+                    type: "uint128"
+                  },
+                  {
+                    internalType: "uint128",
+                    name: "againstVotes",
+                    type: "uint128"
+                  },
+                  {
+                    internalType: "uint256",
+                    name: "cancellationFee",
+                    type: "uint256"
+                  },
+                  {
+                    components: [
+                      {
+                        internalType: "uint256",
+                        name: "chain",
+                        type: "uint256"
+                      },
+                      {
+                        internalType: "enum PayloadsControllerUtils.AccessControl",
+                        name: "accessLevel",
+                        type: "uint8"
+                      },
+                      {
+                        internalType: "address",
+                        name: "payloadsController",
+                        type: "address"
+                      },
+                      {
+                        internalType: "uint40",
+                        name: "payloadId",
+                        type: "uint40"
+                      }
+                    ],
+                    internalType: "struct PayloadsControllerUtils.Payload[]",
+                    name: "payloads",
+                    type: "tuple[]"
+                  }
+                ],
+                internalType: "struct IGovernanceCore.Proposal",
+                name: "proposalData",
+                type: "tuple"
+              }
+            ],
+            internalType: "struct IGovernanceDataHelper.Proposal[]",
+            name: "",
+            type: "tuple[]"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "contract IGovernanceCore",
+            name: "govCore",
+            type: "address"
+          },
+          {
+            internalType: "address",
+            name: "wallet",
+            type: "address"
+          },
+          {
+            internalType: "uint256[]",
+            name: "chainIds",
+            type: "uint256[]"
+          }
+        ],
+        name: "getRepresentationData",
+        outputs: [
+          {
+            components: [
+              {
+                internalType: "uint256",
+                name: "chainId",
+                type: "uint256"
+              },
+              {
+                internalType: "address",
+                name: "representative",
+                type: "address"
+              }
+            ],
+            internalType: "struct IGovernanceDataHelper.Representatives[]",
+            name: "",
+            type: "tuple[]"
+          },
+          {
+            components: [
+              {
+                internalType: "uint256",
+                name: "chainId",
+                type: "uint256"
+              },
+              {
+                internalType: "address[]",
+                name: "votersRepresented",
+                type: "address[]"
+              }
+            ],
+            internalType: "struct IGovernanceDataHelper.Represented[]",
+            name: "",
+            type: "tuple[]"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      }
+    ];
+    var GovernanceDataHelper__factory = class {
+      static createInterface() {
+        return new ethers_1.utils.Interface(_abi);
+      }
+      static connect(address, signerOrProvider) {
+        return new ethers_1.Contract(address, _abi, signerOrProvider);
+      }
+    };
+    exports2.GovernanceDataHelper__factory = GovernanceDataHelper__factory;
+    GovernanceDataHelper__factory.abi = _abi;
+  }
+});
+
+// node_modules/@pollum-io/contract-helpers/dist/cjs/governance-v3/governance-data-helper/index.js
+var require_governance_data_helper = __commonJS({
+  "node_modules/@pollum-io/contract-helpers/dist/cjs/governance-v3/governance-data-helper/index.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.GovernanceDataHelperService = exports2.ProposalV3State = exports2.AccessLevel = void 0;
+    var GovernanceDataHelper__factory_1 = require_GovernanceDataHelper_factory();
+    var AccessLevel;
+    (function(AccessLevel2) {
+      AccessLevel2[AccessLevel2["None"] = 0] = "None";
+      AccessLevel2[AccessLevel2["Short_Executor"] = 1] = "Short_Executor";
+      AccessLevel2[AccessLevel2["Long_Executor"] = 2] = "Long_Executor";
+    })(AccessLevel = exports2.AccessLevel || (exports2.AccessLevel = {}));
+    var ProposalV3State;
+    (function(ProposalV3State2) {
+      ProposalV3State2[ProposalV3State2["Null"] = 0] = "Null";
+      ProposalV3State2[ProposalV3State2["Created"] = 1] = "Created";
+      ProposalV3State2[ProposalV3State2["Active"] = 2] = "Active";
+      ProposalV3State2[ProposalV3State2["Queued"] = 3] = "Queued";
+      ProposalV3State2[ProposalV3State2["Executed"] = 4] = "Executed";
+      ProposalV3State2[ProposalV3State2["Failed"] = 5] = "Failed";
+      ProposalV3State2[ProposalV3State2["Cancelled"] = 6] = "Cancelled";
+      ProposalV3State2[ProposalV3State2["Expired"] = 7] = "Expired";
+    })(ProposalV3State = exports2.ProposalV3State || (exports2.ProposalV3State = {}));
+    var GovernanceDataHelperService = class {
+      constructor(governanceDataHelperContractAddress, provider) {
+        this._contract = GovernanceDataHelper__factory_1.GovernanceDataHelper__factory.connect(governanceDataHelperContractAddress, provider);
+      }
+      getConstants(govCore, accessLevels) {
+        return __async(this, null, function* () {
+          const data = yield this._contract.getConstants(govCore, accessLevels);
+          const votingConfigs = data.votingConfigs.map((votingConfig) => {
+            return {
+              accessLevel: votingConfig.accessLevel,
+              config: {
+                coolDownBeforeVotingStart: votingConfig.config.coolDownBeforeVotingStart.toString(),
+                votingDuration: votingConfig.config.votingDuration.toString(),
+                quorum: votingConfig.config.yesThreshold.toString(),
+                differential: votingConfig.config.yesNoDifferential.toString(),
+                minPropositionPower: votingConfig.config.minPropositionPower.toString()
+              }
+            };
+          });
+          return {
+            votingConfigs,
+            precisionDivider: data.precisionDivider.toString(),
+            cooldownPeriod: data.cooldownPeriod.toString(),
+            expirationTime: data.expirationTime.toString(),
+            cancellationFee: data.cancellationFee.toString()
+          };
+        });
+      }
+      getProposalsData(govCore, from, to, pageSize) {
+        return __async(this, null, function* () {
+          const data = yield this._contract.getProposalsData(govCore, from, to, pageSize);
+          return data.map((proposalData) => {
+            return {
+              id: proposalData.id.toString(),
+              votingChainId: proposalData.votingChainId.toNumber(),
+              proposalData: {
+                state: proposalData.proposalData.state,
+                accessLevel: proposalData.proposalData.accessLevel,
+                creationTime: proposalData.proposalData.creationTime,
+                votingDuration: proposalData.proposalData.votingDuration,
+                votingActivationTime: proposalData.proposalData.votingActivationTime,
+                queuingTime: proposalData.proposalData.queuingTime,
+                cancelTimestamp: proposalData.proposalData.cancelTimestamp,
+                creator: proposalData.proposalData.creator,
+                votingPortal: proposalData.proposalData.votingPortal,
+                snapshotBlockHash: proposalData.proposalData.snapshotBlockHash,
+                ipfsHash: proposalData.proposalData.ipfsHash,
+                forVotes: proposalData.proposalData.forVotes.toString(),
+                againstVotes: proposalData.proposalData.againstVotes.toString(),
+                cancellationFee: proposalData.proposalData.cancellationFee.toString(),
+                payloads: proposalData.proposalData.payloads.map((payload) => {
+                  return {
+                    chain: payload.chain.toNumber(),
+                    accessLevel: payload.accessLevel,
+                    payloadsController: payload.payloadsController,
+                    payloadId: payload.payloadId
+                  };
+                })
+              }
+            };
+          });
+        });
+      }
+      getRepresentationData(govCore, wallet, chainIds) {
+        return __async(this, null, function* () {
+          const data = yield this._contract.getRepresentationData(govCore, wallet, chainIds);
+          return {
+            Representatives: data[0].map((representative) => {
+              return {
+                chainId: representative.chainId.toNumber(),
+                representative: representative.representative
+              };
+            }),
+            Represented: data[1].map((represented) => {
+              return {
+                chainId: represented.chainId.toNumber(),
+                votersRepresented: represented.votersRepresented
+              };
+            })
+          };
+        });
+      }
+    };
+    exports2.GovernanceDataHelperService = GovernanceDataHelperService;
+  }
+});
+
+// node_modules/@pollum-io/contract-helpers/dist/cjs/governance-v3/typechain/factories/VotingMachine__factory.js
+var require_VotingMachine_factory = __commonJS({
+  "node_modules/@pollum-io/contract-helpers/dist/cjs/governance-v3/typechain/factories/VotingMachine__factory.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.VotingMachine__factory = void 0;
+    var ethers_1 = require_lib31();
+    var _abi = [
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "crossChainController",
+            type: "address"
+          },
+          {
+            internalType: "uint256",
+            name: "gasLimit",
+            type: "uint256"
+          },
+          {
+            internalType: "uint256",
+            name: "l1VotingPortalChainId",
+            type: "uint256"
+          },
+          {
+            internalType: "contract IVotingStrategy",
+            name: "votingStrategy",
+            type: "address"
+          },
+          {
+            internalType: "address",
+            name: "l1VotingPortal",
+            type: "address"
+          },
+          {
+            internalType: "address",
+            name: "governance",
+            type: "address"
+          }
+        ],
+        stateMutability: "nonpayable",
+        type: "constructor"
+      },
+      {
+        inputs: [],
+        name: "ECDSAInvalidSignature",
+        type: "error"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "length",
+            type: "uint256"
+          }
+        ],
+        name: "ECDSAInvalidSignatureLength",
+        type: "error"
+      },
+      {
+        inputs: [
+          {
+            internalType: "bytes32",
+            name: "s",
+            type: "bytes32"
+          }
+        ],
+        name: "ECDSAInvalidSignatureS",
+        type: "error"
+      },
+      {
+        inputs: [],
+        name: "InvalidShortString",
+        type: "error"
+      },
+      {
+        inputs: [
+          {
+            internalType: "string",
+            name: "str",
+            type: "string"
+          }
+        ],
+        name: "StringTooLong",
+        type: "error"
+      },
+      {
+        anonymous: false,
+        inputs: [],
+        name: "EIP712DomainChanged",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "uint256",
+            name: "gasLimit",
+            type: "uint256"
+          }
+        ],
+        name: "GasLimitUpdated",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "address",
+            name: "originSender",
+            type: "address"
+          },
+          {
+            indexed: true,
+            internalType: "uint256",
+            name: "originChainId",
+            type: "uint256"
+          },
+          {
+            indexed: false,
+            internalType: "bytes",
+            name: "message",
+            type: "bytes"
+          },
+          {
+            indexed: false,
+            internalType: "bytes",
+            name: "reason",
+            type: "bytes"
+          }
+        ],
+        name: "IncorrectTypeMessageReceived",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "address",
+            name: "originSender",
+            type: "address"
+          },
+          {
+            indexed: true,
+            internalType: "uint256",
+            name: "originChainId",
+            type: "uint256"
+          },
+          {
+            indexed: true,
+            internalType: "bool",
+            name: "delivered",
+            type: "bool"
+          },
+          {
+            indexed: false,
+            internalType: "enum IVotingPortal.MessageType",
+            name: "messageType",
+            type: "uint8"
+          },
+          {
+            indexed: false,
+            internalType: "bytes",
+            name: "message",
+            type: "bytes"
+          },
+          {
+            indexed: false,
+            internalType: "bytes",
+            name: "reason",
+            type: "bytes"
+          }
+        ],
+        name: "MessageReceived",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "address",
+            name: "previousOwner",
+            type: "address"
+          },
+          {
+            indexed: true,
+            internalType: "address",
+            name: "newOwner",
+            type: "address"
+          }
+        ],
+        name: "OwnershipTransferred",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "uint256",
+            name: "proposalId",
+            type: "uint256"
+          },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "forVotes",
+            type: "uint256"
+          },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "againstVotes",
+            type: "uint256"
+          }
+        ],
+        name: "ProposalResultsSent",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "uint256",
+            name: "proposalId",
+            type: "uint256"
+          },
+          {
+            indexed: true,
+            internalType: "bytes32",
+            name: "blockHash",
+            type: "bytes32"
+          },
+          {
+            indexed: false,
+            internalType: "uint24",
+            name: "votingDuration",
+            type: "uint24"
+          },
+          {
+            indexed: true,
+            internalType: "bool",
+            name: "voteCreated",
+            type: "bool"
+          }
+        ],
+        name: "ProposalVoteConfigurationBridged",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "uint256",
+            name: "proposalId",
+            type: "uint256"
+          },
+          {
+            indexed: true,
+            internalType: "bytes32",
+            name: "l1BlockHash",
+            type: "bytes32"
+          },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "startTime",
+            type: "uint256"
+          },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "endTime",
+            type: "uint256"
+          }
+        ],
+        name: "ProposalVoteStarted",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "uint256",
+            name: "proposalId",
+            type: "uint256"
+          },
+          {
+            indexed: true,
+            internalType: "address",
+            name: "voter",
+            type: "address"
+          },
+          {
+            indexed: true,
+            internalType: "bool",
+            name: "support",
+            type: "bool"
+          },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "votingPower",
+            type: "uint256"
+          }
+        ],
+        name: "VoteEmitted",
+        type: "event"
+      },
+      {
+        inputs: [],
+        name: "CROSS_CHAIN_CONTROLLER",
+        outputs: [
+          {
+            internalType: "address",
+            name: "",
+            type: "address"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "DATA_WAREHOUSE",
+        outputs: [
+          {
+            internalType: "contract IDataWarehouse",
+            name: "",
+            type: "address"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "DOMAIN_SEPARATOR",
+        outputs: [
+          {
+            internalType: "bytes32",
+            name: "",
+            type: "bytes32"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "GOVERNANCE",
+        outputs: [
+          {
+            internalType: "address",
+            name: "",
+            type: "address"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "L1_VOTING_PORTAL",
+        outputs: [
+          {
+            internalType: "address",
+            name: "",
+            type: "address"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "L1_VOTING_PORTAL_CHAIN_ID",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "NAME",
+        outputs: [
+          {
+            internalType: "string",
+            name: "",
+            type: "string"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "REPRESENTATIVES_SLOT",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "VOTE_SUBMITTED_BY_REPRESENTATIVE_TYPEHASH",
+        outputs: [
+          {
+            internalType: "bytes32",
+            name: "",
+            type: "bytes32"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "VOTE_SUBMITTED_TYPEHASH",
+        outputs: [
+          {
+            internalType: "bytes32",
+            name: "",
+            type: "bytes32"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "VOTING_ASSET_WITH_SLOT_RAW",
+        outputs: [
+          {
+            internalType: "string",
+            name: "",
+            type: "string"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "VOTING_ASSET_WITH_SLOT_TYPEHASH",
+        outputs: [
+          {
+            internalType: "bytes32",
+            name: "",
+            type: "bytes32"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "VOTING_STRATEGY",
+        outputs: [
+          {
+            internalType: "contract IVotingStrategy",
+            name: "",
+            type: "address"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "proposalId",
+            type: "uint256"
+          }
+        ],
+        name: "closeAndSendVote",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "bytes",
+            name: "message",
+            type: "bytes"
+          }
+        ],
+        name: "decodeMessage",
+        outputs: [
+          {
+            internalType: "enum IVotingPortal.MessageType",
+            name: "",
+            type: "uint8"
+          },
+          {
+            internalType: "bytes",
+            name: "",
+            type: "bytes"
+          }
+        ],
+        stateMutability: "pure",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "bytes",
+            name: "message",
+            type: "bytes"
+          }
+        ],
+        name: "decodeProposalMessage",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          },
+          {
+            internalType: "bytes32",
+            name: "",
+            type: "bytes32"
+          },
+          {
+            internalType: "uint24",
+            name: "",
+            type: "uint24"
+          }
+        ],
+        stateMutability: "pure",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "bytes",
+            name: "message",
+            type: "bytes"
+          }
+        ],
+        name: "decodeVoteMessage",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          },
+          {
+            internalType: "address",
+            name: "",
+            type: "address"
+          },
+          {
+            internalType: "bool",
+            name: "",
+            type: "bool"
+          },
+          {
+            components: [
+              {
+                internalType: "address",
+                name: "underlyingAsset",
+                type: "address"
+              },
+              {
+                internalType: "uint128",
+                name: "slot",
+                type: "uint128"
+              }
+            ],
+            internalType: "struct IVotingMachineWithProofs.VotingAssetWithSlot[]",
+            name: "",
+            type: "tuple[]"
+          }
+        ],
+        stateMutability: "pure",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "eip712Domain",
+        outputs: [
+          {
+            internalType: "bytes1",
+            name: "fields",
+            type: "bytes1"
+          },
+          {
+            internalType: "string",
+            name: "name",
+            type: "string"
+          },
+          {
+            internalType: "string",
+            name: "version",
+            type: "string"
+          },
+          {
+            internalType: "uint256",
+            name: "chainId",
+            type: "uint256"
+          },
+          {
+            internalType: "address",
+            name: "verifyingContract",
+            type: "address"
+          },
+          {
+            internalType: "bytes32",
+            name: "salt",
+            type: "bytes32"
+          },
+          {
+            internalType: "uint256[]",
+            name: "extensions",
+            type: "uint256[]"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "getGasLimit",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "proposalId",
+            type: "uint256"
+          }
+        ],
+        name: "getProposalById",
+        outputs: [
+          {
+            components: [
+              {
+                internalType: "uint256",
+                name: "id",
+                type: "uint256"
+              },
+              {
+                internalType: "bool",
+                name: "sentToGovernance",
+                type: "bool"
+              },
+              {
+                internalType: "uint40",
+                name: "startTime",
+                type: "uint40"
+              },
+              {
+                internalType: "uint40",
+                name: "endTime",
+                type: "uint40"
+              },
+              {
+                internalType: "uint40",
+                name: "votingClosedAndSentTimestamp",
+                type: "uint40"
+              },
+              {
+                internalType: "uint128",
+                name: "forVotes",
+                type: "uint128"
+              },
+              {
+                internalType: "uint128",
+                name: "againstVotes",
+                type: "uint128"
+              },
+              {
+                internalType: "uint256",
+                name: "creationBlockNumber",
+                type: "uint256"
+              },
+              {
+                internalType: "uint256",
+                name: "votingClosedAndSentBlockNumber",
+                type: "uint256"
+              }
+            ],
+            internalType: "struct IVotingMachineWithProofs.ProposalWithoutVotes",
+            name: "",
+            type: "tuple"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "proposalId",
+            type: "uint256"
+          }
+        ],
+        name: "getProposalState",
+        outputs: [
+          {
+            internalType: "enum IVotingMachineWithProofs.ProposalState",
+            name: "",
+            type: "uint8"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "proposalId",
+            type: "uint256"
+          }
+        ],
+        name: "getProposalVoteConfiguration",
+        outputs: [
+          {
+            components: [
+              {
+                internalType: "uint24",
+                name: "votingDuration",
+                type: "uint24"
+              },
+              {
+                internalType: "bytes32",
+                name: "l1ProposalBlockHash",
+                type: "bytes32"
+              }
+            ],
+            internalType: "struct IVotingMachineWithProofs.ProposalVoteConfiguration",
+            name: "",
+            type: "tuple"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "skip",
+            type: "uint256"
+          },
+          {
+            internalType: "uint256",
+            name: "size",
+            type: "uint256"
+          }
+        ],
+        name: "getProposalsVoteConfigurationIds",
+        outputs: [
+          {
+            internalType: "uint256[]",
+            name: "",
+            type: "uint256[]"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "user",
+            type: "address"
+          },
+          {
+            internalType: "uint256",
+            name: "proposalId",
+            type: "uint256"
+          }
+        ],
+        name: "getUserProposalVote",
+        outputs: [
+          {
+            components: [
+              {
+                internalType: "bool",
+                name: "support",
+                type: "bool"
+              },
+              {
+                internalType: "uint248",
+                name: "votingPower",
+                type: "uint248"
+              }
+            ],
+            internalType: "struct IVotingMachineWithProofs.Vote",
+            name: "",
+            type: "tuple"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "owner",
+        outputs: [
+          {
+            internalType: "address",
+            name: "",
+            type: "address"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "originSender",
+            type: "address"
+          },
+          {
+            internalType: "uint256",
+            name: "originChainId",
+            type: "uint256"
+          },
+          {
+            internalType: "bytes",
+            name: "messageWithType",
+            type: "bytes"
+          }
+        ],
+        name: "receiveCrossChainMessage",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "renounceOwnership",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "proposalId",
+            type: "uint256"
+          }
+        ],
+        name: "startProposalVote",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "proposalId",
+            type: "uint256"
+          },
+          {
+            internalType: "bool",
+            name: "support",
+            type: "bool"
+          },
+          {
+            components: [
+              {
+                internalType: "address",
+                name: "underlyingAsset",
+                type: "address"
+              },
+              {
+                internalType: "uint128",
+                name: "slot",
+                type: "uint128"
+              },
+              {
+                internalType: "bytes",
+                name: "proof",
+                type: "bytes"
+              }
+            ],
+            internalType: "struct IVotingMachineWithProofs.VotingBalanceProof[]",
+            name: "votingBalanceProofs",
+            type: "tuple[]"
+          }
+        ],
+        name: "submitVote",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "proposalId",
+            type: "uint256"
+          },
+          {
+            internalType: "bool",
+            name: "support",
+            type: "bool"
+          },
+          {
+            internalType: "address",
+            name: "voter",
+            type: "address"
+          },
+          {
+            internalType: "bytes",
+            name: "proofOfRepresentation",
+            type: "bytes"
+          },
+          {
+            components: [
+              {
+                internalType: "address",
+                name: "underlyingAsset",
+                type: "address"
+              },
+              {
+                internalType: "uint128",
+                name: "slot",
+                type: "uint128"
+              },
+              {
+                internalType: "bytes",
+                name: "proof",
+                type: "bytes"
+              }
+            ],
+            internalType: "struct IVotingMachineWithProofs.VotingBalanceProof[]",
+            name: "votingBalanceProofs",
+            type: "tuple[]"
+          }
+        ],
+        name: "submitVoteAsRepresentative",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "proposalId",
+            type: "uint256"
+          },
+          {
+            internalType: "address",
+            name: "voter",
+            type: "address"
+          },
+          {
+            internalType: "address",
+            name: "representative",
+            type: "address"
+          },
+          {
+            internalType: "bool",
+            name: "support",
+            type: "bool"
+          },
+          {
+            internalType: "bytes",
+            name: "proofOfRepresentation",
+            type: "bytes"
+          },
+          {
+            components: [
+              {
+                internalType: "address",
+                name: "underlyingAsset",
+                type: "address"
+              },
+              {
+                internalType: "uint128",
+                name: "slot",
+                type: "uint128"
+              },
+              {
+                internalType: "bytes",
+                name: "proof",
+                type: "bytes"
+              }
+            ],
+            internalType: "struct IVotingMachineWithProofs.VotingBalanceProof[]",
+            name: "votingBalanceProofs",
+            type: "tuple[]"
+          },
+          {
+            components: [
+              {
+                internalType: "uint8",
+                name: "v",
+                type: "uint8"
+              },
+              {
+                internalType: "bytes32",
+                name: "r",
+                type: "bytes32"
+              },
+              {
+                internalType: "bytes32",
+                name: "s",
+                type: "bytes32"
+              }
+            ],
+            internalType: "struct IVotingMachineWithProofs.SignatureParams",
+            name: "signatureParams",
+            type: "tuple"
+          }
+        ],
+        name: "submitVoteAsRepresentativeBySignature",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "proposalId",
+            type: "uint256"
+          },
+          {
+            internalType: "address",
+            name: "voter",
+            type: "address"
+          },
+          {
+            internalType: "bool",
+            name: "support",
+            type: "bool"
+          },
+          {
+            components: [
+              {
+                internalType: "address",
+                name: "underlyingAsset",
+                type: "address"
+              },
+              {
+                internalType: "uint128",
+                name: "slot",
+                type: "uint128"
+              },
+              {
+                internalType: "bytes",
+                name: "proof",
+                type: "bytes"
+              }
+            ],
+            internalType: "struct IVotingMachineWithProofs.VotingBalanceProof[]",
+            name: "votingBalanceProofs",
+            type: "tuple[]"
+          },
+          {
+            internalType: "uint8",
+            name: "v",
+            type: "uint8"
+          },
+          {
+            internalType: "bytes32",
+            name: "r",
+            type: "bytes32"
+          },
+          {
+            internalType: "bytes32",
+            name: "s",
+            type: "bytes32"
+          }
+        ],
+        name: "submitVoteBySignature",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "newOwner",
+            type: "address"
+          }
+        ],
+        name: "transferOwnership",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "gasLimit",
+            type: "uint256"
+          }
+        ],
+        name: "updateGasLimit",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      }
+    ];
+    var VotingMachine__factory = class {
+      static createInterface() {
+        return new ethers_1.utils.Interface(_abi);
+      }
+      static connect(address, signerOrProvider) {
+        return new ethers_1.Contract(address, _abi, signerOrProvider);
+      }
+    };
+    exports2.VotingMachine__factory = VotingMachine__factory;
+    VotingMachine__factory.abi = _abi;
+  }
+});
+
+// node_modules/@pollum-io/contract-helpers/dist/cjs/governance-v3/typechain/factories/VotingMachineDataHelper__factory.js
+var require_VotingMachineDataHelper_factory = __commonJS({
+  "node_modules/@pollum-io/contract-helpers/dist/cjs/governance-v3/typechain/factories/VotingMachineDataHelper__factory.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.VotingMachineDataHelper__factory = void 0;
+    var ethers_1 = require_lib31();
+    var _abi = [
+      {
+        inputs: [
+          {
+            internalType: "contract IVotingMachineWithProofs",
+            name: "votingMachine",
+            type: "address"
+          },
+          {
+            components: [
+              {
+                internalType: "uint256",
+                name: "id",
+                type: "uint256"
+              },
+              {
+                internalType: "bytes32",
+                name: "snapshotBlockHash",
+                type: "bytes32"
+              }
+            ],
+            internalType: "struct IVotingMachineDataHelper.InitialProposal[]",
+            name: "initialProposals",
+            type: "tuple[]"
+          },
+          {
+            internalType: "address",
+            name: "user",
+            type: "address"
+          }
+        ],
+        name: "getProposalsData",
+        outputs: [
+          {
+            components: [
+              {
+                components: [
+                  {
+                    internalType: "uint256",
+                    name: "id",
+                    type: "uint256"
+                  },
+                  {
+                    internalType: "bool",
+                    name: "sentToGovernance",
+                    type: "bool"
+                  },
+                  {
+                    internalType: "uint40",
+                    name: "startTime",
+                    type: "uint40"
+                  },
+                  {
+                    internalType: "uint40",
+                    name: "endTime",
+                    type: "uint40"
+                  },
+                  {
+                    internalType: "uint40",
+                    name: "votingClosedAndSentTimestamp",
+                    type: "uint40"
+                  },
+                  {
+                    internalType: "uint128",
+                    name: "forVotes",
+                    type: "uint128"
+                  },
+                  {
+                    internalType: "uint128",
+                    name: "againstVotes",
+                    type: "uint128"
+                  },
+                  {
+                    internalType: "uint256",
+                    name: "creationBlockNumber",
+                    type: "uint256"
+                  },
+                  {
+                    internalType: "uint256",
+                    name: "votingClosedAndSentBlockNumber",
+                    type: "uint256"
+                  }
+                ],
+                internalType: "struct IVotingMachineWithProofs.ProposalWithoutVotes",
+                name: "proposalData",
+                type: "tuple"
+              },
+              {
+                components: [
+                  {
+                    internalType: "bool",
+                    name: "support",
+                    type: "bool"
+                  },
+                  {
+                    internalType: "uint248",
+                    name: "votingPower",
+                    type: "uint248"
+                  }
+                ],
+                internalType: "struct IVotingMachineDataHelper.VotedInfo",
+                name: "votedInfo",
+                type: "tuple"
+              },
+              {
+                internalType: "contract IVotingStrategy",
+                name: "strategy",
+                type: "address"
+              },
+              {
+                internalType: "contract IDataWarehouse",
+                name: "dataWarehouse",
+                type: "address"
+              },
+              {
+                internalType: "address[]",
+                name: "votingAssets",
+                type: "address[]"
+              },
+              {
+                internalType: "bool",
+                name: "hasRequiredRoots",
+                type: "bool"
+              },
+              {
+                components: [
+                  {
+                    internalType: "uint24",
+                    name: "votingDuration",
+                    type: "uint24"
+                  },
+                  {
+                    internalType: "bytes32",
+                    name: "l1ProposalBlockHash",
+                    type: "bytes32"
+                  }
+                ],
+                internalType: "struct IVotingMachineWithProofs.ProposalVoteConfiguration",
+                name: "voteConfig",
+                type: "tuple"
+              },
+              {
+                internalType: "enum IVotingMachineWithProofs.ProposalState",
+                name: "state",
+                type: "uint8"
+              }
+            ],
+            internalType: "struct IVotingMachineDataHelper.Proposal[]",
+            name: "",
+            type: "tuple[]"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      }
+    ];
+    var VotingMachineDataHelper__factory = class {
+      static createInterface() {
+        return new ethers_1.utils.Interface(_abi);
+      }
+      static connect(address, signerOrProvider) {
+        return new ethers_1.Contract(address, _abi, signerOrProvider);
+      }
+    };
+    exports2.VotingMachineDataHelper__factory = VotingMachineDataHelper__factory;
+    VotingMachineDataHelper__factory.abi = _abi;
+  }
+});
+
+// node_modules/@pollum-io/contract-helpers/dist/cjs/governance-v3/typechain/index.js
+var require_typechain = __commonJS({
+  "node_modules/@pollum-io/contract-helpers/dist/cjs/governance-v3/typechain/index.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.PegasysTokenV3__factory = exports2.VotingMachineDataHelper__factory = exports2.VotingMachine__factory = exports2.GovernanceDataHelper__factory = void 0;
+    var GovernanceDataHelper__factory_1 = require_GovernanceDataHelper_factory();
+    Object.defineProperty(exports2, "GovernanceDataHelper__factory", { enumerable: true, get: function() {
+      return GovernanceDataHelper__factory_1.GovernanceDataHelper__factory;
+    } });
+    var VotingMachine__factory_1 = require_VotingMachine_factory();
+    Object.defineProperty(exports2, "VotingMachine__factory", { enumerable: true, get: function() {
+      return VotingMachine__factory_1.VotingMachine__factory;
+    } });
+    var VotingMachineDataHelper__factory_1 = require_VotingMachineDataHelper_factory();
+    Object.defineProperty(exports2, "VotingMachineDataHelper__factory", { enumerable: true, get: function() {
+      return VotingMachineDataHelper__factory_1.VotingMachineDataHelper__factory;
+    } });
+    var PegasysTokenV3__factory_1 = require_PegasysTokenV3_factory();
+    Object.defineProperty(exports2, "PegasysTokenV3__factory", { enumerable: true, get: function() {
+      return PegasysTokenV3__factory_1.PegasysTokenV3__factory;
+    } });
+  }
+});
+
+// node_modules/@pollum-io/contract-helpers/dist/cjs/governance-v3/voting-machine-data-helper/index.js
+var require_voting_machine_data_helper = __commonJS({
+  "node_modules/@pollum-io/contract-helpers/dist/cjs/governance-v3/voting-machine-data-helper/index.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.VotingMachineDataHelperService = exports2.VotingMachineProposalState = void 0;
+    var index_1 = require_typechain();
+    var VotingMachineProposalState;
+    (function(VotingMachineProposalState2) {
+      VotingMachineProposalState2[VotingMachineProposalState2["NotCreated"] = 0] = "NotCreated";
+      VotingMachineProposalState2[VotingMachineProposalState2["Active"] = 1] = "Active";
+      VotingMachineProposalState2[VotingMachineProposalState2["Finished"] = 2] = "Finished";
+      VotingMachineProposalState2[VotingMachineProposalState2["SentToGovernance"] = 3] = "SentToGovernance";
+    })(VotingMachineProposalState = exports2.VotingMachineProposalState || (exports2.VotingMachineProposalState = {}));
+    var VotingMachineDataHelperService = class {
+      constructor(votingMachineDataHelperContractAddress, provider) {
+        this._contract = index_1.VotingMachineDataHelper__factory.connect(votingMachineDataHelperContractAddress, provider);
+      }
+      getProposalsData(votingMachineContractAddress, proposals, userAddress) {
+        return __async(this, null, function* () {
+          const data = yield this._contract.getProposalsData(votingMachineContractAddress, proposals, userAddress !== null && userAddress !== void 0 ? userAddress : "0x0");
+          return data.map((proposal) => {
+            return {
+              proposalData: {
+                id: proposal.proposalData.id.toString(),
+                sentToGovernance: proposal.proposalData.sentToGovernance,
+                startTime: proposal.proposalData.startTime,
+                endTime: proposal.proposalData.endTime,
+                votingClosedAndSentTimestamp: proposal.proposalData.votingClosedAndSentTimestamp,
+                forVotes: proposal.proposalData.forVotes.toString(),
+                againstVotes: proposal.proposalData.againstVotes.toString(),
+                creationBlockNumber: proposal.proposalData.creationBlockNumber.toNumber(),
+                votingClosedAndSentBlockNumber: proposal.proposalData.votingClosedAndSentBlockNumber.toNumber()
+              },
+              votedInfo: {
+                support: proposal.votedInfo.support,
+                votingPower: proposal.votedInfo.votingPower.toString()
+              },
+              strategy: proposal.strategy,
+              dataWarehouse: proposal.dataWarehouse,
+              votingAssets: proposal.votingAssets,
+              hasRequiredRoots: proposal.hasRequiredRoots,
+              voteConfig: {
+                votingDuration: proposal.voteConfig.votingDuration.toString(),
+                l1ProposalBlockHash: proposal.voteConfig.l1ProposalBlockHash
+              },
+              state: proposal.state
+            };
+          });
+        });
+      }
+    };
+    exports2.VotingMachineDataHelperService = VotingMachineDataHelperService;
+  }
+});
+
+// node_modules/@pollum-io/contract-helpers/dist/cjs/governance-v3/typechain/factories/GovernanceCore__factory.js
+var require_GovernanceCore_factory = __commonJS({
+  "node_modules/@pollum-io/contract-helpers/dist/cjs/governance-v3/typechain/factories/GovernanceCore__factory.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.GovernanceCore__factory = void 0;
+    var ethers_1 = require_lib31();
+    var _abi = [
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "uint256",
+            name: "proposalId",
+            type: "uint256"
+          },
+          {
+            indexed: true,
+            internalType: "address",
+            name: "to",
+            type: "address"
+          },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "cancellationFee",
+            type: "uint256"
+          },
+          {
+            indexed: true,
+            internalType: "bool",
+            name: "success",
+            type: "bool"
+          }
+        ],
+        name: "CancellationFeeRedeemed",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "cancellationFee",
+            type: "uint256"
+          }
+        ],
+        name: "CancellationFeeUpdated",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: false,
+            internalType: "address",
+            name: "oldGuardian",
+            type: "address"
+          },
+          {
+            indexed: false,
+            internalType: "address",
+            name: "newGuardian",
+            type: "address"
+          }
+        ],
+        name: "GuardianUpdated",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: false,
+            internalType: "uint8",
+            name: "version",
+            type: "uint8"
+          }
+        ],
+        name: "Initialized",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "address",
+            name: "previousOwner",
+            type: "address"
+          },
+          {
+            indexed: true,
+            internalType: "address",
+            name: "newOwner",
+            type: "address"
+          }
+        ],
+        name: "OwnershipTransferred",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "uint256",
+            name: "proposalId",
+            type: "uint256"
+          },
+          {
+            indexed: false,
+            internalType: "uint40",
+            name: "payloadId",
+            type: "uint40"
+          },
+          {
+            indexed: true,
+            internalType: "address",
+            name: "payloadsController",
+            type: "address"
+          },
+          {
+            indexed: true,
+            internalType: "uint256",
+            name: "chainId",
+            type: "uint256"
+          },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "payloadNumberOnProposal",
+            type: "uint256"
+          },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "numberOfPayloadsOnProposal",
+            type: "uint256"
+          }
+        ],
+        name: "PayloadSent",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "address",
+            name: "newPowerStrategy",
+            type: "address"
+          }
+        ],
+        name: "PowerStrategyUpdated",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "uint256",
+            name: "proposalId",
+            type: "uint256"
+          }
+        ],
+        name: "ProposalCanceled",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "uint256",
+            name: "proposalId",
+            type: "uint256"
+          },
+          {
+            indexed: true,
+            internalType: "address",
+            name: "creator",
+            type: "address"
+          },
+          {
+            indexed: true,
+            internalType: "enum PayloadsControllerUtils.AccessControl",
+            name: "accessLevel",
+            type: "uint8"
+          },
+          {
+            indexed: false,
+            internalType: "bytes32",
+            name: "ipfsHash",
+            type: "bytes32"
+          }
+        ],
+        name: "ProposalCreated",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "uint256",
+            name: "proposalId",
+            type: "uint256"
+          }
+        ],
+        name: "ProposalExecuted",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "uint256",
+            name: "proposalId",
+            type: "uint256"
+          },
+          {
+            indexed: false,
+            internalType: "uint128",
+            name: "votesFor",
+            type: "uint128"
+          },
+          {
+            indexed: false,
+            internalType: "uint128",
+            name: "votesAgainst",
+            type: "uint128"
+          }
+        ],
+        name: "ProposalFailed",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "uint256",
+            name: "proposalId",
+            type: "uint256"
+          },
+          {
+            indexed: false,
+            internalType: "uint128",
+            name: "votesFor",
+            type: "uint128"
+          },
+          {
+            indexed: false,
+            internalType: "uint128",
+            name: "votesAgainst",
+            type: "uint128"
+          }
+        ],
+        name: "ProposalQueued",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "address",
+            name: "voter",
+            type: "address"
+          },
+          {
+            indexed: true,
+            internalType: "address",
+            name: "representative",
+            type: "address"
+          },
+          {
+            indexed: true,
+            internalType: "uint256",
+            name: "chainId",
+            type: "uint256"
+          }
+        ],
+        name: "RepresentativeUpdated",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "uint256",
+            name: "proposalId",
+            type: "uint256"
+          },
+          {
+            indexed: true,
+            internalType: "address",
+            name: "voter",
+            type: "address"
+          },
+          {
+            indexed: true,
+            internalType: "bool",
+            name: "support",
+            type: "bool"
+          },
+          {
+            components: [
+              {
+                internalType: "address",
+                name: "underlyingAsset",
+                type: "address"
+              },
+              {
+                internalType: "uint128",
+                name: "slot",
+                type: "uint128"
+              }
+            ],
+            indexed: false,
+            internalType: "struct IVotingMachineWithProofs.VotingAssetWithSlot[]",
+            name: "votingAssetsWithSlot",
+            type: "tuple[]"
+          }
+        ],
+        name: "VoteForwarded",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "uint256",
+            name: "proposalId",
+            type: "uint256"
+          },
+          {
+            indexed: true,
+            internalType: "bytes32",
+            name: "snapshotBlockHash",
+            type: "bytes32"
+          },
+          {
+            indexed: false,
+            internalType: "uint24",
+            name: "votingDuration",
+            type: "uint24"
+          }
+        ],
+        name: "VotingActivated",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "enum PayloadsControllerUtils.AccessControl",
+            name: "accessLevel",
+            type: "uint8"
+          },
+          {
+            indexed: false,
+            internalType: "uint24",
+            name: "votingDuration",
+            type: "uint24"
+          },
+          {
+            indexed: false,
+            internalType: "uint24",
+            name: "coolDownBeforeVotingStart",
+            type: "uint24"
+          },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "yesThreshold",
+            type: "uint256"
+          },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "yesNoDifferential",
+            type: "uint256"
+          },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "minPropositionPower",
+            type: "uint256"
+          }
+        ],
+        name: "VotingConfigUpdated",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "address",
+            name: "votingPortal",
+            type: "address"
+          },
+          {
+            indexed: true,
+            internalType: "bool",
+            name: "approved",
+            type: "bool"
+          }
+        ],
+        name: "VotingPortalUpdated",
+        type: "event"
+      },
+      {
+        inputs: [],
+        name: "ACHIEVABLE_VOTING_PARTICIPATION",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "CANCELLATION_FEE_COLLECTOR",
+        outputs: [
+          {
+            internalType: "address",
+            name: "",
+            type: "address"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "COOLDOWN_PERIOD",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "MIN_VOTING_DURATION",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "NAME",
+        outputs: [
+          {
+            internalType: "string",
+            name: "",
+            type: "string"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "PRECISION_DIVIDER",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "PROPOSAL_EXPIRATION_TIME",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "VOTING_TOKENS_CAP",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "proposalId",
+            type: "uint256"
+          }
+        ],
+        name: "activateVoting",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address[]",
+            name: "votingPortals",
+            type: "address[]"
+          }
+        ],
+        name: "addVotingPortals",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "proposalId",
+            type: "uint256"
+          }
+        ],
+        name: "cancelProposal",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            components: [
+              {
+                internalType: "uint256",
+                name: "chain",
+                type: "uint256"
+              },
+              {
+                internalType: "enum PayloadsControllerUtils.AccessControl",
+                name: "accessLevel",
+                type: "uint8"
+              },
+              {
+                internalType: "address",
+                name: "payloadsController",
+                type: "address"
+              },
+              {
+                internalType: "uint40",
+                name: "payloadId",
+                type: "uint40"
+              }
+            ],
+            internalType: "struct PayloadsControllerUtils.Payload[]",
+            name: "payloads",
+            type: "tuple[]"
+          },
+          {
+            internalType: "address",
+            name: "votingPortal",
+            type: "address"
+          },
+          {
+            internalType: "bytes32",
+            name: "ipfsHash",
+            type: "bytes32"
+          }
+        ],
+        name: "createProposal",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "payable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "proposalId",
+            type: "uint256"
+          }
+        ],
+        name: "executeProposal",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "getCancellationFee",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "getPowerStrategy",
+        outputs: [
+          {
+            internalType: "contract IGovernancePowerStrategy",
+            name: "",
+            type: "address"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "proposalId",
+            type: "uint256"
+          }
+        ],
+        name: "getProposal",
+        outputs: [
+          {
+            components: [
+              {
+                internalType: "enum IGovernanceCore.State",
+                name: "state",
+                type: "uint8"
+              },
+              {
+                internalType: "enum PayloadsControllerUtils.AccessControl",
+                name: "accessLevel",
+                type: "uint8"
+              },
+              {
+                internalType: "uint40",
+                name: "creationTime",
+                type: "uint40"
+              },
+              {
+                internalType: "uint24",
+                name: "votingDuration",
+                type: "uint24"
+              },
+              {
+                internalType: "uint40",
+                name: "votingActivationTime",
+                type: "uint40"
+              },
+              {
+                internalType: "uint40",
+                name: "queuingTime",
+                type: "uint40"
+              },
+              {
+                internalType: "uint40",
+                name: "cancelTimestamp",
+                type: "uint40"
+              },
+              {
+                internalType: "address",
+                name: "creator",
+                type: "address"
+              },
+              {
+                internalType: "address",
+                name: "votingPortal",
+                type: "address"
+              },
+              {
+                internalType: "bytes32",
+                name: "snapshotBlockHash",
+                type: "bytes32"
+              },
+              {
+                internalType: "bytes32",
+                name: "ipfsHash",
+                type: "bytes32"
+              },
+              {
+                internalType: "uint128",
+                name: "forVotes",
+                type: "uint128"
+              },
+              {
+                internalType: "uint128",
+                name: "againstVotes",
+                type: "uint128"
+              },
+              {
+                internalType: "uint256",
+                name: "cancellationFee",
+                type: "uint256"
+              },
+              {
+                components: [
+                  {
+                    internalType: "uint256",
+                    name: "chain",
+                    type: "uint256"
+                  },
+                  {
+                    internalType: "enum PayloadsControllerUtils.AccessControl",
+                    name: "accessLevel",
+                    type: "uint8"
+                  },
+                  {
+                    internalType: "address",
+                    name: "payloadsController",
+                    type: "address"
+                  },
+                  {
+                    internalType: "uint40",
+                    name: "payloadId",
+                    type: "uint40"
+                  }
+                ],
+                internalType: "struct PayloadsControllerUtils.Payload[]",
+                name: "payloads",
+                type: "tuple[]"
+              }
+            ],
+            internalType: "struct IGovernanceCore.Proposal",
+            name: "",
+            type: "tuple"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "proposalId",
+            type: "uint256"
+          }
+        ],
+        name: "getProposalState",
+        outputs: [
+          {
+            internalType: "enum IGovernanceCore.State",
+            name: "",
+            type: "uint8"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "getProposalsCount",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "voter",
+            type: "address"
+          },
+          {
+            internalType: "uint256",
+            name: "chainId",
+            type: "uint256"
+          }
+        ],
+        name: "getRepresentativeByChain",
+        outputs: [
+          {
+            internalType: "address",
+            name: "",
+            type: "address"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "representative",
+            type: "address"
+          },
+          {
+            internalType: "uint256",
+            name: "chainId",
+            type: "uint256"
+          }
+        ],
+        name: "getRepresentedVotersByChain",
+        outputs: [
+          {
+            internalType: "address[]",
+            name: "",
+            type: "address[]"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "enum PayloadsControllerUtils.AccessControl",
+            name: "accessLevel",
+            type: "uint8"
+          }
+        ],
+        name: "getVotingConfig",
+        outputs: [
+          {
+            components: [
+              {
+                internalType: "uint24",
+                name: "coolDownBeforeVotingStart",
+                type: "uint24"
+              },
+              {
+                internalType: "uint24",
+                name: "votingDuration",
+                type: "uint24"
+              },
+              {
+                internalType: "uint56",
+                name: "yesThreshold",
+                type: "uint56"
+              },
+              {
+                internalType: "uint56",
+                name: "yesNoDifferential",
+                type: "uint56"
+              },
+              {
+                internalType: "uint56",
+                name: "minPropositionPower",
+                type: "uint56"
+              }
+            ],
+            internalType: "struct IGovernanceCore.VotingConfig",
+            name: "",
+            type: "tuple"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "getVotingPortalsCount",
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "guardian",
+        outputs: [
+          {
+            internalType: "address",
+            name: "",
+            type: "address"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "votingPortal",
+            type: "address"
+          }
+        ],
+        name: "isVotingPortalApproved",
+        outputs: [
+          {
+            internalType: "bool",
+            name: "",
+            type: "bool"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "owner",
+        outputs: [
+          {
+            internalType: "address",
+            name: "",
+            type: "address"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "proposalId",
+            type: "uint256"
+          },
+          {
+            internalType: "uint128",
+            name: "forVotes",
+            type: "uint128"
+          },
+          {
+            internalType: "uint128",
+            name: "againstVotes",
+            type: "uint128"
+          }
+        ],
+        name: "queueProposal",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256[]",
+            name: "proposalIds",
+            type: "uint256[]"
+          }
+        ],
+        name: "redeemCancellationFee",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address[]",
+            name: "votingPortals",
+            type: "address[]"
+          }
+        ],
+        name: "removeVotingPortals",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "renounceOwnership",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "votingPortal",
+            type: "address"
+          }
+        ],
+        name: "rescueVotingPortal",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "contract IGovernancePowerStrategy",
+            name: "powerStrategy",
+            type: "address"
+          }
+        ],
+        name: "setPowerStrategy",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            components: [
+              {
+                internalType: "enum PayloadsControllerUtils.AccessControl",
+                name: "accessLevel",
+                type: "uint8"
+              },
+              {
+                internalType: "uint24",
+                name: "coolDownBeforeVotingStart",
+                type: "uint24"
+              },
+              {
+                internalType: "uint24",
+                name: "votingDuration",
+                type: "uint24"
+              },
+              {
+                internalType: "uint256",
+                name: "yesThreshold",
+                type: "uint256"
+              },
+              {
+                internalType: "uint256",
+                name: "yesNoDifferential",
+                type: "uint256"
+              },
+              {
+                internalType: "uint256",
+                name: "minPropositionPower",
+                type: "uint256"
+              }
+            ],
+            internalType: "struct IGovernanceCore.SetVotingConfigInput[]",
+            name: "votingConfigs",
+            type: "tuple[]"
+          }
+        ],
+        name: "setVotingConfigs",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "newOwner",
+            type: "address"
+          }
+        ],
+        name: "transferOwnership",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "cancellationFee",
+            type: "uint256"
+          }
+        ],
+        name: "updateCancellationFee",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "newGuardian",
+            type: "address"
+          }
+        ],
+        name: "updateGuardian",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            components: [
+              {
+                internalType: "address",
+                name: "representative",
+                type: "address"
+              },
+              {
+                internalType: "uint256",
+                name: "chainId",
+                type: "uint256"
+              }
+            ],
+            internalType: "struct IGovernanceCore.RepresentativeInput[]",
+            name: "representatives",
+            type: "tuple[]"
+          }
+        ],
+        name: "updateRepresentativesForChain",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      }
+    ];
+    var GovernanceCore__factory = class {
+      static createInterface() {
+        return new ethers_1.utils.Interface(_abi);
+      }
+      static connect(address, signerOrProvider) {
+        return new ethers_1.Contract(address, _abi, signerOrProvider);
+      }
+    };
+    exports2.GovernanceCore__factory = GovernanceCore__factory;
+    GovernanceCore__factory.abi = _abi;
+  }
+});
+
+// node_modules/@pollum-io/contract-helpers/dist/cjs/governance-v3/governance-core/index.js
+var require_governance_core = __commonJS({
+  "node_modules/@pollum-io/contract-helpers/dist/cjs/governance-v3/governance-core/index.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.GovernanceCoreService = void 0;
+    var ethers_1 = require_lib31();
+    var types_1 = require_types2();
+    var utils_1 = require_utils6();
+    var GovernanceCore__factory_1 = require_GovernanceCore_factory();
+    var GovernanceCoreService = class {
+      constructor(governanceCoreContractAddress, provider) {
+        this._contractInterface = GovernanceCore__factory_1.GovernanceCore__factory.createInterface();
+        this._contractInstance = GovernanceCore__factory_1.GovernanceCore__factory.connect(governanceCoreContractAddress, provider);
+      }
+      getProposalCount() {
+        return __async(this, null, function* () {
+          const count = yield this._contractInstance.getProposalsCount();
+          return count.toNumber();
+        });
+      }
+      updateRepresentativesForChain(user, representatives) {
+        const actionTx = {
+          data: this._contractInterface.encodeFunctionData("updateRepresentativesForChain", [representatives]),
+          to: this._contractInstance.address,
+          from: user,
+          gasLimit: ethers_1.BigNumber.from(utils_1.gasLimitRecommendations[types_1.ProtocolAction.updateRepresentatives].limit)
+        };
+        return actionTx;
+      }
+    };
+    exports2.GovernanceCoreService = GovernanceCoreService;
+  }
+});
+
+// node_modules/@pollum-io/contract-helpers/dist/cjs/governance-v3/typechain/factories/PayloadsControllerDataHelper__factory.js
+var require_PayloadsControllerDataHelper_factory = __commonJS({
+  "node_modules/@pollum-io/contract-helpers/dist/cjs/governance-v3/typechain/factories/PayloadsControllerDataHelper__factory.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.PayloadsControllerDataHelper__factory = void 0;
+    var ethers_1 = require_lib31();
+    var _abi = [
+      {
+        inputs: [
+          {
+            internalType: "contract IPayloadsController",
+            name: "payloadsController",
+            type: "address"
+          },
+          {
+            internalType: "enum PayloadsControllerUtils.AccessControl[]",
+            name: "accessLevels",
+            type: "uint8[]"
+          }
+        ],
+        name: "getExecutorConfigs",
+        outputs: [
+          {
+            components: [
+              {
+                internalType: "enum PayloadsControllerUtils.AccessControl",
+                name: "accessLevel",
+                type: "uint8"
+              },
+              {
+                components: [
+                  {
+                    internalType: "address",
+                    name: "executor",
+                    type: "address"
+                  },
+                  {
+                    internalType: "uint40",
+                    name: "delay",
+                    type: "uint40"
+                  }
+                ],
+                internalType: "struct IPayloadsControllerCore.ExecutorConfig",
+                name: "config",
+                type: "tuple"
+              }
+            ],
+            internalType: "struct IPayloadsControllerDataHelper.ExecutorConfig[]",
+            name: "",
+            type: "tuple[]"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "contract IPayloadsController",
+            name: "payloadsController",
+            type: "address"
+          },
+          {
+            internalType: "uint40[]",
+            name: "payloadsIds",
+            type: "uint40[]"
+          }
+        ],
+        name: "getPayloadsData",
+        outputs: [
+          {
+            components: [
+              {
+                internalType: "uint256",
+                name: "id",
+                type: "uint256"
+              },
+              {
+                components: [
+                  {
+                    internalType: "address",
+                    name: "creator",
+                    type: "address"
+                  },
+                  {
+                    internalType: "enum PayloadsControllerUtils.AccessControl",
+                    name: "maximumAccessLevelRequired",
+                    type: "uint8"
+                  },
+                  {
+                    internalType: "enum IPayloadsControllerCore.PayloadState",
+                    name: "state",
+                    type: "uint8"
+                  },
+                  {
+                    internalType: "uint40",
+                    name: "createdAt",
+                    type: "uint40"
+                  },
+                  {
+                    internalType: "uint40",
+                    name: "queuedAt",
+                    type: "uint40"
+                  },
+                  {
+                    internalType: "uint40",
+                    name: "executedAt",
+                    type: "uint40"
+                  },
+                  {
+                    internalType: "uint40",
+                    name: "cancelledAt",
+                    type: "uint40"
+                  },
+                  {
+                    internalType: "uint40",
+                    name: "expirationTime",
+                    type: "uint40"
+                  },
+                  {
+                    internalType: "uint40",
+                    name: "delay",
+                    type: "uint40"
+                  },
+                  {
+                    internalType: "uint40",
+                    name: "gracePeriod",
+                    type: "uint40"
+                  },
+                  {
+                    components: [
+                      {
+                        internalType: "address",
+                        name: "target",
+                        type: "address"
+                      },
+                      {
+                        internalType: "bool",
+                        name: "withDelegateCall",
+                        type: "bool"
+                      },
+                      {
+                        internalType: "enum PayloadsControllerUtils.AccessControl",
+                        name: "accessLevel",
+                        type: "uint8"
+                      },
+                      {
+                        internalType: "uint256",
+                        name: "value",
+                        type: "uint256"
+                      },
+                      {
+                        internalType: "string",
+                        name: "signature",
+                        type: "string"
+                      },
+                      {
+                        internalType: "bytes",
+                        name: "callData",
+                        type: "bytes"
+                      }
+                    ],
+                    internalType: "struct IPayloadsControllerCore.ExecutionAction[]",
+                    name: "actions",
+                    type: "tuple[]"
+                  }
+                ],
+                internalType: "struct IPayloadsControllerCore.Payload",
+                name: "data",
+                type: "tuple"
+              }
+            ],
+            internalType: "struct IPayloadsControllerDataHelper.Payload[]",
+            name: "",
+            type: "tuple[]"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      }
+    ];
+    var PayloadsControllerDataHelper__factory = class {
+      static createInterface() {
+        return new ethers_1.utils.Interface(_abi);
+      }
+      static connect(address, signerOrProvider) {
+        return new ethers_1.Contract(address, _abi, signerOrProvider);
+      }
+    };
+    exports2.PayloadsControllerDataHelper__factory = PayloadsControllerDataHelper__factory;
+    PayloadsControllerDataHelper__factory.abi = _abi;
+  }
+});
+
+// node_modules/@pollum-io/contract-helpers/dist/cjs/governance-v3/payloads-data-helper/index.js
+var require_payloads_data_helper = __commonJS({
+  "node_modules/@pollum-io/contract-helpers/dist/cjs/governance-v3/payloads-data-helper/index.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.PayloadsDataHelperService = exports2.PayloadState = void 0;
+    var PayloadsControllerDataHelper__factory_1 = require_PayloadsControllerDataHelper_factory();
+    var PayloadState;
+    (function(PayloadState2) {
+      PayloadState2[PayloadState2["None"] = 0] = "None";
+      PayloadState2[PayloadState2["Created"] = 1] = "Created";
+      PayloadState2[PayloadState2["Queued"] = 2] = "Queued";
+      PayloadState2[PayloadState2["Executed"] = 3] = "Executed";
+      PayloadState2[PayloadState2["Cancelled"] = 4] = "Cancelled";
+      PayloadState2[PayloadState2["Expired"] = 5] = "Expired";
+    })(PayloadState = exports2.PayloadState || (exports2.PayloadState = {}));
+    var PayloadsDataHelperService = class {
+      constructor(payloadsHelperContracAddress, provider) {
+        this._contract = PayloadsControllerDataHelper__factory_1.PayloadsControllerDataHelper__factory.connect(payloadsHelperContracAddress, provider);
+      }
+      getPayloadsData(payloadsControllerAddress, payloadsIds) {
+        return __async(this, null, function* () {
+          const data = yield this._contract.getPayloadsData(payloadsControllerAddress, payloadsIds);
+          const payloads = data.map((payload) => {
+            return {
+              id: payload.id.toString(),
+              creator: payload.data.creator,
+              maximumAccessLevelRequired: payload.data.maximumAccessLevelRequired,
+              state: payload.data.state,
+              createdAt: payload.data.createdAt,
+              queuedAt: payload.data.queuedAt,
+              executedAt: payload.data.executedAt,
+              cancelledAt: payload.data.cancelledAt,
+              expirationTime: payload.data.expirationTime,
+              delay: payload.data.delay,
+              gracePeriod: payload.data.gracePeriod,
+              actions: payload.data.actions.map((action) => {
+                return {
+                  target: action.target,
+                  withDelegateCall: action.withDelegateCall,
+                  accessLevel: action.accessLevel,
+                  value: action.value.toString(),
+                  signature: action.signature,
+                  callData: action.callData
+                };
+              })
+            };
+          });
+          return payloads;
+        });
+      }
+    };
+    exports2.PayloadsDataHelperService = PayloadsDataHelperService;
+  }
+});
+
+// node_modules/@pollum-io/contract-helpers/dist/cjs/governance-v3/typechain/factories/MetaDelegateHelper__factory.js
+var require_MetaDelegateHelper_factory = __commonJS({
+  "node_modules/@pollum-io/contract-helpers/dist/cjs/governance-v3/typechain/factories/MetaDelegateHelper__factory.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.MetaDelegateHelper__factory = void 0;
+    var ethers_1 = require_lib31();
+    var _abi = [
+      {
+        inputs: [
+          {
+            components: [
+              {
+                internalType: "contract IGovernancePowerDelegationToken",
+                name: "underlyingAsset",
+                type: "address"
+              },
+              {
+                internalType: "enum IMetaDelegateHelper.DelegationType",
+                name: "delegationType",
+                type: "uint8"
+              },
+              {
+                internalType: "address",
+                name: "delegator",
+                type: "address"
+              },
+              {
+                internalType: "address",
+                name: "delegatee",
+                type: "address"
+              },
+              {
+                internalType: "uint256",
+                name: "deadline",
+                type: "uint256"
+              },
+              {
+                internalType: "uint8",
+                name: "v",
+                type: "uint8"
+              },
+              {
+                internalType: "bytes32",
+                name: "r",
+                type: "bytes32"
+              },
+              {
+                internalType: "bytes32",
+                name: "s",
+                type: "bytes32"
+              }
+            ],
+            internalType: "struct IMetaDelegateHelper.MetaDelegateParams[]",
+            name: "delegateParams",
+            type: "tuple[]"
+          }
+        ],
+        name: "batchMetaDelegate",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      }
+    ];
+    var _bytecode = "0x608060405234801561001057600080fd5b50610662806100206000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c8063dfec976814610030575b600080fd5b61004361003e366004610434565b610045565b005b6000805b828110156103ed576002848483818110610065576100656104bf565b90506101000201602001602081019061007e91906104d5565b600281111561008f5761008f6104a9565b03610228578383828181106100a6576100a66104bf565b6100bd926020610100909202019081019150610515565b6001600160a01b031663a095ac198585848181106100dd576100dd6104bf565b9050610100020160400160208101906100f69190610515565b868685818110610108576101086104bf565b9050610100020160600160208101906101219190610515565b878786818110610133576101336104bf565b9050610100020160800135888887818110610150576101506104bf565b9050610100020160a00160208101906101699190610532565b89898881811061017b5761017b6104bf565b9050610100020160c001358a8a89818110610198576101986104bf565b60405160e08a811b6001600160e01b03191682526001600160a01b03998a16600483015297909816602489015260448801959095525060ff929092166064860152608485015261010090910201013560a482015260c401600060405180830381600087803b15801561020957600080fd5b505af192505050801561021a575060015b156103db57600191506103db565b83838281811061023a5761023a6104bf565b610251926020610100909202019081019150610515565b6001600160a01b031663657f0cde858584818110610271576102716104bf565b90506101000201604001602081019061028a9190610515565b86868581811061029c5761029c6104bf565b9050610100020160600160208101906102b59190610515565b60008888878181106102c9576102c96104bf565b9050610100020160200160208101906102e291906104d5565b60028111156102f3576102f36104a9565b146102ff576001610302565b60005b888887818110610314576103146104bf565b9050610100020160800135898988818110610331576103316104bf565b9050610100020160a001602081019061034a9190610532565b8a8a8981811061035c5761035c6104bf565b9050610100020160c001358b8b8a818110610379576103796104bf565b9050610100020160e001356040518863ffffffff1660e01b81526004016103a69796959493929190610555565b600060405180830381600087803b1580156103c057600080fd5b505af19250505080156103d1575060015b156103db57600191505b806103e5816105b7565b915050610049565b50604080518082019091526002815261072760f31b60208201528161042e5760405162461bcd60e51b815260040161042591906105de565b60405180910390fd5b50505050565b6000806020838503121561044757600080fd5b823567ffffffffffffffff8082111561045f57600080fd5b818501915085601f83011261047357600080fd5b81358181111561048257600080fd5b8660208260081b850101111561049757600080fd5b60209290920196919550909350505050565b634e487b7160e01b600052602160045260246000fd5b634e487b7160e01b600052603260045260246000fd5b6000602082840312156104e757600080fd5b8135600381106104f657600080fd5b9392505050565b6001600160a01b038116811461051257600080fd5b50565b60006020828403121561052757600080fd5b81356104f6816104fd565b60006020828403121561054457600080fd5b813560ff811681146104f657600080fd5b6001600160a01b0388811682528716602082015260e081016002871061058b57634e487b7160e01b600052602160045260246000fd5b6040820196909652606081019490945260ff92909216608084015260a083015260c09091015292915050565b6000600182016105d757634e487b7160e01b600052601160045260246000fd5b5060010190565b600060208083528351808285015260005b8181101561060b578581018301518582016040015282016105ef565b506000604082860101526040601f19601f830116850101925050509291505056fea26469706673582212203dced7f46a3999c58a7e8dd9fb69bbfb2191166296934c957b5c98f1adb8b70c64736f6c63430008130033";
+    var isSuperArgs = (xs) => xs.length > 1;
+    var MetaDelegateHelper__factory = class extends ethers_1.ContractFactory {
+      constructor(...args) {
+        if (isSuperArgs(args)) {
+          super(...args);
+        } else {
+          super(_abi, _bytecode, args[0]);
+        }
+      }
+      deploy(overrides) {
+        return super.deploy(overrides || {});
+      }
+      getDeployTransaction(overrides) {
+        return super.getDeployTransaction(overrides || {});
+      }
+      attach(address) {
+        return super.attach(address);
+      }
+      connect(signer) {
+        return super.connect(signer);
+      }
+      static createInterface() {
+        return new ethers_1.utils.Interface(_abi);
+      }
+      static connect(address, signerOrProvider) {
+        return new ethers_1.Contract(address, _abi, signerOrProvider);
+      }
+    };
+    exports2.MetaDelegateHelper__factory = MetaDelegateHelper__factory;
+    MetaDelegateHelper__factory.bytecode = _bytecode;
+    MetaDelegateHelper__factory.abi = _abi;
+  }
+});
+
+// node_modules/@pollum-io/contract-helpers/dist/cjs/governance-v3/delegate-helper/index.js
+var require_delegate_helper = __commonJS({
+  "node_modules/@pollum-io/contract-helpers/dist/cjs/governance-v3/delegate-helper/index.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.MetaDelegateHelperService = exports2.DelegationType = void 0;
+    var ethers_1 = require_lib31();
+    var types_1 = require_types2();
+    var utils_1 = require_utils6();
+    var MetaDelegateHelper__factory_1 = require_MetaDelegateHelper_factory();
+    var DelegationType;
+    (function(DelegationType2) {
+      DelegationType2[DelegationType2["VOTING"] = 0] = "VOTING";
+      DelegationType2[DelegationType2["PROPOSITION"] = 1] = "PROPOSITION";
+      DelegationType2[DelegationType2["ALL"] = 2] = "ALL";
+    })(DelegationType = exports2.DelegationType || (exports2.DelegationType = {}));
+    var MetaDelegateHelperService = class {
+      constructor(metaDelegateHelperContractAddress, provider) {
+        this._contractInterface = MetaDelegateHelper__factory_1.MetaDelegateHelper__factory.createInterface();
+        this.metaDelegateHelperContractAddress = metaDelegateHelperContractAddress;
+        this._contract = MetaDelegateHelper__factory_1.MetaDelegateHelper__factory.connect(metaDelegateHelperContractAddress, provider);
+      }
+      batchMetaDelegate(user, delegateParams) {
+        const tx = {
+          data: this._contractInterface.encodeFunctionData("batchMetaDelegate", [
+            delegateParams
+          ]),
+          to: this.metaDelegateHelperContractAddress,
+          from: user,
+          gasLimit: ethers_1.BigNumber.from(utils_1.gasLimitRecommendations[types_1.ProtocolAction.batchMetaDelegate].limit)
+        };
+        return tx;
+      }
+      prepareV3DelegateByTypeSignature(_0) {
+        return __async(this, arguments, function* ({ underlyingAsset, delegatee, delegationType, delegator, increaseNonce, governanceTokenName, nonce, connectedChainId, deadline }) {
+          const isAllDelegate = delegationType === DelegationType.ALL;
+          const sigBaseType = [
+            { name: "nonce", type: "uint256" },
+            { name: "deadline", type: "uint256" }
+          ];
+          const sigParametersType = [
+            { name: "delegator", type: "address" },
+            { name: "delegatee", type: "address" }
+          ];
+          const sigDelegationTypeType = [{ name: "delegationType", type: "uint8" }];
+          const typesData = {
+            delegator,
+            delegatee,
+            nonce: BigInt(increaseNonce ? Number(nonce) + 1 : nonce).toString(),
+            deadline
+          };
+          const eIP712DomainType = {
+            EIP712Domain: [
+              {
+                name: "name",
+                type: "string"
+              },
+              {
+                name: "version",
+                type: "string"
+              },
+              {
+                name: "chainId",
+                type: "uint256"
+              },
+              {
+                name: "verifyingContract",
+                type: "address"
+              }
+            ]
+          };
+          const typeData = {
+            domain: {
+              name: governanceTokenName,
+              version: "2",
+              chainId: connectedChainId,
+              verifyingContract: underlyingAsset
+            },
+            types: isAllDelegate ? Object.assign(Object.assign({}, eIP712DomainType), { Delegate: [...sigParametersType, ...sigBaseType] }) : Object.assign(Object.assign({}, eIP712DomainType), { DelegateByType: [
+              ...sigParametersType,
+              ...sigDelegationTypeType,
+              ...sigBaseType
+            ] }),
+            primaryType: isAllDelegate ? "Delegate" : "DelegateByType",
+            message: isAllDelegate ? Object.assign({}, typesData) : Object.assign(Object.assign({}, typesData), { delegationType })
+          };
+          return JSON.stringify(typeData);
+        });
+      }
+    };
+    exports2.MetaDelegateHelperService = MetaDelegateHelperService;
+  }
+});
+
+// node_modules/@pollum-io/contract-helpers/dist/cjs/abpt-migration/typechain/StkABPTMigrator__factory.js
+var require_StkABPTMigrator_factory = __commonJS({
+  "node_modules/@pollum-io/contract-helpers/dist/cjs/abpt-migration/typechain/StkABPTMigrator__factory.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.StkABPTMigrator__factory = void 0;
+    var ethers_1 = require_lib31();
+    var _abi = [
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "stkABPTV2",
+            type: "address"
+          }
+        ],
+        stateMutability: "nonpayable",
+        type: "constructor"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "address",
+            name: "caller",
+            type: "address"
+          },
+          {
+            indexed: true,
+            internalType: "address",
+            name: "token",
+            type: "address"
+          },
+          {
+            indexed: true,
+            internalType: "address",
+            name: "to",
+            type: "address"
+          },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "amount",
+            type: "uint256"
+          }
+        ],
+        name: "ERC20Rescued",
+        type: "event"
+      },
+      {
+        anonymous: false,
+        inputs: [
+          {
+            indexed: true,
+            internalType: "address",
+            name: "caller",
+            type: "address"
+          },
+          {
+            indexed: true,
+            internalType: "address",
+            name: "to",
+            type: "address"
+          },
+          {
+            indexed: false,
+            internalType: "uint256",
+            name: "amount",
+            type: "uint256"
+          }
+        ],
+        name: "NativeTokensRescued",
+        type: "event"
+      },
+      {
+        inputs: [],
+        name: "STK_ABPT_V2",
+        outputs: [
+          {
+            internalType: "address",
+            name: "",
+            type: "address"
+          }
+        ],
+        stateMutability: "view",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "to",
+            type: "address"
+          },
+          {
+            internalType: "uint256",
+            name: "amount",
+            type: "uint256"
+          }
+        ],
+        name: "emergencyEtherTransfer",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "erc20Token",
+            type: "address"
+          },
+          {
+            internalType: "address",
+            name: "to",
+            type: "address"
+          },
+          {
+            internalType: "uint256",
+            name: "amount",
+            type: "uint256"
+          }
+        ],
+        name: "emergencyTokenTransfer",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "amount",
+            type: "uint256"
+          },
+          {
+            internalType: "uint256[]",
+            name: "tokenOutAmountsMin",
+            type: "uint256[]"
+          },
+          {
+            internalType: "uint256",
+            name: "poolOutAmountMin",
+            type: "uint256"
+          }
+        ],
+        name: "migrateStkABPT",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "amount",
+            type: "uint256"
+          },
+          {
+            internalType: "uint256",
+            name: "deadline",
+            type: "uint256"
+          },
+          {
+            internalType: "uint8",
+            name: "v",
+            type: "uint8"
+          },
+          {
+            internalType: "bytes32",
+            name: "r",
+            type: "bytes32"
+          },
+          {
+            internalType: "bytes32",
+            name: "s",
+            type: "bytes32"
+          },
+          {
+            internalType: "uint256[]",
+            name: "tokenOutAmountsMin",
+            type: "uint256[]"
+          },
+          {
+            internalType: "uint256",
+            name: "poolOutAmountMin",
+            type: "uint256"
+          }
+        ],
+        name: "migrateStkABPTWithPermit",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+      },
+      {
+        inputs: [],
+        name: "whoCanRescue",
+        outputs: [
+          {
+            internalType: "address",
+            name: "",
+            type: "address"
+          }
+        ],
+        stateMutability: "pure",
+        type: "function"
+      },
+      {
+        stateMutability: "payable",
+        type: "receive"
+      }
+    ];
+    var _bytecode = "0x60a06040523480156200001157600080fd5b506040516200187e3803806200187e833981016040819052620000349162000280565b6200006b737fc66500c84a76ad7e9c93437bfc5ac33e2ddae973ba12222222228d8ba445958a75a0704d566bf2c86000196200010e565b620000a273ae7ab96520de3a18e5e111b5eaab095312d7fe84737f39c581f595b53c5cb19bd0b3f8da6c935e2ca06000196200010e565b620000d9737f39c581f595b53c5cb19bd0b3f8da6c935e2ca073ba12222222228d8ba445958a75a0704d566bf2c86000196200010e565b620000fc733de27efa2f1aa663ae5d458857e731c129069f29826000196200010e565b6001600160a01b0316608052620002f0565b604051636eb1769f60e11b81523060048201526001600160a01b0383811660248301526000919085169063dd62ed3e90604401602060405180830381865afa1580156200015f573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190620001859190620002b2565b1115620002045760405163095ea7b360e01b81526001600160a01b0383811660048301526000602483015284169063095ea7b3906044016020604051808303816000875af1158015620001dc573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190620002029190620002cc565b505b60405163095ea7b360e01b81526001600160a01b0383811660048301526024820183905284169063095ea7b3906044016020604051808303816000875af115801562000254573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906200027a9190620002cc565b50505050565b6000602082840312156200029357600080fd5b81516001600160a01b0381168114620002ab57600080fd5b9392505050565b600060208284031215620002c557600080fd5b5051919050565b600060208284031215620002df57600080fd5b81518015158114620002ab57600080fd5b60805161156c620003126000396000818160b90152610b26015261156c6000f3fe6080604052600436106100595760003560e01c806334ea0957146100655780637c544cc4146100875780637fb64fb2146100a7578063a3d5b255146100f7578063a4757b0f14610117578063eed88b8d1461013e57600080fd5b3661006057005b600080fd5b34801561007157600080fd5b50610085610080366004611136565b61015e565b005b34801561009357600080fd5b506100856100a2366004611189565b610170565b3480156100b357600080fd5b506100db7f000000000000000000000000000000000000000000000000000000000000000081565b6040516001600160a01b03909116815260200160405180910390f35b34801561010357600080fd5b5061008561011236600461122f565b61020f565b34801561012357600080fd5b50735300a1a15135ea4dc7ad5a167152c01efc9b192a6100db565b34801561014a57600080fd5b5061008561015936600461126b565b6102de565b61016a8484848461042e565b50505050565b60405163d505accf60e01b8152336004820152306024820152604481018990526064810188905260ff8716608482015260a4810186905260c4810185905273a1116930326d21fb917d5a27f1e9943a9595fb479063d505accf9060e401600060405180830381600087803b1580156101e757600080fd5b505af19250505080156101f8575060015b506102058884848461042e565b5050505050505050565b33735300a1a15135ea4dc7ad5a167152c01efc9b192a1461026e5760405162461bcd60e51b815260206004820152601460248201527327a7262cafa922a9a1aaa2afa3aaa0a92224a0a760611b60448201526064015b60405180910390fd5b6102826001600160a01b0384168383610c2c565b816001600160a01b0316836001600160a01b0316336001600160a01b03167fc7af665d489507e14ae25ac7ab0030fc7f570869610bdd32117ea56b60ae5c61846040516102d191815260200190565b60405180910390a4505050565b33735300a1a15135ea4dc7ad5a167152c01efc9b192a146103385760405162461bcd60e51b815260206004820152601460248201527327a7262cafa922a9a1aaa2afa3aaa0a92224a0a760611b6044820152606401610265565b604080516000808252602082019092526001600160a01b03841690839060405161036291906112cf565b60006040518083038185875af1925050503d806000811461039f576040519150601f19603f3d011682016040523d82523d6000602084013e6103a4565b606091505b50509050806103e95760405162461bcd60e51b815260206004820152601160248201527011551217d514905394d1915497d1905253607a1b6044820152606401610265565b6040518281526001600160a01b0384169033907fb7c602059992183c7b767c08204223afc99f1895fd175adf9ece23ce9f5bb8b79060200160405180910390a3505050565b6040516370a0823160e01b815230600482015260009073c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2906370a0823190602401602060405180830381865afa158015610480573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906104a491906112eb565b6040516370a0823160e01b8152306004820152909150600090737fc66500c84a76ad7e9c93437bfc5ac33e2ddae9906370a0823190602401602060405180830381865afa1580156104f9573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061051d91906112eb565b6040516370a0823160e01b81523060048201529091506000907341a08648c3766f9f9d85598ff102a08f4ef84f84906370a0823190602401602060405180830381865afa158015610572573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061059691906112eb565b6040516370a0823160e01b8152306004820152909150600090733de27efa2f1aa663ae5d458857e731c129069f29906370a0823190602401602060405180830381865afa1580156105eb573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061060f91906112eb565b6040516323b872dd60e01b8152336004820152306024820152604481018a905290915073a1116930326d21fb917d5a27f1e9943a9595fb47906323b872dd906064016020604051808303816000875af1158015610670573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906106949190611304565b506040516301e9a69560e41b81523060048201526024810189905273a1116930326d21fb917d5a27f1e9943a9595fb4790631e9a695090604401600060405180830381600087803b1580156106e857600080fd5b505af11580156106fc573d6000803e3d6000fd5b50506040516370a0823160e01b8152306004820152600092508491507341a08648c3766f9f9d85598ff102a08f4ef84f84906370a0823190602401602060405180830381865afa158015610754573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061077891906112eb565b610782919061132d565b60405163b02f0b7360e01b81529091507341a08648c3766f9f9d85598ff102a08f4ef84f849063b02f0b73906107c09084908c908c90600401611354565b600060405180830381600087803b1580156107da57600080fd5b505af11580156107ee573d6000803e3d6000fd5b50506040516370a0823160e01b81523060048201526000925073c02aaa39b223fe8d0a0e5c4f27ead9083c756cc291506370a0823190602401602060405180830381865afa158015610844573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061086891906112eb565b6040516370a0823160e01b8152306004820152909150600090737fc66500c84a76ad7e9c93437bfc5ac33e2ddae9906370a0823190602401602060405180830381865afa1580156108bd573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906108e191906112eb565b6040805160028082526060820183529293506000929091602083019080368337019050509050737f39c581f595b53c5cb19bd0b3f8da6c935e2ca08160008151811061092f5761092f611395565b60200260200101906001600160a01b031690816001600160a01b031681525050737fc66500c84a76ad7e9c93437bfc5ac33e2ddae98160018151811061097757610977611395565b60200260200101906001600160a01b031690816001600160a01b0316815250506000815167ffffffffffffffff8111156109b3576109b3611295565b6040519080825280602002602001820160405280156109dc578160200160208202803683370190505b5090506109f16109ec8a8661132d565b610c83565b81600081518110610a0457610a04611395565b6020908102919091010152610a19888461132d565b81600181518110610a2c57610a2c611395565b60200260200101818152505060006001828c604051602001610a50939291906113e6565b60408051601f198184030181526080830182528583526020830185905282820181905260006060840152905163172b958560e31b815290925073ba12222222228d8ba445958a75a0704d566bf2c89063b95cac2890610ad9907f3de27efa2f1aa663ae5d458857e731c129069f2900020000000000000000058890309081908790600401611459565b600060405180830381600087803b158015610af357600080fd5b505af1158015610b07573d6000803e3d6000fd5b50506040516370a0823160e01b81523060048201526001600160a01b037f000000000000000000000000000000000000000000000000000000000000000016925063adc9772e915033908b90733de27efa2f1aa663ae5d458857e731c129069f29906370a0823190602401602060405180830381865afa158015610b8f573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610bb391906112eb565b610bbd919061132d565b6040516001600160e01b031960e085901b1681526001600160a01b0390921660048301526024820152604401600060405180830381600087803b158015610c0357600080fd5b505af1158015610c17573d6000803e3d6000fd5b50505050505050505050505050505050505050565b604080516001600160a01b038416602482015260448082018490528251808303909101815260649091019091526020810180516001600160e01b031663a9059cbb60e01b179052610c7e908490610ef5565b505050565b604051632e1a7d4d60e01b81526004810182905260009073c02aaa39b223fe8d0a0e5c4f27ead9083c756cc290632e1a7d4d90602401600060405180830381600087803b158015610cd357600080fd5b505af1158015610ce7573d6000803e3d6000fd5b50506040516370a0823160e01b81523060048201526000925073ae7ab96520de3a18e5e111b5eaab095312d7fe8491506370a0823190602401602060405180830381865afa158015610d3d573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610d6191906112eb565b60405163a1903eab60e01b8152735300a1a15135ea4dc7ad5a167152c01efc9b192a600482015290915073ae7ab96520de3a18e5e111b5eaab095312d7fe849063a1903eab90859060240160206040518083038185885af1158015610dca573d6000803e3d6000fd5b50505050506040513d601f19601f82011682018060405250810190610def91906112eb565b506040516370a0823160e01b815230600482015260009073ae7ab96520de3a18e5e111b5eaab095312d7fe84906370a0823190602401602060405180830381865afa158015610e42573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610e6691906112eb565b9050737f39c581f595b53c5cb19bd0b3f8da6c935e2ca063ea598cb0610e8c848461132d565b6040518263ffffffff1660e01b8152600401610eaa91815260200190565b6020604051808303816000875af1158015610ec9573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610eed91906112eb565b949350505050565b6000610f4a826040518060400160405280602081526020017f5361666545524332303a206c6f772d6c6576656c2063616c6c206661696c6564815250856001600160a01b0316610fc79092919063ffffffff16565b805190915015610c7e5780806020019051810190610f689190611304565b610c7e5760405162461bcd60e51b815260206004820152602a60248201527f5361666545524332303a204552433230206f7065726174696f6e20646964206e6044820152691bdd081cdd58d8d9595960b21b6064820152608401610265565b6060610eed848460008585600080866001600160a01b03168587604051610fee91906112cf565b60006040518083038185875af1925050503d806000811461102b576040519150601f19603f3d011682016040523d82523d6000602084013e611030565b606091505b50915091506110418783838761104c565b979650505050505050565b606083156110bb5782516000036110b4576001600160a01b0385163b6110b45760405162461bcd60e51b815260206004820152601d60248201527f416464726573733a2063616c6c20746f206e6f6e2d636f6e74726163740000006044820152606401610265565b5081610eed565b610eed83838151156110d05781518083602001fd5b8060405162461bcd60e51b81526004016102659190611523565b60008083601f8401126110fc57600080fd5b50813567ffffffffffffffff81111561111457600080fd5b6020830191508360208260051b850101111561112f57600080fd5b9250929050565b6000806000806060858703121561114c57600080fd5b84359350602085013567ffffffffffffffff81111561116a57600080fd5b611176878288016110ea565b9598909750949560400135949350505050565b60008060008060008060008060e0898b0312156111a557600080fd5b8835975060208901359650604089013560ff811681146111c457600080fd5b9550606089013594506080890135935060a089013567ffffffffffffffff8111156111ee57600080fd5b6111fa8b828c016110ea565b999c989b50969995989497949560c00135949350505050565b80356001600160a01b038116811461122a57600080fd5b919050565b60008060006060848603121561124457600080fd5b61124d84611213565b925061125b60208501611213565b9150604084013590509250925092565b6000806040838503121561127e57600080fd5b61128783611213565b946020939093013593505050565b634e487b7160e01b600052604160045260246000fd5b60005b838110156112c65781810151838201526020016112ae565b50506000910152565b600082516112e18184602087016112ab565b9190910192915050565b6000602082840312156112fd57600080fd5b5051919050565b60006020828403121561131657600080fd5b8151801515811461132657600080fd5b9392505050565b8181038181111561134e57634e487b7160e01b600052601160045260246000fd5b92915050565b838152604060208201819052810182905260006001600160fb1b0383111561137b57600080fd5b8260051b8085606085013791909101606001949350505050565b634e487b7160e01b600052603260045260246000fd5b600081518084526020808501945080840160005b838110156113db578151875295820195908201906001016113bf565b509495945050505050565b60006002851061140657634e487b7160e01b600052602160045260246000fd5b8482526060602083015261141d60608301856113ab565b9050826040830152949350505050565b600081518084526114458160208601602086016112ab565b601f01601f19169290920160200192915050565b8481526000602060018060a01b038087168285015280861660408501526080606085015261010084018551608080870152818151808452610120880191508583019350600092505b808310156114c3578351851682529285019260019290920191908501906114a1565b50848801519450607f199350838782030160a08801526114e381866113ab565b94505050506040850151818584030160c0860152611501838261142d565b92505050606084015161151860e085018215159052565b509695505050505050565b602081526000611326602083018461142d56fea2646970667358221220b4078261a61bbcb84af497a16bd52e652a994b9068cb8d9bb872cb5659b50dbb64736f6c63430008140033";
+    var isSuperArgs = (xs) => xs.length > 1;
+    var StkABPTMigrator__factory = class extends ethers_1.ContractFactory {
+      constructor(...args) {
+        if (isSuperArgs(args)) {
+          super(...args);
+        } else {
+          super(_abi, _bytecode, args[0]);
+        }
+      }
+      deploy(stkABPTV2, overrides) {
+        return super.deploy(stkABPTV2, overrides || {});
+      }
+      getDeployTransaction(stkABPTV2, overrides) {
+        return super.getDeployTransaction(stkABPTV2, overrides || {});
+      }
+      attach(address) {
+        return super.attach(address);
+      }
+      connect(signer) {
+        return super.connect(signer);
+      }
+      static createInterface() {
+        return new ethers_1.utils.Interface(_abi);
+      }
+      static connect(address, signerOrProvider) {
+        return new ethers_1.Contract(address, _abi, signerOrProvider);
+      }
+    };
+    exports2.StkABPTMigrator__factory = StkABPTMigrator__factory;
+    StkABPTMigrator__factory.bytecode = _bytecode;
+    StkABPTMigrator__factory.abi = _abi;
+  }
+});
+
+// node_modules/@pollum-io/contract-helpers/dist/cjs/abpt-migration/index.js
+var require_abpt_migration = __commonJS({
+  "node_modules/@pollum-io/contract-helpers/dist/cjs/abpt-migration/index.js"(exports2) {
+    "use strict";
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.StkABPTMigratorService = void 0;
+    var ethers_1 = require_lib31();
+    var types_1 = require_types2();
+    var utils_1 = require_utils6();
+    var StkABPTMigrator__factory_1 = require_StkABPTMigrator_factory();
+    var StkABPTMigratorService = class {
+      constructor(contractAddress) {
+        this.contractAddress = contractAddress;
+        this.contractInterface = StkABPTMigrator__factory_1.StkABPTMigrator__factory.createInterface();
+      }
+      migrate(user, amount, tokenOutAmountsMin, poolOutAmountMin) {
+        const tx = {
+          data: this.contractInterface.encodeFunctionData("migrateStkABPT", [
+            amount,
+            tokenOutAmountsMin,
+            poolOutAmountMin
+          ]),
+          to: this.contractAddress,
+          from: user,
+          gasLimit: ethers_1.BigNumber.from(utils_1.gasLimitRecommendations[types_1.ProtocolAction.default].recommended)
+        };
+        return tx;
+      }
+      migrateWithPermit({ user, amount, tokenOutAmountsMin, poolOutAmountMin, signature, deadline }) {
+        const { v, r, s } = ethers_1.utils.splitSignature(signature);
+        const tx = {
+          data: this.contractInterface.encodeFunctionData("migrateStkABPTWithPermit", [amount, deadline, v, r, s, tokenOutAmountsMin, poolOutAmountMin]),
+          to: this.contractAddress,
+          from: user,
+          gasLimit: ethers_1.BigNumber.from(utils_1.gasLimitRecommendations[types_1.ProtocolAction.default].recommended)
+        };
+        return tx;
+      }
+    };
+    exports2.StkABPTMigratorService = StkABPTMigratorService;
+  }
+});
+
 // node_modules/unfetch/dist/unfetch.js
 var require_unfetch = __commonJS({
   "node_modules/unfetch/dist/unfetch.js"(exports2, module2) {
@@ -52710,8 +60234,7 @@ var require_unfetch = __commonJS({
           s.getAllResponseHeaders().replace(/^(.*?):[^\S\n]*([\s\S]*?)$/gm, function(e2, n2, t2) {
             o.push(n2 = n2.toLowerCase()), u.push([n2, t2]), i[n2] = i[n2] ? i[n2] + "," + t2 : t2;
           }), t(a());
-        }, s.onerror = r, s.withCredentials = "include" == n.credentials, n.headers)
-          s.setRequestHeader(l, n.headers[l]);
+        }, s.onerror = r, s.withCredentials = "include" == n.credentials, n.headers) s.setRequestHeader(l, n.headers[l]);
         s.send(n.body || null);
       });
     };
@@ -52743,8 +60266,7 @@ var require_lib32 = __commonJS({
       const moduloVal = typeOpts.moduloBitLength ? Math.pow(2, typeOpts.moduloBitLength) : Math.pow(2, bitLength);
       const moduloBound = typeOpts.moduloBitLength ? Math.pow(2, typeOpts.moduloBitLength - 1) : Math.pow(2, bitLength - 1);
       return function(V, opts) {
-        if (!opts)
-          opts = {};
+        if (!opts) opts = {};
         let x = +V;
         if (opts.enforceRange) {
           if (!Number.isFinite(x)) {
@@ -52758,10 +60280,8 @@ var require_lib32 = __commonJS({
         }
         if (!isNaN(x) && opts.clamp) {
           x = evenRound(x);
-          if (x < lowerBound)
-            x = lowerBound;
-          if (x > upperBound)
-            x = upperBound;
+          if (x < lowerBound) x = lowerBound;
+          if (x > upperBound) x = upperBound;
           return x;
         }
         if (!Number.isFinite(x) || x === 0) {
@@ -52812,8 +60332,7 @@ var require_lib32 = __commonJS({
     conversions["float"] = conversions["double"];
     conversions["unrestricted float"] = conversions["unrestricted double"];
     conversions["DOMString"] = function(V, opts) {
-      if (!opts)
-        opts = {};
+      if (!opts) opts = {};
       if (opts.treatNullAsEmptyString && V === null) {
         return "";
       }
@@ -53050,8 +60569,7 @@ var require_tr46 = __commonJS({
           }
         }
       }
-      if (result.error)
-        return null;
+      if (result.error) return null;
       return labels.join(".");
     };
     module2.exports.toUnicode = function(domain_name, useSTD3) {
@@ -54462,8 +61980,7 @@ var require_URL = __commonJS({
         return obj;
       },
       setup(obj, constructorArgs, privateData) {
-        if (!privateData)
-          privateData = {};
+        if (!privateData) privateData = {};
         privateData.wrapper = obj;
         obj[impl] = new Impl.implementation(constructorArgs, privateData);
         obj[impl][utils.wrapperSymbol] = obj;
@@ -54636,16 +62153,13 @@ var require_lib33 = __commonJS({
         body = null;
       } else if (isURLSearchParams(body)) {
         body = Buffer.from(body.toString());
-      } else if (isBlob(body))
-        ;
-      else if (Buffer.isBuffer(body))
-        ;
+      } else if (isBlob(body)) ;
+      else if (Buffer.isBuffer(body)) ;
       else if (Object.prototype.toString.call(body) === "[object ArrayBuffer]") {
         body = Buffer.from(body);
       } else if (ArrayBuffer.isView(body)) {
         body = Buffer.from(body.buffer, body.byteOffset, body.byteLength);
-      } else if (body instanceof Stream)
-        ;
+      } else if (body instanceof Stream) ;
       else {
         body = Buffer.from(String(body));
       }
@@ -54988,8 +62502,7 @@ var require_lib33 = __commonJS({
           }
           return;
         }
-        if (init == null)
-          ;
+        if (init == null) ;
         else if (typeof init === "object") {
           const method = init[Symbol.iterator];
           if (method != null) {
@@ -55371,8 +62884,7 @@ var require_lib33 = __commonJS({
           }
         }
         let signal = isRequest(input) ? input.signal : null;
-        if ("signal" in init)
-          signal = init.signal;
+        if ("signal" in init) signal = init.signal;
         if (signal != null && !isAbortSignal(signal)) {
           throw new TypeError("Expected signal to be an instanceof AbortSignal");
         }
@@ -55507,8 +63019,7 @@ var require_lib33 = __commonJS({
           if (request.body && request.body instanceof Stream.Readable) {
             request.body.destroy(error);
           }
-          if (!response || !response.body)
-            return;
+          if (!response || !response.body) return;
           response.body.emit("error", error);
         };
         if (signal && signal.aborted) {
@@ -55526,8 +63037,7 @@ var require_lib33 = __commonJS({
         }
         function finalize() {
           req.abort();
-          if (signal)
-            signal.removeEventListener("abort", abortAndFinalize);
+          if (signal) signal.removeEventListener("abort", abortAndFinalize);
           clearTimeout(reqTimeout);
         }
         if (request.timeout) {
@@ -55613,8 +63123,7 @@ var require_lib33 = __commonJS({
             }
           }
           res.once("end", function() {
-            if (signal)
-              signal.removeEventListener("abort", abortAndFinalize);
+            if (signal) signal.removeEventListener("abort", abortAndFinalize);
           });
           let body = res.pipe(new PassThrough$1());
           const response_options = {
@@ -55731,7 +63240,7 @@ var require_ipfs = __commonJS({
           MEMORIZE2[ipfsHash] = Object.assign(Object.assign({}, data), { ipfsHash });
           return MEMORIZE2[ipfsHash];
         } catch (e) {
-          console.error(`@pollum-io/contract-helpers: IPFS fetch Error: ${e}`);
+          console.error(`@pegasys/contract-helpers: IPFS fetch Error: ${e}`);
           return {
             ipfsHash,
             title: `Proposal - ${ipfsHash}`,
@@ -55768,6 +63277,8 @@ var require_cjs = __commonJS({
     tslib_1.__exportStar(require_wallet_balance_provider(), exports2);
     tslib_1.__exportStar(require_cl_feed_registry(), exports2);
     tslib_1.__exportStar(require_uiStakeDataProvider_contract(), exports2);
+    tslib_1.__exportStar(require_V3_uiStakeDataProvider_contract(), exports2);
+    tslib_1.__exportStar(require_v3_staking_contract(), exports2);
     tslib_1.__exportStar(require_incentive_controller(), exports2);
     tslib_1.__exportStar(require_incentive_controller_v2(), exports2);
     tslib_1.__exportStar(require_erc20_contract(), exports2);
@@ -55788,6 +63299,14 @@ var require_cjs = __commonJS({
     tslib_1.__exportStar(require_erc20_2612(), exports2);
     tslib_1.__exportStar(require_paraswap_debtSwitch_contract(), exports2);
     tslib_1.__exportStar(require_paraswap_withdrawAndSwitchAdapter_contract(), exports2);
+    tslib_1.__exportStar(require_token_wrapper(), exports2);
+    tslib_1.__exportStar(require_governance_data_helper(), exports2);
+    tslib_1.__exportStar(require_voting_machine_data_helper(), exports2);
+    tslib_1.__exportStar(require_governance_core(), exports2);
+    tslib_1.__exportStar(require_pegasys_token_v3(), exports2);
+    tslib_1.__exportStar(require_payloads_data_helper(), exports2);
+    tslib_1.__exportStar(require_delegate_helper(), exports2);
+    tslib_1.__exportStar(require_abpt_migration(), exports2);
     tslib_1.__exportStar(require_types2(), exports2);
     tslib_1.__exportStar(require_ipfs(), exports2);
     tslib_1.__exportStar(require_utils6(), exports2);
@@ -61281,39 +68800,28 @@ var require_kind_of = __commonJS({
     "use strict";
     var toString = Object.prototype.toString;
     module2.exports = function kindOf(val) {
-      if (val === void 0)
-        return "undefined";
-      if (val === null)
-        return "null";
+      if (val === void 0) return "undefined";
+      if (val === null) return "null";
       var type = typeof val;
-      if (type === "boolean")
-        return "boolean";
-      if (type === "string")
-        return "string";
-      if (type === "number")
-        return "number";
-      if (type === "symbol")
-        return "symbol";
+      if (type === "boolean") return "boolean";
+      if (type === "string") return "string";
+      if (type === "number") return "number";
+      if (type === "symbol") return "symbol";
       if (type === "function") {
         return isGeneratorFn(val) ? "generatorfunction" : "function";
       }
-      if (isArray(val))
-        return "array";
-      if (isBuffer(val))
-        return "buffer";
-      if (isArguments(val))
-        return "arguments";
-      if (isDate(val))
-        return "date";
-      if (isError(val))
-        return "error";
-      if (isRegexp(val))
-        return "regexp";
+      if (isArray(val)) return "array";
+      if (isBuffer(val)) return "buffer";
+      if (isArguments(val)) return "arguments";
+      if (isDate(val)) return "date";
+      if (isError(val)) return "error";
+      if (isRegexp(val)) return "regexp";
       switch (ctorName(val)) {
         case "Symbol":
           return "symbol";
         case "Promise":
           return "promise";
+        // Set, Map, WeakSet, WeakMap
         case "WeakMap":
           return "weakmap";
         case "WeakSet":
@@ -61322,16 +68830,19 @@ var require_kind_of = __commonJS({
           return "map";
         case "Set":
           return "set";
+        // 8-bit typed arrays
         case "Int8Array":
           return "int8array";
         case "Uint8Array":
           return "uint8array";
         case "Uint8ClampedArray":
           return "uint8clampedarray";
+        // 16-bit typed arrays
         case "Int16Array":
           return "int16array";
         case "Uint16Array":
           return "uint16array";
+        // 32-bit typed arrays
         case "Int32Array":
           return "int32array";
         case "Uint32Array":
@@ -61348,6 +68859,7 @@ var require_kind_of = __commonJS({
       switch (type) {
         case "[object Object]":
           return "object";
+        // iterators
         case "[object Map Iterator]":
           return "mapiterator";
         case "[object Set Iterator]":
@@ -61363,21 +68875,18 @@ var require_kind_of = __commonJS({
       return typeof val.constructor === "function" ? val.constructor.name : null;
     }
     function isArray(val) {
-      if (Array.isArray)
-        return Array.isArray(val);
+      if (Array.isArray) return Array.isArray(val);
       return val instanceof Array;
     }
     function isError(val) {
       return val instanceof Error || typeof val.message === "string" && val.constructor && typeof val.constructor.stackTraceLimit === "number";
     }
     function isDate(val) {
-      if (val instanceof Date)
-        return true;
+      if (val instanceof Date) return true;
       return typeof val.toDateString === "function" && typeof val.getDate === "function" && typeof val.setDate === "function";
     }
     function isRegexp(val) {
-      if (val instanceof RegExp)
-        return true;
+      if (val instanceof RegExp) return true;
       return typeof val.flags === "string" && typeof val.ignoreCase === "boolean" && typeof val.multiline === "boolean" && typeof val.global === "boolean";
     }
     function isGeneratorFn(name2, val) {
@@ -61566,10 +69075,8 @@ var require_common3 = __commonJS({
       return typeof subject === "object" && subject !== null;
     }
     function toArray(sequence) {
-      if (Array.isArray(sequence))
-        return sequence;
-      else if (isNothing(sequence))
-        return [];
+      if (Array.isArray(sequence)) return sequence;
+      else if (isNothing(sequence)) return [];
       return [sequence];
     }
     function extend(target, source) {
@@ -61646,8 +69153,7 @@ var require_mark = __commonJS({
     }
     Mark.prototype.getSnippet = function getSnippet(indent, maxLength) {
       var head, start, tail, end, snippet;
-      if (!this.buffer)
-        return null;
+      if (!this.buffer) return null;
       indent = indent || 4;
       maxLength = maxLength || 75;
       head = "";
@@ -61901,8 +69407,7 @@ var require_null2 = __commonJS({
     "use strict";
     var Type = require_type();
     function resolveYamlNull(data) {
-      if (data === null)
-        return true;
+      if (data === null) return true;
       var max = data.length;
       return max === 1 && data === "~" || max === 4 && (data === "null" || data === "Null" || data === "NULL");
     }
@@ -61942,8 +69447,7 @@ var require_bool = __commonJS({
     "use strict";
     var Type = require_type();
     function resolveYamlBoolean(data) {
-      if (data === null)
-        return false;
+      if (data === null) return false;
       var max = data.length;
       return max === 4 && (data === "true" || data === "True" || data === "TRUE") || max === 5 && (data === "false" || data === "False" || data === "FALSE");
     }
@@ -61990,27 +69494,22 @@ var require_int = __commonJS({
       return 48 <= c && c <= 57;
     }
     function resolveYamlInteger(data) {
-      if (data === null)
-        return false;
+      if (data === null) return false;
       var max = data.length, index = 0, hasDigits = false, ch;
-      if (!max)
-        return false;
+      if (!max) return false;
       ch = data[index];
       if (ch === "-" || ch === "+") {
         ch = data[++index];
       }
       if (ch === "0") {
-        if (index + 1 === max)
-          return true;
+        if (index + 1 === max) return true;
         ch = data[++index];
         if (ch === "b") {
           index++;
           for (; index < max; index++) {
             ch = data[index];
-            if (ch === "_")
-              continue;
-            if (ch !== "0" && ch !== "1")
-              return false;
+            if (ch === "_") continue;
+            if (ch !== "0" && ch !== "1") return false;
             hasDigits = true;
           }
           return hasDigits && ch !== "_";
@@ -62019,41 +69518,32 @@ var require_int = __commonJS({
           index++;
           for (; index < max; index++) {
             ch = data[index];
-            if (ch === "_")
-              continue;
-            if (!isHexCode(data.charCodeAt(index)))
-              return false;
+            if (ch === "_") continue;
+            if (!isHexCode(data.charCodeAt(index))) return false;
             hasDigits = true;
           }
           return hasDigits && ch !== "_";
         }
         for (; index < max; index++) {
           ch = data[index];
-          if (ch === "_")
-            continue;
-          if (!isOctCode(data.charCodeAt(index)))
-            return false;
+          if (ch === "_") continue;
+          if (!isOctCode(data.charCodeAt(index))) return false;
           hasDigits = true;
         }
         return hasDigits && ch !== "_";
       }
-      if (ch === "_")
-        return false;
+      if (ch === "_") return false;
       for (; index < max; index++) {
         ch = data[index];
-        if (ch === "_")
-          continue;
-        if (ch === ":")
-          break;
+        if (ch === "_") continue;
+        if (ch === ":") break;
         if (!isDecCode(data.charCodeAt(index))) {
           return false;
         }
         hasDigits = true;
       }
-      if (!hasDigits || ch === "_")
-        return false;
-      if (ch !== ":")
-        return true;
+      if (!hasDigits || ch === "_") return false;
+      if (ch !== ":") return true;
       return /^(:[0-5]?[0-9])+$/.test(data.slice(index));
     }
     function constructYamlInteger(data) {
@@ -62063,18 +69553,14 @@ var require_int = __commonJS({
       }
       ch = value[0];
       if (ch === "-" || ch === "+") {
-        if (ch === "-")
-          sign = -1;
+        if (ch === "-") sign = -1;
         value = value.slice(1);
         ch = value[0];
       }
-      if (value === "0")
-        return 0;
+      if (value === "0") return 0;
       if (ch === "0") {
-        if (value[1] === "b")
-          return sign * parseInt(value.slice(2), 2);
-        if (value[1] === "x")
-          return sign * parseInt(value, 16);
+        if (value[1] === "b") return sign * parseInt(value.slice(2), 2);
+        if (value[1] === "x") return sign * parseInt(value, 16);
         return sign * parseInt(value, 8);
       }
       if (value.indexOf(":") !== -1) {
@@ -62136,8 +69622,7 @@ var require_float = __commonJS({
       "^(?:[-+]?(?:0|[1-9][0-9_]*)(?:\\.[0-9_]*)?(?:[eE][-+]?[0-9]+)?|\\.[0-9_]+(?:[eE][-+]?[0-9]+)?|[-+]?[0-9][0-9_]*(?::[0-5]?[0-9])+\\.[0-9_]*|[-+]?\\.(?:inf|Inf|INF)|\\.(?:nan|NaN|NAN))$"
     );
     function resolveYamlFloat(data) {
-      if (data === null)
-        return false;
+      if (data === null) return false;
       if (!YAML_FLOAT_PATTERN.test(data) || // Quick hack to not allow integers end with `_`
       // Probably should update regexp & check speed
       data[data.length - 1] === "_") {
@@ -62265,21 +69750,16 @@ var require_timestamp = __commonJS({
       "^([0-9][0-9][0-9][0-9])-([0-9][0-9]?)-([0-9][0-9]?)(?:[Tt]|[ \\t]+)([0-9][0-9]?):([0-9][0-9]):([0-9][0-9])(?:\\.([0-9]*))?(?:[ \\t]*(Z|([-+])([0-9][0-9]?)(?::([0-9][0-9]))?))?$"
     );
     function resolveYamlTimestamp(data) {
-      if (data === null)
-        return false;
-      if (YAML_DATE_REGEXP.exec(data) !== null)
-        return true;
-      if (YAML_TIMESTAMP_REGEXP.exec(data) !== null)
-        return true;
+      if (data === null) return false;
+      if (YAML_DATE_REGEXP.exec(data) !== null) return true;
+      if (YAML_TIMESTAMP_REGEXP.exec(data) !== null) return true;
       return false;
     }
     function constructYamlTimestamp(data) {
       var match, year, month, day, hour, minute, second, fraction = 0, delta = null, tz_hour, tz_minute, date;
       match = YAML_DATE_REGEXP.exec(data);
-      if (match === null)
-        match = YAML_TIMESTAMP_REGEXP.exec(data);
-      if (match === null)
-        throw new Error("Date resolve error");
+      if (match === null) match = YAML_TIMESTAMP_REGEXP.exec(data);
+      if (match === null) throw new Error("Date resolve error");
       year = +match[1];
       month = +match[2] - 1;
       day = +match[3];
@@ -62300,12 +69780,10 @@ var require_timestamp = __commonJS({
         tz_hour = +match[10];
         tz_minute = +(match[11] || 0);
         delta = (tz_hour * 60 + tz_minute) * 6e4;
-        if (match[9] === "-")
-          delta = -delta;
+        if (match[9] === "-") delta = -delta;
       }
       date = new Date(Date.UTC(year, month, day, hour, minute, second, fraction));
-      if (delta)
-        date.setTime(date.getTime() - delta);
+      if (delta) date.setTime(date.getTime() - delta);
       return date;
     }
     function representYamlTimestamp(object) {
@@ -62350,15 +69828,12 @@ var require_binary = __commonJS({
     var Type = require_type();
     var BASE64_MAP = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=\n\r";
     function resolveYamlBinary(data) {
-      if (data === null)
-        return false;
+      if (data === null) return false;
       var code, idx, bitlen = 0, max = data.length, map = BASE64_MAP;
       for (idx = 0; idx < max; idx++) {
         code = map.indexOf(data.charAt(idx));
-        if (code > 64)
-          continue;
-        if (code < 0)
-          return false;
+        if (code > 64) continue;
+        if (code < 0) return false;
         bitlen += 6;
       }
       return bitlen % 8 === 0;
@@ -62440,28 +69915,21 @@ var require_omap = __commonJS({
     var _hasOwnProperty = Object.prototype.hasOwnProperty;
     var _toString = Object.prototype.toString;
     function resolveYamlOmap(data) {
-      if (data === null)
-        return true;
+      if (data === null) return true;
       var objectKeys = [], index, length, pair, pairKey, pairHasKey, object = data;
       for (index = 0, length = object.length; index < length; index += 1) {
         pair = object[index];
         pairHasKey = false;
-        if (_toString.call(pair) !== "[object Object]")
-          return false;
+        if (_toString.call(pair) !== "[object Object]") return false;
         for (pairKey in pair) {
           if (_hasOwnProperty.call(pair, pairKey)) {
-            if (!pairHasKey)
-              pairHasKey = true;
-            else
-              return false;
+            if (!pairHasKey) pairHasKey = true;
+            else return false;
           }
         }
-        if (!pairHasKey)
-          return false;
-        if (objectKeys.indexOf(pairKey) === -1)
-          objectKeys.push(pairKey);
-        else
-          return false;
+        if (!pairHasKey) return false;
+        if (objectKeys.indexOf(pairKey) === -1) objectKeys.push(pairKey);
+        else return false;
       }
       return true;
     }
@@ -62483,24 +69951,20 @@ var require_pairs = __commonJS({
     var Type = require_type();
     var _toString = Object.prototype.toString;
     function resolveYamlPairs(data) {
-      if (data === null)
-        return true;
+      if (data === null) return true;
       var index, length, pair, keys, result, object = data;
       result = new Array(object.length);
       for (index = 0, length = object.length; index < length; index += 1) {
         pair = object[index];
-        if (_toString.call(pair) !== "[object Object]")
-          return false;
+        if (_toString.call(pair) !== "[object Object]") return false;
         keys = Object.keys(pair);
-        if (keys.length !== 1)
-          return false;
+        if (keys.length !== 1) return false;
         result[index] = [keys[0], pair[keys[0]]];
       }
       return true;
     }
     function constructYamlPairs(data) {
-      if (data === null)
-        return [];
+      if (data === null) return [];
       var index, length, pair, keys, result, object = data;
       result = new Array(object.length);
       for (index = 0, length = object.length; index < length; index += 1) {
@@ -62525,13 +69989,11 @@ var require_set = __commonJS({
     var Type = require_type();
     var _hasOwnProperty = Object.prototype.hasOwnProperty;
     function resolveYamlSet(data) {
-      if (data === null)
-        return true;
+      if (data === null) return true;
       var key, object = data;
       for (key in object) {
         if (_hasOwnProperty.call(object, key)) {
-          if (object[key] !== null)
-            return false;
+          if (object[key] !== null) return false;
         }
       }
       return true;
@@ -62603,38 +70065,29 @@ var require_regexp = __commonJS({
     "use strict";
     var Type = require_type();
     function resolveJavascriptRegExp(data) {
-      if (data === null)
-        return false;
-      if (data.length === 0)
-        return false;
+      if (data === null) return false;
+      if (data.length === 0) return false;
       var regexp = data, tail = /\/([gim]*)$/.exec(data), modifiers = "";
       if (regexp[0] === "/") {
-        if (tail)
-          modifiers = tail[1];
-        if (modifiers.length > 3)
-          return false;
-        if (regexp[regexp.length - modifiers.length - 1] !== "/")
-          return false;
+        if (tail) modifiers = tail[1];
+        if (modifiers.length > 3) return false;
+        if (regexp[regexp.length - modifiers.length - 1] !== "/") return false;
       }
       return true;
     }
     function constructJavascriptRegExp(data) {
       var regexp = data, tail = /\/([gim]*)$/.exec(data), modifiers = "";
       if (regexp[0] === "/") {
-        if (tail)
-          modifiers = tail[1];
+        if (tail) modifiers = tail[1];
         regexp = regexp.slice(1, regexp.length - modifiers.length - 1);
       }
       return new RegExp(regexp, modifiers);
     }
     function representJavascriptRegExp(object) {
       var result = "/" + object.source + "/";
-      if (object.global)
-        result += "g";
-      if (object.multiline)
-        result += "m";
-      if (object.ignoreCase)
-        result += "i";
+      if (object.global) result += "g";
+      if (object.multiline) result += "m";
+      if (object.ignoreCase) result += "i";
       return result;
     }
     function isRegExp(object) {
@@ -62659,14 +70112,12 @@ var require_function = __commonJS({
       _require = require;
       esprima = _require("esprima");
     } catch (_) {
-      if (typeof window !== "undefined")
-        esprima = window.esprima;
+      if (typeof window !== "undefined") esprima = window.esprima;
     }
     var _require;
     var Type = require_type();
     function resolveJavascriptFunction(data) {
-      if (data === null)
-        return false;
+      if (data === null) return false;
       try {
         var source = "(" + data + ")", ast = esprima.parse(source, { range: true });
         if (ast.type !== "Program" || ast.body.length !== 1 || ast.body[0].type !== "ExpressionStatement" || ast.body[0].expression.type !== "ArrowFunctionExpression" && ast.body[0].expression.type !== "FunctionExpression") {
@@ -63480,8 +70931,7 @@ var require_loader = __commonJS({
     function readTagProperty(state) {
       var _position, isVerbatim = false, isNamed = false, tagHandle, tagName, ch;
       ch = state.input.charCodeAt(state.position);
-      if (ch !== 33)
-        return false;
+      if (ch !== 33) return false;
       if (state.tag !== null) {
         throwError(state, "duplication of a tag property");
       }
@@ -63547,8 +70997,7 @@ var require_loader = __commonJS({
     function readAnchorProperty(state) {
       var _position, ch;
       ch = state.input.charCodeAt(state.position);
-      if (ch !== 38)
-        return false;
+      if (ch !== 38) return false;
       if (state.anchor !== null) {
         throwError(state, "duplication of an anchor property");
       }
@@ -63566,8 +71015,7 @@ var require_loader = __commonJS({
     function readAlias(state) {
       var _position, alias, ch;
       ch = state.input.charCodeAt(state.position);
-      if (ch !== 42)
-        return false;
+      if (ch !== 42) return false;
       ch = state.input.charCodeAt(++state.position);
       _position = state.position;
       while (ch !== 0 && !is_WS_OR_EOL(ch) && !is_FLOW_INDICATOR(ch)) {
@@ -63729,16 +71177,14 @@ var require_loader = __commonJS({
             } while (ch !== 0 && !is_EOL(ch));
             break;
           }
-          if (is_EOL(ch))
-            break;
+          if (is_EOL(ch)) break;
           _position = state.position;
           while (ch !== 0 && !is_WS_OR_EOL(ch)) {
             ch = state.input.charCodeAt(++state.position);
           }
           directiveArgs.push(state.input.slice(_position, state.position));
         }
-        if (ch !== 0)
-          readLineBreak(state);
+        if (ch !== 0) readLineBreak(state);
         if (_hasOwnProperty.call(directiveHandlers, directiveName)) {
           directiveHandlers[directiveName](state, directiveName, directiveArgs);
         } else {
@@ -63907,8 +71353,7 @@ var require_dumper = __commonJS({
     ];
     function compileStyleMap(schema, map) {
       var result, keys, index, length, tag, style, type;
-      if (map === null)
-        return {};
+      if (map === null) return {};
       result = {};
       keys = Object.keys(map);
       for (index = 0, length = keys.length; index < length; index += 1) {
@@ -63972,8 +71417,7 @@ var require_dumper = __commonJS({
           line = string.slice(position, next + 1);
           position = next + 1;
         }
-        if (line.length && line !== "\n")
-          result += ind;
+        if (line.length && line !== "\n") result += ind;
         result += line;
       }
       return result;
@@ -64118,8 +71562,7 @@ var require_dumper = __commonJS({
       return result;
     }
     function foldLine(line, width) {
-      if (line === "" || line[0] === " ")
-        return line;
+      if (line === "" || line[0] === " ") return line;
       var breakRe = / [^ ]/g;
       var match;
       var start = 0, end, curr = 0, next = 0;
@@ -64164,8 +71607,7 @@ var require_dumper = __commonJS({
       var _result = "", _tag = state.tag, index, length;
       for (index = 0, length = object.length; index < length; index += 1) {
         if (writeNode(state, level, object[index], false, false)) {
-          if (index !== 0)
-            _result += "," + (!state.condenseFlow ? " " : "");
+          if (index !== 0) _result += "," + (!state.condenseFlow ? " " : "");
           _result += state.dump;
         }
       }
@@ -64194,17 +71636,14 @@ var require_dumper = __commonJS({
       var _result = "", _tag = state.tag, objectKeyList = Object.keys(object), index, length, objectKey, objectValue, pairBuffer;
       for (index = 0, length = objectKeyList.length; index < length; index += 1) {
         pairBuffer = "";
-        if (index !== 0)
-          pairBuffer += ", ";
-        if (state.condenseFlow)
-          pairBuffer += '"';
+        if (index !== 0) pairBuffer += ", ";
+        if (state.condenseFlow) pairBuffer += '"';
         objectKey = objectKeyList[index];
         objectValue = object[objectKey];
         if (!writeNode(state, level, objectKey, false, false)) {
           continue;
         }
-        if (state.dump.length > 1024)
-          pairBuffer += "? ";
+        if (state.dump.length > 1024) pairBuffer += "? ";
         pairBuffer += state.dump + (state.condenseFlow ? '"' : "") + ":" + (state.condenseFlow ? "" : " ");
         if (!writeNode(state, level, objectValue, false, false)) {
           continue;
@@ -64337,8 +71776,7 @@ var require_dumper = __commonJS({
             writeScalar(state, state.dump, level, iskey);
           }
         } else {
-          if (state.skipInvalid)
-            return false;
+          if (state.skipInvalid) return false;
           throw new YAMLException("unacceptable kind of an object to dump " + type);
         }
         if (state.tag !== null && state.tag !== "?") {
@@ -64381,10 +71819,8 @@ var require_dumper = __commonJS({
     function dump(input, options2) {
       options2 = options2 || {};
       var state = new State(options2);
-      if (!state.noRefs)
-        getDuplicateReferences(input, state);
-      if (writeNode(state, 0, input, true, true))
-        return state.dump + "\n";
+      if (!state.noRefs) getDuplicateReferences(input, state);
+      if (writeNode(state, 0, input, true, true)) return state.dump + "\n";
       return "";
     }
     function safeDump(input, options2) {
@@ -64514,8 +71950,7 @@ var require_utils8 = __commonJS({
       return typeof input === "string" ? Buffer.from(input) : input;
     };
     exports2.toString = function(input) {
-      if (exports2.isBuffer(input))
-        return stripBom(String(input));
+      if (exports2.isBuffer(input)) return stripBom(String(input));
       if (typeof input !== "string") {
         throw new TypeError("expected input to be a string or buffer");
       }
@@ -64525,8 +71960,7 @@ var require_utils8 = __commonJS({
       return val ? Array.isArray(val) ? val : [val] : [];
     };
     exports2.startsWith = function(str2, substr, len) {
-      if (typeof len !== "number")
-        len = substr.length;
+      if (typeof len !== "number") len = substr.length;
       return str2.slice(0, len) === substr;
     };
   }
@@ -64609,8 +72043,7 @@ var require_stringify = __commonJS({
       const str2 = file3.content;
       const opts = defaults(options2);
       if (data == null) {
-        if (!opts.data)
-          return file3;
+        if (!opts.data) return file3;
         data = opts.data;
       }
       const language = file3.language || opts.language;
@@ -64801,8 +72234,7 @@ var require_gray_matter = __commonJS({
     }
     matter2.engines = engines2;
     matter2.stringify = function(file3, data, options2) {
-      if (typeof file3 === "string")
-        file3 = matter2(file3, options2);
+      if (typeof file3 === "string") file3 = matter2(file3, options2);
       return stringify(file3, data, options2);
     };
     matter2.read = function(filepath, options2) {
@@ -64847,30 +72279,30 @@ var import_contract_helpers2 = __toESM(require_cjs());
 // src/ui-config/governanceConfig.ts
 var governanceConfig = {
   chainId: 570,
-  votingAssetName: " stkPSYS",
-  averageNetworkBlockTime: 1,
-  queryGovernanceDataUrl: "https://api.thegraph.com/subgraphs/name/aave/governance-v2",
-  wsGovernanceDataUrl: "wss://api.thegraph.com/subgraphs/name/aave/governance-v2",
-  aaveTokenAddress: "0x48023b16c3e81AA7F6eFFbdEB35Bb83f4f31a8fd",
-  // aAaveTokenAddress: '0xDa5E8e1C3596D3Cc11a4dd5aD66b8f03B5410F8C',
-  stkAaveTokenAddress: "0x7170FeE145954863ca1c456BE1b6FB1e869e3B77",
-  governanceForumLink: "https://governance.aave.com",
+  votingAssetName: "PSYS + stkPSYS",
+  averageNetworkBlockTime: 2.5,
+  queryGovernanceDataUrl: "https://rollux.graph.pegasys.fi/subgraphs/name/pollum-io/governance-v2",
+  wsGovernanceDataUrl: "wss://rollux.graph.pegasys.fi/subgraphs/name/pollum-io/governance-v2",
+  aaveTokenAddress: "0x1c5ed8Ff728574faf9a8Cba1E63DC9eBD14Aa9dd",
+  aAaveTokenAddress: "0x",
+  stkAaveTokenAddress: "0xf18B6F5127433a37BA26B8daCF351BC1d688d50e",
+  governanceForumLink: "https://gov.pegasys.fi/",
   governanceFAQLink: "https://docs.aave.com/faq/governance",
-  walletBalanceProvider: "0x7cC050298928bab7287517d5185e1AFFa240852F",
-  governanceSnapshotLink: "https://snapshot.org/#/aave.eth",
+  walletBalanceProvider: "0xb0F8a553Ff177bB68c7013A513B36AdC72738954",
+  governanceSnapshotLink: "",
   addresses: {
-    AAVE_GOVERNANCE_V2: "0x4894A8900D0fDB4DAAFA80383F212f03E1d0f351",
-    AAVE_GOVERNANCE_V2_EXECUTOR_SHORT: "0xEC2d95Fa98F69401648484A6584AeE6de586b65c",
-    AAVE_GOVERNANCE_V2_EXECUTOR_LONG: "0xEC2d95Fa98F69401648484A6584AeE6de586b65c",
-    AAVE_GOVERNANCE_V2_HELPER: "0x7AbaCB2043CCE3E6f4eC3cE13c27b83b25EB3702"
+    PEGASYS_GOVERNANCE_V2: "0x3b9511dce0d50AE8f15C618Bb8720E7c5c634AD8",
+    PEGASYS_GOVERNANCE_V2_EXECUTOR_SHORT: "0xD280f3A2067487948E4c46e4b14e80876e6E36aa",
+    PEGASYS_GOVERNANCE_V2_EXECUTOR_LONG: "0xD280f3A2067487948E4c46e4b14e80876e6E36aa",
+    PEGASYS_GOVERNANCE_V2_HELPER: "0xa3480f6A129AD4514Fd5d6DF00DDa2C213eE0b3B"
   },
   ipfsGateway: "https://cloudflare-ipfs.com/ipfs",
   fallbackIpfsGateway: "https://ipfs.io/ipfs"
 };
 
 // src/utils/marketsAndNetworksConfig.ts
-var import_contract_helpers = __toESM(require_cjs());
 var import_providers2 = __toESM(require_lib30());
+var import_contract_helpers = __toESM(require_cjs());
 
 // src/ui-config/marketsConfig.tsx
 var marketsData = {
@@ -64927,13 +72359,13 @@ var marketsData = {
     },
     subgraphUrl: "https://rollux.graph.pegasys.fi/subgraphs/name/pollum-io/pegasys-lending",
     addresses: {
-      LENDING_POOL_ADDRESS_PROVIDER: "0x4E4D3f7AF9ba410D4721b61517143D7C0134aa5a",
-      LENDING_POOL: "0x384cAE0Dd193d4B117817d93Fdc761372b99F3b0",
-      WETH_GATEWAY: "0xfA340E14C6febCD0dF2dCe6eB77eA735af84f3D3",
-      WALLET_BALANCE_PROVIDER: "0x7cC050298928bab7287517d5185e1AFFa240852F",
-      UI_POOL_DATA_PROVIDER: "0x93eA994d286FC44d3B6c3b3204d4c64af44Fd50D",
-      UI_INCENTIVE_DATA_PROVIDER: "0x4e2d2701e551eA91E73255eA4f921E25422c2836"
-      // L2_ENCODER: '0xa6D9c5175B5b86Eb98a6E4B19E60B6a75F07F159',
+      LENDING_POOL_ADDRESS_PROVIDER: "0x160E423f0b3D5Fe8104058C3E4aeBa176B35615d",
+      LENDING_POOL: "0xd4D28954f957fc7383c480D0EBF3f87eA5D44429",
+      WETH_GATEWAY: "0x771149D92a92729D4fD5aa5ED3F980a356Fb18B6",
+      WALLET_BALANCE_PROVIDER: "0xb0F8a553Ff177bB68c7013A513B36AdC72738954",
+      UI_POOL_DATA_PROVIDER: "0xa1fcD4A9Ad96CC87a69ec0d6a633Faad9ba2C484",
+      UI_INCENTIVE_DATA_PROVIDER: "0xFD84E21a7e4015684C379BEc04c28bc5aa702E53",
+      L2_ENCODER: "0x47dAe56c40F09cF8f5986EE443580c0d742FD0bD"
       // COLLECTOR: ZERO_ADDRESS,
       // SWAP_COLLATERAL_ADAPTER: ZERO_ADDRESS,
       // REPAY_WITH_COLLATERAL_ADAPTER: ZERO_ADDRESS,
@@ -65600,18 +73032,18 @@ var networkConfigs = {
   // },
   [570]: {
     name: "Rollux",
-    privateJsonRPCUrl: "https://rpc.rollux.com/",
-    publicJsonRPCUrl: ["https://rpc.rollux.com/"],
+    privateJsonRPCUrl: "https://rpc1.rollux.com/",
+    publicJsonRPCUrl: ["https://rpc1.rollux.com/"],
     // publicJsonRPCWSUrl: 'wss://eth-goerli.public.blastapi.io',
     // protocolDataUrl: '',
     baseUniswapAdapter: "0x0",
     baseAssetSymbol: "SYS",
-    wrappedBaseAssetSymbol: "SYS",
+    wrappedBaseAssetSymbol: "WSYS",
     baseAssetDecimals: 18,
     explorerLink: "https://explorer.rollux.com/",
     // usdMarket: true,
     // isTestnet: true,
-    networkLogoPath: "/icons/networks/base.svg"
+    networkLogoPath: "/icons/networks/rollux.svg"
   }
 };
 
@@ -65679,8 +73111,7 @@ var RotationProvider = class extends import_providers.BaseProvider {
    */
   rotateUrl(prevIndex) {
     return __async(this, null, function* () {
-      if (prevIndex !== this.currentProviderIndex)
-        return;
+      if (prevIndex !== this.currentProviderIndex) return;
       if (this.currentProviderIndex === 0) {
         this.currentProviderIndex += 1;
         this.firstRotationTimestamp = (/* @__PURE__ */ new Date()).getTime();
@@ -65827,10 +73258,13 @@ var getProvider = (chainId) => {
 };
 
 // src/modules/governance/utils/governanceProvider.tsx
-var governanceContract = new import_contract_helpers2.AaveGovernanceService(getProvider(governanceConfig.chainId), {
-  GOVERNANCE_ADDRESS: governanceConfig.addresses.PEGASYS_GOVERNANCE_V2,
-  GOVERNANCE_HELPER_ADDRESS: governanceConfig.addresses.PEGASYS_GOVERNANCE_V2_HELPER
-});
+var governanceContract = new import_contract_helpers2.PegasysGovernanceService(
+  getProvider(governanceConfig.chainId),
+  {
+    GOVERNANCE_ADDRESS: governanceConfig.addresses.PEGASYS_GOVERNANCE_V2,
+    GOVERNANCE_HELPER_ADDRESS: governanceConfig.addresses.PEGASYS_GOVERNANCE_V2_HELPER
+  }
+);
 
 // src/static-build/ipfs.ts
 var import_lodash = __toESM(require_lodash());
@@ -65838,19 +73272,14 @@ var import_lodash = __toESM(require_lodash());
 // node_modules/steno/lib/index.js
 var import_fs = __toESM(require("fs"), 1);
 var __classPrivateFieldSet2 = function(receiver, state, value, kind, f) {
-  if (kind === "m")
-    throw new TypeError("Private method is not writable");
-  if (kind === "a" && !f)
-    throw new TypeError("Private accessor was defined without a setter");
-  if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver))
-    throw new TypeError("Cannot write private member to an object whose class did not declare it");
+  if (kind === "m") throw new TypeError("Private method is not writable");
+  if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
+  if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
   return kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value), value;
 };
 var __classPrivateFieldGet2 = function(receiver, state, kind, f) {
-  if (kind === "a" && !f)
-    throw new TypeError("Private accessor was defined without a getter");
-  if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver))
-    throw new TypeError("Cannot read private member from an object whose class did not declare it");
+  if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
+  if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
   return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
 };
 var _Writer_instances;
@@ -65910,19 +73339,14 @@ _JSONFile_adapter = /* @__PURE__ */ new WeakMap();
 var import_fs2 = __toESM(require("fs"), 1);
 var import_path = __toESM(require("path"), 1);
 var __classPrivateFieldSet3 = function(receiver, state, value, kind, f) {
-  if (kind === "m")
-    throw new TypeError("Private method is not writable");
-  if (kind === "a" && !f)
-    throw new TypeError("Private accessor was defined without a setter");
-  if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver))
-    throw new TypeError("Cannot write private member to an object whose class did not declare it");
+  if (kind === "m") throw new TypeError("Private method is not writable");
+  if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
+  if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
   return kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value), value;
 };
 var __classPrivateFieldGet3 = function(receiver, state, kind, f) {
-  if (kind === "a" && !f)
-    throw new TypeError("Private accessor was defined without a getter");
-  if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver))
-    throw new TypeError("Cannot read private member from an object whose class did not declare it");
+  if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
+  if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
   return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
 };
 var _TextFileSync_tempFilename;
@@ -65955,19 +73379,14 @@ _TextFileSync_tempFilename = /* @__PURE__ */ new WeakMap(), _TextFileSync_filena
 
 // node_modules/lowdb/lib/adapters/JSONFileSync.js
 var __classPrivateFieldSet4 = function(receiver, state, value, kind, f) {
-  if (kind === "m")
-    throw new TypeError("Private method is not writable");
-  if (kind === "a" && !f)
-    throw new TypeError("Private accessor was defined without a setter");
-  if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver))
-    throw new TypeError("Cannot write private member to an object whose class did not declare it");
+  if (kind === "m") throw new TypeError("Private method is not writable");
+  if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
+  if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
   return kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value), value;
 };
 var __classPrivateFieldGet4 = function(receiver, state, kind, f) {
-  if (kind === "a" && !f)
-    throw new TypeError("Private accessor was defined without a getter");
-  if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver))
-    throw new TypeError("Cannot read private member from an object whose class did not declare it");
+  if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
+  if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
   return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
 };
 var _JSONFileSync_adapter;
@@ -66075,11 +73494,9 @@ function getProposalMetadata(hash, gateway) {
 function fetchFromIpfs(hash, gateway) {
   return __async(this, null, function* () {
     const ipfsHash = hash.startsWith("0x") ? import_utils.base58.encode(Buffer.from(`1220${hash.slice(2)}`, "hex")) : hash;
-    if (MEMORIZE[ipfsHash])
-      return MEMORIZE[ipfsHash];
+    if (MEMORIZE[ipfsHash]) return MEMORIZE[ipfsHash];
     const ipfsResponse = yield (0, import_isomorphic_unfetch.default)(getLink(ipfsHash, gateway));
-    if (!ipfsResponse.ok)
-      throw Error("Fetch not working");
+    if (!ipfsResponse.ok) throw Error("Fetch not working");
     const clone2 = yield ipfsResponse.clone();
     try {
       const response = yield ipfsResponse.json();
@@ -66114,18 +73531,15 @@ db.read();
 var Ipfs = class {
   get(id) {
     const value = db.chain.get("ipfs").find({ id }).value();
-    if (!value)
-      throw new Error(`trying to fetch ipfs cache, but failed ${id}`);
+    if (!value) throw new Error(`trying to fetch ipfs cache, but failed ${id}`);
     return value;
   }
   populate(id, proposal) {
     return __async(this, null, function* () {
       db.data || (db.data = { ipfs: [] });
       const value = db.chain.get("ipfs").find({ id }).value();
-      if (value)
-        return;
-      if (!proposal)
-        throw new Error(`error populating proposal ${id}`);
+      if (value) return;
+      if (!proposal) throw new Error(`error populating proposal ${id}`);
       const ipfs = yield getProposalMetadata(proposal.ipfsHash, governanceConfig.ipfsGateway);
       const newIpfs = __spreadProps(__spreadValues({}, ipfs), { originalHash: proposal.ipfsHash, id });
       db.data.ipfs.push(newIpfs);
@@ -66167,8 +73581,7 @@ function clone(configObject) {
   }, ALPHABET = "0123456789abcdefghijklmnopqrstuvwxyz", alphabetHasNormalDecimalDigits = true;
   function BigNumber2(v, b) {
     var alphabet, c, caseChanged, e, i, isNum, len, str2, x = this;
-    if (!(x instanceof BigNumber2))
-      return new BigNumber2(v, b);
+    if (!(x instanceof BigNumber2)) return new BigNumber2(v, b);
     if (b == null) {
       if (v && v._isBigNumber === true) {
         x.s = v.s;
@@ -66185,8 +73598,7 @@ function clone(configObject) {
       if ((isNum = typeof v == "number") && v * 0 == 0) {
         x.s = 1 / v < 0 ? (v = -v, -1) : 1;
         if (v === ~~v) {
-          for (e = 0, i = v; i >= 10; i /= 10, e++)
-            ;
+          for (e = 0, i = v; i >= 10; i /= 10, e++) ;
           if (e > MAX_EXP) {
             x.c = x.e = null;
           } else {
@@ -66197,15 +73609,12 @@ function clone(configObject) {
         }
         str2 = String(v);
       } else {
-        if (!isNumeric.test(str2 = String(v)))
-          return parseNumeric(x, str2, isNum);
+        if (!isNumeric.test(str2 = String(v))) return parseNumeric(x, str2, isNum);
         x.s = str2.charCodeAt(0) == 45 ? (str2 = str2.slice(1), -1) : 1;
       }
-      if ((e = str2.indexOf(".")) > -1)
-        str2 = str2.replace(".", "");
+      if ((e = str2.indexOf(".")) > -1) str2 = str2.replace(".", "");
       if ((i = str2.search(/e/i)) > 0) {
-        if (e < 0)
-          e = i;
+        if (e < 0) e = i;
         e += +str2.slice(i + 1);
         str2 = str2.substring(0, i);
       } else if (e < 0) {
@@ -66219,8 +73628,7 @@ function clone(configObject) {
       }
       str2 = String(v);
       if (isNum = typeof v == "number") {
-        if (v * 0 != 0)
-          return parseNumeric(x, str2, isNum, b);
+        if (v * 0 != 0) return parseNumeric(x, str2, isNum, b);
         x.s = 1 / v < 0 ? (str2 = str2.slice(1), -1) : 1;
         if (BigNumber2.DEBUG && str2.replace(/^0\.0*|\./, "").length > 15) {
           throw Error(tooManyDigits + v);
@@ -66250,15 +73658,11 @@ function clone(configObject) {
       }
       isNum = false;
       str2 = convertBase(str2, b, 10, x.s);
-      if ((e = str2.indexOf(".")) > -1)
-        str2 = str2.replace(".", "");
-      else
-        e = str2.length;
+      if ((e = str2.indexOf(".")) > -1) str2 = str2.replace(".", "");
+      else e = str2.length;
     }
-    for (i = 0; str2.charCodeAt(i) === 48; i++)
-      ;
-    for (len = str2.length; str2.charCodeAt(--len) === 48; )
-      ;
+    for (i = 0; str2.charCodeAt(i) === 48; i++) ;
+    for (len = str2.length; str2.charCodeAt(--len) === 48; ) ;
     if (str2 = str2.slice(i, ++len)) {
       len -= i;
       if (isNum && BigNumber2.DEBUG && len > 15 && (v > MAX_SAFE_INTEGER || v !== mathfloor(v))) {
@@ -66272,11 +73676,9 @@ function clone(configObject) {
         x.e = e;
         x.c = [];
         i = (e + 1) % LOG_BASE;
-        if (e < 0)
-          i += LOG_BASE;
+        if (e < 0) i += LOG_BASE;
         if (i < len) {
-          if (i)
-            x.c.push(+str2.slice(0, i));
+          if (i) x.c.push(+str2.slice(0, i));
           for (len -= LOG_BASE; i < len; ) {
             x.c.push(+str2.slice(i, i += LOG_BASE));
           }
@@ -66284,8 +73686,7 @@ function clone(configObject) {
         } else {
           i -= len;
         }
-        for (; i--; str2 += "0")
-          ;
+        for (; i--; str2 += "0") ;
         x.c.push(+str2);
       }
     } else {
@@ -66374,10 +73775,8 @@ function clone(configObject) {
         }
         if (obj.hasOwnProperty(p = "FORMAT")) {
           v = obj[p];
-          if (typeof v == "object")
-            FORMAT = v;
-          else
-            throw Error(bignumberError + p + " not an object: " + v);
+          if (typeof v == "object") FORMAT = v;
+          else throw Error(bignumberError + p + " not an object: " + v);
         }
         if (obj.hasOwnProperty(p = "ALPHABET")) {
           v = obj[p];
@@ -66405,35 +73804,28 @@ function clone(configObject) {
     };
   };
   BigNumber2.isBigNumber = function(v) {
-    if (!v || v._isBigNumber !== true)
-      return false;
-    if (!BigNumber2.DEBUG)
-      return true;
+    if (!v || v._isBigNumber !== true) return false;
+    if (!BigNumber2.DEBUG) return true;
     var i, n, c = v.c, e = v.e, s = v.s;
-    out:
-      if ({}.toString.call(c) == "[object Array]") {
-        if ((s === 1 || s === -1) && e >= -MAX && e <= MAX && e === mathfloor(e)) {
-          if (c[0] === 0) {
-            if (e === 0 && c.length === 1)
-              return true;
-            break out;
-          }
-          i = (e + 1) % LOG_BASE;
-          if (i < 1)
-            i += LOG_BASE;
-          if (String(c[0]).length == i) {
-            for (i = 0; i < c.length; i++) {
-              n = c[i];
-              if (n < 0 || n >= BASE || n !== mathfloor(n))
-                break out;
-            }
-            if (n !== 0)
-              return true;
-          }
+    out: if ({}.toString.call(c) == "[object Array]") {
+      if ((s === 1 || s === -1) && e >= -MAX && e <= MAX && e === mathfloor(e)) {
+        if (c[0] === 0) {
+          if (e === 0 && c.length === 1) return true;
+          break out;
         }
-      } else if (c === null && e === null && (s === null || s === 1 || s === -1)) {
-        return true;
+        i = (e + 1) % LOG_BASE;
+        if (i < 1) i += LOG_BASE;
+        if (String(c[0]).length == i) {
+          for (i = 0; i < c.length; i++) {
+            n = c[i];
+            if (n < 0 || n >= BASE || n !== mathfloor(n)) break out;
+          }
+          if (n !== 0) return true;
+        }
       }
+    } else if (c === null && e === null && (s === null || s === 1 || s === -1)) {
+      return true;
+    }
     throw Error(bignumberError + "Invalid BigNumber: " + v);
   };
   BigNumber2.maximum = BigNumber2.max = function() {
@@ -66451,10 +73843,8 @@ function clone(configObject) {
     };
     return function(dp) {
       var a, b, e, k, v, i = 0, c = [], rand = new BigNumber2(ONE);
-      if (dp == null)
-        dp = DECIMAL_PLACES;
-      else
-        intCheck(dp, 0, MAX);
+      if (dp == null) dp = DECIMAL_PLACES;
+      else intCheck(dp, 0, MAX);
       k = mathceil(dp / LOG_BASE);
       if (CRYPTO) {
         if (crypto.getRandomValues) {
@@ -66491,8 +73881,7 @@ function clone(configObject) {
       if (!CRYPTO) {
         for (; i < k; ) {
           v = random53bitInt();
-          if (v < 9e15)
-            c[i++] = v % 1e14;
+          if (v < 9e15) c[i++] = v % 1e14;
         }
       }
       k = c[--i];
@@ -66501,17 +73890,13 @@ function clone(configObject) {
         v = POWS_TEN[LOG_BASE - dp];
         c[i] = mathfloor(k / v) * v;
       }
-      for (; c[i] === 0; c.pop(), i--)
-        ;
+      for (; c[i] === 0; c.pop(), i--) ;
       if (i < 0) {
         c = [e = 0];
       } else {
-        for (e = -1; c[0] === 0; c.splice(0, 1), e -= LOG_BASE)
-          ;
-        for (i = 1, v = c[0]; v >= 10; v /= 10, i++)
-          ;
-        if (i < LOG_BASE)
-          e -= LOG_BASE - i;
+        for (e = -1; c[0] === 0; c.splice(0, 1), e -= LOG_BASE) ;
+        for (i = 1, v = c[0]; v >= 10; v /= 10, i++) ;
+        if (i < LOG_BASE) e -= LOG_BASE - i;
       }
       rand.e = e;
       rand.c = c;
@@ -66520,8 +73905,7 @@ function clone(configObject) {
   }();
   BigNumber2.sum = function() {
     var i = 1, args = arguments, sum = new BigNumber2(args[0]);
-    for (; i < args.length; )
-      sum = sum.plus(args[i++]);
+    for (; i < args.length; ) sum = sum.plus(args[i++]);
     return sum;
   };
   convertBase = /* @__PURE__ */ function() {
@@ -66529,13 +73913,11 @@ function clone(configObject) {
     function toBaseOut(str2, baseIn, baseOut, alphabet) {
       var j, arr = [0], arrL, i = 0, len = str2.length;
       for (; i < len; ) {
-        for (arrL = arr.length; arrL--; arr[arrL] *= baseIn)
-          ;
+        for (arrL = arr.length; arrL--; arr[arrL] *= baseIn) ;
         arr[0] += alphabet.indexOf(str2.charAt(i++));
         for (j = 0; j < arr.length; j++) {
           if (arr[j] > baseOut - 1) {
-            if (arr[j + 1] == null)
-              arr[j + 1] = 0;
+            if (arr[j + 1] == null) arr[j + 1] = 0;
             arr[j + 1] += arr[j] / baseOut | 0;
             arr[j] %= baseOut;
           }
@@ -66562,10 +73944,8 @@ function clone(configObject) {
       }
       xc = toBaseOut(str2, baseIn, baseOut, callerIsToString ? (alphabet = ALPHABET, decimal) : (alphabet = decimal, ALPHABET));
       e = k = xc.length;
-      for (; xc[--k] == 0; xc.pop())
-        ;
-      if (!xc[0])
-        return alphabet.charAt(0);
+      for (; xc[--k] == 0; xc.pop()) ;
+      if (!xc[0]) return alphabet.charAt(0);
       if (i < 0) {
         --e;
       } else {
@@ -66595,10 +73975,8 @@ function clone(configObject) {
             }
           }
         }
-        for (k = xc.length; !xc[--k]; )
-          ;
-        for (i = 0, str2 = ""; i <= k; str2 += alphabet.charAt(xc[i++]))
-          ;
+        for (k = xc.length; !xc[--k]; ) ;
+        for (i = 0, str2 = ""; i <= k; str2 += alphabet.charAt(xc[i++])) ;
         str2 = toFixedPoint(str2, e, alphabet.charAt(0));
       }
       return str2;
@@ -66615,8 +73993,7 @@ function clone(configObject) {
         carry = (temp / base | 0) + (m / SQRT_BASE | 0) + khi * xhi;
         x[i] = temp % base;
       }
-      if (carry)
-        x = [carry].concat(x);
+      if (carry) x = [carry].concat(x);
       return x;
     }
     function compare2(a, b, aL, bL) {
@@ -66640,8 +74017,7 @@ function clone(configObject) {
         i = a[aL] < b[aL] ? 1 : 0;
         a[aL] = i * base + a[aL] - b[aL];
       }
-      for (; !a[0] && a.length > 1; a.splice(0, 1))
-        ;
+      for (; !a[0] && a.length > 1; a.splice(0, 1)) ;
     }
     return function(x, y, dp, rm, base) {
       var cmp, e, i, more, n, prod, prodL, q, qc, rem, remL, rem0, xi, xL, yc0, yL, yz, s = x.s == y.s ? 1 : -1, xc = x.c, yc = y.c;
@@ -66663,10 +74039,8 @@ function clone(configObject) {
         e = bitFloor(x.e / LOG_BASE) - bitFloor(y.e / LOG_BASE);
         s = s / LOG_BASE | 0;
       }
-      for (i = 0; yc[i] == (xc[i] || 0); i++)
-        ;
-      if (yc[i] > (xc[i] || 0))
-        e--;
+      for (i = 0; yc[i] == (xc[i] || 0); i++) ;
+      if (yc[i] > (xc[i] || 0)) e--;
       if (s < 0) {
         qc.push(1);
         more = true;
@@ -66685,24 +74059,20 @@ function clone(configObject) {
         xi = yL;
         rem = xc.slice(0, yL);
         remL = rem.length;
-        for (; remL < yL; rem[remL++] = 0)
-          ;
+        for (; remL < yL; rem[remL++] = 0) ;
         yz = yc.slice();
         yz = [0].concat(yz);
         yc0 = yc[0];
-        if (yc[1] >= base / 2)
-          yc0++;
+        if (yc[1] >= base / 2) yc0++;
         do {
           n = 0;
           cmp = compare2(yc, rem, yL, remL);
           if (cmp < 0) {
             rem0 = rem[0];
-            if (yL != remL)
-              rem0 = rem0 * base + (rem[1] || 0);
+            if (yL != remL) rem0 = rem0 * base + (rem[1] || 0);
             n = mathfloor(rem0 / yc0);
             if (n > 1) {
-              if (n >= base)
-                n = base - 1;
+              if (n >= base) n = base - 1;
               prod = multiply(yc, n, base);
               prodL = prod.length;
               remL = rem.length;
@@ -66719,8 +74089,7 @@ function clone(configObject) {
               prod = yc.slice();
               prodL = prod.length;
             }
-            if (prodL < remL)
-              prod = [0].concat(prod);
+            if (prodL < remL) prod = [0].concat(prod);
             subtract(rem, prod, remL, base);
             remL = rem.length;
             if (cmp == -1) {
@@ -66743,12 +74112,10 @@ function clone(configObject) {
           }
         } while ((xi++ < xL || rem[0] != null) && s--);
         more = rem[0] != null;
-        if (!qc[0])
-          qc.splice(0, 1);
+        if (!qc[0]) qc.splice(0, 1);
       }
       if (base == BASE) {
-        for (i = 1, s = qc[0]; s >= 10; s /= 10, i++)
-          ;
+        for (i = 1, s = qc[0]; s >= 10; s /= 10, i++) ;
         round(q, dp + (q.e = i + e * LOG_BASE - 1) + 1, rm, more);
       } else {
         q.e = e;
@@ -66759,12 +74126,9 @@ function clone(configObject) {
   }();
   function format(n, i, rm, id) {
     var c0, e, ne, len, str2;
-    if (rm == null)
-      rm = ROUNDING_MODE;
-    else
-      intCheck(rm, 0, 8);
-    if (!n.c)
-      return n.toString();
+    if (rm == null) rm = ROUNDING_MODE;
+    else intCheck(rm, 0, 8);
+    if (!n.c) return n.toString();
     c0 = n.c[0];
     ne = n.e;
     if (i == null) {
@@ -66776,23 +74140,18 @@ function clone(configObject) {
       str2 = coeffToString(n.c);
       len = str2.length;
       if (id == 1 || id == 2 && (i <= e || e <= TO_EXP_NEG)) {
-        for (; len < i; str2 += "0", len++)
-          ;
+        for (; len < i; str2 += "0", len++) ;
         str2 = toExponential(str2, e);
       } else {
         i -= ne;
         str2 = toFixedPoint(str2, e, "0");
         if (e + 1 > len) {
-          if (--i > 0)
-            for (str2 += "."; i--; str2 += "0")
-              ;
+          if (--i > 0) for (str2 += "."; i--; str2 += "0") ;
         } else {
           i += e - len;
           if (i > 0) {
-            if (e + 1 == len)
-              str2 += ".";
-            for (; i--; str2 += "0")
-              ;
+            if (e + 1 == len) str2 += ".";
+            for (; i--; str2 += "0") ;
           }
         }
       }
@@ -66814,10 +74173,8 @@ function clone(configObject) {
   }
   function normalise(n, c, e) {
     var i = 1, j = c.length;
-    for (; !c[--j]; c.pop())
-      ;
-    for (j = c[0]; j >= 10; j /= 10, i++)
-      ;
+    for (; !c[--j]; c.pop()) ;
+    for (j = c[0]; j >= 10; j /= 10, i++) ;
     if ((e = i + e * LOG_BASE - 1) > MAX_EXP) {
       n.c = n.e = null;
     } else if (e < MIN_EXP) {
@@ -66844,8 +74201,7 @@ function clone(configObject) {
             base = b;
             s = s.replace(dotAfter, "$1").replace(dotBefore, "0.$1");
           }
-          if (str2 != s)
-            return new BigNumber2(s, base);
+          if (str2 != s) return new BigNumber2(s, base);
         }
         if (BigNumber2.DEBUG) {
           throw Error(bignumberError + "Not a" + (b ? " base " + b : "") + " number: " + str2);
@@ -66859,8 +74215,7 @@ function clone(configObject) {
     var d, i, j, k, n, ni, rd, xc = x.c, pows10 = POWS_TEN;
     if (xc) {
       out: {
-        for (d = 1, k = xc[0]; k >= 10; k /= 10, d++)
-          ;
+        for (d = 1, k = xc[0]; k >= 10; k /= 10, d++) ;
         i = sd - d;
         if (i < 0) {
           i += LOG_BASE;
@@ -66871,8 +74226,7 @@ function clone(configObject) {
           ni = mathceil((i + 1) / LOG_BASE);
           if (ni >= xc.length) {
             if (r) {
-              for (; xc.length <= ni; xc.push(0))
-                ;
+              for (; xc.length <= ni; xc.push(0)) ;
               n = rd = 0;
               d = 1;
               i %= LOG_BASE;
@@ -66882,8 +74236,7 @@ function clone(configObject) {
             }
           } else {
             n = k = xc[ni];
-            for (d = 1; k >= 10; k /= 10, d++)
-              ;
+            for (d = 1; k >= 10; k /= 10, d++) ;
             i %= LOG_BASE;
             j = i - LOG_BASE + d;
             rd = j < 0 ? 0 : n / pows10[d - j - 1] % 10 | 0;
@@ -66918,28 +74271,23 @@ function clone(configObject) {
         if (r) {
           for (; ; ) {
             if (ni == 0) {
-              for (i = 1, j = xc[0]; j >= 10; j /= 10, i++)
-                ;
+              for (i = 1, j = xc[0]; j >= 10; j /= 10, i++) ;
               j = xc[0] += k;
-              for (k = 1; j >= 10; j /= 10, k++)
-                ;
+              for (k = 1; j >= 10; j /= 10, k++) ;
               if (i != k) {
                 x.e++;
-                if (xc[0] == BASE)
-                  xc[0] = 1;
+                if (xc[0] == BASE) xc[0] = 1;
               }
               break;
             } else {
               xc[ni] += k;
-              if (xc[ni] != BASE)
-                break;
+              if (xc[ni] != BASE) break;
               xc[ni--] = 0;
               k = 1;
             }
           }
         }
-        for (i = xc.length; xc[--i] === 0; xc.pop())
-          ;
+        for (i = xc.length; xc[--i] === 0; xc.pop()) ;
       }
       if (x.e > MAX_EXP) {
         x.c = x.e = null;
@@ -66951,16 +74299,14 @@ function clone(configObject) {
   }
   function valueOf(n) {
     var str2, e = n.e;
-    if (e === null)
-      return n.toString();
+    if (e === null) return n.toString();
     str2 = coeffToString(n.c);
     str2 = e <= TO_EXP_NEG || e >= TO_EXP_POS ? toExponential(str2, e) : toFixedPoint(str2, e, "0");
     return n.s < 0 ? "-" + str2 : str2;
   }
   P.absoluteValue = P.abs = function() {
     var x = new BigNumber2(this);
-    if (x.s < 0)
-      x.s = 1;
+    if (x.s < 0) x.s = 1;
     return x;
   };
   P.comparedTo = function(y, b) {
@@ -66970,20 +74316,14 @@ function clone(configObject) {
     var c, n, v, x = this;
     if (dp != null) {
       intCheck(dp, 0, MAX);
-      if (rm == null)
-        rm = ROUNDING_MODE;
-      else
-        intCheck(rm, 0, 8);
+      if (rm == null) rm = ROUNDING_MODE;
+      else intCheck(rm, 0, 8);
       return round(new BigNumber2(x), dp + x.e + 1, rm);
     }
-    if (!(c = x.c))
-      return null;
+    if (!(c = x.c)) return null;
     n = ((v = c.length - 1) - bitFloor(this.e / LOG_BASE)) * LOG_BASE;
-    if (v = c[v])
-      for (; v % 10 == 0; v /= 10, n--)
-        ;
-    if (n < 0)
-      n = 0;
+    if (v = c[v]) for (; v % 10 == 0; v /= 10, n--) ;
+    if (n < 0) n = 0;
     return n;
   };
   P.dividedBy = P.div = function(y, b) {
@@ -66998,8 +74338,7 @@ function clone(configObject) {
     if (n.c && !n.isInteger()) {
       throw Error(bignumberError + "Exponent not an integer: " + valueOf(n));
     }
-    if (m != null)
-      m = new BigNumber2(m);
+    if (m != null) m = new BigNumber2(m);
     nIsBig = n.e > 14;
     if (!x.c || !x.c[0] || x.c[0] == 1 && !x.e && x.c.length == 1 || !n.c || !n.c[0]) {
       y = new BigNumber2(Math.pow(+valueOf(x), nIsBig ? n.s * (2 - isOdd(n)) : +valueOf(n)));
@@ -67007,23 +74346,19 @@ function clone(configObject) {
     }
     nIsNeg = n.s < 0;
     if (m) {
-      if (m.c ? !m.c[0] : !m.s)
-        return new BigNumber2(NaN);
+      if (m.c ? !m.c[0] : !m.s) return new BigNumber2(NaN);
       isModExp = !nIsNeg && x.isInteger() && m.isInteger();
-      if (isModExp)
-        x = x.mod(m);
+      if (isModExp) x = x.mod(m);
     } else if (n.e > 9 && (x.e > 0 || x.e < -1 || (x.e == 0 ? x.c[0] > 1 || nIsBig && x.c[1] >= 24e7 : x.c[0] < 8e13 || nIsBig && x.c[0] <= 9999975e7))) {
       k = x.s < 0 && isOdd(n) ? -0 : 0;
-      if (x.e > -1)
-        k = 1 / k;
+      if (x.e > -1) k = 1 / k;
       return new BigNumber2(nIsNeg ? 1 / k : k);
     } else if (POW_PRECISION) {
       k = mathceil(POW_PRECISION / LOG_BASE + 2);
     }
     if (nIsBig) {
       half = new BigNumber2(0.5);
-      if (nIsNeg)
-        n.s = 1;
+      if (nIsNeg) n.s = 1;
       nIsOdd = isOdd(n);
     } else {
       i = Math.abs(+valueOf(n));
@@ -67033,19 +74368,16 @@ function clone(configObject) {
     for (; ; ) {
       if (nIsOdd) {
         y = y.times(x);
-        if (!y.c)
-          break;
+        if (!y.c) break;
         if (k) {
-          if (y.c.length > k)
-            y.c.length = k;
+          if (y.c.length > k) y.c.length = k;
         } else if (isModExp) {
           y = y.mod(m);
         }
       }
       if (i) {
         i = mathfloor(i / 2);
-        if (i === 0)
-          break;
+        if (i === 0) break;
         nIsOdd = i % 2;
       } else {
         n = n.times(half);
@@ -67054,31 +74386,25 @@ function clone(configObject) {
           nIsOdd = isOdd(n);
         } else {
           i = +valueOf(n);
-          if (i === 0)
-            break;
+          if (i === 0) break;
           nIsOdd = i % 2;
         }
       }
       x = x.times(x);
       if (k) {
-        if (x.c && x.c.length > k)
-          x.c.length = k;
+        if (x.c && x.c.length > k) x.c.length = k;
       } else if (isModExp) {
         x = x.mod(m);
       }
     }
-    if (isModExp)
-      return y;
-    if (nIsNeg)
-      y = ONE.div(y);
+    if (isModExp) return y;
+    if (nIsNeg) y = ONE.div(y);
     return m ? y.mod(m) : k ? round(y, POW_PRECISION, ROUNDING_MODE, more) : y;
   };
   P.integerValue = function(rm) {
     var n = new BigNumber2(this);
-    if (rm == null)
-      rm = ROUNDING_MODE;
-    else
-      intCheck(rm, 0, 8);
+    if (rm == null) rm = ROUNDING_MODE;
+    else intCheck(rm, 0, 8);
     return round(n, n.e + 1, rm);
   };
   P.isEqualTo = P.eq = function(y, b) {
@@ -67118,16 +74444,14 @@ function clone(configObject) {
     var i, j, t, xLTy, x = this, a = x.s;
     y = new BigNumber2(y, b);
     b = y.s;
-    if (!a || !b)
-      return new BigNumber2(NaN);
+    if (!a || !b) return new BigNumber2(NaN);
     if (a != b) {
       y.s = -b;
       return x.plus(y);
     }
     var xe = x.e / LOG_BASE, ye = y.e / LOG_BASE, xc = x.c, yc = y.c;
     if (!xe || !ye) {
-      if (!xc || !yc)
-        return xc ? (y.s = -b, y) : new BigNumber2(yc ? x : NaN);
+      if (!xc || !yc) return xc ? (y.s = -b, y) : new BigNumber2(yc ? x : NaN);
       if (!xc[0] || !yc[0]) {
         return yc[0] ? (y.s = -b, y) : new BigNumber2(xc[0] ? x : (
           // IEEE 754 (2008) 6.3: n - n = -0 when rounding to -Infinity
@@ -67147,8 +74471,7 @@ function clone(configObject) {
         t = yc;
       }
       t.reverse();
-      for (b = a; b--; t.push(0))
-        ;
+      for (b = a; b--; t.push(0)) ;
       t.reverse();
     } else {
       j = (xLTy = (a = xc.length) < (b = yc.length)) ? a : b;
@@ -67159,24 +74482,19 @@ function clone(configObject) {
         }
       }
     }
-    if (xLTy)
-      t = xc, xc = yc, yc = t, y.s = -y.s;
+    if (xLTy) t = xc, xc = yc, yc = t, y.s = -y.s;
     b = (j = yc.length) - (i = xc.length);
-    if (b > 0)
-      for (; b--; xc[i++] = 0)
-        ;
+    if (b > 0) for (; b--; xc[i++] = 0) ;
     b = BASE - 1;
     for (; j > a; ) {
       if (xc[--j] < yc[j]) {
-        for (i = j; i && !xc[--i]; xc[i] = b)
-          ;
+        for (i = j; i && !xc[--i]; xc[i] = b) ;
         --xc[i];
         xc[j] += BASE;
       }
       xc[j] -= yc[j];
     }
-    for (; xc[0] == 0; xc.splice(0, 1), --ye)
-      ;
+    for (; xc[0] == 0; xc.splice(0, 1), --ye) ;
     if (!xc[0]) {
       y.s = ROUNDING_MODE == 3 ? -1 : 1;
       y.c = [y.e = 0];
@@ -67202,8 +74520,7 @@ function clone(configObject) {
       q = div(x, y, 0, MODULO_MODE);
     }
     y = x.minus(q.times(y));
-    if (!y.c[0] && MODULO_MODE == 1)
-      y.s = x.s;
+    if (!y.c[0] && MODULO_MODE == 1) y.s = x.s;
     return y;
   };
   P.multipliedBy = P.times = function(y, b) {
@@ -67226,10 +74543,8 @@ function clone(configObject) {
     y.s *= x.s;
     xcL = xc.length;
     ycL = yc.length;
-    if (xcL < ycL)
-      zc = xc, xc = yc, yc = zc, i = xcL, xcL = ycL, ycL = i;
-    for (i = xcL + ycL, zc = []; i--; zc.push(0))
-      ;
+    if (xcL < ycL) zc = xc, xc = yc, yc = zc, i = xcL, xcL = ycL, ycL = i;
+    for (i = xcL + ycL, zc = []; i--; zc.push(0)) ;
     base = BASE;
     sqrtBase = SQRT_BASE;
     for (i = ycL; --i >= 0; ) {
@@ -67262,18 +74577,15 @@ function clone(configObject) {
     var t, x = this, a = x.s;
     y = new BigNumber2(y, b);
     b = y.s;
-    if (!a || !b)
-      return new BigNumber2(NaN);
+    if (!a || !b) return new BigNumber2(NaN);
     if (a != b) {
       y.s = -b;
       return x.minus(y);
     }
     var xe = x.e / LOG_BASE, ye = y.e / LOG_BASE, xc = x.c, yc = y.c;
     if (!xe || !ye) {
-      if (!xc || !yc)
-        return new BigNumber2(a / 0);
-      if (!xc[0] || !yc[0])
-        return yc[0] ? y : new BigNumber2(xc[0] ? x : a * 0);
+      if (!xc || !yc) return new BigNumber2(a / 0);
+      if (!xc[0] || !yc[0]) return yc[0] ? y : new BigNumber2(xc[0] ? x : a * 0);
     }
     xe = bitFloor(xe);
     ye = bitFloor(ye);
@@ -67287,14 +74599,12 @@ function clone(configObject) {
         t = xc;
       }
       t.reverse();
-      for (; a--; t.push(0))
-        ;
+      for (; a--; t.push(0)) ;
       t.reverse();
     }
     a = xc.length;
     b = yc.length;
-    if (a - b < 0)
-      t = yc, yc = xc, xc = t, b = a;
+    if (a - b < 0) t = yc, yc = xc, xc = t, b = a;
     for (a = 0; b; ) {
       a = (xc[--b] = xc[b] + yc[b] + a) / BASE | 0;
       xc[b] = BASE === xc[b] ? 0 : xc[b] % BASE;
@@ -67309,24 +74619,18 @@ function clone(configObject) {
     var c, n, v, x = this;
     if (sd != null && sd !== !!sd) {
       intCheck(sd, 1, MAX);
-      if (rm == null)
-        rm = ROUNDING_MODE;
-      else
-        intCheck(rm, 0, 8);
+      if (rm == null) rm = ROUNDING_MODE;
+      else intCheck(rm, 0, 8);
       return round(new BigNumber2(x), sd, rm);
     }
-    if (!(c = x.c))
-      return null;
+    if (!(c = x.c)) return null;
     v = c.length - 1;
     n = v * LOG_BASE + 1;
     if (v = c[v]) {
-      for (; v % 10 == 0; v /= 10, n--)
-        ;
-      for (v = c[0]; v >= 10; v /= 10, n++)
-        ;
+      for (; v % 10 == 0; v /= 10, n--) ;
+      for (v = c[0]; v >= 10; v /= 10, n++) ;
     }
-    if (sd && x.e + 1 > n)
-      n = x.e + 1;
+    if (sd && x.e + 1 > n) n = x.e + 1;
     return n;
   };
   P.shiftedBy = function(k) {
@@ -67341,8 +74645,7 @@ function clone(configObject) {
     s = Math.sqrt(+valueOf(x));
     if (s == 0 || s == 1 / 0) {
       n = coeffToString(c);
-      if ((n.length + e) % 2 == 0)
-        n += "0";
+      if ((n.length + e) % 2 == 0) n += "0";
       s = Math.sqrt(+n);
       e = bitFloor((e + 1) / 2) - (e < 0 || e % 2);
       if (s == 1 / 0) {
@@ -67358,14 +74661,12 @@ function clone(configObject) {
     if (r.c[0]) {
       e = r.e;
       s = e + dp;
-      if (s < 3)
-        s = 0;
+      if (s < 3) s = 0;
       for (; ; ) {
         t = r;
         r = half.times(t.plus(div(x, t, dp, 1)));
         if (coeffToString(t.c).slice(0, s) === (n = coeffToString(r.c)).slice(0, s)) {
-          if (r.e < e)
-            --s;
+          if (r.e < e) --s;
           n = n.slice(s - 3, s + 1);
           if (n == "9999" || !rep && n == "4999") {
             if (!rep) {
@@ -67422,17 +74723,13 @@ function clone(configObject) {
     str2 = x.toFixed(dp, rm);
     if (x.c) {
       var i, arr = str2.split("."), g1 = +format2.groupSize, g2 = +format2.secondaryGroupSize, groupSeparator = format2.groupSeparator || "", intPart = arr[0], fractionPart = arr[1], isNeg = x.s < 0, intDigits = isNeg ? intPart.slice(1) : intPart, len = intDigits.length;
-      if (g2)
-        i = g1, g1 = g2, g2 = i, len -= i;
+      if (g2) i = g1, g1 = g2, g2 = i, len -= i;
       if (g1 > 0 && len > 0) {
         i = len % g1 || g1;
         intPart = intDigits.substr(0, i);
-        for (; i < len; i += g1)
-          intPart += groupSeparator + intDigits.substr(i, g1);
-        if (g2 > 0)
-          intPart += groupSeparator + intDigits.slice(i);
-        if (isNeg)
-          intPart = "-" + intPart;
+        for (; i < len; i += g1) intPart += groupSeparator + intDigits.substr(i, g1);
+        if (g2 > 0) intPart += groupSeparator + intDigits.slice(i);
+        if (isNeg) intPart = "-" + intPart;
       }
       str2 = fractionPart ? intPart + (format2.decimalSeparator || "") + ((g2 = +format2.fractionGroupSize) ? fractionPart.replace(
         new RegExp("\\d{" + g2 + "}\\B", "g"),
@@ -67449,8 +74746,7 @@ function clone(configObject) {
         throw Error(bignumberError + "Argument " + (n.isInteger() ? "out of range: " : "not an integer: ") + valueOf(n));
       }
     }
-    if (!xc)
-      return new BigNumber2(x);
+    if (!xc) return new BigNumber2(x);
     d = new BigNumber2(ONE);
     n1 = d0 = new BigNumber2(ONE);
     d1 = n0 = new BigNumber2(ONE);
@@ -67465,8 +74761,7 @@ function clone(configObject) {
     for (; ; ) {
       q = div(n, d, 0, 1);
       d2 = d0.plus(q.times(d1));
-      if (d2.comparedTo(md) == 1)
-        break;
+      if (d2.comparedTo(md) == 1) break;
       d0 = d1;
       d1 = d2;
       n1 = n0.plus(q.times(d2 = n1));
@@ -67489,8 +74784,7 @@ function clone(configObject) {
     return +valueOf(this);
   };
   P.toPrecision = function(sd, rm) {
-    if (sd != null)
-      intCheck(sd, 1, MAX);
+    if (sd != null) intCheck(sd, 1, MAX);
     return format(this, sd, rm, 2);
   };
   P.toString = function(b) {
@@ -67498,8 +74792,7 @@ function clone(configObject) {
     if (e === null) {
       if (s) {
         str2 = "Infinity";
-        if (s < 0)
-          str2 = "-" + str2;
+        if (s < 0) str2 = "-" + str2;
       } else {
         str2 = "NaN";
       }
@@ -67513,8 +74806,7 @@ function clone(configObject) {
         intCheck(b, 2, ALPHABET.length, "Base");
         str2 = convertBase(toFixedPoint(coeffToString(n.c), e, "0"), 10, b, s, true);
       }
-      if (s < 0 && n.c[0])
-        str2 = "-" + str2;
+      if (s < 0 && n.c[0]) str2 = "-" + str2;
     }
     return str2;
   };
@@ -67524,8 +74816,7 @@ function clone(configObject) {
   P._isBigNumber = true;
   P[Symbol.toStringTag] = "BigNumber";
   P[Symbol.for("nodejs.util.inspect.custom")] = P.valueOf;
-  if (configObject != null)
-    BigNumber2.set(configObject);
+  if (configObject != null) BigNumber2.set(configObject);
   return BigNumber2;
 }
 function bitFloor(n) {
@@ -67537,34 +74828,25 @@ function coeffToString(a) {
   for (; i < j; ) {
     s = a[i++] + "";
     z = LOG_BASE - s.length;
-    for (; z--; s = "0" + s)
-      ;
+    for (; z--; s = "0" + s) ;
     r += s;
   }
-  for (j = r.length; r.charCodeAt(--j) === 48; )
-    ;
+  for (j = r.length; r.charCodeAt(--j) === 48; ) ;
   return r.slice(0, j + 1 || 1);
 }
 function compare(x, y) {
   var a, b, xc = x.c, yc = y.c, i = x.s, j = y.s, k = x.e, l = y.e;
-  if (!i || !j)
-    return null;
+  if (!i || !j) return null;
   a = xc && !xc[0];
   b = yc && !yc[0];
-  if (a || b)
-    return a ? b ? 0 : -j : i;
-  if (i != j)
-    return i;
+  if (a || b) return a ? b ? 0 : -j : i;
+  if (i != j) return i;
   a = i < 0;
   b = k == l;
-  if (!xc || !yc)
-    return b ? 0 : !xc ^ a ? 1 : -1;
-  if (!b)
-    return k > l ^ a ? 1 : -1;
+  if (!xc || !yc) return b ? 0 : !xc ^ a ? 1 : -1;
+  if (!b) return k > l ^ a ? 1 : -1;
   j = (k = xc.length) < (l = yc.length) ? k : l;
-  for (i = 0; i < j; i++)
-    if (xc[i] != yc[i])
-      return xc[i] > yc[i] ^ a ? 1 : -1;
+  for (i = 0; i < j; i++) if (xc[i] != yc[i]) return xc[i] > yc[i] ^ a ? 1 : -1;
   return k == l ? 0 : k > l ^ a ? 1 : -1;
 }
 function intCheck(n, min, max, name2) {
@@ -67582,14 +74864,12 @@ function toExponential(str2, e) {
 function toFixedPoint(str2, e, z) {
   var len, zs;
   if (e < 0) {
-    for (zs = z + "."; ++e; zs += z)
-      ;
+    for (zs = z + "."; ++e; zs += z) ;
     str2 = zs + str2;
   } else {
     len = str2.length;
     if (++e > len) {
-      for (zs = z, e -= len; --e; zs += z)
-        ;
+      for (zs = z, e -= len; --e; zs += z) ;
       str2 += zs;
     } else if (e < len) {
       str2 = str2.slice(0, e) + "." + str2.slice(e);
@@ -67657,16 +74937,14 @@ var Proposal2 = class {
   }
   get(id) {
     const value = db2.chain.get("proposals").find({ id }).value();
-    if (!value)
-      throw new Error("trying to fetch proposal cache, but failed");
+    if (!value) throw new Error("trying to fetch proposal cache, but failed");
     return value;
   }
   populate(id) {
     return __async(this, null, function* () {
       db2.data || (db2.data = { proposals: [] });
       const value = db2.chain.get("proposals").find({ id }).value();
-      if (value && isProposalStateImmutable(value))
-        return value;
+      if (value && isProposalStateImmutable(value)) return value;
       const _a7 = yield governanceContract.getProposal({ proposalId: id }), { values } = _a7, rest = __objRest(_a7, ["values"]);
       const proposal = yield enhanceProposalWithTimes(rest);
       if (value) {
@@ -67703,10 +74981,10 @@ populateCache().then(() => console.log("finished"));
 tslib/tslib.es6.js:
   (*! *****************************************************************************
   Copyright (c) Microsoft Corporation.
-
+  
   Permission to use, copy, modify, and/or distribute this software for any
   purpose with or without fee is hereby granted.
-
+  
   THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
   REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
   AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
@@ -67732,12 +75010,12 @@ reflect-metadata/Reflect.js:
   Licensed under the Apache License, Version 2.0 (the "License"); you may not use
   this file except in compliance with the License. You may obtain a copy of the
   License at http://www.apache.org/licenses/LICENSE-2.0
-
+  
   THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
   KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
   WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
   MERCHANTABLITY OR NON-INFRINGEMENT.
-
+  
   See the Apache Version 2.0 License for specific language governing permissions
   and limitations under the License.
   ***************************************************************************** *)
