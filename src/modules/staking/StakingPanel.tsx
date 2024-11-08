@@ -366,7 +366,7 @@ export const StakingPanel: React.FC<StakingPanelProps> = ({
               )}
             </>
           }
-          cooldownAmount={
+          userCooldownAmount={
             isCooldownActive || isUnstakeWindowActive ? (
               <Box
                 sx={{
@@ -507,7 +507,7 @@ export const StakingPanel: React.FC<StakingPanelProps> = ({
           title={<Trans>Claimable PSYS</Trans>}
           value={formatEther(stakeUserData?.userIncentivesToClaim || '0')}
           valueUSD={claimableUSD}
-          bottomLineTitle={<Trans>Aave per month</Trans>}
+          bottomLineTitle={<Trans>PSYS per month</Trans>}
           dataCy={`rewardBox_${stakedToken}`}
           bottomLineComponent={
             <FormattedNumber

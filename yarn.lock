@@ -2,13 +2,6 @@
 # yarn lockfile v1
 
 
-"@aave/contract-helpers@^1.30.5":
-  version "1.30.5"
-  resolved "https://registry.yarnpkg.com/@aave/contract-helpers/-/contract-helpers-1.30.5.tgz#2dca36c08701548eb7ad52551514215cfd4c3b6a"
-  integrity sha512-4CCLROduGD6HG3/DYAWS9KPDe30Pbo+b2LNKblLCy+Y90lE8aB5/e0RVZ47+vHheV9qOCjEjLYXEyeUYo7NvFg==
-  dependencies:
-    isomorphic-unfetch "^3.1.0"
-
 "@aave/math-utils@^1.21.0":
   version "1.21.0"
   resolved "https://registry.yarnpkg.com/@aave/math-utils/-/math-utils-1.21.0.tgz#420e36de179c27637be1c544afaf2f7b6c92b4d1"
@@ -2825,10 +2818,10 @@
   resolved "https://registry.npmjs.org/@polka/url/-/url-1.0.0-next.21.tgz"
   integrity sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==
 
-"@pollum-io/contract-helpers@0.0.3":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@pollum-io/contract-helpers/-/contract-helpers-0.0.3.tgz#9b9c01e6f6ad82dd6580a20bd3616576b5679f53"
-  integrity sha512-i1PsNaT17jVkDAcd9u7UVpGB5XqS15Lrm+cQs6Z0bt9zcwUO3ZWMox+r7gbQOBTC4Ndh5gJvWRd2akxhnhfjUQ==
+"@pollum-io/contract-helpers@0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@pollum-io/contract-helpers/-/contract-helpers-0.0.4.tgz#39d12c1e6a9e159f4ae4d9b5db031cd00b466018"
+  integrity sha512-izhN0VqBmeBdlLPIyqb7QL8hpVGhH83MDtkRRs5IOwfQhwNYoQbjxgnCerJi161wS/4lODhNstTHJBeba9n2SQ==
   dependencies:
     isomorphic-unfetch "^3.1.0"
 

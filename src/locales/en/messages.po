@@ -113,10 +113,6 @@ msgstr "APY, variable"
 msgid "AToken supply is not zero"
 msgstr "AToken supply is not zero"
 
-#: src/modules/staking/StakingPanel.tsx
-msgid "Aave per month"
-msgstr "Aave per month"
-
 #: src/modules/reserve-overview/Gho/GhoReserveConfiguration.tsx
 msgid "About HOE"
 msgstr "About HOE"
@@ -1587,6 +1583,10 @@ msgstr "Overview"
 msgid "PSYS holders (Rollux network only) can stake their PSYS in the Safety Module to add more security to the protocol and earn Safety Incentives. In the case of a shortfall event, up to 30% of your stake can be slashed to cover the deficit, providing an additional layer of protection for the protocol."
 msgstr "PSYS holders (Rollux network only) can stake their PSYS in the Safety Module to add more security to the protocol and earn Safety Incentives. In the case of a shortfall event, up to 30% of your stake can be slashed to cover the deficit, providing an additional layer of protection for the protocol."
 
+#: src/modules/staking/StakingPanel.tsx
+msgid "PSYS per month"
+msgstr "PSYS per month"
+
 #: pages/404.page.tsx
 msgid "Page not found"
 msgstr "Page not found"
@@ -2101,14 +2101,6 @@ msgstr "Stablecoin"
 #: src/ui-config/menu-items/index.tsx
 msgid "Stake"
 msgstr "Stake"
-
-#: pages/staking.staking.tsx
-msgid "Stake ABPT"
-msgstr "Stake ABPT"
-
-#: pages/staking.staking.tsx
-msgid "Stake PSYS"
-msgstr "Stake PSYS"
 
 #: src/components/transactions/StakeCooldown/StakeCooldownModalContent.tsx
 msgid "Stake cooldown activated"

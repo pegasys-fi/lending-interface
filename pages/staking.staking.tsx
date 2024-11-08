@@ -1,13 +1,11 @@
 import { Trans } from '@lingui/macro';
-import { Box, Grid, Typography } from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import { BigNumber } from 'ethers/lib/ethers';
 import { formatEther, formatUnits } from 'ethers/lib/utils';
 import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
 import { ConnectWalletPaperStaking } from 'src/components/ConnectWalletPaperStaking';
 import { ContentContainer } from 'src/components/ContentContainer';
-import StyledToggleButton from 'src/components/StyledToggleButton';
-import StyledToggleButtonGroup from 'src/components/StyledToggleButtonGroup';
 import { useGeneralStakeUiData } from 'src/hooks/stake/useGeneralStakeUiData';
 import { useUserStakeUiData } from 'src/hooks/stake/useUserStakeUiData';
 import { useModalContext } from 'src/hooks/useModal';
@@ -66,7 +64,7 @@ export default function Staking() {
     openStakeRewardsRestakeClaim,
   } = useModalContext();
 
-  const [mode, setMode] = useState<'aave' | 'bpt' | ''>('aave');
+  const [mode] = useState<'aave' | 'bpt' | ''>('aave');
 
   const { name: network } = getNetworkConfig(chainId);
   const trackEvent = useRootStore((store) => store.trackEvent);
@@ -113,7 +111,7 @@ export default function Staking() {
                 mb: { xs: 3, xsm: 4 },
               }}
             >
-              <StyledToggleButtonGroup
+              {/* <StyledToggleButtonGroup
                 color="primary"
                 value={mode}
                 exclusive
@@ -130,7 +128,7 @@ export default function Staking() {
                     <Trans>Stake ABPT</Trans>
                   </Typography>
                 </StyledToggleButton>
-              </StyledToggleButtonGroup>
+              </StyledToggleButtonGroup> */}
             </Box>
 
             <Grid container spacing={4}>
@@ -145,7 +143,7 @@ export default function Staking() {
                 <StakingPanel
                   stakeTitle="PSYS"
                   stakedToken="PSYS"
-                  maxSlash="0.3"
+                  maxSlash="0.2"
                   icon="psys"
                   stakeData={stakeGeneralResult?.pegasys}
                   stakeUserData={stakeUserResult?.pegasys}
