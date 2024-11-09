@@ -26,7 +26,7 @@ import { useCurrentTimestamp } from 'src/hooks/useCurrentTimestamp';
 import { ENABLE_TESTNET, STAGING_ENV } from 'src/utils/marketsAndNetworksConfig';
 import { GENERAL } from 'src/utils/mixPanelEvents';
 
-import { GhoDiscountProgram } from './GhoDiscountProgram';
+// import { GhoDiscountProgram } from './GhoDiscountProgram';
 import { StakeActionBox } from './StakeActionBox';
 
 function secondsToDHMS(seconds: number) {
@@ -581,7 +581,7 @@ export const StakingPanel: React.FC<StakingPanelProps> = ({
             marginX: 'auto',
           }}
         >
-          <GhoDiscountProgram />
+          {/* <GhoDiscountProgram /> */}
         </Box>
       )}
     </Paper>

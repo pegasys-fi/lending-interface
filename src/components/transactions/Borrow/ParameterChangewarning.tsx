@@ -18,7 +18,7 @@ export const ParameterChangewarning = ({ underlyingAsset }: { underlyingAsset: s
               Link: 'Governance Link',
             });
           }}
-          href="https://governance.aave.com/"
+          href="https://gov.pegasys.fi/"
         >
           Pegasys governance forum
         </a>{' '}
