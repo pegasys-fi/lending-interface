@@ -16,7 +16,7 @@ export const useGovernanceTokens = () => {
     initialData: {
       aave: '0',
       stkAave: '0',
-      aAave: '0',
+      //aAave: '0',
     },
   });
 };
