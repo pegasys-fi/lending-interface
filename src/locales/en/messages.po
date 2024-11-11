@@ -806,10 +806,6 @@ msgstr "Delegated power"
 msgid "Details"
 msgstr "Details"
 
-#: src/ui-config/menu-items/index.tsx
-msgid "Developers"
-msgstr "Developers"
-
 #: pages/governance/proposal/[proposalId].governance.tsx
 #: src/modules/governance/ProposalListItem.tsx
 msgid "Differential"
@@ -992,7 +988,6 @@ msgid "Export data to"
 msgstr "Export data to"
 
 #: src/modules/reserve-overview/Gho/GhoReserveConfiguration.tsx
-#: src/ui-config/menu-items/index.tsx
 msgid "FAQ"
 msgstr "FAQ"
 
