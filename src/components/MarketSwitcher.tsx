@@ -186,7 +186,7 @@ export const MarketSwitcher = ({ disableSwitch = false }: { disableSwitch?: bool
                       color: '#fff',
                       px: 2,
                       borderRadius: '12px',
-                      background: (theme) => theme.palette.gradients.aaveGradient,
+                      background: (theme) => theme.palette.gradients.psysGradient,
                     }}
                   >
                     <Typography variant="subheader2">V3</Typography>
@@ -212,6 +212,7 @@ export const MarketSwitcher = ({ disableSwitch = false }: { disableSwitch?: bool
             pl: 0,
             py: 0,
             backgroundColor: 'transparent !important',
+            border: 0,
           },
           '.MuiSelect-icon': { color: '#F1F1F3' },
         },
@@ -283,7 +284,7 @@ export const MarketSwitcher = ({ disableSwitch = false }: { disableSwitch?: bool
                     sx={
                       selectedMarketVersion === SelectedMarketVersion.V3
                         ? {
-                            backgroundImage: (theme) => theme.palette.gradients.aaveGradient,
+                            backgroundImage: (theme) => theme.palette.gradients.psysGradient,
                             backgroundClip: 'text',
                             color: 'transparent',
                           }
@@ -312,7 +313,7 @@ export const MarketSwitcher = ({ disableSwitch = false }: { disableSwitch?: bool
                     sx={
                       selectedMarketVersion === SelectedMarketVersion.V2
                         ? {
-                            backgroundImage: (theme) => theme.palette.gradients.aaveGradient,
+                            backgroundImage: (theme) => theme.palette.gradients.psysGradient,
                             backgroundClip: 'text',
                             color: 'transparent',
                           }

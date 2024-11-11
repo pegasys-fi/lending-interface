@@ -13,7 +13,7 @@ export const ProposalTopPanel = () => {
 
   return (
     <TopInfoPanel>
-      <Box sx={{ display: 'flex', alignItems: 'center', mb: '18px' }}>
+      <Box sx={{ display: 'flex', alignItems: 'center' }}>
         <Button
           component={Link}
           href={ROUTES.governance}

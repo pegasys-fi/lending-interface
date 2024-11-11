@@ -233,7 +233,7 @@ export const WalletSelector = () => {
             py: 1,
             px: 3,
             border: `1px solid ${theme.palette.divider}`,
-            borderRadius: '6px',
+            borderRadius: '9999px',
             mb: 1,
             overflow: 'show',
             fontSize: sm ? '16px' : '14px',
@@ -276,7 +276,17 @@ export const WalletSelector = () => {
       <Typography variant="description" sx={{ mt: '22px', mb: '30px', alignSelf: 'center' }}>
         <Trans>
           Need help connecting a wallet?{' '}
-          <Link href="https://docs.aave.com/faq/troubleshooting" target="_blank" rel="noopener">
+          <Link
+            href="https://docs.aave.com/faq/troubleshooting"
+            target="_blank"
+            rel="noopener"
+            sx={(theme) => {
+              return {
+                color: theme.palette.info.main,
+                textDecoration: 'underline',
+              };
+            }}
+          >
             Read our FAQ
           </Link>
         </Trans>

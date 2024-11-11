@@ -40,7 +40,23 @@ export const ProposalListHeaderDesktop: React.FC<ProposalListHeaderElementProps>
       <Typography>
         <Trans>Filter</Trans>
       </Typography>
-      <Select id="filter" value={proposalFilter} sx={{ minWidth: 140 }} onChange={handleChange}>
+      <Select
+        id="filter"
+        value={proposalFilter}
+        onChange={handleChange}
+        sx={{
+          minWidth: 140,
+          '&.MuiInputBase-root': {
+            border: 0,
+            '.MuiSelect-select': {
+              display: 'flex',
+            },
+          },
+          '& .MuiOutlinedInput-notchedOutline': {
+            border: 'none',
+          },
+        }}
+      >
         <MenuItem value="all">
           <Trans>All proposals</Trans>
         </MenuItem>

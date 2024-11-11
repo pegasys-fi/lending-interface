@@ -35,7 +35,7 @@ export const SearchInput = ({ onSearchTermChange, wrapperSx, placeholder }: Sear
         alignItems: 'center',
         gap: 2,
         border: `1px solid ${theme.palette.divider}`,
-        borderRadius: '6px',
+        borderRadius: '9999px',
         height: '36px',
         ...wrapperSx,
       })}

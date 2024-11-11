@@ -1,4 +1,4 @@
-import { BookOpenIcon, CreditCardIcon, QuestionMarkCircleIcon } from '@heroicons/react/outline';
+import { CreditCardIcon } from '@heroicons/react/outline';
 import { t } from '@lingui/macro';
 import { ReactNode } from 'react';
 import { ROUTES } from 'src/components/primitives/Link';
@@ -55,16 +55,16 @@ interface MoreMenuItem extends Navigation {
 }
 
 const moreMenuItems: MoreMenuItem[] = [
-  {
-    link: 'https://docs.aave.com/faq/',
-    title: t`FAQ`,
-    icon: <QuestionMarkCircleIcon />,
-  },
-  {
-    link: 'https://docs.aave.com/portal/',
-    title: t`Developers`,
-    icon: <BookOpenIcon />,
-  },
+  // {
+  //   link: 'https://docs.aave.com/faq/',
+  //   title: t`FAQ`,
+  //   icon: <QuestionMarkCircleIcon />,
+  // },
+  // {
+  //   link: 'https://docs.aave.com/portal/',
+  //   title: t`Developers`,
+  //   icon: <BookOpenIcon />,
+  // },
   {
     link: 'https://app.pegasys.fi/#/swap',
     title: t`Go to V3`,

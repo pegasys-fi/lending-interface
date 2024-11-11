@@ -42,6 +42,7 @@ declare module '@mui/material/styles/createPalette' {
     gradients: {
       aaveGradient: string;
       newGradient: string;
+      psysGradient: string;
     };
     other: {
       standardInputLine: string;
@@ -52,6 +53,7 @@ declare module '@mui/material/styles/createPalette' {
     gradients: {
       aaveGradient: string;
       newGradient: string;
+      psysGradient: string;
     };
   }
 }
@@ -214,6 +216,8 @@ export const getDesignTokens = (mode: 'light' | 'dark') => {
       gradients: {
         aaveGradient: 'linear-gradient(248.86deg, #B6509E 10.51%, #2EBAC6 93.41%)',
         newGradient: 'linear-gradient(79.67deg, #8C3EBC 0%, #007782 95.82%)',
+        psysGradient:
+          'linear-gradient(90deg, rgb(83, 217, 217) 9.38%, rgba(0, 53, 71, 0.9) 128.42%)',
       },
     },
     spacing: 4,
@@ -264,7 +268,7 @@ export const getDesignTokens = (mode: 'light' | 'dark') => {
       },
       subheader1: {
         fontFamily: FONT,
-        fontWeight: 600,
+        fontWeight: 400,
         letterSpacing: pxToRem(0.15),
         lineHeight: pxToRem(20),
         fontSize: pxToRem(14),
@@ -425,7 +429,7 @@ export function getThemedComponents(theme: Theme) {
         },
         styleOverrides: {
           root: {
-            borderRadius: '4px',
+            borderRadius: '9999px',
           },
           sizeLarge: {
             ...theme.typography.buttonL,
@@ -447,10 +451,7 @@ export function getThemedComponents(theme: Theme) {
               color: theme.palette.common.white,
               border: '1px solid',
               borderColor: '#EBEBED1F',
-              backgroundColor: '#383D51',
-              '&:hover, &.Mui-focusVisible': {
-                backgroundColor: '#383D51B8',
-              },
+              backgroundColor: '#081120',
             },
           },
           {
@@ -459,17 +460,15 @@ export function getThemedComponents(theme: Theme) {
               color: theme.palette.common.white,
               background: theme.palette.gradients.aaveGradient,
               transition: 'all 0.2s ease',
-              '&:hover, &.Mui-focusVisible': {
-                background: theme.palette.gradients.aaveGradient,
-                opacity: '0.9',
-              },
             },
           },
           {
-            props: { color: 'primary', variant: 'outlined' },
+            props: { color: 'transparent', variant: 'outlined' },
             style: {
               background: theme.palette.background.surface,
               borderColor: theme.palette.divider,
+              border: '1px solid',
+              borderRadius: '9999px !important',
             },
           },
         ],
@@ -569,7 +568,7 @@ export function getThemedComponents(theme: Theme) {
       MuiPaper: {
         styleOverrides: {
           root: {
-            borderRadius: '4px',
+            borderRadius: '16px',
           },
         },
         variants: [
@@ -650,7 +649,7 @@ export function getThemedComponents(theme: Theme) {
             },
           },
           thumb: {
-            color: '#665ee1',
+            color: '#3da9d6',
             borderRadius: '50%',
             width: '16px',
             height: '16px',
@@ -833,20 +832,24 @@ export function getThemedComponents(theme: Theme) {
         },
         styleOverrides: {
           outlined: {
-            backgroundColor: theme.palette.background.surface,
-            ...theme.typography.buttonM,
+            backgroundColor: theme.palette.background.paper,
             padding: '6px 12px',
             color: theme.palette.primary.light,
+            border: `1px solid ${theme.palette.divider}`,
+            '&:hover': {
+              border: `1px solid ${theme.palette.divider}`,
+            },
+            borderRadius: '9999px',
           },
         },
       },
       MuiLinearProgress: {
         styleOverrides: {
           bar1Indeterminate: {
-            background: theme.palette.gradients.aaveGradient,
+            background: theme.palette.gradients.psysGradient,
           },
           bar2Indeterminate: {
-            background: theme.palette.gradients.aaveGradient,
+            background: theme.palette.gradients.psysGradient,
           },
         },
       },

@@ -7,7 +7,7 @@ import { MarketDataType } from 'src/ui-config/marketsConfig';
 interface GovernanceTokensBalance {
   aave: string;
   stkAave: string;
-  aAave: string;
+  //aAave: string;
 }
 
 export type UserPoolTokensBalances = {
@@ -41,8 +41,8 @@ export class WalletBalanceService {
     );
     return {
       aave: normalize(balances[0].toString(), 18),
-      aAave: normalize(balances[1].toString(), 18),
-      stkAave: normalize(balances[2].toString(), 18),
+      //aAave: normalize(balances[1].toString(), 18),
+      stkAave: normalize(balances[1].toString(), 18),
     };
   }
 

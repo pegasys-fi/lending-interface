@@ -41,6 +41,7 @@ export function ProposalsList({ proposals: initialProposals }: GovernancePagePro
         for (let i = proposals.length; i < count; i++) {
           const { values, ...rest } = await governanceContract.getProposal({ proposalId: i });
           const proposal = await enhanceProposalWithTimes(rest);
+
           const proposalMetadata = await getProposalMetadata(
             proposal.ipfsHash,
             governanceConfig.ipfsGateway
@@ -58,6 +59,7 @@ export function ProposalsList({ proposals: initialProposals }: GovernancePagePro
         nextProposals.map((elem) => searchEngineRef.current.add(elem));
         setProposals((p) => [...nextProposals, ...p]);
       }
+
       setLoadingNewProposals(false);
     } catch (e) {
       console.log('error fetching new proposals', e);
@@ -80,6 +82,7 @@ export function ProposalsList({ proposals: initialProposals }: GovernancePagePro
         );
         setProposals((proposals) => {
           updatedProposals.map((proposal) => {
+            console.log({ updatedProposals, proposal });
             proposals[proposals.length - 1 - proposal.id].proposal = proposal;
             proposals[proposals.length - 1 - proposal.id].prerendered = false;
           });
@@ -97,7 +100,6 @@ export function ProposalsList({ proposals: initialProposals }: GovernancePagePro
 
   const filteredByState = useMemo(() => {
     // filters by proposal state and pins large executors at the top
-
     const filtered = proposals
       .filter((item) => proposalFilter === 'all' || item.proposal.state === proposalFilter)
       .reduce(
@@ -152,7 +154,7 @@ export function ProposalsList({ proposals: initialProposals }: GovernancePagePro
           sx={{
             background:
               palette.mode === 'dark'
-                ? 'linear-gradient(90deg, rgb(83, 217, 217) 9.38%, rgba(0, 184, 255, 0.1) 128.42%)'
+                ? 'linear-gradient(90deg, rgb(83, 217, 217) 30%, rgba(0, 53, 71, 1) 100%)'
                 : 'linear-gradient(90deg, rgb(102, 94, 225) 9.38%, rgba(0, 184, 255, 0.3) 128.42%)',
           }}
         />

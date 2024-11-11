@@ -135,7 +135,7 @@ export const HistoryFilterMenu: React.FC<HistoryFilterMenuProps> = ({
           height: 36,
           border: '1px solid',
           borderColor: 'divider',
-          borderRadius: '4px',
+          borderRadius: '9999px',
           mr: downToMD ? 0 : 2,
           ml: downToMD ? 4 : 0,
           pl: 2,
@@ -195,7 +195,7 @@ export const HistoryFilterMenu: React.FC<HistoryFilterMenuProps> = ({
             maxHeight: 300,
             mt: 1,
             boxShadow: '0px 0px 2px rgba(0, 0, 0, 0.2), 0px 2px 10px rgba(0, 0, 0, 0.1)',
-            borderRadius: '4px',
+            borderRadius: '16px',
           },
         }}
       >
