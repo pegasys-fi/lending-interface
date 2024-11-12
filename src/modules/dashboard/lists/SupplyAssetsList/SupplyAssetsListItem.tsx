@@ -141,11 +141,13 @@ export const SupplyAssetsListItem = ({
           sx={(theme) => ({
             minWidth: 0,
             px: 4,
+            border: 0,
             borderRadius: '20px',
             background: theme.palette.mode === 'dark' ? '#1d2e49' : '#665de1',
             color: theme.palette.mode === 'dark' ? '#ffff' : '#ffff',
             '&:hover': {
               background: theme.palette.mode === 'dark' ? '#1d2e49' : '#665de1',
+              border: 0,
             },
           })}
         >

@@ -37,8 +37,8 @@ export const IsolatedEnabledBadge = ({
   const theme = useTheme();
 
   const sx = {
-    border: `1px solid ${theme.palette.warning.main}`,
-    color: theme.palette.warning.main,
+    border: `1px solid ${theme.palette.info.main}`,
+    color: theme.palette.info.main,
     ...contentSx,
   };
   return (
@@ -61,12 +61,12 @@ export const IsolatedEnabledBadge = ({
           sx={{
             lineHeight: '0.75rem',
           }}
-          color={theme.palette.warning.main}
+          color={theme.palette.info.main}
           {...typographyProps}
         >
           <Trans>Isolated</Trans>
         </Typography>
-        <InfoIcon color={theme.palette.warning.main} />
+        <InfoIcon color={theme.palette.info.main} />
       </Box>
     </ContentWithTooltip>
   );
@@ -122,7 +122,7 @@ const IsolationModeTooltipTemplate = ({ content }: { content: ReactNode }) => {
       <Typography variant="subheader2" color="text.secondary">
         <Trans>
           Learn more in our{' '}
-          <Link href="https://docs.aave.com/faq/aave-v3-features#isolation-mode" fontWeight={500}>
+          <Link href="" fontWeight={500}>
             FAQ guide
           </Link>
         </Trans>

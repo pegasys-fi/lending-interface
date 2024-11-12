@@ -252,7 +252,7 @@ export const InterestRateModelGraph = withTooltip<AreaProps, TooltipData>(
 
             {/* Variable Borrow APR Line */}
             <LinePath
-              stroke="#B6509E"
+              stroke="#53d9d9"
               strokeWidth={2}
               data={data}
               x={(d) => dateScale(getDate(d)) ?? 0}
