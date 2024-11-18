@@ -156,7 +156,7 @@ export const StakeCooldownModalContent = ({ stakeAssetName }: StakeCooldownProps
           <Trans>Amount to unstake</Trans>
         </Typography>
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
-          <TokenIcon symbol={stakeAssetName} sx={{ mr: 1, width: 14, height: 14 }} />
+          <TokenIcon symbol={'psys'} sx={{ mr: 1, width: 14, height: 14 }} />
           <FormattedNumber value={amountToCooldown} variant="secondary14" color="text.primary" />
         </Box>
       </Box>

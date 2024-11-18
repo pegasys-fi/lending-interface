@@ -116,18 +116,10 @@ export const SupplyAssetsListItem = ({
       <ListButtonsColumn>
         <Button
           disabled={disableSupply}
-          // variant="contained"
+          variant="contained"
           onClick={() => {
             openSupply(underlyingAsset, currentMarket, name, 'dashboard');
           }}
-          sx={(theme) => ({
-            borderRadius: '20px',
-            background: theme.palette.mode === 'dark' ? '#1d2e49' : '#665de1',
-            color: theme.palette.mode === 'dark' ? '#ffff' : '#ffff',
-            '&:hover': {
-              background: theme.palette.mode === 'dark' ? '#1d2e49' : '#665de1',
-            },
-          })}
         >
           <Trans>Supply</Trans>
         </Button>

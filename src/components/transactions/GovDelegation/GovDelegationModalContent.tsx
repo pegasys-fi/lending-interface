@@ -207,6 +207,11 @@ export const GovDelegationModalContent: React.FC<GovDelegationModalContentProps>
               value={delegate}
               onChange={(e) => setDelegate(e.target.value)}
               placeholder={t`Enter ETH address`}
+              sx={{
+                '& .MuiOutlinedInput-notchedOutline': {
+                  borderRadius: '9999px',
+                },
+              }}
               error={delegateAddressBlockingError !== undefined}
               helperText={handleDelegateAddressError()}
               data-cy={`delegationAddress`}

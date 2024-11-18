@@ -26,6 +26,8 @@ declare module '@mui/material/styles/createPalette' {
 
   interface TypeText {
     muted: string;
+    button: string;
+    outline: string;
   }
 
   interface TypeBackground {
@@ -36,6 +38,7 @@ declare module '@mui/material/styles/createPalette' {
     header: string;
     disabled: string;
     deepShadow: string;
+    button: string;
   }
 
   interface Palette {
@@ -44,6 +47,7 @@ declare module '@mui/material/styles/createPalette' {
       newGradient: string;
       psysGradient: string;
     };
+    border: string;
     other: {
       standardInputLine: string;
     };
@@ -184,6 +188,8 @@ export const getDesignTokens = (mode: 'light' | 'dark') => {
         disabled: getColor('#D2D4DC', '#62677B'),
         muted: getColor('#A5A8B6', '#8E92A3'),
         highlight: getColor('#383D51', '#C9B3F9'),
+        button: getColor('#FFFFFF', '#00D9EF'),
+        outline: getColor('#665EE1', '#FFFFFF'),
       },
       background: {
         default: getColor('#FFFFFF', '#000913'),
@@ -192,6 +198,7 @@ export const getDesignTokens = (mode: 'light' | 'dark') => {
         surface2: getColor('#F9F9FB', '#383D51'),
         header: getColor('#FFFFFF', '#000913'),
         disabled: getColor('#EAEBEF', '#EBEBEF14'),
+        button: getColor('#665EE1', '#153D6F'),
         bgGradient: getColor(
           'radial-gradient(60% 50% at 50% 45%, #68e1ffbe, #e6faff)!important',
           'radial-gradient(60% 50% at 50% 45% , #56BED8, #000913)'
@@ -201,6 +208,7 @@ export const getDesignTokens = (mode: 'light' | 'dark') => {
           '#8C15E8'
         )}`,
       },
+      border: getColor('#665EE1', '#00D9EF'),
       divider: getColor('#EAEBEF', '#EBEBEF14'),
       action: {
         active: getColor('#8E92A3', '#EBEBEF8F'),
@@ -465,10 +473,23 @@ export function getThemedComponents(theme: Theme) {
           {
             props: { color: 'transparent', variant: 'outlined' },
             style: {
-              background: theme.palette.background.surface,
-              borderColor: theme.palette.divider,
+              background: theme.palette.background.deepShadow,
+              borderColor: theme.palette.border,
+              color: theme.palette.text.outline,
               border: '1px solid',
               borderRadius: '9999px !important',
+            },
+          },
+          {
+            props: { variant: 'contained' },
+            style: {
+              background: theme.palette.background.button,
+              color: theme.palette.text.button,
+              borderRadius: '9999px !important',
+              ':hover': {
+                background: theme.palette.background.button,
+                color: theme.palette.text.button,
+              },
             },
           },
         ],
@@ -641,7 +662,11 @@ export function getThemedComponents(theme: Theme) {
             '&.Mui-checked': {
               transform: 'translateX(14px)',
               '& + .MuiSwitch-track': {
+                backgroundColor: '#00D9EF', // Change track color when checked
                 opacity: 1,
+              },
+              '& .MuiSwitch-thumb': {
+                color: '#FFF', // Thumb color when checked
               },
             },
             '&.Mui-enabled': {
@@ -649,7 +674,7 @@ export function getThemedComponents(theme: Theme) {
             },
           },
           thumb: {
-            color: '#3da9d6',
+            color: '#3da9d6', // Default thumb color
             borderRadius: '50%',
             width: '16px',
             height: '16px',
@@ -658,7 +683,10 @@ export function getThemedComponents(theme: Theme) {
           track: {
             opacity: 1,
             borderRadius: '20px',
-            backgroundColor: '#665ee11f',
+            backgroundColor: '#665ee11f', // Default track background
+            '.Mui-checked + &': {
+              backgroundColor: '#00D9EF', // Track color when switch is enabled/checked
+            },
           },
         },
       },

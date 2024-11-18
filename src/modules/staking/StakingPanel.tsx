@@ -276,18 +276,10 @@ export const StakingPanel: React.FC<StakingPanelProps> = ({
 
         {/**Stake action */}
         <Button
-          // variant="contained"
-
-          sx={(theme) => ({
+          variant="contained"
+          sx={{
             minWidth: '96px',
-            mb: { xs: 6, xsm: 0 },
-            borderRadius: '20px',
-            background: theme.palette.mode === 'dark' ? '#1d2e49' : '#665de1',
-            color: theme.palette.mode === 'dark' ? '#ffff' : '#ffff',
-            '&:hover': {
-              background: theme.palette.mode === 'dark' ? '#1d2e49' : '#665de1',
-            },
-          })}
+          }}
           onClick={onStakeAction}
           disabled={+availableToStake === 0}
           fullWidth={!xsm}
@@ -526,21 +518,15 @@ export const StakingPanel: React.FC<StakingPanelProps> = ({
             }}
           >
             <Button
-              // variant="contained"
+              variant="contained"
               onClick={onStakeRewardClaimAction}
               disabled={stakeUserData?.userIncentivesToClaim === '0'}
               data-cy={`claimBtn_${stakedToken}`}
-              sx={(theme) => ({
+              sx={{
                 flex: 1,
                 mb: { xs: 2, sm: 0 },
                 mr: { xs: 0, sm: 1 },
-                borderRadius: '20px',
-                background: theme.palette.mode === 'dark' ? '#1d2e49' : '#665de1',
-                color: theme.palette.mode === 'dark' ? '#ffff' : '#ffff',
-                '&:hover': {
-                  background: theme.palette.mode === 'dark' ? '#1d2e49' : '#665de1',
-                },
-              })}
+              }}
             >
               <Trans>Claim</Trans>
             </Button>

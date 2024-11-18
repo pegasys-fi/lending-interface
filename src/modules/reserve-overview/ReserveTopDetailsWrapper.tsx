@@ -103,15 +103,11 @@ export const ReserveTopDetailsWrapper = ({ underlyingAsset }: ReserveTopDetailsP
                 if (history.state.idx !== 0) router.back();
                 else router.push('/markets');
               }}
-              sx={(theme) => ({
+              sx={{
                 mr: 3,
                 mb: downToSM ? '24px' : '0',
                 borderRadius: '20px',
-                background: theme.palette.mode === 'dark' ? '#1d2e49' : '#665de1',
-                '&:hover': {
-                  background: theme.palette.mode === 'dark' ? '#1d2e49' : '#665de1',
-                },
-              })}
+              }}
             >
               <Trans>Go Back</Trans>
             </Button>

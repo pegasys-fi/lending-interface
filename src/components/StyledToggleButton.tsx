@@ -4,12 +4,17 @@ import React from 'react';
 const CustomToggleButton = styled(ToggleButton)<ToggleButtonProps>(({ theme }) => ({
   border: '0px',
   flex: 1,
-  backgroundColor: '#383D51',
-  borderRadius: '4px',
+  borderRadius: '9999px',
 
   '&.Mui-selected, &.Mui-selected:hover': {
-    backgroundColor: '#FFFFFF',
-    borderRadius: '4px !important',
+    backgroundColor: '#0B172C',
+    borderRadius: '9999px !important',
+    color: '#FFFFFF',
+  },
+
+  '&.Mui-disabled:hover': {
+    borderRadius: '9999px !important',
+    backgroundColor: '#0B172C',
   },
 
   '&.Mui-selected, &.Mui-disabled': {
@@ -19,9 +24,9 @@ const CustomToggleButton = styled(ToggleButton)<ToggleButtonProps>(({ theme }) =
     justifyContent: 'center',
 
     '.MuiTypography-subheader1': {
-      background: theme.palette.gradients.aaveGradient,
-      backgroundClip: 'text',
-      textFillColor: 'transparent',
+      borderRadius: '9999px !important',
+      color: '#FFFFFF',
+      fontWeight: 'bold',
     },
     '.MuiTypography-secondary14': {
       background: theme.palette.gradients.aaveGradient,
@@ -35,12 +40,12 @@ const CustomTxModalToggleButton = styled(ToggleButton)<ToggleButtonProps>(({ the
   border: '0px',
   flex: 1,
   color: theme.palette.text.muted,
-  borderRadius: '4px',
+  borderRadius: '9999px',
 
   '&.Mui-selected, &.Mui-selected:hover': {
     border: `1px solid ${theme.palette.other.standardInputLine}`,
     backgroundColor: '#FFFFFF',
-    borderRadius: '4px !important',
+    borderRadius: '9999px !important',
   },
 
   '&.Mui-selected, &.Mui-disabled': {
@@ -48,7 +53,7 @@ const CustomTxModalToggleButton = styled(ToggleButton)<ToggleButtonProps>(({ the
     height: '100%',
     display: 'flex',
     justifyContent: 'center',
-    color: theme.palette.background.header,
+    color: theme.palette.text.muted,
   },
 })) as typeof ToggleButton;
 
