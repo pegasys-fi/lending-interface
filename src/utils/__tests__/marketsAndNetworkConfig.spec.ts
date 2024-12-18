@@ -4,6 +4,6 @@ import { getProvider } from '../marketsAndNetworksConfig';
 import { RotationProvider } from '../rotationProvider';
 
 it('should use a RotationProvider when there are multiple rpc urls configured for a network', () => {
-  const provider = getProvider(570 as ChainId);
+  const provider = getProvider(300 as ChainId);
   expect(provider).instanceOf(RotationProvider);
 });

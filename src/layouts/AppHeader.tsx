@@ -100,11 +100,11 @@ export function AppHeader() {
 
       {!mobileMenuOpen && (
         <>
-          {currentAccount && chainId === 570 && (
+          {currentAccount && chainId === 300 && (
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mr: 3 }}>
               <img src={`/icons/networks/rollux.svg`} width="24px" height="24px" alt="" />
               <Typography fontSize={16} color="text.primary">
-                Rollux
+                ZkSYS
               </Typography>
             </Box>
           )}
