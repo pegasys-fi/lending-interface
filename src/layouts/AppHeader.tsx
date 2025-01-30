@@ -100,9 +100,9 @@ export function AppHeader() {
 
       {!mobileMenuOpen && (
         <>
-          {currentAccount && chainId === 300 && (
+          {currentAccount && chainId === 5701 && (
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mr: 3 }}>
-              <img src={`/icons/networks/rollux.svg`} width="24px" height="24px" alt="" />
+              <img src={`/icons/networks/zksys.svg`} width="24px" height="24px" alt="" />
               <Typography fontSize={16} color="text.primary">
                 ZkSYS
               </Typography>

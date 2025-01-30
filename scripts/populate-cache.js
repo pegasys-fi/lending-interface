@@ -72346,26 +72346,26 @@ var marketsData = {
     marketTitle: "ZkSYS",
     market: "proto_rollux_v3" /* proto_rollux_v3 */,
     v3: true,
-    chainId: 300,
+    chainId: 5701,
     enabledFeatures: {
       governance: false,
-      staking: false
-      // incentives: true,
+      staking: true,
+      incentives: true
       // liquiditySwap: true,
       // collateralRepay: true,
       // debtSwitch: true,
       // withdrawAndSwitch: true,
       // switch: true,
     },
-    subgraphUrl: "https://rollux.graph.pegasys.fi/subgraphs/name/pollum-io/pegasys-lending",
+    // subgraphUrl: 'https://rollux.graph.pegasys.fi/subgraphs/name/pollum-io/pegasys-lending',
     addresses: {
-      LENDING_POOL_ADDRESS_PROVIDER: "0x100e9509fb859116eDcd9ca44A481764B1b6fFda",
-      LENDING_POOL: "0x22c687110Ba9a757C2c134c97CA313fe14E88003",
-      WETH_GATEWAY: "0x2Fa542ea7c3CD81F79cE4a9698662d547Eed53E3",
-      WALLET_BALANCE_PROVIDER: "0x1E3e941D9CE9f461E19d5c97daBD9CdE1998069A",
-      UI_POOL_DATA_PROVIDER: "0x2ae34f53b4CA8323a4FdFcFAC5134522BF9331a7",
-      UI_INCENTIVE_DATA_PROVIDER: "0xef5c26E0dB98B238b13E6eE149ED0c47E0BaFA8B",
-      L2_ENCODER: "0xeEC6f8d268B62bADeF50EC055dB87e486dDF8E5F"
+      LENDING_POOL_ADDRESS_PROVIDER: "0xD78aA88d679D77b518C56a6422713b9327F23F79",
+      LENDING_POOL: "0x27c79D2f69E4F69BeC5bb7F48a5D1b818574BdfB",
+      WETH_GATEWAY: "0x8f4f69740D4FB50755065E93b58196a431EFBdb7",
+      WALLET_BALANCE_PROVIDER: "0x338968B87F0D46601d29095dd24cAa9A81e1F796",
+      UI_POOL_DATA_PROVIDER: "0x90375031b467Bf89Fe629F7Ac1AED1a9593b9fbD",
+      UI_INCENTIVE_DATA_PROVIDER: "0xFe18AABE9d041857f89bB797C82cedb881a732F0"
+      // L2_ENCODER: '0xfC8ee3457e061e6D14a2066ABAd771E1C1CB4719',
       // COLLECTOR: ZERO_ADDRESS,
       // SWAP_COLLATERAL_ADAPTER: ZERO_ADDRESS,
       // REPAY_WITH_COLLATERAL_ADAPTER: ZERO_ADDRESS,
@@ -73043,22 +73043,22 @@ var networkConfigs = {
     explorerLink: "https://explorer.rollux.com/",
     // usdMarket: true,
     // isTestnet: true,
-    networkLogoPath: "/icons/networks/rollux.svg"
+    networkLogoPath: "/icons/networks/zksys.svg"
   },
-  [300]: {
+  [5701]: {
     name: "ZkSYS",
-    privateJsonRPCUrl: "https://sepolia.era.zksync.dev",
-    publicJsonRPCUrl: ["https://sepolia.era.zksync.dev"],
-    publicJsonRPCWSUrl: "wss://sepolia.era.zksync.dev/ws",
+    privateJsonRPCUrl: "https://rpc-test-zk.syscoin.org",
+    publicJsonRPCUrl: ["https://rpc-test-zk.syscoin.org"],
+    // publicJsonRPCWSUrl: 'wss://rpc-test-zk.syscoin.org/ws',
     // protocolDataUrl: '',
     baseUniswapAdapter: "0x0",
     baseAssetSymbol: "SYS",
     wrappedBaseAssetSymbol: "WSYS",
     baseAssetDecimals: 18,
-    explorerLink: "https://sepolia.explorer.zksync.io",
+    explorerLink: "https://explorer-test-zk.syscoin.org/",
     // usdMarket: true,
     // isTestnet: true,
-    networkLogoPath: "/icons/networks/rollux.svg"
+    networkLogoPath: "/icons/networks/zksys.svg"
   }
 };
 
